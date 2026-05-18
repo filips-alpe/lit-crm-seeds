@@ -1,0 +1,20 @@
+- username: bfranklin
+  name: Benjamin Franklin
+  bio: Printer, postmaster, philosopher, agent, minister plenipotentiary. Lately President of the Pennsylvania Society for Promoting the Abolition of Slavery.
+  color: "#7a5230"
+- username: dfranklin
+  name: Deborah Read Franklin
+  bio: Wife and partner in the Market Street shop. Kept the household and accounts during the long absences in London.
+  color: "#8a2f3e"
+- username: mstevenson
+  name: Margaret Stevenson
+  bio: Widow of Craven Street, Strand. Landlady and household manager during the London years, 1757–1775. Mother of Polly.
+  color: "#6b4a7a"
+- username: phewson
+  name: Polly Hewson
+  bio: Née Stevenson, of Craven Street. Long correspondent, friend, and student in natural philosophy.
+  color: "#2e6f7e"
+- username: wtfranklin
+  name: William Temple Franklin
+  bio: Grandson and secretary at Passy. Took down dictation for the autobiography.
+  color: "#3a5a40"

@@ -1,0 +1,34 @@
+- code: imprimerie-philadelphia
+  description: Franklin & Hall printing house, Market Street. Pennsylvania Gazette, Poor Richard, almanacks, jobbing work. Partnership with David Hall since 1748; quarterly remittances continue until 1766 dissolution and beyond as a long tail.
+  status: ACTIVE
+  color: "#1f3a5f"
+- code: pennsylvania-abolition-society
+  description: Pennsylvania Society for Promoting the Abolition of Slavery — Franklin elected President 1787. Society dues, petitions, transatlantic correspondence with Granville Sharp, Thomas Clarkson, Josiah Wedgwood, and Olaudah Equiano. The Equiano thread carries footNote flags where direct correspondence is plausible-but-undocumented.
+  status: ACTIVE
+  color: "#b8860b"
+- code: experimentations-electricite
+  description: Lightning rods, the Franklin stove (Pennsylvanian Fire-Place), the glass armonica, and the long-running natural philosophy correspondence with Collinson, Priestley, Ingenhousz, and Lavoisier. A revenue stream as well as a calling.
+  status: ACTIVE
+  color: "#d4af37"
+- code: correspondance-philosophes
+  description: 'The wider correspondence: Voltaire, Lavoisier, Priestley, Jefferson, Adams, Madame Brillon, Madame Helvétius, Polly Stevenson, and — kept in this ledger but flagged — Edward Bancroft, the "secretary" who was on the British payroll from 1776.'
+  status: ACTIVE
+  color: "#8b4513"
+- code: domicile-market-street
+  description: "Household in Philadelphia after the return from France. Sally and Richard Bache, the grandchildren Benny and Willy, servants, repairs, wine and provisions. Also: the long shadow of William Franklin, estranged Loyalist son in London."
+  status: ACTIVE
+  color: "#c4a484"
+- code: agence-londres-1757-1775
+  description: ARCHIVED. The London years as colonial agent for Pennsylvania, then Massachusetts, Georgia, New Jersey. Craven Street lodgings with Mrs Stevenson and Polly. Penn family negotiations, Stamp Act examination, the Hutchinson letters affair, and the Cockpit humiliation that turned a loyal subject into a revolutionary.
+  status: INACTIVE
+  color: "#4b6584"
+- code: legation-paris-1776-1785
+  description: ARCHIVED. Minister Plenipotentiary to the Court of France, then Commissioner with Adams and Lee, then sole Minister. Beaumarchais's Roderigue Hortalez et Cie, French treasury loans, the Treaty of Alliance, the John Paul Jones outfitting, the Treaty of Paris. And Bancroft on the payroll, leaking to London the whole time.
+  status: INACTIVE
+  color: "#5c2c2c"
+  assignee: wtfranklin
+- code: presse-passy-1777-1785
+  description: ARCHIVED. The private press in the garden at Passy. Bagatelles for the salons; jeux d'esprit; and — the working end — pseudonymous propaganda culminating in the forged Supplement to the Boston Independent Chronicle of 12 March 1782. Type, paper, and a French compositor; everything else done by hand by B.F.
+  status: INACTIVE
+  color: "#2c1810"
+  assignee: wtfranklin
