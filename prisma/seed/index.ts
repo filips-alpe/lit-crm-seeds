@@ -11,9 +11,7 @@ export async function seed(prisma: PrismaClient) {
   const userIdByUsername = new Map(userRows.map((u) => [u.username, u.id]));
   const user = await prisma.user.findUniqueOrThrow({ where: { username: 'bfranklin' } });
 
-  const typeRows = await Promise.all(
-    types.map((t) => prisma.type.create({ data: t })),
-  );
+  const typeRows = await Promise.all(types.map((t) => prisma.type.create({ data: t })));
   const typeIdByCode = new Map(typeRows.map((t) => [t.code, t.id]));
 
   const orderRows = await Promise.all(
@@ -70,4 +68,3 @@ export async function seed(prisma: PrismaClient) {
     });
   }
 }
-
