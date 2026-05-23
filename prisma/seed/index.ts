@@ -57,7 +57,7 @@ export async function seed(prisma: PrismaClient) {
         endDate: r.endDate,
         note: r.note,
         footNote: r.footNote,
-        idNote: r.idNote,
+        alternateIds: r.alternateIds,
         projectNote: r.projectNote,
         typeNote: r.typeNote,
         priceNote: r.priceNote,

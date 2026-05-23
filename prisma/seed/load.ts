@@ -22,4 +22,9 @@ export const users = load<SeedUser[]>('user.yaml');
 
 export const types = load<SeedType[]>('types.yaml');
 export const projects = load<SeedProjectMeta[]>('projects.yaml');
-export const records = load<SeedRecordFlat[]>('records.yaml');
+
+type RawSeedRecord = Omit<SeedRecordFlat, 'alternateIds'> & { alternateIds?: string[] };
+export const records: SeedRecordFlat[] = load<RawSeedRecord[]>('records.yaml').map((r) => ({
+  ...r,
+  alternateIds: r.alternateIds ?? [],
+}));

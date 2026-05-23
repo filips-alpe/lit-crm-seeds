@@ -11,7 +11,7 @@ export type SeedRecord = {
   endDate?: Date;
   note?: string;
   footNote?: string;
-  idNote?: string;
+  alternateIds: string[];
   projectNote?: string;
   typeNote?: string;
   priceNote?: string;
