@@ -12,7 +12,7 @@ export type SeedRecord = {
   note?: string;
   footNote?: string;
   idNote?: string;
-  orderNote?: string;
+  projectNote?: string;
   typeNote?: string;
   priceNote?: string;
   bookNote?: string;
@@ -23,7 +23,7 @@ export type SeedRecord = {
   user?: string;
 };
 
-export type SeedOrder = {
+export type SeedProject = {
   code: string;
   description: string;
   status?: SeedStatus;
@@ -31,7 +31,7 @@ export type SeedOrder = {
   records: SeedRecord[];
 };
 
-export type SeedOrderMeta = {
+export type SeedProjectMeta = {
   code: string;
   description: string;
   status?: SeedStatus;
@@ -39,7 +39,7 @@ export type SeedOrderMeta = {
   assignee?: string;
 };
 
-export type SeedRecordFlat = SeedRecord & { order: string };
+export type SeedRecordFlat = SeedRecord & { project: string };
 
 export type SeedType = {
   code: string;

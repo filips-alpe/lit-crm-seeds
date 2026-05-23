@@ -1,9 +1,9 @@
 import type { PrismaClient } from '../../generated/prisma/client';
-import { users, types, orders, records } from './load';
+import { users, types, projects, records } from './load';
 
 export async function seed(prisma: PrismaClient) {
   await prisma.record.deleteMany({});
-  await prisma.order.deleteMany({});
+  await prisma.project.deleteMany({});
   await prisma.type.deleteMany({});
   await prisma.user.deleteMany({});
 
@@ -14,29 +14,29 @@ export async function seed(prisma: PrismaClient) {
   const typeRows = await Promise.all(types.map((t) => prisma.type.create({ data: t })));
   const typeIdByCode = new Map(typeRows.map((t) => [t.code, t.id]));
 
-  const orderRows = await Promise.all(
-    orders.map((o) => {
-      const assigneeId = o.assignee ? userIdByUsername.get(o.assignee) : user.id;
-      if (!assigneeId) throw new Error(`Unknown assignee: ${o.assignee}`);
-      return prisma.order.create({
+  const projectRows = await Promise.all(
+    projects.map((p) => {
+      const assigneeId = p.assignee ? userIdByUsername.get(p.assignee) : user.id;
+      if (!assigneeId) throw new Error(`Unknown assignee: ${p.assignee}`);
+      return prisma.project.create({
         data: {
-          code: o.code,
-          description: o.description,
-          color: o.color,
-          status: o.status ?? 'ACTIVE',
+          code: p.code,
+          description: p.description,
+          color: p.color,
+          status: p.status ?? 'ACTIVE',
           creatorId: user.id,
           assigneeId,
         },
       });
     }),
   );
-  const orderIdByCode = new Map(orderRows.map((o) => [o.code, o.id]));
+  const projectIdByCode = new Map(projectRows.map((p) => [p.code, p.id]));
 
   for (const r of records) {
     const typeId = typeIdByCode.get(r.type);
     if (!typeId) throw new Error(`Unknown type: ${r.type}`);
-    const orderId = orderIdByCode.get(r.order);
-    if (!orderId) throw new Error(`Unknown order: ${r.order}`);
+    const projectId = projectIdByCode.get(r.project);
+    if (!projectId) throw new Error(`Unknown project: ${r.project}`);
     const userId = r.user ? userIdByUsername.get(r.user) : user.id;
     if (!userId) throw new Error(`Unknown user: ${r.user}`);
     const remindToId = r.remindTo ? userIdByUsername.get(r.remindTo) : undefined;
@@ -45,7 +45,7 @@ export async function seed(prisma: PrismaClient) {
       data: {
         typeId,
         userId,
-        orderId,
+        projectId,
         remindToId,
         status: r.status ?? 'ACTIVE',
         date: r.date,
@@ -58,7 +58,7 @@ export async function seed(prisma: PrismaClient) {
         note: r.note,
         footNote: r.footNote,
         idNote: r.idNote,
-        orderNote: r.orderNote,
+        projectNote: r.projectNote,
         typeNote: r.typeNote,
         priceNote: r.priceNote,
         bookNote: r.bookNote,
