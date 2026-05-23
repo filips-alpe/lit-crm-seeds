@@ -14,7 +14,8 @@ export type SeedUser = {
   username: string;
   name: string;
   bio?: string;
-  color?: string;
+  color: string;
+  avatarSeed?: string;
 };
 
 export const users = load<SeedUser[]>('user.yaml');

@@ -27,7 +27,7 @@ export type SeedOrder = {
   code: string;
   description: string;
   status?: SeedStatus;
-  color?: string;
+  color: string;
   records: SeedRecord[];
 };
 
@@ -35,7 +35,7 @@ export type SeedOrderMeta = {
   code: string;
   description: string;
   status?: SeedStatus;
-  color?: string;
+  color: string;
   assignee?: string;
 };
 
@@ -44,5 +44,5 @@ export type SeedRecordFlat = SeedRecord & { order: string };
 export type SeedType = {
   code: string;
   description: string;
-  color?: string;
+  color: string;
 };
