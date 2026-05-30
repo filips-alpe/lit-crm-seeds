@@ -2,6 +2,7 @@ import type { PrismaClient } from '../../generated/prisma/client';
 import { users, types, projects, records } from './load';
 
 export async function seed(prisma: PrismaClient) {
+  await prisma.projectRecord.deleteMany({});
   await prisma.record.deleteMany({});
   await prisma.project.deleteMany({});
   await prisma.type.deleteMany({});
@@ -32,39 +33,55 @@ export async function seed(prisma: PrismaClient) {
   );
   const projectIdByCode = new Map(projectRows.map((p) => [p.code, p.id]));
 
+  // First pass: create records and the project join rows.
+  const recordIdByKey = new Map<string, string>();
+  const linked: { id: string; linkedTo: string }[] = [];
   for (const r of records) {
     const typeId = typeIdByCode.get(r.type);
     if (!typeId) throw new Error(`Unknown type: ${r.type}`);
-    const projectId = projectIdByCode.get(r.project);
-    if (!projectId) throw new Error(`Unknown project: ${r.project}`);
-    const userId = r.user ? userIdByUsername.get(r.user) : user.id;
-    if (!userId) throw new Error(`Unknown user: ${r.user}`);
-    const remindToId = r.remindTo ? userIdByUsername.get(r.remindTo) : undefined;
-    if (r.remindTo && !remindToId) throw new Error(`Unknown remindTo: ${r.remindTo}`);
-    await prisma.record.create({
+    const creatorId = r.user ? userIdByUsername.get(r.user) : user.id;
+    if (!creatorId) throw new Error(`Unknown user: ${r.user}`);
+    const assigneeId = r.remindTo ? userIdByUsername.get(r.remindTo) : undefined;
+    if (r.remindTo && !assigneeId) throw new Error(`Unknown remindTo: ${r.remindTo}`);
+    const projectsCreate = r.projects.map((code) => {
+      const projectId = projectIdByCode.get(code);
+      if (!projectId) throw new Error(`Unknown project: ${code}`);
+      return { projectId };
+    });
+
+    const created = await prisma.record.create({
       data: {
         typeId,
-        userId,
-        projectId,
-        remindToId,
+        creatorId,
+        assigneeId,
         status: r.status ?? 'ACTIVE',
-        date: r.date,
-        allDay: r.allDay ?? false,
-        sum: r.sum ?? 0,
-        hours: r.hours ?? 0,
-        totalPrice: r.totalPrice ?? 0,
-        startDate: r.startDate,
-        endDate: r.endDate,
+        title: r.title,
+        description: r.description,
+        text: r.text,
         note: r.note,
-        footNote: r.footNote,
-        alternateIds: r.alternateIds,
-        projectNote: r.projectNote,
-        typeNote: r.typeNote,
-        priceNote: r.priceNote,
-        bookNote: r.bookNote,
-        placeFrom: r.placeFrom,
-        placeTo: r.placeTo,
+        references: r.references,
+        date: r.date,
+        start: r.start,
+        end: r.end,
+        allDay: r.allDay,
+        sum: r.sum,
+        hours: r.hours,
+        total: r.total,
+        unit: r.unit,
+        from: r.from,
+        to: r.to,
+        projects: { create: projectsCreate },
       },
     });
+
+    if (r.key) recordIdByKey.set(r.key, created.id);
+    if (r.linkedTo) linked.push({ id: created.id, linkedTo: r.linkedTo });
+  }
+
+  // Second pass: wire up self-links now that every record exists.
+  for (const { id, linkedTo } of linked) {
+    const recordId = recordIdByKey.get(linkedTo);
+    if (!recordId) throw new Error(`Unknown linkedTo key: ${linkedTo}`);
+    await prisma.record.update({ where: { id }, data: { recordId } });
   }
 }

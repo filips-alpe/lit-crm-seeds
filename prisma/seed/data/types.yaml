@@ -1,24 +1,32 @@
 - code: facture
   description: Invoice issued to a counterparty
   color: '#2e7d32'
+  iconSeed: receipt-quill
 - code: depense
   description: Expense / outgoing payment
   color: '#c62828'
+  iconSeed: purse-out
 - code: paiement
   description: Payment received
   color: '#1565c0'
+  iconSeed: purse-in
 - code: lettre
   description: Correspondence (in or out)
   color: '#6a1b9a'
+  iconSeed: sealed-letter
 - code: reunion
   description: Meeting, audience or salon
   color: '#ef6c00'
+  iconSeed: salon-chairs
 - code: souscription
   description: Subscription, dues, or pension
   color: '#00838f'
+  iconSeed: ledger-ring
 - code: temps
   description: Time / hours entry
   color: '#455a64'
+  iconSeed: pocket-watch
 - code: note
   description: General log entry, observation, or memo
   color: '#757575'
+  iconSeed: memorandum

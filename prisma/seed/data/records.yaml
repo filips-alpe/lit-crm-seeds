@@ -1,341 +1,567 @@
-- project: agence-londres-1757-1775
+- projects: [agence-londres-1757-1775]
   type: depense
   date: 1757-08-15T00:00:00.000Z
   user: mstevenson
   sum: 22
-  totalPrice: 22
-  note: First quarter's rent and board, 7 Craven Street, with Mrs Margaret Stevenson.
-  alternateIds: ['PBF vol 7 doc 252']
-  priceNote: £ stg.
-  placeTo: London
-- project: agence-londres-1757-1775
+  total: 22
+  unit: '£ stg.'
+  to: London
+  title: "First quarter's rent, Craven Street"
+  description: "Rent and board with Mrs Margaret Stevenson, 7 Craven Street."
+  text: >-
+    First quarter's rent and board, 7 Craven Street, with Mrs Margaret
+    Stevenson.
+  references: ['PBF vol 7 doc 252']
+- projects: [agence-londres-1757-1775]
   type: reunion
   date: 1762-04-30T00:00:00.000Z
+  start: 1762-04-30T08:23:26.000Z
+  end: 1762-04-30T12:23:26.000Z
   hours: 4
-  startDate: 1762-04-30T08:23:26.000Z
-  endDate: 1762-04-30T12:23:26.000Z
-  note: At Oxford. They conferred on me the Doctor of Civil Laws honoris causa. From "Mr Franklin" to "Dr Franklin," a useful elevation for the work ahead.
-  placeTo: Oxford
-- project: experimentations-electricite
+  to: Oxford
+  title: "Oxford — Doctor of Civil Laws"
+  description: "Honorary D.C.L. conferred; 'Dr Franklin' thereafter."
+  text: >-
+    At Oxford. They conferred on me the Doctor of Civil Laws honoris causa.
+    From "Mr Franklin" to "Dr Franklin," a useful elevation for the work ahead.
+- projects: [experimentations-electricite]
   type: facture
   date: 1762-09-14T00:00:00.000Z
   sum: 3.5
-  totalPrice: 3.5
-  note: Bill to Mr. West, merchant — fitted a pointed iron rod to his Front Street warehouse, with grounding chain to the river.
-  alternateIds: ['rod no. 41']
-  priceNote: £ Pa.
-  placeTo: Philadelphia
-- project: imprimerie-philadelphia
+  total: 3.5
+  unit: '£ Pa.'
+  to: Philadelphia
+  title: "Lightning rod fitted — Mr West's warehouse"
+  description: "A pointed iron rod with grounding chain to the river, Front Street."
+  text: >-
+    Bill to Mr. West, merchant — fitted a pointed iron rod to his Front Street
+    warehouse, with grounding chain to the river.
+  references: ['rod no. 41']
+- projects: [imprimerie-philadelphia]
   type: paiement
   date: 1763-01-15T00:00:00.000Z
   sum: 467.12
-  totalPrice: 467.12
-  note: Quarterly remittance to me from D. Hall — share of Pennsylvania Gazette ad revenue and Almanack receipts for Oct–Dec 1762.
-  alternateIds: ['PBF vol 10 doc 191']
-  priceNote: £ Pa.
-- project: agence-londres-1757-1775
+  total: 467.12
+  unit: '£ Pa.'
+  title: "Quarterly remittance from D. Hall"
+  description: "Gazette advertising revenue and Almanack receipts, Oct–Dec 1762."
+  text: >-
+    Quarterly remittance to me from D. Hall — share of Pennsylvania Gazette ad
+    revenue and Almanack receipts for Oct–Dec 1762.
+  references: ['PBF vol 10 doc 191']
+- projects: [agence-londres-1757-1775]
   type: depense
   date: 1763-10-12T00:00:00.000Z
   user: phewson
   sum: 4.5
-  totalPrice: 4.5
-  note: Tutor's bill for Polly Stevenson — algebra and natural philosophy. She has the keenest mind of any pupil I have known.
-  alternateIds: ['Stevenson household']
-  priceNote: £ stg.
-- project: agence-londres-1757-1775
+  total: 4.5
+  unit: '£ stg.'
+  title: "Tutor's bill — Polly Stevenson"
+  description: "Algebra and natural philosophy for the keenest pupil I have known."
+  text: >-
+    Tutor's bill for Polly Stevenson — algebra and natural philosophy. She has
+    the keenest mind of any pupil I have known.
+  references: ['Stevenson household']
+- projects: [agence-londres-1757-1775]
   type: reunion
   date: 1766-02-13T00:00:00.000Z
+  start: 1766-02-13T09:23:26.000Z
+  end: 1766-02-13T15:23:26.000Z
   hours: 6
-  startDate: 1766-02-13T09:23:26.000Z
-  endDate: 1766-02-13T15:23:26.000Z
-  note: Examined at the bar of the House of Commons on the Stamp Act. 174 questions, friendly and hostile. The Act repealed within a month. The greatest day of my public life.
-  alternateIds: ['PBF vol 13 doc 124']
-  placeTo: London, House of Commons
-- project: imprimerie-philadelphia
+  to: 'London, House of Commons'
+  title: "Examined on the Stamp Act, House of Commons"
+  description: "174 questions at the bar; the Act repealed within the month."
+  text: >-
+    Examined at the bar of the House of Commons on the Stamp Act. 174
+    questions, friendly and hostile. The Act repealed within a month. The
+    greatest day of my public life.
+  references: ['PBF vol 13 doc 124']
+- projects: [imprimerie-philadelphia]
   type: note
   date: 1766-07-01T00:00:00.000Z
-  note: Partnership with D. Hall dissolved this day, 18 years to the day from our formation. Continuing tail of accounts to settle.
-  alternateIds: ['PBF vol 13 doc 250']
-- project: agence-londres-1757-1775
+  title: "Franklin & Hall partnership dissolved"
+  description: "Eighteen years to the day; a tail of accounts remains to settle."
+  text: >-
+    Partnership with D. Hall dissolved this day, 18 years to the day from our
+    formation. Continuing tail of accounts to settle.
+  references: ['PBF vol 13 doc 250']
+- projects: [agence-londres-1757-1775]
   type: lettre
   date: 1772-12-02T00:00:00.000Z
   allDay: true
-  note: Wrote to Thomas Cushing, Boston — sending him a packet of letters from Governor Hutchinson and Lt-Gov Oliver to former Undersecretary Whately. The Massachusetts House to see, not to print. The originals must return to me.
-  alternateIds: ['PBF vol 19 doc 348']
-- project: agence-londres-1757-1775
+  title: "Hutchinson letters sent to Thomas Cushing"
+  description: "A packet to the Massachusetts House — to see, not to print."
+  text: >-
+    Wrote to Thomas Cushing, Boston — sending him a packet of letters from
+    Governor Hutchinson and Lt-Gov Oliver to former Undersecretary Whately. The
+    Massachusetts House to see, not to print. The originals must return to me.
+  references: ['PBF vol 19 doc 348']
+- projects: [agence-londres-1757-1775]
   type: reunion
   date: 1774-01-29T00:00:00.000Z
+  start: 1774-01-29T09:23:26.000Z
+  end: 1774-01-29T13:23:26.000Z
   hours: 4
-  startDate: 1774-01-29T09:23:26.000Z
-  endDate: 1774-01-29T13:23:26.000Z
-  note: Before the Privy Council at the Cockpit. Solicitor-General Wedderburn's hour of personal abuse, the council chamber full of laughing lords. Stood, silent, in my Manchester velvet suit. Did not move a feature.
-  alternateIds: ['PBF vol 21 doc 36']
-  priceNote: — (no payment, only humiliation)
-  placeTo: London, Privy Council, Cockpit
-- project: agence-londres-1757-1775
+  to: 'London, Privy Council, Cockpit'
+  title: "The Cockpit — before the Privy Council"
+  description: "Wedderburn's hour of abuse; stood silent in Manchester velvet."
+  text: >-
+    Before the Privy Council at the Cockpit. Solicitor-General Wedderburn's
+    hour of personal abuse, the council chamber full of laughing lords. Stood,
+    silent, in my Manchester velvet suit. Did not move a feature.
+  note: "No payment, only humiliation."
+  references: ['PBF vol 21 doc 36']
+- projects: [agence-londres-1757-1775]
   type: note
   date: 1774-01-31T00:00:00.000Z
   sum: -300
-  totalPrice: -300
-  note: 'Am dismissed as Deputy Postmaster General for North America by letter from Anthony Todd. The proximate retaliation. Loss: £300 stg. per annum.'
-  footNote: punitive
-  alternateIds: ['PBF vol 21 doc 40']
-  priceNote: £ stg.
-- project: agence-londres-1757-1775
+  total: -300
+  unit: '£ stg.'
+  title: "Dismissed as Deputy Postmaster General"
+  description: "The proximate retaliation for the Hutchinson affair."
+  text: >-
+    Am dismissed as Deputy Postmaster General for North America by letter from
+    Anthony Todd. The proximate retaliation. Loss: £300 stg. per annum.
+  note: "Punitive."
+  references: ['PBF vol 21 doc 40']
+- projects: [agence-londres-1757-1775]
   type: note
   date: 1774-12-19T00:00:00.000Z
   user: dfranklin
-  note: Word reached me of Deborah's death. Five weeks ago. She is dead and I in London. Forty-four years married and I last saw her in 1764. The fault is partly mine.
-  placeFrom: Philadelphia
-  placeTo: London
-- project: agence-londres-1757-1775
+  from: Philadelphia
+  to: London
+  title: "Word of Deborah's death"
+  description: "Dead five weeks; forty-four years married, last seen in 1764."
+  text: >-
+    Word reached me of Deborah's death. Five weeks ago. She is dead and I in
+    London. Forty-four years married and I last saw her in 1764. The fault is
+    partly mine.
+- projects: [agence-londres-1757-1775]
   type: note
   date: 1775-03-22T00:00:00.000Z
-  note: Embarked at Portsmouth. Voyage of six weeks home, knowing war has begun though not yet hearing of Lexington. Began on the passage a paper on the Gulf Stream, sounding the temperature daily.
-  alternateIds: ['Gulf Stream chart 1775']
-  placeTo: at sea
-- project: legation-paris-1776-1785
+  to: at sea
+  title: "Embarked at Portsmouth for home"
+  description: "Six weeks' passage; began the Gulf Stream soundings en route."
+  text: >-
+    Embarked at Portsmouth. Voyage of six weeks home, knowing war has begun
+    though not yet hearing of Lexington. Began on the passage a paper on the
+    Gulf Stream, sounding the temperature daily.
+  references: ['Gulf Stream chart 1775']
+- projects: [legation-paris-1776-1785]
   type: note
   date: 1776-12-21T00:00:00.000Z
-  note: Landed at Auray, Brittany. Crossing in the Reprisal an adventure — we captured two British prizes en route. To Paris by easy stages. The whole nation watching me.
-  alternateIds: ['PBF vol 23 doc 56']
-  placeTo: Auray
-- project: presse-passy-1777-1785
+  to: Auray
+  title: "Landed at Auray, Brittany"
+  description: "The Reprisal took two British prizes en route; to Paris by stages."
+  text: >-
+    Landed at Auray, Brittany. Crossing in the Reprisal an adventure — we
+    captured two British prizes en route. To Paris by easy stages. The whole
+    nation watching me.
+  references: ['PBF vol 23 doc 56']
+- projects: [presse-passy-1777-1785]
   type: depense
   date: 1777-09-08T00:00:00.000Z
   sum: 1840
-  totalPrice: 1840
-  note: Bought type from Fournier le Jeune, Paris — petit romain and cicero, 200 lb. Press from Galien & Petit, fully assembled and delivered to Passy.
-  alternateIds: ['Fournier invoice 1777-09']
-  priceNote: l.t.
-  placeTo: Passy
-- project: legation-paris-1776-1785
+  total: 1840
+  unit: l.t.
+  to: Passy
+  title: "Type and press bought for the Passy press"
+  description: "200 lb of type from Fournier le Jeune; press from Galien & Petit."
+  text: >-
+    Bought type from Fournier le Jeune, Paris — petit romain and cicero, 200
+    lb. Press from Galien & Petit, fully assembled and delivered to Passy.
+  references: ['Fournier invoice 1777-09']
+- projects: [legation-paris-1776-1785]
   type: note
   date: 1777-12-04T00:00:00.000Z
-  note: Word of Burgoyne's surrender at Saratoga reached me in Paris this evening. Saw M. de Vergennes within the hour. He smiled. The treaties will follow.
-  alternateIds: ['PBF vol 25 doc 320']
-- project: legation-paris-1776-1785
+  title: "News of Saratoga reaches Paris"
+  description: "Saw Vergennes within the hour; the treaties will follow."
+  text: >-
+    Word of Burgoyne's surrender at Saratoga reached me in Paris this evening.
+    Saw M. de Vergennes within the hour. He smiled. The treaties will follow.
+  references: ['PBF vol 25 doc 320']
+- projects: [legation-paris-1776-1785]
   type: reunion
   date: 1778-02-06T00:00:00.000Z
+  start: 1778-02-06T09:23:26.000Z
+  end: 1778-02-06T13:23:26.000Z
   hours: 4
-  startDate: 1778-02-06T09:23:26.000Z
-  endDate: 1778-02-06T13:23:26.000Z
-  note: Signed, with France, the Treaty of Alliance and the Treaty of Amity and Commerce at the Hôtel de Coislin. Wore my Manchester velvet suit of the Cockpit, by deliberate intention.
-  alternateIds: ['Treaty of Alliance, 6 Feb 1778']
-  bookNote: Vergennes' dispatches
-  placeTo: Paris
-- project: correspondance-philosophes
+  to: Paris
+  title: "Treaties of Alliance and Commerce signed with France"
+  description: "At the Hôtel de Coislin, in the Manchester velvet of the Cockpit."
+  text: >-
+    Signed, with France, the Treaty of Alliance and the Treaty of Amity and
+    Commerce at the Hôtel de Coislin. Wore my Manchester velvet suit of the
+    Cockpit, by deliberate intention.
+  references: ['Treaty of Alliance, 6 Feb 1778', "Vergennes' dispatches"]
+- projects: [correspondance-philosophes]
   type: reunion
   date: 1778-04-29T00:00:00.000Z
+  start: 1778-04-29T11:23:26.000Z
+  end: 1778-04-29T14:23:26.000Z
   hours: 3
-  startDate: 1778-04-29T11:23:26.000Z
-  endDate: 1778-04-29T14:23:26.000Z
-  note: At the Loge des Neuf Sœurs. M. de Voltaire and self, after twenty minutes of formal salutation in French, embraced à l'américaine. The assembly applauded for some minutes. The old man trembling, much aged. He spoke to me of Calas and of the Address to Congress he had drafted on hearing of the alliance.
-  alternateIds: ['PBF vol 26 doc 313']
-  bookNote: witnessed by Court de Gébelin and the Loge
-  placeTo: Paris, Loge des Neuf Sœurs
-- project: legation-paris-1776-1785
+  to: 'Paris, Loge des Neuf Sœurs'
+  title: "Embrace with Voltaire at the Loge des Neuf Sœurs"
+  description: "Embraced à l'américaine before the applauding assembly."
+  text: >-
+    At the Loge des Neuf Sœurs. M. de Voltaire and self, after twenty minutes
+    of formal salutation in French, embraced à l'américaine. The assembly
+    applauded for some minutes. The old man trembling, much aged. He spoke to
+    me of Calas and of the Address to Congress he had drafted on hearing of the
+    alliance.
+  references: ['PBF vol 26 doc 313', 'witnessed by Court de Gébelin and the Loge']
+- projects: [legation-paris-1776-1785]
   type: paiement
+  key: bancroft-1778
   date: 1778-07-01T00:00:00.000Z
   sum: 1000
-  totalPrice: 1000
-  note: Quarterly to E. Bancroft, secretary to the Commission. Mr Adams and Mr Lee insist he is in the pay of London also; let him stay where I can watch him.
-  alternateIds: ['legation ledger']
-  priceNote: l.t.
-- project: legation-paris-1776-1785
+  total: 1000
+  unit: l.t.
+  title: "Quarterly salary to E. Bancroft"
+  description: "Secretary to the Commission — kept where I can watch him."
+  text: >-
+    Quarterly to E. Bancroft, secretary to the Commission. Mr Adams and Mr Lee
+    insist he is in the pay of London also; let him stay where I can watch him.
+  references: ['legation ledger']
+- projects: [legation-paris-1776-1785]
   type: note
   date: 1779-09-23T00:00:00.000Z
-  note: 'Action off Flamborough Head. Bonhomme Richard takes the Serapis though sinking under her. Capt. Jones''s reply to the British call to strike: "I have not yet begun to fight."'
-  alternateIds: ['Jones dispatches']
-- project: correspondance-philosophes
+  title: "Action off Flamborough Head"
+  description: "Bonhomme Richard takes the Serapis: 'I have not yet begun to fight.'"
+  text: >-
+    Action off Flamborough Head. Bonhomme Richard takes the Serapis though
+    sinking under her. Capt. Jones's reply to the British call to strike: "I
+    have not yet begun to fight."
+  references: ['Jones dispatches']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1779-10-19T00:00:00.000Z
   allDay: true
-  note: Wrote to Mme Helvétius — declining (again) her marriage proposal, in the form of a fable about the bees of Auteuil and their preference for their old hive. Sent it with a pot of honey.
-  alternateIds: ['PBF vol 30 doc 547']
-  bookNote: the Auteuil bagatelle, to be set at the Passy press
-- project: presse-passy-1777-1785
+  title: "To Mme Helvétius — the Auteuil bees"
+  description: "Declining her proposal, in the form of a fable, with a pot of honey."
+  text: >-
+    Wrote to Mme Helvétius — declining (again) her marriage proposal, in the
+    form of a fable about the bees of Auteuil and their preference for their
+    old hive. Sent it with a pot of honey.
+  references: ['PBF vol 30 doc 547', 'the Auteuil bagatelle, to be set at the Passy press']
+- projects: [presse-passy-1777-1785]
   type: temps
   date: 1780-04-11T00:00:00.000Z
   hours: 5
-  note: '"Dialogue between Franklin and the Gout" — set this week. 100 copies for friends. (Mr Diderot has asked for one; the irony of it amused us both.)'
-  alternateIds: ['bagatelle no. 6']
-- project: correspondance-philosophes
+  title: "Set 'Dialogue between Franklin and the Gout'"
+  description: "100 copies for friends; even Mr Diderot asked for one."
+  text: >-
+    "Dialogue between Franklin and the Gout" — set this week. 100 copies for
+    friends. (Mr Diderot has asked for one; the irony of it amused us both.)
+  references: ['bagatelle no. 6']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1780-06-15T00:00:00.000Z
   allDay: true
-  note: From J. Adams, Paris — angry about a perceived slight in my dispatches to Congress. Replied gently. Mr Adams suspects everyone, which I find occasionally useful but mostly exhausting.
-  alternateIds: ['PBF vol 32 doc 467']
   remindTo: bfranklin
-- project: correspondance-philosophes
+  title: "From J. Adams — a perceived slight"
+  description: "Replied gently; Mr Adams suspects everyone."
+  text: >-
+    From J. Adams, Paris — angry about a perceived slight in my dispatches to
+    Congress. Replied gently. Mr Adams suspects everyone, which I find
+    occasionally useful but mostly exhausting.
+  references: ['PBF vol 32 doc 467']
+- projects: [correspondance-philosophes, legation-paris-1776-1785]
   type: paiement
+  linkedTo: bancroft-1778
   date: 1781-04-01T00:00:00.000Z
   sum: 1000
-  totalPrice: 1000
-  note: Quarterly salary to E. Bancroft, secretary. As authorised by Congress.
-  footNote: 'BANCROFT FLAG: suspected by Adams and Arthur Lee since 1777 of taking money from London as well. Why I keep him: a controlled leak is preferable to an unknown one. Logged here for honesty.'
-  alternateIds: ['legation ledger']
-  projectNote: cross-ref legation-paris ledger
-  typeNote: paiement / espionage tolerance
-  priceNote: l.t.
-  placeFrom: Passy
-  placeTo: Passy
-- project: presse-passy-1777-1785
+  total: 1000
+  unit: l.t.
+  from: Passy
+  to: Passy
+  title: "Quarterly salary to E. Bancroft (flagged)"
+  description: "Salary as authorised by Congress; a controlled leak, logged for honesty."
+  text: >-
+    Quarterly salary to E. Bancroft, secretary. As authorised by Congress.
+  note: >-
+    BANCROFT FLAG: suspected by Adams and Arthur Lee since 1777 of taking money
+    from London as well. Why I keep him: a controlled leak is preferable to an
+    unknown one. Logged here for honesty. — paiement / espionage tolerance.
+  references: ['legation ledger', 'cross-ref legation-paris ledger']
+- projects: [presse-passy-1777-1785]
   type: temps
+  key: forgery-draft
   date: 1782-02-28T00:00:00.000Z
   hours: 14
-  note: Drafted the "Extract of a Letter from Captain Gerrish, of the New England Militia" — invoice of scalps purportedly captured from Seneca warriors, addressed to Governor Haldimand. Eight bundles; total 1062 scalps; details of women, boys, infants. Designed to inflame opinion in London and Amsterdam.
-  footNote: the propaganda forgery; entirely fabricated
-  alternateIds: ['forgery draft']
-  typeNote: temps / propaganda fabrication
-- project: presse-passy-1777-1785
+  title: "Drafted the Gerrish 'scalp' letter"
+  description: "A fabricated invoice of scalps to inflame London and Amsterdam."
+  text: >-
+    Drafted the "Extract of a Letter from Captain Gerrish, of the New England
+    Militia" — invoice of scalps purportedly captured from Seneca warriors,
+    addressed to Governor Haldimand. Eight bundles; total 1062 scalps; details
+    of women, boys, infants. Designed to inflame opinion in London and
+    Amsterdam.
+  note: "The propaganda forgery; entirely fabricated. — temps / propaganda fabrication."
+  references: ['forgery draft']
+- projects: [presse-passy-1777-1785, legation-paris-1776-1785]
   type: note
+  key: forgery-supplement
+  linkedTo: forgery-draft
   date: 1782-03-12T00:00:00.000Z
-  note: 'Printed today: "Supplement to the Boston Independent Chronicle. Numb. 705." Dated Boston, 12 March 1782. Datelined falsely by me. 100 copies. To be slipped into packets going to London friends — Mr Strahan in particular — and to the Amsterdam press.'
-  footNote: the Supplement, our most ambitious forgery of the war
-  alternateIds: ['forgery printed']
-  projectNote: cross-ref legation-paris
-  typeNote: propaganda forgery
-  priceNote: — (no public sale)
-  placeTo: Passy
-- project: presse-passy-1777-1785
+  to: Passy
+  title: "Printed the forged 'Supplement' (Numb. 705)"
+  description: "Falsely datelined Boston, 12 March 1782; 100 copies for London friends."
+  text: >-
+    Printed today: "Supplement to the Boston Independent Chronicle. Numb. 705."
+    Dated Boston, 12 March 1782. Datelined falsely by me. 100 copies. To be
+    slipped into packets going to London friends — Mr Strahan in particular —
+    and to the Amsterdam press.
+  note: "The Supplement, our most ambitious forgery of the war. No public sale. — propaganda forgery."
+  references: ['forgery printed', 'cross-ref legation-paris']
+- projects: [presse-passy-1777-1785]
   type: lettre
+  linkedTo: forgery-supplement
   date: 1782-04-22T00:00:00.000Z
   allDay: true
-  note: To J. Adams, The Hague — sending a copy of the Supplement. "If they are genuine, which I rather doubt, they prove a horrid disposition in the enemy." The plausible-deniability formula. Adams will understand.
-  alternateIds: ['PBF vol 37 doc 174']
-- project: experimentations-electricite
+  title: "To J. Adams — forwarding the Supplement"
+  description: "'If they are genuine, which I rather doubt...' — the deniability formula."
+  text: >-
+    To J. Adams, The Hague — sending a copy of the Supplement. "If they are
+    genuine, which I rather doubt, they prove a horrid disposition in the
+    enemy." The plausible-deniability formula. Adams will understand.
+  references: ['PBF vol 37 doc 174']
+- projects: [experimentations-electricite]
   type: reunion
   date: 1782-06-15T00:00:00.000Z
+  start: 1782-06-15T13:23:26.000Z
+  end: 1782-06-15T17:23:26.000Z
   hours: 4
-  startDate: 1782-06-15T13:23:26.000Z
-  endDate: 1782-06-15T17:23:26.000Z
-  note: Visited M. Lavoisier at the Arsenal. Observed his new pneumatic apparatus and his demonstration of the composition of water by combination of inflammable air and dephlogisticated air. Most remarkable. Mme Lavoisier translated for me.
-  alternateIds: ['PBF vol 37 doc 408']
-  placeTo: Paris, Arsenal
-- project: experimentations-electricite
+  to: 'Paris, Arsenal'
+  title: "Visited Lavoisier at the Arsenal"
+  description: "Saw the composition of water from inflammable and dephlogisticated air."
+  text: >-
+    Visited M. Lavoisier at the Arsenal. Observed his new pneumatic apparatus
+    and his demonstration of the composition of water by combination of
+    inflammable air and dephlogisticated air. Most remarkable. Mme Lavoisier
+    translated for me.
+  references: ['PBF vol 37 doc 408']
+- projects: [experimentations-electricite]
   type: note
   date: 1782-08-19T00:00:00.000Z
-  note: Witnessed at Mr Charles's the ascent of the first inflammable-air balloon from the Champ de Mars. To Mr Pringle and others who ask me "what use" I answered — "What use is a newborn baby?"
-  alternateIds: ['PBF vol 38 doc 11']
-  placeTo: Paris, Champ de Mars
-- project: legation-paris-1776-1785
+  to: 'Paris, Champ de Mars'
+  title: "First inflammable-air balloon, Champ de Mars"
+  description: "To those who ask its use — 'What use is a newborn baby?'"
+  text: >-
+    Witnessed at Mr Charles's the ascent of the first inflammable-air balloon
+    from the Champ de Mars. To Mr Pringle and others who ask me "what use" I
+    answered — "What use is a newborn baby?"
+  references: ['PBF vol 38 doc 11']
+- projects: [legation-paris-1776-1785]
   type: reunion
   date: 1783-09-03T00:00:00.000Z
+  start: 1783-09-03T08:23:26.000Z
+  end: 1783-09-03T11:23:26.000Z
   hours: 3
-  startDate: 1783-09-03T08:23:26.000Z
-  endDate: 1783-09-03T11:23:26.000Z
-  note: Treaty of Paris signed at the Hôtel d'York. Hartley for Britain; Adams, Jay, self for the United States. The independence of the United States acknowledged. Seven years' work concluded.
-  alternateIds: ['Treaty of Paris, 3 Sep 1783']
-  placeTo: Paris, Hôtel d'York
-- project: legation-paris-1776-1785
+  to: "Paris, Hôtel d'York"
+  title: "Treaty of Paris signed"
+  description: "Independence acknowledged; seven years' work concluded."
+  text: >-
+    Treaty of Paris signed at the Hôtel d'York. Hartley for Britain; Adams,
+    Jay, self for the United States. The independence of the United States
+    acknowledged. Seven years' work concluded.
+  references: ['Treaty of Paris, 3 Sep 1783']
+- projects: [legation-paris-1776-1785]
   type: lettre
   date: 1784-03-09T00:00:00.000Z
   allDay: true
-  note: To Mesmer's commission — appointed by the King with Lavoisier, Bailly, Guillotin, and others to investigate animal magnetism. The blindfolded experiments will, I expect, end this fashionable craze.
-  alternateIds: ['PBF vol 42 doc 80']
-- project: correspondance-philosophes
+  title: "Appointed to the commission on animal magnetism"
+  description: "With Lavoisier, Bailly, Guillotin — the blindfold experiments to come."
+  text: >-
+    To Mesmer's commission — appointed by the King with Lavoisier, Bailly,
+    Guillotin, and others to investigate animal magnetism. The blindfolded
+    experiments will, I expect, end this fashionable craze.
+  references: ['PBF vol 42 doc 80']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1784-04-04T00:00:00.000Z
   allDay: true
-  note: To my daughter Sally — on the Society of the Cincinnati, the proposed hereditary order of officers. Am against it on principle of equal citizenship. Includes the famous discussion of the bald eagle vs the turkey.
-  footNote: private letter, never intended for publication
-  alternateIds: ['PBF vol 42 doc 6']
-  placeFrom: Passy
-- project: legation-paris-1776-1785
+  from: Passy
+  title: "To Sally — against the Society of the Cincinnati"
+  description: "On hereditary honours, and the bald eagle versus the turkey."
+  text: >-
+    To my daughter Sally — on the Society of the Cincinnati, the proposed
+    hereditary order of officers. Am against it on principle of equal
+    citizenship. Includes the famous discussion of the bald eagle vs the
+    turkey.
+  note: "Private letter, never intended for publication."
+  references: ['PBF vol 42 doc 6']
+- projects: [legation-paris-1776-1785]
   type: paiement
   date: 1785-07-10T00:00:00.000Z
   sum: 0
-  totalPrice: 0
-  note: Received the diamond portrait of His Most Christian Majesty this day, value c. 90,000 l.t. Gift on my departure.
-  footNote: gift; logged for transparency.
-  alternateIds: ['royal gift on departure']
-  priceNote: — (gift in kind)
-- project: domicile-market-street
+  total: 0
+  title: "Diamond portrait of the King received"
+  description: "Value c. 90,000 l.t.; a gift on my departure."
+  text: >-
+    Received the diamond portrait of His Most Christian Majesty this day, value
+    c. 90,000 l.t. Gift on my departure.
+  note: "Gift in kind; logged for transparency."
+  references: ['royal gift on departure']
+- projects: [domicile-market-street]
   type: lettre
   date: 1786-04-22T00:00:00.000Z
   allDay: true
-  note: Wrote to William Franklin, London — formal, brief, on the disposition of certain papers and lands in New Jersey. Have not forgiven him for taking the King's side. Will not.
-  footNote: last warm correspondence between them was 1773
-  alternateIds: ['PBF vol 44 doc 220']
-  placeTo: London
-- project: domicile-market-street
+  to: London
+  title: "To William Franklin — papers and lands"
+  description: "Formal and brief; I have not forgiven him, and will not."
+  text: >-
+    Wrote to William Franklin, London — formal, brief, on the disposition of
+    certain papers and lands in New Jersey. Have not forgiven him for taking
+    the King's side. Will not.
+  note: "Last warm correspondence between them was 1773."
+  references: ['PBF vol 44 doc 220']
+- projects: [domicile-market-street]
   type: note
   date: 1786-06-08T00:00:00.000Z
-  note: Benny (my grandson B. F. Bache) returned to me from Geneva at last, finishing his schooling. Am setting him up at Market Street with the founts and press from Passy. He shall be a printer, like his grandfather.
-  alternateIds: ['family']
-- project: domicile-market-street
+  title: "Benny returned from Geneva"
+  description: "Setting up B. F. Bache with the Passy press; he shall be a printer."
+  text: >-
+    Benny (my grandson B. F. Bache) returned to me from Geneva at last,
+    finishing his schooling. Am setting him up at Market Street with the founts
+    and press from Passy. He shall be a printer, like his grandfather.
+  references: ['family']
+- projects: [domicile-market-street]
   type: reunion
   date: 1787-05-25T00:00:00.000Z
+  start: 1787-05-25T08:23:26.000Z
+  end: 1787-05-25T13:23:26.000Z
   hours: 5
-  startDate: 1787-05-25T08:23:26.000Z
-  endDate: 1787-05-25T13:23:26.000Z
-  note: The Convention opens. Was carried in a sedan chair (a gift from a French friend) — the cobbles too painful for my carriage. Will dine the delegates at Market Street through the summer; cook to plan for 20.
-  placeTo: Philadelphia, State House
-- project: correspondance-philosophes
+  to: 'Philadelphia, State House'
+  title: "The Federal Convention opens"
+  description: "Carried in a sedan chair; will dine the delegates all summer."
+  text: >-
+    The Convention opens. Was carried in a sedan chair (a gift from a French
+    friend) — the cobbles too painful for my carriage. Will dine the delegates
+    at Market Street through the summer; cook to plan for 20.
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1787-09-17T00:00:00.000Z
   allDay: true
-  note: Convention rises. Wrote to Mme Helvétius, by the next packet — describing the Federal Constitution as the work of a long, tedious, but ultimately good-humoured assembly. Famous remark about the rising sun on the back of the President's chair.
-  footNote: '"I have the happiness to know that it is a rising and not a setting sun"'
-  alternateIds: ['PBF vol 36 doc 244']
-  placeTo: Philadelphia
-- project: correspondance-philosophes
+  to: Philadelphia
+  title: "Convention rises — the rising sun"
+  description: "To Mme Helvétius on the Constitution and the President's chair."
+  text: >-
+    Convention rises. Wrote to Mme Helvétius, by the next packet — describing
+    the Federal Constitution as the work of a long, tedious, but ultimately
+    good-humoured assembly. Famous remark about the rising sun on the back of
+    the President's chair.
+  note: '"I have the happiness to know that it is a rising and not a setting sun."'
+  references: ['PBF vol 36 doc 244']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1788-11-13T00:00:00.000Z
   allDay: true
-  note: To T. Jefferson, Paris — on his projected return to America, and on the news of M. Necker recalled. Storms gathering in France; the king's health alarmingly indifferent. (Of Louis I mean; the queen as bright as ever.)
-  alternateIds: ['PBF vol 38 doc 280']
-- project: correspondance-philosophes
+  title: "To T. Jefferson — Necker recalled"
+  description: "Storms gathering in France; the king's health alarmingly indifferent."
+  text: >-
+    To T. Jefferson, Paris — on his projected return to America, and on the
+    news of M. Necker recalled. Storms gathering in France; the king's health
+    alarmingly indifferent. (Of Louis I mean; the queen as bright as ever.)
+  references: ['PBF vol 38 doc 280']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1789-08-27T00:00:00.000Z
   allDay: true
-  note: From the Marquis de Lafayette, Paris — the Declaration of the Rights of Man and of the Citizen voted yesterday by the National Assembly. Asks for my emendations on the draft (sent in July). The work, he writes, is mine and Mr Jefferson's as much as France's.
-  alternateIds: ['PBF vol 46 doc 318']
-  placeFrom: Paris
-- project: experimentations-electricite
+  from: Paris
+  title: "From Lafayette — the Rights of Man"
+  description: "The Declaration voted; he asks my emendations on the draft."
+  text: >-
+    From the Marquis de Lafayette, Paris — the Declaration of the Rights of Man
+    and of the Citizen voted yesterday by the National Assembly. Asks for my
+    emendations on the draft (sent in July). The work, he writes, is mine and
+    Mr Jefferson's as much as France's.
+  references: ['PBF vol 46 doc 318']
+- projects: [experimentations-electricite]
   type: temps
   date: 1789-10-15T00:00:00.000Z
   hours: 2.5
-  note: Bifocal spectacles, finally settled in design. Optician in town to make my frames.
-  alternateIds: ['PBF vol 46 doc 318']
   remindTo: bfranklin
-- project: pennsylvania-abolition-society
+  title: "Bifocal spectacles settled in design"
+  description: "Optician in town to make my frames."
+  text: >-
+    Bifocal spectacles, finally settled in design. Optician in town to make my
+    frames.
+  references: ['PBF vol 46 doc 318']
+- projects: [pennsylvania-abolition-society]
   type: lettre
   date: 1789-11-08T00:00:00.000Z
   allDay: true
-  note: From G. Sharp — he encloses a presentation copy of The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African. Equiano sends his "most respectful compliments" to me and the PAS.
-  alternateIds: ['Sharp forwards copies to American allies']
-  placeFrom: London
-- project: pennsylvania-abolition-society
+  from: London
+  title: "From G. Sharp — Equiano's Narrative"
+  description: "A presentation copy, with Equiano's compliments to me and the PAS."
+  text: >-
+    From G. Sharp — he encloses a presentation copy of The Interesting
+    Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African.
+    Equiano sends his "most respectful compliments" to me and the PAS.
+  references: ['Sharp forwards copies to American allies']
+- projects: [pennsylvania-abolition-society]
   type: lettre
   date: 1790-02-03T00:00:00.000Z
   allDay: true
-  note: 'Memorial of the Pennsylvania Society for Promoting the Abolition of Slavery, signed B. Franklin, President. Presented to the First Congress this day by James Pemberton. The text, in part, as printed for the House: "Mankind are all formed by the same Almighty Being, alike objects of his care, and equally designed for the enjoyment of happiness, the Christian religion teaches us to believe, and the political creed of America fully coincides with the position. Your memorialists, particularly engaged in attending to the distresses arising from slavery, believe it their indispensable duty to present this subject to your notice. They have observed with great satisfaction that many important and salutary powers are vested in you for promoting the welfare and securing the blessings of liberty to the people of the United States; and as they conceive that these blessings ought rightfully to be administered without distinction of colour to all descriptions of people, so they indulge themselves in the pleasing expectation that nothing which can be done for the relief of the unhappy objects of their care will be either omitted or delayed."'
-  alternateIds: ['PBF vol 47 doc 8']
-  placeTo: New York, Federal Hall
   remindTo: bfranklin
-- project: correspondance-philosophes
+  to: 'New York, Federal Hall'
+  title: "PAS memorial presented to Congress"
+  description: "Signed B. Franklin, President; presented to the First Congress by James Pemberton."
+  text: >-
+    Memorial of the Pennsylvania Society for Promoting the Abolition of
+    Slavery, signed B. Franklin, President. Presented to the First Congress this
+    day by James Pemberton. The text, in part, as printed for the House:
+    "Mankind are all formed by the same Almighty Being, alike objects of his
+    care, and equally designed for the enjoyment of happiness, the Christian
+    religion teaches us to believe, and the political creed of America fully
+    coincides with the position. Your memorialists, particularly engaged in
+    attending to the distresses arising from slavery, believe it their
+    indispensable duty to present this subject to your notice. They have
+    observed with great satisfaction that many important and salutary powers
+    are vested in you for promoting the welfare and securing the blessings of
+    liberty to the people of the United States; and as they conceive that these
+    blessings ought rightfully to be administered without distinction of colour
+    to all descriptions of people, so they indulge themselves in the pleasing
+    expectation that nothing which can be done for the relief of the unhappy
+    objects of their care will be either omitted or delayed."
+  references: ['PBF vol 47 doc 8']
+- projects: [correspondance-philosophes]
   type: lettre
   date: 1790-03-09T00:00:00.000Z
   allDay: true
-  note: To Ezra Stiles, Yale — on the question of the divinity of Jesus, which he asks me directly. Answer that I have some doubts but think it needless to busy myself with them now, as I shall soon have opportunity to know the truth with less trouble.
-  alternateIds: ['PBF vol 47 doc 71']
-- project: pennsylvania-abolition-society
+  title: "To Ezra Stiles — on the divinity of Jesus"
+  description: "Some doubts, but I shall soon know the truth with less trouble."
+  text: >-
+    To Ezra Stiles, Yale — on the question of the divinity of Jesus, which he
+    asks me directly. Answer that I have some doubts but think it needless to
+    busy myself with them now, as I shall soon have opportunity to know the
+    truth with less trouble.
+  references: ['PBF vol 47 doc 71']
+- projects: [pennsylvania-abolition-society]
   type: lettre
   date: 1790-03-23T00:00:00.000Z
   allDay: true
-  note: Wrote to the Federal Gazette — "Sidi Mehemet Ibrahim on the Slave Trade." My satirical piece imagining an Algerian arguing for white Christian slavery using the exact arguments Congressman Jackson made on Feb 11. Sent it to print under my pseudonym Historicus.
-  footNote: satirical method learned from Voltaire
-  alternateIds: ['PBF vol 47 doc 79']
-  typeNote: 'pseudonymous: Historicus'
-  priceNote: £ Pa.
-  placeTo: Philadelphia
-- project: correspondance-philosophes
+  unit: '£ Pa.'
+  to: Philadelphia
+  title: "'Sidi Mehemet Ibrahim on the Slave Trade'"
+  description: "A satire answering Congressman Jackson, under the name Historicus."
+  text: >-
+    Wrote to the Federal Gazette — "Sidi Mehemet Ibrahim on the Slave Trade."
+    My satirical piece imagining an Algerian arguing for white Christian
+    slavery using the exact arguments Congressman Jackson made on Feb 11. Sent
+    it to print under my pseudonym Historicus.
+  note: "Satirical method learned from Voltaire. — pseudonymous: Historicus."
+  references: ['PBF vol 47 doc 79']
+- projects: [correspondance-philosophes]
   type: note
   date: 1790-04-12T00:00:00.000Z
   user: phewson
-  note: Failing now. The pleurisy returned. Polly Hewson and Sally by the bed. Asked Sally to change the bedclothes "that I may die in a decent manner."
-  footNote: recorded at the bedside by Polly Hewson
-  alternateIds: ['last conscious entry']
-  placeTo: Philadelphia, Market Street
+  to: 'Philadelphia, Market Street'
+  title: "The last entry"
+  description: "The pleurisy returned; 'that I may die in a decent manner.'"
+  text: >-
+    Failing now. The pleurisy returned. Polly Hewson and Sally by the bed.
+    Asked Sally to change the bedclothes "that I may die in a decent manner."
+  note: "Recorded at the bedside by Polly Hewson."
+  references: ['last conscious entry']

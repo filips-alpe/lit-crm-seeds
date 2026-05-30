@@ -2,25 +2,26 @@ export type SeedStatus = 'ACTIVE' | 'INACTIVE';
 
 export type SeedRecord = {
   type: string;
-  date: Date;
+  key?: string;
+  linkedTo?: string;
+  title?: string;
+  description?: string;
+  text?: string;
+  note?: string;
+  references: string[];
+  date?: Date;
+  start?: Date;
+  end?: Date;
   allDay?: boolean;
   sum?: number;
   hours?: number;
-  totalPrice?: number;
-  startDate?: Date;
-  endDate?: Date;
-  note?: string;
-  footNote?: string;
-  alternateIds: string[];
-  projectNote?: string;
-  typeNote?: string;
-  priceNote?: string;
-  bookNote?: string;
-  placeFrom?: string;
-  placeTo?: string;
+  total?: number;
+  unit?: string;
+  from?: string;
+  to?: string;
+  user?: string;
   remindTo?: string;
   status?: SeedStatus;
-  user?: string;
 };
 
 export type SeedProject = {
@@ -39,10 +40,11 @@ export type SeedProjectMeta = {
   assignee?: string;
 };
 
-export type SeedRecordFlat = SeedRecord & { project: string };
+export type SeedRecordFlat = SeedRecord & { projects: string[] };
 
 export type SeedType = {
   code: string;
   description: string;
   color: string;
+  iconSeed?: string;
 };
