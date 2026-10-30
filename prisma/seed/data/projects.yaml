@@ -1,34 +1,129 @@
-- code: imprimerie-philadelphia
-  description: Franklin & Hall printing house, Market Street. Pennsylvania Gazette, Poor Richard, almanacks, jobbing work. Partnership with David Hall since 1748; quarterly remittances continue until 1766 dissolution and beyond as a long tail.
-  status: ACTIVE
-  color: '#1f3a5f'
-- code: pennsylvania-abolition-society
-  description: Pennsylvania Society for Promoting the Abolition of Slavery — Franklin elected President 1787. Society dues, petitions, transatlantic correspondence with Granville Sharp, Thomas Clarkson, Josiah Wedgwood, and Olaudah Equiano. The Equiano thread carries footNote flags where direct correspondence is plausible-but-undocumented.
-  status: ACTIVE
-  color: '#b8860b'
-- code: experimentations-electricite
-  description: Lightning rods, the Franklin stove (Pennsylvanian Fire-Place), the glass armonica, and the long-running natural philosophy correspondence with Collinson, Priestley, Ingenhousz, and Lavoisier. A revenue stream as well as a calling.
-  status: ACTIVE
-  color: '#d4af37'
-- code: correspondance-philosophes
-  description: 'The wider correspondence: Voltaire, Lavoisier, Priestley, Jefferson, Adams, Madame Brillon, Madame Helvétius, Polly Stevenson, and — kept in this ledger but flagged — Edward Bancroft, the "secretary" who was on the British payroll from 1776.'
-  status: ACTIVE
-  color: '#8b4513'
-- code: domicile-market-street
-  description: 'Household in Philadelphia after the return from France. Sally and Richard Bache, the grandchildren Benny and Willy, servants, repairs, wine and provisions. Also: the long shadow of William Franklin, estranged Loyalist son in London.'
-  status: ACTIVE
-  color: '#c4a484'
-- code: agence-londres-1757-1775
-  description: ARCHIVED. The London years as colonial agent for Pennsylvania, then Massachusetts, Georgia, New Jersey. Craven Street lodgings with Mrs Stevenson and Polly. Penn family negotiations, Stamp Act examination, the Hutchinson letters affair, and the Cockpit humiliation that turned a loyal subject into a revolutionary.
-  status: INACTIVE
-  color: '#4b6584'
-- code: legation-paris-1776-1785
-  description: ARCHIVED. Minister Plenipotentiary to the Court of France, then Commissioner with Adams and Lee, then sole Minister. Beaumarchais's Roderigue Hortalez et Cie, French treasury loans, the Treaty of Alliance, the John Paul Jones outfitting, the Treaty of Paris. And Bancroft on the payroll, leaking to London the whole time.
-  status: INACTIVE
-  color: '#5c2c2c'
-  assignee: wtfranklin
-- code: presse-passy-1777-1785
-  description: ARCHIVED. The private press in the garden at Passy. Bagatelles for the salons; jeux d'esprit; and — the working end — pseudonymous propaganda culminating in the forged Supplement to the Boston Independent Chronicle of 12 March 1782. Type, paper, and a French compositor; everything else done by hand by B.F.
-  status: INACTIVE
-  color: '#2c1810'
-  assignee: wtfranklin
+- code: periode-boston-1706-1723
+  description: "Boston, 1706–1723. First document of this period in the generated
+    set: Record of Birth, 6 January 1706
+    (https://founders.archives.gov/documents/Franklin/01-01-02-0001)."
+  color: "#3f5e6b"
+- code: periode-londres-1724-1726
+  description: "First London sojourn, 1724–1726. First document of this period in
+    the generated set: Birth of Patience Wright (wikidata:Q1397018:birth)."
+  color: "#5c4b8a"
+- code: periode-philadelphie-1723-1757
+  description: "Philadelphia, 1723–1757. First document of this period in the
+    generated set: Birth of Joseph Hawley (wikidata:Q6283855:birth)."
+  color: "#7a5c3e"
+- code: periode-londres-agence-1757-1762
+  description: "London, colonial agent, 1757–1762. First document of this period
+    in the generated set: Account of Expenses, 1757–1762
+    (https://founders.archives.gov/documents/Franklin/01-07-02-0065)."
+  color: "#4b6584"
+- code: periode-philadelphie-1762-1764
+  description: "Philadelphia, 1762–1764. First document of this period in the
+    generated set: Benjamin Franklin to Lord and Lady Bathurst, [before 13
+    February 1768]
+    (https://founders.archives.gov/documents/Franklin/01-15-02-0023)."
+  color: "#8a6d3e"
+- code: periode-londres-1764-1775
+  description: "London, agent for several colonies, 1764–1775. First document of
+    this period in the generated set: Pennsylvania Assembly Committee of
+    Correspondence to Benjamin Franklin, 1 November 1764
+    (https://founders.archives.gov/documents/Franklin/01-11-02-0119)."
+  color: "#2f4f6f"
+- code: periode-congres-1775-1776
+  description: "Second Continental Congress, 1775–1776. First document of this
+    period in the generated set: Death of Thomas Penn
+    (wikidata:Q7793095:death)."
+  color: "#6b2c2c"
+- code: periode-france-1776-1785
+  description: "Mission to France, 1776–1785. First document of this period in the
+    generated set: Jacques-Donatien Le Ray de Chaumont to Benjamin Franklin,
+    [before 4 January 1777]
+    (https://founders.archives.gov/documents/Franklin/01-23-02-0065)."
+  color: "#5c2c2c"
+- code: periode-philadelphie-1785-1790
+  description: "Philadelphia, return and final years, 1785–1790. First document of
+    this period in the generated set: De la Lande & Fynje to John Adams, 1 July
+    1785 (https://founders.archives.gov/documents/Adams/06-17-02-0119)."
+  color: "#2e7d32"
+- code: theme-electricite
+  description: "Electrical experiments — keyword-matched thematic project.
+    Earliest matching document: Thomas-François Dalibard: Report of an
+    Experiment with Lightning, 13 May 1752
+    (https://founders.archives.gov/documents/Franklin/01-04-02-0105). 14
+    documents matched by keyword."
+  color: "#d4af37"
+- code: theme-imprimerie
+  description: "Printing, the Gazette & Poor Richard — keyword-matched thematic
+    project. Earliest matching document: The Printer to the Reader, 11 February
+    1723 (https://founders.archives.gov/documents/Franklin/01-01-02-0023). 71
+    documents matched by keyword."
+  color: "#1f3a5f"
+- code: theme-library-company
+  description: "Library Company of Philadelphia — keyword-matched thematic
+    project. Earliest matching document: Joseph Breintnall to Directors of
+    Library Company, 8 November 1731
+    (https://founders.archives.gov/documents/Franklin/01-01-02-0065). 31
+    documents matched by keyword."
+  color: "#00838f"
+- code: theme-aps
+  description: "American Philosophical Society — keyword-matched thematic project.
+    Earliest matching document: Arthur Lee — member of American Philosophical
+    Society (wikidata:Q2865204:member:Q466089:1768-01-01). 27 documents matched
+    by keyword."
+  color: "#6a4f8a"
+- code: theme-academy
+  description: "Academy of Philadelphia — keyword-matched thematic project.
+    Earliest matching document: Constitutions of the Academy of Philadelphia,
+    [13 November 1749]
+    (https://founders.archives.gov/documents/Franklin/01-03-02-0167). 2
+    documents matched by keyword."
+  color: "#8a6d3e"
+- code: theme-pennsylvania-hospital
+  description: "Pennsylvania Hospital — keyword-matched thematic project. Earliest
+    matching document: Petition for the Pennsylvania Hospital, 23 January 1751
+    (https://founders.archives.gov/documents/Franklin/01-04-02-0032). 23
+    documents matched by keyword."
+  color: "#b8860b"
+- code: theme-post-office
+  description: "Post Office — keyword-matched thematic project. Earliest matching
+    document: Philadelphia Post Office Record Books, 1737–53
+    (https://founders.archives.gov/documents/Franklin/01-02-02-0030). 22
+    documents matched by keyword."
+  color: "#455a64"
+- code: theme-albany-plan
+  description: "Albany Plan of Union — keyword-matched thematic project. Earliest
+    matching document: The Albany Plan of Union, 1754
+    (https://founders.archives.gov/documents/Franklin/01-05-02-0104). 5
+    documents matched by keyword."
+  color: "#4a4f7a"
+- code: theme-stamp-act
+  description: "Stamp Act — keyword-matched thematic project. Earliest matching
+    document: Fragments of a Pamphlet on the Stamp Act, [January 1766]
+    (https://founders.archives.gov/documents/Franklin/01-13-02-0024). 3
+    documents matched by keyword."
+  color: "#8b4513"
+- code: theme-hutchinson-letters
+  description: "Hutchinson letters affair — keyword-matched thematic project.
+    Earliest matching document: On the Hutchinson Letters, 31 August 1773
+    (https://founders.archives.gov/documents/Franklin/01-20-02-0206). 3
+    documents matched by keyword."
+  color: "#5c2c2c"
+- code: theme-alliance-france
+  description: "French alliance & loans — keyword-matched thematic project.
+    Earliest matching document: Birth of Charles Gravier, comte de Vergennes
+    (wikidata:Q726681:birth). 454 documents matched by keyword."
+  color: "#2f4f8a"
+- code: theme-paix-1783
+  description: "Peace of Paris, 1782–1783 — keyword-matched thematic project.
+    Earliest matching document: Franklin: Proposed Article for the Definitive
+    Treaty, [on or before 13 December 1782]
+    (https://founders.archives.gov/documents/Franklin/01-38-02-0329). 6
+    documents matched by keyword."
+  color: "#3a5a40"
+- code: theme-abolition
+  description: Abolition of slavery — keyword-matched thematic project. No
+    generated document matched this theme.
+  color: "#b8860b"
+- code: theme-presse-passy
+  description: Private press at Passy — keyword-matched thematic project. No
+    generated document matched this theme.
+  color: "#5e503f"

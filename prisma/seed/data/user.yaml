@@ -18,3 +18,51 @@
   name: William Temple Franklin
   bio: Grandson and secretary at Passy. Took down dictation for the autobiography.
   color: '#3a5a40'
+- username: wfranklin
+  name: William Franklin
+  bio: Son. Last royal Governor of New Jersey, and a loyalist — the estrangement of the war years never quite healed.
+  color: '#5a3a2e'
+- username: sbache
+  name: Sarah Bache
+  bio: Daughter, "Sally". Kept the Philadelphia household and led the women's relief drive for the Continental Army.
+  color: '#9a3f5e'
+- username: pcollinson
+  name: Peter Collinson
+  bio: London Quaker merchant and naturalist. Fellow of the Royal Society who forwarded the electrical letters and the glass tube that began it all.
+  color: '#2e5a4a'
+- username: tcushing
+  name: Thomas Cushing
+  bio: Speaker of the Massachusetts House, Boston. Official correspondent during the agency years.
+  color: '#4a4f7a'
+- username: ahelvetius
+  name: Anne-Catherine Helvétius
+  bio: 'Madame Helvétius of Auteuil. Widow whose salon gathered the philosophes; the bantering affection of the Passy years.'
+  color: '#8a5a7a'
+- username: jadams
+  name: John Adams
+  bio: Massachusetts lawyer and fellow commissioner in France. A colleague of warmer temper and cooler regard.
+  color: '#3f5a6a'
+- username: tjefferson
+  name: Thomas Jefferson
+  bio: Virginian, successor as Minister to France. Correspondent on philosophy, politics, and the news from Paris.
+  color: '#5a6a3a'
+- username: lafayette
+  name: Marquis de Lafayette
+  bio: French officer and ally of the Revolution who came to think of Franklin as a master in the cause of liberty.
+  color: '#3a4f8a'
+- username: gsharp
+  name: Granville Sharp
+  bio: London abolitionist and fellow labourer against the slave trade. Forwarded Equiano's Narrative.
+  color: '#6a4a3a'
+- username: estiles
+  name: Ezra Stiles
+  bio: President of Yale and clergyman, to whom Franklin set down his creed on the divinity of Jesus.
+  color: '#4a5a5a'
+- username: jcaillot
+  name: Jacques Caillot
+  bio: 'ILLUSTRATIVE. The French compositor at the Passy press — attested as a role but unnamed in the record; stands in here for a registered performer with his own id. A person, registered in the DB.'
+  color: '#5e503f'
+- username: montgolfier
+  name: Montgolfier paper-works, Annonay
+  bio: 'ILLUSTRATIVE. A French paper supplier (the Montgolfiers were the noted papermakers of the day); stands in for a supplier registered in the DB before the transaction. A company, given its own id.'
+  color: '#7d6b58'

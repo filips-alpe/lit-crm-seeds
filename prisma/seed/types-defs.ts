@@ -1,50 +1,61 @@
-export type SeedStatus = 'ACTIVE' | 'INACTIVE';
-
-export type SeedRecord = {
+/** A generated record as the loader hands it to the seeder (see pipeline/record-mapper.ts). */
+export type SeedRecordFlat = {
   type: string;
-  key?: string;
-  linkedTo?: string;
   title?: string;
   description?: string;
   text?: string;
   note?: string;
   references: string[];
-  date?: Date;
-  start?: Date;
-  end?: Date;
+  // ISO date strings: the generated import stores plain ISO strings in JSON.
+  // `new Date(...)` in index.ts accepts them.
+  entered: string; // NS date -> createdAt
+  date?: string; // `date` column (Old Style before 1752)
+  start?: string;
+  end?: string;
   allDay?: boolean;
-  sum?: number;
-  hours?: number;
-  total?: number;
-  unit?: string;
   from?: string;
   to?: string;
-  user?: string;
-  remindTo?: string;
-  status?: SeedStatus;
-};
-
-export type SeedProject = {
-  code: string;
-  description: string;
-  status?: SeedStatus;
-  color: string;
-  records: SeedRecord[];
+  fromGeo?: string;
+  toGeo?: string;
+  user?: string; // creator username
+  assignee?: string; // assignee username
+  projects: string[];
 };
 
 export type SeedProjectMeta = {
   code: string;
   description: string;
-  status?: SeedStatus;
+  status?: 'ACTIVE' | 'INACTIVE';
   color: string;
   assignee?: string;
 };
 
-export type SeedRecordFlat = SeedRecord & { projects: string[] };
+export type SeedLayoutField = {
+  id: string;
+  label: string;
+  kind:
+    | 'text'
+    | 'markdown'
+    | 'number'
+    | 'date'
+    | 'datetime'
+    | 'list'
+    | 'location'
+    | 'user'
+    | 'record';
+  writeTo: string;
+};
+
+export type SeedLayout = {
+  fields: SeedLayoutField[];
+};
 
 export type SeedType = {
   code: string;
   description: string;
   color: string;
   iconSeed?: string;
+  layout?: SeedLayout;
+  // Optional installed renderer id (from the renderer registry).
+  rendererId?: string;
 };

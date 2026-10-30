@@ -1,32 +1,190 @@
-- code: facture
-  description: Invoice issued to a counterparty
-  color: '#2e7d32'
-  iconSeed: receipt-quill
-- code: depense
-  description: Expense / outgoing payment
-  color: '#c62828'
-  iconSeed: purse-out
-- code: paiement
-  description: Payment received
-  color: '#1565c0'
-  iconSeed: purse-in
-- code: lettre
-  description: Correspondence (in or out)
-  color: '#6a1b9a'
-  iconSeed: sealed-letter
-- code: reunion
-  description: Meeting, audience or salon
-  color: '#ef6c00'
-  iconSeed: salon-chairs
-- code: souscription
-  description: Subscription, dues, or pension
-  color: '#00838f'
-  iconSeed: ledger-ring
-- code: temps
-  description: Time / hours entry
-  color: '#455a64'
-  iconSeed: pocket-watch
+# Types derived from the actual Founders Online / Wikidata data (see prisma/seed/pipeline/classifier.ts).
+# Each layout maps its fields onto the shared record columns.
+- code: letter
+  description: Letter or dispatch between correspondents (people or institutions)
+  color: '#3b6ea5'
+  iconSeed: envelope
+  rendererId: letter
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: From, kind: text, writeTo: from }
+      - { id: creator, label: 'From (person)', kind: user, writeTo: creatorId }
+      - { id: to, label: To, kind: text, writeTo: to }
+      - { id: assignee, label: 'To (person)', kind: user, writeTo: assigneeId }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: diary
+  description: Dated diary or journal entry
+  color: '#7b5e3b'
+  iconSeed: journal
+  rendererId: diary
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: creator, label: 'Author (person)', kind: user, writeTo: creatorId }
+      - { id: body, label: Entry, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: essay
+  description: 'Authored piece: essay, verse, almanac, series, hoax'
+  color: '#283593'
+  iconSeed: quill
+  rendererId: essay
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: start, label: Start, kind: date, writeTo: start }
+      - { id: end, label: End, kind: date, writeTo: end }
+      - { id: from, label: Author, kind: text, writeTo: from }
+      - { id: creator, label: 'Author (person)', kind: user, writeTo: creatorId }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
 - code: note
-  description: General log entry, observation, or memo
-  color: '#757575'
-  iconSeed: memorandum
+  description: Memorandum, notes, extracts, remarks, plans
+  color: '#8d6e63'
+  iconSeed: memo
+  rendererId: note
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: start, label: Start, kind: date, writeTo: start }
+      - { id: end, label: End, kind: date, writeTo: end }
+      - { id: from, label: From, kind: text, writeTo: from }
+      - { id: to, label: To, kind: text, writeTo: to }
+      - { id: creator, label: 'Author (person)', kind: user, writeTo: creatorId }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: instrument
+  description: 'Legal or official instrument: treaty, contract, certificate, commission, deed, act'
+  color: '#6a1b4d'
+  iconSeed: seal
+  rendererId: instrument
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: Parties, kind: text, writeTo: from }
+      - { id: to, label: Counterparty, kind: text, writeTo: to }
+      - { id: creator, label: 'Party (person)', kind: user, writeTo: creatorId }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: proceedings
+  description: Minutes, report, resolution, message, speech
+  color: '#00695c'
+  iconSeed: gavel
+  rendererId: proceedings
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: Body, kind: text, writeTo: from }
+      - { id: to, label: Addressed to, kind: text, writeTo: to }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: account
+  description: Account, bill, receipt, list, inventory, subscription
+  color: '#9a6b00'
+  iconSeed: ledger
+  rendererId: account
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: start, label: Start, kind: date, writeTo: start }
+      - { id: end, label: End, kind: date, writeTo: end }
+      - { id: from, label: From, kind: text, writeTo: from }
+      - { id: to, label: To, kind: text, writeTo: to }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: petition
+  description: Petition, memorial, proposal, address
+  color: '#b23a48'
+  iconSeed: scroll
+  rendererId: petition
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: 'Petitioner(s)', kind: text, writeTo: from }
+      - { id: to, label: Addressed to, kind: text, writeTo: to }
+      - { id: creator, label: 'Petitioner (person)', kind: user, writeTo: creatorId }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: document
+  description: Other document
+  color: '#607d8b'
+  iconSeed: folder
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: From, kind: text, writeTo: from }
+      - { id: to, label: To, kind: text, writeTo: to }
+      - { id: body, label: Text, kind: markdown, writeTo: text }
+      - { id: note, label: Note, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: life
+  description: 'Life event: birth, baptism, marriage, death, child'
+  color: '#c2185b'
+  iconSeed: star
+  rendererId: life
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: Person, kind: text, writeTo: from }
+      - { id: creator, label: 'Person (user)', kind: user, writeTo: creatorId }
+      - { id: to, label: Place, kind: text, writeTo: to }
+      - { id: toGeo, label: 'Place (location)', kind: location, writeTo: toGeo }
+      - { id: detail, label: Details, kind: text, writeTo: description }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: office
+  description: Office or position held
+  color: '#1565c0'
+  iconSeed: crown
+  rendererId: office
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: start, label: Start, kind: date, writeTo: start }
+      - { id: end, label: End, kind: date, writeTo: end }
+      - { id: from, label: Holder, kind: text, writeTo: from }
+      - { id: creator, label: 'Holder (user)', kind: user, writeTo: creatorId }
+      - { id: to, label: Of, kind: text, writeTo: to }
+      - { id: toGeo, label: 'Place (location)', kind: location, writeTo: toGeo }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: membership
+  description: 'Membership or honour: society, academy, award'
+  color: '#2e7d32'
+  iconSeed: rosette
+  rendererId: membership
+  layout:
+    fields:
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: start, label: Start, kind: date, writeTo: start }
+      - { id: end, label: End, kind: date, writeTo: end }
+      - { id: from, label: Member, kind: text, writeTo: from }
+      - { id: creator, label: 'Member (user)', kind: user, writeTo: creatorId }
+      - { id: to, label: Body, kind: text, writeTo: to }
+      - { id: refs, label: Sources, kind: list, writeTo: references }

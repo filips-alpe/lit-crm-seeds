@@ -1,0 +1,6451 @@
+{
+  "demo": [
+    "Adams, John",
+    "Bache, Sarah Franklin",
+    "Caillot, Joseph",
+    "Collinson, Peter",
+    "Cushing, Thomas",
+    "Franklin, Benjamin",
+    "Franklin, Deborah",
+    "Franklin, William",
+    "Franklin, William Temple",
+    "Helvétius, Anne-Catherine de Ligniville",
+    "Hewson, Mary (Polly) Stevenson",
+    "Jefferson, Thomas",
+    "Lafayette, Marie-Joseph-Paul-Yves-Roch-Gilbert du Motier, marquis de",
+    "Montgolfier, Jacques-Etienne",
+    "Montgolfier, Jacques-Étienne",
+    "Montgolfier, Maurice-Augustin",
+    "Sharp, Granville",
+    "Stevenson, Margaret",
+    "Stiles, Ezra"
+  ],
+  "top": [
+    {
+      "name": "Adams, John",
+      "count": 1457
+    },
+    {
+      "name": "Lee, Arthur",
+      "count": 1412
+    },
+    {
+      "name": "Deane, Silas",
+      "count": 573
+    },
+    {
+      "name": "Jay, John",
+      "count": 347
+    },
+    {
+      "name": "Vergennes, Charles Gravier, comte de",
+      "count": 328
+    },
+    {
+      "name": "Dumas, Charles-Guillaume-Frédéric",
+      "count": 313
+    },
+    {
+      "name": "Sartine, Antoine-Raymond-Gualbert-Gabriel de",
+      "count": 198
+    },
+    {
+      "name": "Hartley, David",
+      "count": 175
+    },
+    {
+      "name": "Franklin, Deborah",
+      "count": 173
+    },
+    {
+      "name": "Jones, John Paul",
+      "count": 154
+    },
+    {
+      "name": "Bondfield, John",
+      "count": 135
+    },
+    {
+      "name": "Strahan, William",
+      "count": 135
+    },
+    {
+      "name": "Hewson, Mary (Polly) Stevenson",
+      "count": 134
+    },
+    {
+      "name": "Laurens, Henry",
+      "count": 124
+    },
+    {
+      "name": "Brillon de Jouy, Anne-Louise Boivin d’Hardancourt",
+      "count": 122
+    },
+    {
+      "name": "Bache, Richard",
+      "count": 120
+    },
+    {
+      "name": "Mecom, Jane",
+      "count": 101
+    },
+    {
+      "name": "Barbeu-Dubourg, Jacques",
+      "count": 99
+    },
+    {
+      "name": "Digges, Thomas",
+      "count": 97
+    },
+    {
+      "name": "Lafayette, Marie-Joseph-Paul-Yves-Roch-Gilbert du Motier, marquis de",
+      "count": 96
+    },
+    {
+      "name": "Le Roy, Jean Baptiste",
+      "count": 96
+    },
+    {
+      "name": "Morris, Robert",
+      "count": 95
+    },
+    {
+      "name": "Franklin, William",
+      "count": 91
+    },
+    {
+      "name": "Parker, James",
+      "count": 90
+    },
+    {
+      "name": "Collinson, Peter",
+      "count": 82
+    },
+    {
+      "name": "Jefferson, Thomas",
+      "count": 81
+    },
+    {
+      "name": "Washington, George",
+      "count": 80
+    },
+    {
+      "name": "Hall, David",
+      "count": 76
+    },
+    {
+      "name": "Galloway, Joseph",
+      "count": 75
+    },
+    {
+      "name": "Vaughan, Benjamin",
+      "count": 75
+    },
+    {
+      "name": "Cooper, Samuel",
+      "count": 74
+    },
+    {
+      "name": "Dickinson, John",
+      "count": 71
+    },
+    {
+      "name": "Grand, Rodolphe-Ferdinand",
+      "count": 70
+    },
+    {
+      "name": "Hodgson, William",
+      "count": 70
+    },
+    {
+      "name": "Livingston, Robert R.",
+      "count": 70
+    },
+    {
+      "name": "Harrison, Benjamin",
+      "count": 69
+    },
+    {
+      "name": "Schweighauser, Jean-Daniel",
+      "count": 68
+    },
+    {
+      "name": "Johnson, Thomas",
+      "count": 67
+    },
+    {
+      "name": "Carmichael, William",
+      "count": 66
+    },
+    {
+      "name": "Ingenhousz, Jan",
+      "count": 63
+    },
+    {
+      "name": "Coffyn, Francis",
+      "count": 61
+    },
+    {
+      "name": "Cushing, Thomas",
+      "count": 58
+    },
+    {
+      "name": "Landais, Pierre",
+      "count": 58
+    },
+    {
+      "name": "Norris, Isaac",
+      "count": 58
+    },
+    {
+      "name": "Jackson, Richard",
+      "count": 56
+    },
+    {
+      "name": "Lee, William",
+      "count": 55
+    },
+    {
+      "name": "Colden, Cadwallader",
+      "count": 54
+    },
+    {
+      "name": "Wharton, Samuel",
+      "count": 51
+    },
+    {
+      "name": "Franklin, William Temple",
+      "count": 46
+    },
+    {
+      "name": "Bache, Sarah Franklin",
+      "count": 45
+    },
+    {
+      "name": "Ross, John",
+      "count": 45
+    },
+    {
+      "name": "Wickes, Lambert",
+      "count": 44
+    },
+    {
+      "name": "La Rochefoucauld, Louis-Alexandre, duc de La Roche-Guyon et de",
+      "count": 43
+    },
+    {
+      "name": "Dumas, Charles William Frederick",
+      "count": 42
+    },
+    {
+      "name": "Foxcroft, John",
+      "count": 42
+    },
+    {
+      "name": "Logan, James",
+      "count": 42
+    },
+    {
+      "name": "Izard, Ralph",
+      "count": 41
+    },
+    {
+      "name": "Bache, Benjamin Franklin",
+      "count": 40
+    },
+    {
+      "name": "Kéralio, Agathon Guynement, chevalier de",
+      "count": 40
+    },
+    {
+      "name": "Todd, Anthony",
+      "count": 40
+    },
+    {
+      "name": "Moylan, James",
+      "count": 39
+    },
+    {
+      "name": "Price, Richard",
+      "count": 37
+    },
+    {
+      "name": "Torris, John",
+      "count": 37
+    },
+    {
+      "name": "Bowdoin, James",
+      "count": 36
+    },
+    {
+      "name": "Chaumont",
+      "count": 36
+    },
+    {
+      "name": "Lovell, James",
+      "count": 36
+    },
+    {
+      "name": "Priestley, Joseph",
+      "count": 36
+    },
+    {
+      "name": "Barclay, Thomas",
+      "count": 35
+    },
+    {
+      "name": "Thomson, Charles",
+      "count": 35
+    },
+    {
+      "name": "Shipley, Jonathan",
+      "count": 33
+    },
+    {
+      "name": "Gérard de Rayneval (Reyneval), Joseph Matthias",
+      "count": 32
+    },
+    {
+      "name": "Alexander, William",
+      "count": 30
+    },
+    {
+      "name": "Huntington, Samuel",
+      "count": 30
+    },
+    {
+      "name": "Jones, Noble Wimberly",
+      "count": 30
+    },
+    {
+      "name": "Nesbitt, Jonathan",
+      "count": 30
+    },
+    {
+      "name": "Newenham, Sir Edward",
+      "count": 30
+    },
+    {
+      "name": "Bingham, William",
+      "count": 29
+    },
+    {
+      "name": "Hutton, James",
+      "count": 29
+    },
+    {
+      "name": "Stiles, Ezra",
+      "count": 29
+    },
+    {
+      "name": "Greene, Catharine",
+      "count": 28
+    },
+    {
+      "name": "Hopkinson, Francis",
+      "count": 28
+    },
+    {
+      "name": "Barclay, David Junior",
+      "count": 27
+    },
+    {
+      "name": "Fothergill, John",
+      "count": 27
+    },
+    {
+      "name": "Genet, Edmé Jacques",
+      "count": 27
+    },
+    {
+      "name": "Oswald, Richard",
+      "count": 27
+    },
+    {
+      "name": "Castries, Charles Eugène Gabriel de La Croix, marquis de",
+      "count": 26
+    },
+    {
+      "name": "Shaffer, John",
+      "count": 26
+    },
+    {
+      "name": "Gérard, Conrad Alexandre",
+      "count": 25
+    },
+    {
+      "name": "Vicq d’Azyr, Félix",
+      "count": 24
+    },
+    {
+      "name": "Evans, Cadwalader",
+      "count": 23
+    },
+    {
+      "name": "Peters, Richard",
+      "count": 23
+    },
+    {
+      "name": "Sarsfield, Guy Claude, Comte de",
+      "count": 23
+    },
+    {
+      "name": "Bancroft, Edward",
+      "count": 22
+    },
+    {
+      "name": "Rush, Benjamin",
+      "count": 22
+    },
+    {
+      "name": "Bridgen, Edward",
+      "count": 21
+    },
+    {
+      "name": "Melmoth, Courtney",
+      "count": 21
+    },
+    {
+      "name": "Wharton, Thomas",
+      "count": 21
+    },
+    {
+      "name": "Williams, Jonathan",
+      "count": 21
+    },
+    {
+      "name": "Banks, Joseph",
+      "count": 20
+    },
+    {
+      "name": "Chaumont, Jacques Donatien, Leray de",
+      "count": 20
+    }
+  ],
+  "people": [
+    {
+      "name": "Franklin, Benjamin",
+      "count": 14130,
+      "from": 1718,
+      "to": 1790
+    },
+    {
+      "name": "Adams, John",
+      "count": 7356,
+      "from": 1768,
+      "to": 1790
+    },
+    {
+      "name": "Washington, George",
+      "count": 2143,
+      "from": 1756,
+      "to": 1790
+    },
+    {
+      "name": "Jefferson, Thomas",
+      "count": 1574,
+      "from": 1775,
+      "to": 1790
+    },
+    {
+      "name": "Lee, Arthur",
+      "count": 1503,
+      "from": 1771,
+      "to": 1789
+    },
+    {
+      "name": "Jay, John",
+      "count": 1194,
+      "from": 1765,
+      "to": 1790
+    },
+    {
+      "name": "Huntington, Samuel",
+      "count": 695,
+      "from": 1779,
+      "to": 1790
+    },
+    {
+      "name": "Deane, Silas",
+      "count": 611,
+      "from": 1775,
+      "to": 1789
+    },
+    {
+      "name": "Lafayette, Marie-Joseph-Paul-Yves-Roch-Gilbert du Motier, marquis de",
+      "count": 587,
+      "from": 1777,
+      "to": 1790
+    },
+    {
+      "name": "Dumas, Charles William Frederick",
+      "count": 502,
+      "from": 1778,
+      "to": 1790
+    },
+    {
+      "name": "Adams, Abigail",
+      "count": 488,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Vergennes, Charles Gravier, comte de",
+      "count": 440,
+      "from": 1776,
+      "to": 1787
+    },
+    {
+      "name": "Laurens, Henry",
+      "count": 434,
+      "from": 1777,
+      "to": 1789
+    },
+    {
+      "name": "Morris, Robert",
+      "count": 419,
+      "from": 1775,
+      "to": 1790
+    },
+    {
+      "name": "Dumas, Charles-Guillaume-Frédéric",
+      "count": 316,
+      "from": 1768,
+      "to": 1789
+    },
+    {
+      "name": "Livingston, Robert R.",
+      "count": 315,
+      "from": 1765,
+      "to": 1789
+    },
+    {
+      "name": "President of Congress",
+      "count": 294,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Bondfield, John",
+      "count": 272,
+      "from": 1777,
+      "to": 1789
+    },
+    {
+      "name": "Jones, John Paul",
+      "count": 244,
+      "from": 1777,
+      "to": 1789
+    },
+    {
+      "name": "Sartine, Antoine-Raymond-Gualbert-Gabriel de",
+      "count": 229,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Harrison, Benjamin",
+      "count": 221,
+      "from": 1775,
+      "to": 1789
+    },
+    {
+      "name": "Hartley, David",
+      "count": 199,
+      "from": 1775,
+      "to": 1789
+    },
+    {
+      "name": "Carmichael, William",
+      "count": 194,
+      "from": 1777,
+      "to": 1790
+    },
+    {
+      "name": "Jenings, Edmund",
+      "count": 188,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Franklin, Deborah",
+      "count": 183,
+      "from": 1734,
+      "to": 1774
+    },
+    {
+      "name": "Lovell, James",
+      "count": 173,
+      "from": 1775,
+      "to": 1790
+    },
+    {
+      "name": "Digges, Thomas",
+      "count": 166,
+      "from": 1778,
+      "to": 1788
+    },
+    {
+      "name": "Peters, Richard",
+      "count": 152,
+      "from": 1747,
+      "to": 1789
+    },
+    {
+      "name": "Warren, James",
+      "count": 143,
+      "from": 1770,
+      "to": 1785
+    },
+    {
+      "name": "Strahan, William",
+      "count": 139,
+      "from": 1743,
+      "to": 1785
+    },
+    {
+      "name": "Hewson, Mary (Polly) Stevenson",
+      "count": 134,
+      "from": 1758,
+      "to": 1784
+    },
+    {
+      "name": "Thomson, Charles",
+      "count": 130,
+      "from": 1758,
+      "to": 1789
+    },
+    {
+      "name": "Barclay, Thomas",
+      "count": 129,
+      "from": 1781,
+      "to": 1789
+    },
+    {
+      "name": "Johnson, Thomas",
+      "count": 125,
+      "from": 1770,
+      "to": 1789
+    },
+    {
+      "name": "Brillon de Jouy, Anne-Louise Boivin d’Hardancourt",
+      "count": 124,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Franklin, William Temple",
+      "count": 123,
+      "from": 1772,
+      "to": 1790
+    },
+    {
+      "name": "Bache, Richard",
+      "count": 121,
+      "from": 1767,
+      "to": 1784
+    },
+    {
+      "name": "Cooper, Samuel",
+      "count": 113,
+      "from": 1769,
+      "to": 1783
+    },
+    {
+      "name": "Cushing, Thomas",
+      "count": 112,
+      "from": 1768,
+      "to": 1788
+    },
+    {
+      "name": "Vaughan, Benjamin",
+      "count": 112,
+      "from": 1776,
+      "to": 1790
+    },
+    {
+      "name": "Franklin, William",
+      "count": 110,
+      "from": 1753,
+      "to": 1788
+    },
+    {
+      "name": "Mecom, Jane",
+      "count": 103,
+      "from": 1731,
+      "to": 1784
+    },
+    {
+      "name": "Lee, William",
+      "count": 102,
+      "from": 1770,
+      "to": 1787
+    },
+    {
+      "name": "Barbeu-Dubourg, Jacques",
+      "count": 101,
+      "from": 1768,
+      "to": 1779
+    },
+    {
+      "name": "Dana, Francis",
+      "count": 101,
+      "from": 1776,
+      "to": 1786
+    },
+    {
+      "name": "Le Roy, Jean Baptiste",
+      "count": 101,
+      "from": 1768,
+      "to": 1789
+    },
+    {
+      "name": "Dickinson, John",
+      "count": 96,
+      "from": 1764,
+      "to": 1784
+    },
+    {
+      "name": "Hopkinson, Francis",
+      "count": 96,
+      "from": 1765,
+      "to": 1789
+    },
+    {
+      "name": "Parker, James",
+      "count": 92,
+      "from": 1742,
+      "to": 1774
+    },
+    {
+      "name": "Hall, David",
+      "count": 89,
+      "from": 1748,
+      "to": 1783
+    },
+    {
+      "name": "Genet, Edmé Jacques",
+      "count": 88,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Adams, John Quincy",
+      "count": 87,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Bowdoin, James",
+      "count": 87,
+      "from": 1750,
+      "to": 1790
+    },
+    {
+      "name": "Rush, Benjamin",
+      "count": 87,
+      "from": 1768,
+      "to": 1790
+    },
+    {
+      "name": "Collinson, Peter",
+      "count": 86,
+      "from": 1732,
+      "to": 1767
+    },
+    {
+      "name": "Coffyn, Francis",
+      "count": 83,
+      "from": 1778,
+      "to": 1788
+    },
+    {
+      "name": "Galloway, Joseph",
+      "count": 80,
+      "from": 1757,
+      "to": 1777
+    },
+    {
+      "name": "Gerry, Elbridge",
+      "count": 80,
+      "from": 1774,
+      "to": 1785
+    },
+    {
+      "name": "Izard, Ralph",
+      "count": 78,
+      "from": 1776,
+      "to": 1789
+    },
+    {
+      "name": "Ingenhousz, Jan",
+      "count": 73,
+      "from": 1773,
+      "to": 1789
+    },
+    {
+      "name": "Adams, Samuel",
+      "count": 70,
+      "from": 1768,
+      "to": 1785
+    },
+    {
+      "name": "Grand, Rodolphe-Ferdinand",
+      "count": 70,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Hodgson, William",
+      "count": 70,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Schweighauser, Jean-Daniel",
+      "count": 68,
+      "from": 1776,
+      "to": 1781
+    },
+    {
+      "name": "Price, Richard",
+      "count": 65,
+      "from": 1767,
+      "to": 1790
+    },
+    {
+      "name": "Landais, Pierre",
+      "count": 61,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Norris, Isaac",
+      "count": 61,
+      "from": 1753,
+      "to": 1765
+    },
+    {
+      "name": "Jackson, Richard",
+      "count": 60,
+      "from": 1753,
+      "to": 1772
+    },
+    {
+      "name": "Bancroft, Edward",
+      "count": 57,
+      "from": 1775,
+      "to": 1789
+    },
+    {
+      "name": "Bingham, William",
+      "count": 56,
+      "from": 1776,
+      "to": 1789
+    },
+    {
+      "name": "Colden, Cadwallader",
+      "count": 55,
+      "from": 1743,
+      "to": 1765
+    },
+    {
+      "name": "Stiles, Ezra",
+      "count": 55,
+      "from": 1755,
+      "to": 1788
+    },
+    {
+      "name": "Thaxter, John",
+      "count": 55,
+      "from": 1777,
+      "to": 1785
+    },
+    {
+      "name": "Gérard de Rayneval (Reyneval), Joseph Matthias",
+      "count": 52,
+      "from": 1778,
+      "to": 1790
+    },
+    {
+      "name": "Wharton, Samuel",
+      "count": 52,
+      "from": 1764,
+      "to": 1781
+    },
+    {
+      "name": "Moylan, James",
+      "count": 51,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Sarsfield, Guy Claude, Comte de",
+      "count": 50,
+      "from": 1767,
+      "to": 1789
+    },
+    {
+      "name": "Bache, Sarah Franklin",
+      "count": 49,
+      "from": 1770,
+      "to": 1784
+    },
+    {
+      "name": "Ross, John",
+      "count": 49,
+      "from": 1764,
+      "to": 1789
+    },
+    {
+      "name": "Williams, Jonathan",
+      "count": 48,
+      "from": 1755,
+      "to": 1782
+    },
+    {
+      "name": "La Rochefoucauld, Louis-Alexandre, duc de La Roche-Guyon et de",
+      "count": 46,
+      "from": 1776,
+      "to": 1787
+    },
+    {
+      "name": "Tufts, Cotton",
+      "count": 45,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Hancock, John",
+      "count": 44,
+      "from": 1768,
+      "to": 1785
+    },
+    {
+      "name": "Logan, James",
+      "count": 44,
+      "from": 1731,
+      "to": 1765
+    },
+    {
+      "name": "Wickes, Lambert",
+      "count": 44,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Foxcroft, John",
+      "count": 43,
+      "from": 1763,
+      "to": 1776
+    },
+    {
+      "name": "Cranch, Richard",
+      "count": 41,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Todd, Anthony",
+      "count": 41,
+      "from": 1763,
+      "to": 1784
+    },
+    {
+      "name": "Bache, Benjamin Franklin",
+      "count": 40,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Kéralio, Agathon Guynement, chevalier de",
+      "count": 40,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Castries, Charles Eugène Gabriel de La Croix, marquis de",
+      "count": 39,
+      "from": 1780,
+      "to": 1787
+    },
+    {
+      "name": "Chaumont",
+      "count": 39,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Gérard, Conrad Alexandre",
+      "count": 38,
+      "from": 1777,
+      "to": 1781
+    },
+    {
+      "name": "McKean, Thomas",
+      "count": 37,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Torris, John",
+      "count": 37,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Lee, Richard Henry",
+      "count": 36,
+      "from": 1775,
+      "to": 1785
+    },
+    {
+      "name": "Priestley, Joseph",
+      "count": 36,
+      "from": 1768,
+      "to": 1782
+    },
+    {
+      "name": "Chaumont, Jacques Donatien, Leray de",
+      "count": 34,
+      "from": 1776,
+      "to": 1788
+    },
+    {
+      "name": "Luzac, Jean",
+      "count": 34,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Mazzei, Philip",
+      "count": 34,
+      "from": 1775,
+      "to": 1785
+    },
+    {
+      "name": "Nesbitt, Jonathan",
+      "count": 34,
+      "from": 1779,
+      "to": 1789
+    },
+    {
+      "name": "Alexander, William",
+      "count": 33,
+      "from": 1755,
+      "to": 1784
+    },
+    {
+      "name": "Gordon, William",
+      "count": 33,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Shipley, Jonathan",
+      "count": 33,
+      "from": 1771,
+      "to": 1784
+    },
+    {
+      "name": "Ridley, Matthew",
+      "count": 32,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Cerisier, Antoine Marie",
+      "count": 31,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Church, William Singleton",
+      "count": 31,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Jones, Noble Wimberly",
+      "count": 31,
+      "from": 1768,
+      "to": 1778
+    },
+    {
+      "name": "Barclay, David Junior",
+      "count": 30,
+      "from": 1767,
+      "to": 1783
+    },
+    {
+      "name": "Fothergill, John",
+      "count": 30,
+      "from": 1755,
+      "to": 1780
+    },
+    {
+      "name": "Greene, Catharine",
+      "count": 30,
+      "from": 1762,
+      "to": 1782
+    },
+    {
+      "name": "Newenham, Sir Edward",
+      "count": 30,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Thulemeier, Friedrich Wilhelm, Baron von",
+      "count": 30,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Hutton, James",
+      "count": 29,
+      "from": 1772,
+      "to": 1784
+    },
+    {
+      "name": "Johnson, Joshua",
+      "count": 29,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Tucker, Samuel",
+      "count": 29,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Calkoen, Hendrik",
+      "count": 28,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Oswald, Richard",
+      "count": 28,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Ward, Joseph",
+      "count": 28,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Capellen tot den Pol, Joan Derk, Baron van der",
+      "count": 27,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Chavagnes, Bidé de",
+      "count": 27,
+      "from": 1779,
+      "to": 1785
+    },
+    {
+      "name": "Tudor, William",
+      "count": 27,
+      "from": 1776,
+      "to": 1781
+    },
+    {
+      "name": "Vicq d’Azyr, Félix",
+      "count": 27,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Winthrop, John",
+      "count": 27,
+      "from": 1761,
+      "to": 1777
+    },
+    {
+      "name": "Bridgen, Edward",
+      "count": 26,
+      "from": 1765,
+      "to": 1786
+    },
+    {
+      "name": "MacCreery, William",
+      "count": 26,
+      "from": 1777,
+      "to": 1781
+    },
+    {
+      "name": "Shaffer, John",
+      "count": 26,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Chase, Samuel",
+      "count": 25,
+      "from": 1775,
+      "to": 1784
+    },
+    {
+      "name": "Dalton, Tristram",
+      "count": 25,
+      "from": 1779,
+      "to": 1785
+    },
+    {
+      "name": "La Vauguyon, Paul François de Quélen de Stuer de Causade, Duc de",
+      "count": 25,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Wharton, Thomas",
+      "count": 25,
+      "from": 1764,
+      "to": 1778
+    },
+    {
+      "name": "Warren, Mercy Otis",
+      "count": 24,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Evans, Cadwalader",
+      "count": 23,
+      "from": 1765,
+      "to": 1773
+    },
+    {
+      "name": "Gillon, Alexander",
+      "count": 23,
+      "from": 1779,
+      "to": 1781
+    },
+    {
+      "name": "Grand, Henry",
+      "count": 23,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Morellet, André, abbé",
+      "count": 23,
+      "from": 1772,
+      "to": 1784
+    },
+    {
+      "name": "Schweighauser, John Daniel",
+      "count": 23,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Searle, James",
+      "count": 23,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Gates, Horatio",
+      "count": 22,
+      "from": 1775,
+      "to": 1784
+    },
+    {
+      "name": "Jackson, William",
+      "count": 22,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Montgomery, Robert",
+      "count": 22,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Pownall, Thomas",
+      "count": 22,
+      "from": 1755,
+      "to": 1785
+    },
+    {
+      "name": "Roberdeau, Daniel",
+      "count": 22,
+      "from": 1770,
+      "to": 1784
+    },
+    {
+      "name": "Chalut, Abbé",
+      "count": 21,
+      "from": 1777,
+      "to": 1785
+    },
+    {
+      "name": "Melmoth, Courtney",
+      "count": 21,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Arnoux, Abbé",
+      "count": 20,
+      "from": 1777,
+      "to": 1785
+    },
+    {
+      "name": "Banks, Joseph",
+      "count": 20,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Deux-Ponts, Marianne Camasse, comtesse de Forbach",
+      "count": 20,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Greene, Nathanael",
+      "count": 20,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Houdetot, Elisabeth-Françoise-Sophie de La Live de Bellegarde, comtesse d’",
+      "count": 20,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Mifflin, Thomas",
+      "count": 20,
+      "from": 1768,
+      "to": 1784
+    },
+    {
+      "name": "Netherlands, States General of",
+      "count": 20,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Sayre, Stephen",
+      "count": 20,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Stevenson, Margaret",
+      "count": 20,
+      "from": 1763,
+      "to": 1782
+    },
+    {
+      "name": "Valltravers, Johann Rodolphe",
+      "count": 20,
+      "from": 1767,
+      "to": 1782
+    },
+    {
+      "name": "Dana, Francis M.",
+      "count": 19,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Pierres, Philippe-Denis",
+      "count": 19,
+      "from": 1781,
+      "to": 1785
+    },
+    {
+      "name": "Austin, Jonathan Loring",
+      "count": 18,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Bartram, John",
+      "count": 18,
+      "from": 1757,
+      "to": 1777
+    },
+    {
+      "name": "Coder, Henry",
+      "count": 18,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Feutry, Aimé-Ambroise-Joseph",
+      "count": 18,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Hare-Naylor, Georgiana Shipley",
+      "count": 18,
+      "from": 1772,
+      "to": 1782
+    },
+    {
+      "name": "Laurens, John",
+      "count": 18,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Palmer, Joseph",
+      "count": 18,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Whipple, Abraham",
+      "count": 18,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Barry, John",
+      "count": 17,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Colden, Alexander",
+      "count": 17,
+      "from": 1755,
+      "to": 1773
+    },
+    {
+      "name": "Duportail, Louis Lebègue de Presle",
+      "count": 17,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Falconer, Nathaniel",
+      "count": 17,
+      "from": 1765,
+      "to": 1783
+    },
+    {
+      "name": "Gentlemen at Nantes",
+      "count": 17,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Johnson, Samuel",
+      "count": 17,
+      "from": 1750,
+      "to": 1764
+    },
+    {
+      "name": "Library Company of Philadelphia",
+      "count": 17,
+      "from": 1735,
+      "to": 1775
+    },
+    {
+      "name": "Lloyd, Richard Bennett",
+      "count": 17,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Smith, William",
+      "count": 17,
+      "from": 1753,
+      "to": 1785
+    },
+    {
+      "name": "Sullivan, James",
+      "count": 17,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Grand, Henri-Maximilien (Henry)",
+      "count": 16,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Holker, John",
+      "count": 16,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Managers of the Pennsylvania Hospital",
+      "count": 16,
+      "from": 1751,
+      "to": 1773
+    },
+    {
+      "name": "Marat, Jean-Paul",
+      "count": 16,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Morris, Robert Hunter",
+      "count": 16,
+      "from": 1755,
+      "to": 1756
+    },
+    {
+      "name": "Penn, John",
+      "count": 16,
+      "from": 1735,
+      "to": 1783
+    },
+    {
+      "name": "Pringle, Sir John",
+      "count": 16,
+      "from": 1757,
+      "to": 1773
+    },
+    {
+      "name": "Whitehurst, John",
+      "count": 16,
+      "from": 1762,
+      "to": 1783
+    },
+    {
+      "name": "Barry, Amelia",
+      "count": 15,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Belcher, Jonathan",
+      "count": 15,
+      "from": 1748,
+      "to": 1755
+    },
+    {
+      "name": "Canton, John",
+      "count": 15,
+      "from": 1753,
+      "to": 1771
+    },
+    {
+      "name": "Fournier, Simon-Pierre, le jeune",
+      "count": 15,
+      "from": 1778,
+      "to": 1785
+    },
+    {
+      "name": "Hillegas, Michael",
+      "count": 15,
+      "from": 1769,
+      "to": 1783
+    },
+    {
+      "name": "Parsons, Samuel Holden",
+      "count": 15,
+      "from": 1776,
+      "to": 1786
+    },
+    {
+      "name": "Parsons, William",
+      "count": 15,
+      "from": 1734,
+      "to": 1778
+    },
+    {
+      "name": "Wright, Patience",
+      "count": 15,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Beccaria, Giambatista",
+      "count": 14,
+      "from": 1757,
+      "to": 1781
+    },
+    {
+      "name": "Dubbeldemuts, Adrianus",
+      "count": 14,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Eliot, Jared",
+      "count": 14,
+      "from": 1747,
+      "to": 1755
+    },
+    {
+      "name": "Franklin, John",
+      "count": 14,
+      "from": 1745,
+      "to": 1755
+    },
+    {
+      "name": "Grand, Isaac-Jean-Georges-Jonas",
+      "count": 14,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Hilliard d’Auberteuil, Michel-René",
+      "count": 14,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Howe, Rear Adm. Richard, Viscount",
+      "count": 14,
+      "from": 1774,
+      "to": 1784
+    },
+    {
+      "name": "Johonnot, Samuel Cooper",
+      "count": 14,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Kames, Henry Home, Lord",
+      "count": 14,
+      "from": 1760,
+      "to": 1775
+    },
+    {
+      "name": "Knox, Henry",
+      "count": 14,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Lebègue de Presle, Achille-Guillaume",
+      "count": 14,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Lenoir, Jean-Charles-Pierre",
+      "count": 14,
+      "from": 1779,
+      "to": 1785
+    },
+    {
+      "name": "Penet, Pierre",
+      "count": 14,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Sargent, John",
+      "count": 14,
+      "from": 1760,
+      "to": 1784
+    },
+    {
+      "name": "Schuyler, Philip",
+      "count": 14,
+      "from": 1775,
+      "to": 1783
+    },
+    {
+      "name": "Whitefield, George",
+      "count": 14,
+      "from": 1740,
+      "to": 1769
+    },
+    {
+      "name": "Adams, Abigail (daughter of JA and AA)",
+      "count": 13,
+      "from": 1776,
+      "to": 1784
+    },
+    {
+      "name": "Berckel, Engelbert François van",
+      "count": 13,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Caffiéri, Jean-Jacques",
+      "count": 13,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Conyngham, Gustavus",
+      "count": 13,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Crèvecoeur, Michel Guillaume (Hector) St. John (St. Jean) de",
+      "count": 13,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Denny, William",
+      "count": 13,
+      "from": 1756,
+      "to": 1765
+    },
+    {
+      "name": "Fleury, François Louis Teissèdre de",
+      "count": 13,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Gilbank, John",
+      "count": 13,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Gilpin, Thomas",
+      "count": 13,
+      "from": 1769,
+      "to": 1770
+    },
+    {
+      "name": "Henly, William",
+      "count": 13,
+      "from": 1771,
+      "to": 1774
+    },
+    {
+      "name": "Hutchinson, Thomas",
+      "count": 13,
+      "from": 1765,
+      "to": 1770
+    },
+    {
+      "name": "La Blancherie, Claude-Mammès Pahin de Champlain de",
+      "count": 13,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "MacMahon, John",
+      "count": 13,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Paine, Robert Treat",
+      "count": 13,
+      "from": 1774,
+      "to": 1778
+    },
+    {
+      "name": "Penn, Thomas",
+      "count": 13,
+      "from": 1733,
+      "to": 1758
+    },
+    {
+      "name": "Roberts, Hugh",
+      "count": 13,
+      "from": 1752,
+      "to": 1780
+    },
+    {
+      "name": "Shelburne, William Petty, Earl of",
+      "count": 13,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Simpson, Thomas",
+      "count": 13,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Small, Alexander",
+      "count": 13,
+      "from": 1760,
+      "to": 1783
+    },
+    {
+      "name": "Bernard, Francis",
+      "count": 12,
+      "from": 1763,
+      "to": 1764
+    },
+    {
+      "name": "Bicker, Hendrik",
+      "count": 12,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Boudinot, Elias, Jr.",
+      "count": 12,
+      "from": 1762,
+      "to": 1783
+    },
+    {
+      "name": "Jackson, Jonathan",
+      "count": 12,
+      "from": 1780,
+      "to": 1785
+    },
+    {
+      "name": "Johnson, Henry",
+      "count": 12,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Marshall, Humphry",
+      "count": 12,
+      "from": 1769,
+      "to": 1775
+    },
+    {
+      "name": "Morris, Thomas",
+      "count": 12,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Nicholson, Samuel",
+      "count": 12,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Rhoads, Samuel",
+      "count": 12,
+      "from": 1756,
+      "to": 1781
+    },
+    {
+      "name": "Trumbull, Jonathan",
+      "count": 12,
+      "from": 1776,
+      "to": 1784
+    },
+    {
+      "name": "Colonist’s Advocate",
+      "count": 11,
+      "from": 1770,
+      "to": 1770
+    },
+    {
+      "name": "Dalibard, Thomas-François",
+      "count": 11,
+      "from": 1752,
+      "to": 1777
+    },
+    {
+      "name": "Dick, Sir Alexander",
+      "count": 11,
+      "from": 1759,
+      "to": 1772
+    },
+    {
+      "name": "Golowkin, Wilhelmina von Mosheim, comtesse de",
+      "count": 11,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Grand, Ferdinand",
+      "count": 11,
+      "from": 1778,
+      "to": 1785
+    },
+    {
+      "name": "Lafayette, Marie-Adrienne-Françoise de Noailles, marquise de",
+      "count": 11,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Perkins, John",
+      "count": 11,
+      "from": 1752,
+      "to": 1770
+    },
+    {
+      "name": "San Fernando Raymond (Ferdinando Ramon)",
+      "count": 11,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Smith, James",
+      "count": 11,
+      "from": 1746,
+      "to": 1778
+    },
+    {
+      "name": "Sullivan, John",
+      "count": 11,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Watson, Elkanah, Jr.",
+      "count": 11,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Babcock, Joshua",
+      "count": 10,
+      "from": 1755,
+      "to": 1778
+    },
+    {
+      "name": "Burke, Edmund",
+      "count": 10,
+      "from": 1774,
+      "to": 1783
+    },
+    {
+      "name": "Carmarthen, Marquis of",
+      "count": 10,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Conway, Françoise-Antoinette-Jeanne Langlois du Bouchet, comtesse de",
+      "count": 10,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Delap, Jean-Hans",
+      "count": 10,
+      "from": 1776,
+      "to": 1779
+    },
+    {
+      "name": "Greene, William",
+      "count": 10,
+      "from": 1763,
+      "to": 1785
+    },
+    {
+      "name": "Hanson, John",
+      "count": 10,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Heath, William",
+      "count": 10,
+      "from": 1774,
+      "to": 1778
+    },
+    {
+      "name": "Jones, William",
+      "count": 10,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Leveux, Jacques",
+      "count": 10,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Lotbinière, Michel-Alain Chartier de",
+      "count": 10,
+      "from": 1755,
+      "to": 1783
+    },
+    {
+      "name": "Lotter, Christian",
+      "count": 10,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Lowell, John",
+      "count": 10,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Montaudoüin de La Touche, Jean-Gabriel",
+      "count": 10,
+      "from": 1776,
+      "to": 1779
+    },
+    {
+      "name": "Nogaret",
+      "count": 10,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Paulze, Jacques",
+      "count": 10,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Pemberton, Israel",
+      "count": 10,
+      "from": 1751,
+      "to": 1775
+    },
+    {
+      "name": "Reed, Joseph",
+      "count": 10,
+      "from": 1775,
+      "to": 1784
+    },
+    {
+      "name": "Smith, Joseph",
+      "count": 10,
+      "from": 1769,
+      "to": 1782
+    },
+    {
+      "name": "Storer, Charles",
+      "count": 10,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Taylor, Cradock",
+      "count": 10,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Thompson, Thomas",
+      "count": 10,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Walpole, Thomas",
+      "count": 10,
+      "from": 1774,
+      "to": 1777
+    },
+    {
+      "name": "Walsh, John",
+      "count": 10,
+      "from": 1772,
+      "to": 1779
+    },
+    {
+      "name": "Waterhouse, Benjamin",
+      "count": 10,
+      "from": 1780,
+      "to": 1785
+    },
+    {
+      "name": "Allen, Jeremiah",
+      "count": 9,
+      "from": 1780,
+      "to": 1785
+    },
+    {
+      "name": "Amezaga, Ignace d’Urtado, marquis d’",
+      "count": 9,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Aranda, Pedro Pablo Abarca de Bolea, Conde de",
+      "count": 9,
+      "from": 1776,
+      "to": 1784
+    },
+    {
+      "name": "Beaumarchais, Pierre-Augustin Caron de",
+      "count": 9,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Blunt, Dorothea",
+      "count": 9,
+      "from": 1770,
+      "to": 1779
+    },
+    {
+      "name": "Boulainvilliers, Marie-Madeleine-Adrienne d’Hallencourt Bernard, marquise de",
+      "count": 9,
+      "from": 1777,
+      "to": 1781
+    },
+    {
+      "name": "Bouquet, Henry",
+      "count": 9,
+      "from": 1756,
+      "to": 1764
+    },
+    {
+      "name": "Cadet de Vaux, Antoine-Alexis-François",
+      "count": 9,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Cooper, Sir Grey",
+      "count": 9,
+      "from": 1762,
+      "to": 1780
+    },
+    {
+      "name": "Dartmouth, William Legge, Earl of",
+      "count": 9,
+      "from": 1772,
+      "to": 1775
+    },
+    {
+      "name": "Delap, Samuel",
+      "count": 9,
+      "from": 1776,
+      "to": 1779
+    },
+    {
+      "name": "Directors of Library Company",
+      "count": 9,
+      "from": 1731,
+      "to": 1749
+    },
+    {
+      "name": "Dubbeldemuts, Franco",
+      "count": 9,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Eastern Navy Board",
+      "count": 9,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Emery, John",
+      "count": 9,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Fitzherbert, Alleyne",
+      "count": 9,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "French, Katherine",
+      "count": 9,
+      "from": 1765,
+      "to": 1774
+    },
+    {
+      "name": "Harvard College",
+      "count": 9,
+      "from": 1753,
+      "to": 1780
+    },
+    {
+      "name": "Hubbart, Elizabeth",
+      "count": 9,
+      "from": 1755,
+      "to": 1757
+    },
+    {
+      "name": "Jay, James",
+      "count": 9,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Johonnot, Gabriel",
+      "count": 9,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Kinnersley, Ebenezer",
+      "count": 9,
+      "from": 1752,
+      "to": 1771
+    },
+    {
+      "name": "Lafreté, Jean-Jacques de",
+      "count": 9,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Laurens, Martha",
+      "count": 9,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Lavoisier, Antoine-Laurent",
+      "count": 9,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Le Maire de Gimel, Jacques",
+      "count": 9,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Life, Thomas",
+      "count": 9,
+      "from": 1770,
+      "to": 1775
+    },
+    {
+      "name": "Lloyd, John",
+      "count": 9,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Marignac, Gabriel-Louis Galissard de",
+      "count": 9,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Mercy-Argenteau, Florimond-Claude-Charles, comte de",
+      "count": 9,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Nairne, Edward",
+      "count": 9,
+      "from": 1762,
+      "to": 1784
+    },
+    {
+      "name": "Neufville, Jean (John) de",
+      "count": 9,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "New Jersey Assembly Committee of Correspondence",
+      "count": 9,
+      "from": 1769,
+      "to": 1775
+    },
+    {
+      "name": "Norris, Charles",
+      "count": 9,
+      "from": 1755,
+      "to": 1762
+    },
+    {
+      "name": "Paine, Thomas",
+      "count": 9,
+      "from": 1775,
+      "to": 1781
+    },
+    {
+      "name": "Percival, Thomas",
+      "count": 9,
+      "from": 1771,
+      "to": 1784
+    },
+    {
+      "name": "Raspe, Rudolph Erich",
+      "count": 9,
+      "from": 1767,
+      "to": 1782
+    },
+    {
+      "name": "Rumsey, Nathan",
+      "count": 9,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Sergeant, Jonathan Dickinson",
+      "count": 9,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Shirley, William",
+      "count": 9,
+      "from": 1754,
+      "to": 1756
+    },
+    {
+      "name": "Sousa Coutinho, Vicente, conde de",
+      "count": 9,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Temple, John",
+      "count": 9,
+      "from": 1774,
+      "to": 1784
+    },
+    {
+      "name": "Timothy, Peter",
+      "count": 9,
+      "from": 1754,
+      "to": 1778
+    },
+    {
+      "name": "Walker, Hannah",
+      "count": 9,
+      "from": 1764,
+      "to": 1775
+    },
+    {
+      "name": "Williams, John",
+      "count": 9,
+      "from": 1773,
+      "to": 1785
+    },
+    {
+      "name": "Wyld, Henry",
+      "count": 9,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Alexander, Bethia",
+      "count": 8,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Bailly, Jean-Sylvain",
+      "count": 8,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Barney, Joshua",
+      "count": 8,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Cadet de Vaux, Antoine-Alexis",
+      "count": 8,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Carroll, Charles (of Carrollton)",
+      "count": 8,
+      "from": 1761,
+      "to": 1779
+    },
+    {
+      "name": "Croghan, George",
+      "count": 8,
+      "from": 1755,
+      "to": 1768
+    },
+    {
+      "name": "Farmers General",
+      "count": 8,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Franklin, Peter",
+      "count": 8,
+      "from": 1757,
+      "to": 1765
+    },
+    {
+      "name": "Franklin, Samuel",
+      "count": 8,
+      "from": 1767,
+      "to": 1773
+    },
+    {
+      "name": "Franks, David Salisbury",
+      "count": 8,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Gébelin, Antoine Court de",
+      "count": 8,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Gruel, Jacques-Barthélémy",
+      "count": 8,
+      "from": 1776,
+      "to": 1778
+    },
+    {
+      "name": "Hawley, Joseph",
+      "count": 8,
+      "from": 1770,
+      "to": 1776
+    },
+    {
+      "name": "Henry, Patrick",
+      "count": 8,
+      "from": 1775,
+      "to": 1779
+    },
+    {
+      "name": "Holtzhey, Jean George",
+      "count": 8,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Jebb, John",
+      "count": 8,
+      "from": 1780,
+      "to": 1785
+    },
+    {
+      "name": "La Plaigne, Emmanuel-Pierre de",
+      "count": 8,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Le Veillard, Louis Guillaume",
+      "count": 8,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Managers of the Philadelphia Silk Filature",
+      "count": 8,
+      "from": 1771,
+      "to": 1774
+    },
+    {
+      "name": "Marchant, Stephen",
+      "count": 8,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Morton, James Douglas, 14th Earl of",
+      "count": 8,
+      "from": 1761,
+      "to": 1768
+    },
+    {
+      "name": "Necker, Jacques",
+      "count": 8,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Osgood, Samuel",
+      "count": 8,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Pio, Luigi",
+      "count": 8,
+      "from": 1782,
+      "to": 1785
+    },
+    {
+      "name": "Pownall, John",
+      "count": 8,
+      "from": 1767,
+      "to": 1774
+    },
+    {
+      "name": "Ritchie, Juliana",
+      "count": 8,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Scott, George",
+      "count": 8,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Shippen, Edward",
+      "count": 8,
+      "from": 1745,
+      "to": 1764
+    },
+    {
+      "name": "Sowden, Benjamin",
+      "count": 8,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Van der Kemp, François Adriaan",
+      "count": 8,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Vaughan, Samuel, Jr.",
+      "count": 8,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Woodmason, James",
+      "count": 8,
+      "from": 1779,
+      "to": 1781
+    },
+    {
+      "name": "All, Isaac",
+      "count": 7,
+      "from": 1765,
+      "to": 1782
+    },
+    {
+      "name": "Andrews, Samuel",
+      "count": 7,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Barbé-Marbois (Barbé de Marbois), François",
+      "count": 7,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Benezet, Anthony",
+      "count": 7,
+      "from": 1772,
+      "to": 1783
+    },
+    {
+      "name": "Bleiswyck, Pieter van",
+      "count": 7,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Bollan, William",
+      "count": 7,
+      "from": 1771,
+      "to": 1775
+    },
+    {
+      "name": "Bond, Thomas",
+      "count": 7,
+      "from": 1752,
+      "to": 1780
+    },
+    {
+      "name": "Boudinot, Elias",
+      "count": 7,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Boylston, John",
+      "count": 7,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Bracht, Herman van",
+      "count": 7,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Bradford, John",
+      "count": 7,
+      "from": 1776,
+      "to": 1780
+    },
+    {
+      "name": "Charles, Robert",
+      "count": 7,
+      "from": 1756,
+      "to": 1765
+    },
+    {
+      "name": "Clegg, Edmund",
+      "count": 7,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Collas, Peter",
+      "count": 7,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Courter, Harmon",
+      "count": 7,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Cramer, Catherine de Wesselow",
+      "count": 7,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Darling, Thomas",
+      "count": 7,
+      "from": 1747,
+      "to": 1754
+    },
+    {
+      "name": "du Pont de Nemours, Pierre Samuel",
+      "count": 7,
+      "from": 1768,
+      "to": 1783
+    },
+    {
+      "name": "Dunlap, William",
+      "count": 7,
+      "from": 1757,
+      "to": 1781
+    },
+    {
+      "name": "Elie de Beaumont, Jean-Baptiste-Jacques",
+      "count": 7,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Franklin, Abiah",
+      "count": 7,
+      "from": 1738,
+      "to": 1752
+    },
+    {
+      "name": "Grenville, Thomas",
+      "count": 7,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Heberden, William",
+      "count": 7,
+      "from": 1759,
+      "to": 1768
+    },
+    {
+      "name": "Horsfield, Timothy",
+      "count": 7,
+      "from": 1756,
+      "to": 1757
+    },
+    {
+      "name": "Howe, Caroline",
+      "count": 7,
+      "from": 1775,
+      "to": 1775
+    },
+    {
+      "name": "Hunter, William",
+      "count": 7,
+      "from": 1754,
+      "to": 1772
+    },
+    {
+      "name": "La Luzerne, Anne-César, chevalier de",
+      "count": 7,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Lafreté, Angélique-Michèle-Rosalie Jogues de Martinville",
+      "count": 7,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Laneuville, Louis-Pierre Penot Lombart, chevalier de",
+      "count": 7,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Lee, Charles",
+      "count": 7,
+      "from": 1755,
+      "to": 1776
+    },
+    {
+      "name": "Leech, Thomas",
+      "count": 7,
+      "from": 1756,
+      "to": 1762
+    },
+    {
+      "name": "Létombe, Philippe André Joseph de",
+      "count": 7,
+      "from": 1781,
+      "to": 1785
+    },
+    {
+      "name": "Livingston, Musco",
+      "count": 7,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Mather, Samuel",
+      "count": 7,
+      "from": 1773,
+      "to": 1785
+    },
+    {
+      "name": "McNeill, Daniel",
+      "count": 7,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Neufville, Leendert (Leonard) de",
+      "count": 7,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Nogaret, François-Félix",
+      "count": 7,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "O’Gorman, Thomas, chevalier",
+      "count": 7,
+      "from": 1773,
+      "to": 1782
+    },
+    {
+      "name": "Palteau de Veimerange, Gabriel-Claude",
+      "count": 7,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Partridge, Elizabeth Hubbart",
+      "count": 7,
+      "from": 1772,
+      "to": 1781
+    },
+    {
+      "name": "Pickerin, Thomas",
+      "count": 7,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Putnam, Benjamin",
+      "count": 7,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Ray, Catharine",
+      "count": 7,
+      "from": 1755,
+      "to": 1757
+    },
+    {
+      "name": "Robertson, William",
+      "count": 7,
+      "from": 1765,
+      "to": 1783
+    },
+    {
+      "name": "Séqueville, François-Pierre de",
+      "count": 7,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Soulavie, abbé Jean-Louis Giraud",
+      "count": 7,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Stewart, Margaret",
+      "count": 7,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Stockton, Samuel W.",
+      "count": 7,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Tissington, Anthony",
+      "count": 7,
+      "from": 1767,
+      "to": 1772
+    },
+    {
+      "name": "Trumbull, John",
+      "count": 7,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Villiers, Louis-Pierre Dufourny de",
+      "count": 7,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Viny, Thomas",
+      "count": 7,
+      "from": 1770,
+      "to": 1784
+    },
+    {
+      "name": "West, Benjamin",
+      "count": 7,
+      "from": 1767,
+      "to": 1784
+    },
+    {
+      "name": "Wilson, James",
+      "count": 7,
+      "from": 1775,
+      "to": 1780
+    },
+    {
+      "name": "Addenet, M.",
+      "count": 6,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Alexander, James",
+      "count": 6,
+      "from": 1745,
+      "to": 1754
+    },
+    {
+      "name": "Alleyne, John",
+      "count": 6,
+      "from": 1768,
+      "to": 1773
+    },
+    {
+      "name": "Arendt, Henry Leonard Philip, baron d’",
+      "count": 6,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Bachelier, Jean-Jacques",
+      "count": 6,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Bariatinskii, Ivan Sergeevich",
+      "count": 6,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Bersolle, Emmanuel-Yves",
+      "count": 6,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Bertier, Joseph-Etienne",
+      "count": 6,
+      "from": 1768,
+      "to": 1783
+    },
+    {
+      "name": "Borel, Antoine",
+      "count": 6,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Boston Town Meeting",
+      "count": 6,
+      "from": 1768,
+      "to": 1774
+    },
+    {
+      "name": "Boylston, Thomas",
+      "count": 6,
+      "from": 1770,
+      "to": 1785
+    },
+    {
+      "name": "Brillon de Jouy, Jacques",
+      "count": 6,
+      "from": 1778,
+      "to": 1785
+    },
+    {
+      "name": "Burdett, Peter P.",
+      "count": 6,
+      "from": 1773,
+      "to": 1777
+    },
+    {
+      "name": "Cabanis, Pierre-Jean-Georges",
+      "count": 6,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Castrioto, Félix António",
+      "count": 6,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Champigny, Jean Bochard, chevalier de",
+      "count": 6,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Chezaulx, Jean-Etienne de",
+      "count": 6,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Colden, David",
+      "count": 6,
+      "from": 1753,
+      "to": 1773
+    },
+    {
+      "name": "Condorcet, Marie-Jean-Antoine-Nicolas Caritat, marquis de",
+      "count": 6,
+      "from": 1773,
+      "to": 1783
+    },
+    {
+      "name": "Estaing, Charles Henri Hector, comte d’",
+      "count": 6,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Fagel, Hendrik",
+      "count": 6,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Favi, Francesco",
+      "count": 6,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Filangieri, Gaetano",
+      "count": 6,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Ford, Hezekiah",
+      "count": 6,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Gourlade, Jacques-Alexandre",
+      "count": 6,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Gridley, Joseph",
+      "count": 6,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Grinnell, Richard",
+      "count": 6,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Hamilton, James",
+      "count": 6,
+      "from": 1748,
+      "to": 1762
+    },
+    {
+      "name": "Holtzendorff, Louis-Casimir, baron de",
+      "count": 6,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Hughes, John",
+      "count": 6,
+      "from": 1757,
+      "to": 1765
+    },
+    {
+      "name": "Johnson, Martha",
+      "count": 6,
+      "from": 1768,
+      "to": 1781
+    },
+    {
+      "name": "Lagoanere, Michel",
+      "count": 6,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Lettsom, John Coakley",
+      "count": 6,
+      "from": 1781,
+      "to": 1785
+    },
+    {
+      "name": "Livingston, Muscoe",
+      "count": 6,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Magellan, Jean-Hyacinthe de",
+      "count": 6,
+      "from": 1774,
+      "to": 1782
+    },
+    {
+      "name": "Merckle, John Philip",
+      "count": 6,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Montgomery, Dorcas Armitage",
+      "count": 6,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Morris, Lewis R.",
+      "count": 6,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "New York Provincial Congress",
+      "count": 6,
+      "from": 1775,
+      "to": 1775
+    },
+    {
+      "name": "Partridge, Richard",
+      "count": 6,
+      "from": 1754,
+      "to": 1758
+    },
+    {
+      "name": "Reine, —— de",
+      "count": 6,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Robeson, William",
+      "count": 6,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Ross, George",
+      "count": 6,
+      "from": 1775,
+      "to": 1776
+    },
+    {
+      "name": "Rousseaux, Jean",
+      "count": 6,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Sarsfield, Jacques-Hyacinthe, vicomte de",
+      "count": 6,
+      "from": 1777,
+      "to": 1781
+    },
+    {
+      "name": "Spangenberg, Augustus Gottlieb",
+      "count": 6,
+      "from": 1756,
+      "to": 1756
+    },
+    {
+      "name": "Thornton, John",
+      "count": 6,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Tucker, Josiah",
+      "count": 6,
+      "from": 1774,
+      "to": 1775
+    },
+    {
+      "name": "Turgot, Anne-Robert-Jacques, baron de l’Aulne",
+      "count": 6,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Unknown",
+      "count": 6,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Vaughan, John",
+      "count": 6,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Vaughan, Samuel",
+      "count": 6,
+      "from": 1775,
+      "to": 1784
+    },
+    {
+      "name": "Vernon, William, Jr.",
+      "count": 6,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Walter, John",
+      "count": 6,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Waring, John",
+      "count": 6,
+      "from": 1757,
+      "to": 1763
+    },
+    {
+      "name": "Warren, Joseph",
+      "count": 6,
+      "from": 1769,
+      "to": 1775
+    },
+    {
+      "name": "Wayne, Anthony",
+      "count": 6,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Webb, Benjamin",
+      "count": 6,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Whatley, George",
+      "count": 6,
+      "from": 1774,
+      "to": 1784
+    },
+    {
+      "name": "Willard, Joseph",
+      "count": 6,
+      "from": 1781,
+      "to": 1785
+    },
+    {
+      "name": "Witherspoon, John",
+      "count": 6,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Wulffen, Jean Henry, baron de",
+      "count": 6,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "York County Committee",
+      "count": 6,
+      "from": 1775,
+      "to": 1776
+    },
+    {
+      "name": "Allaire, Peter",
+      "count": 5,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Amiel, Peter",
+      "count": 5,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Anisson-Duperon, Etienne-Alexandre-Jacques",
+      "count": 5,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Bancroft, Edward Nathaniel",
+      "count": 5,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Barnard, Tristram",
+      "count": 5,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Baudouin, ——",
+      "count": 5,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Baynes, John",
+      "count": 5,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Benyowski, Maurice-Auguste, baron de",
+      "count": 5,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Berkenrode, Mattheus Lestevenon van",
+      "count": 5,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Bessborough, William Ponsonby, 2nd Earl of",
+      "count": 5,
+      "from": 1760,
+      "to": 1775
+    },
+    {
+      "name": "Blome, Baron Otto von",
+      "count": 5,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Board of Treasury",
+      "count": 5,
+      "from": 1779,
+      "to": 1785
+    },
+    {
+      "name": "Boux, ——",
+      "count": 5,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Brush, Eliphalet",
+      "count": 5,
+      "from": 1782,
+      "to": 1785
+    },
+    {
+      "name": "Charretié, John",
+      "count": 5,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Childs, Francis",
+      "count": 5,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Collinson, Thomas",
+      "count": 5,
+      "from": 1760,
+      "to": 1784
+    },
+    {
+      "name": "Court de Gébelin, Antoine",
+      "count": 5,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Cuming, James",
+      "count": 5,
+      "from": 1779,
+      "to": 1781
+    },
+    {
+      "name": "Doerner, John James",
+      "count": 5,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Dorset, John Frederick Sackville, third Duke of",
+      "count": 5,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Durey de Meinières, Octavie Guichard",
+      "count": 5,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Durival, Jean-Baptiste Luton",
+      "count": 5,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Folger, Timothy",
+      "count": 5,
+      "from": 1763,
+      "to": 1781
+    },
+    {
+      "name": "Foxcroft, Thomas",
+      "count": 5,
+      "from": 1764,
+      "to": 1774
+    },
+    {
+      "name": "Freeman, Samuel",
+      "count": 5,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Gastellier, René-Georges",
+      "count": 5,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Georgia Assembly Committee of Correspondence",
+      "count": 5,
+      "from": 1768,
+      "to": 1770
+    },
+    {
+      "name": "Graeme, Elizabeth",
+      "count": 5,
+      "from": 1757,
+      "to": 1757
+    },
+    {
+      "name": "Grand, Jean-François-Paul",
+      "count": 5,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Guild, Benjamin",
+      "count": 5,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Harrison, Richard",
+      "count": 5,
+      "from": 1776,
+      "to": 1779
+    },
+    {
+      "name": "Hazard, Ebenezer",
+      "count": 5,
+      "from": 1775,
+      "to": 1783
+    },
+    {
+      "name": "Helvétius, Anne-Catherine de Ligniville",
+      "count": 5,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Hitchcock, Daniel",
+      "count": 5,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Hodshon, John",
+      "count": 5,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Holme, Thomas",
+      "count": 5,
+      "from": 1759,
+      "to": 1762
+    },
+    {
+      "name": "Hubbart, Tuthill",
+      "count": 5,
+      "from": 1764,
+      "to": 1778
+    },
+    {
+      "name": "Hume, David",
+      "count": 5,
+      "from": 1760,
+      "to": 1772
+    },
+    {
+      "name": "James, Abel",
+      "count": 5,
+      "from": 1770,
+      "to": 1782
+    },
+    {
+      "name": "Kermorvan, Gilles-Jean Barazer, chevalier de",
+      "count": 5,
+      "from": 1776,
+      "to": 1778
+    },
+    {
+      "name": "Knox, William",
+      "count": 5,
+      "from": 1771,
+      "to": 1784
+    },
+    {
+      "name": "L’Air de Lamotte, Jean",
+      "count": 5,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "La Roche, Martin Lefebvre, abbé de",
+      "count": 5,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Lagau, Philippe Jean Joseph",
+      "count": 5,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Lalande, Joseph-Jérôme Le Français de Lalande",
+      "count": 5,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Le Baron, ——",
+      "count": 5,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Le Despencer, Francis Dashwood, Baron",
+      "count": 5,
+      "from": 1770,
+      "to": 1775
+    },
+    {
+      "name": "Le Veillard, Geneviève-Elisabeth Belamy",
+      "count": 5,
+      "from": 1773,
+      "to": 1783
+    },
+    {
+      "name": "Mante, Thomas",
+      "count": 5,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Marignac",
+      "count": 5,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Mecom, Edward",
+      "count": 5,
+      "from": 1744,
+      "to": 1756
+    },
+    {
+      "name": "Mesny, ——",
+      "count": 5,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Moore, Samuel Preston",
+      "count": 5,
+      "from": 1752,
+      "to": 1761
+    },
+    {
+      "name": "Morgan, John",
+      "count": 5,
+      "from": 1762,
+      "to": 1776
+    },
+    {
+      "name": "Niles, Robert",
+      "count": 5,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Parsons, R.",
+      "count": 5,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Penington, Edward",
+      "count": 5,
+      "from": 1761,
+      "to": 1767
+    },
+    {
+      "name": "Penn, Richard",
+      "count": 5,
+      "from": 1758,
+      "to": 1758
+    },
+    {
+      "name": "Pigott, Robert",
+      "count": 5,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Platt, Ebenezer Smith",
+      "count": 5,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Potts, Henry",
+      "count": 5,
+      "from": 1761,
+      "to": 1767
+    },
+    {
+      "name": "Potts, Samuel",
+      "count": 5,
+      "from": 1767,
+      "to": 1783
+    },
+    {
+      "name": "Pringle, John Julius",
+      "count": 5,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Read, James",
+      "count": 5,
+      "from": 1745,
+      "to": 1755
+    },
+    {
+      "name": "Read, Thomas",
+      "count": 5,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Roorda, Jacob",
+      "count": 5,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Ryan, Luke",
+      "count": 5,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Saint-Auban, Jacques-Antoine Baratier de",
+      "count": 5,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Ségur, Philippe-Henri, marquis de",
+      "count": 5,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Sharp, Granville",
+      "count": 5,
+      "from": 1775,
+      "to": 1788
+    },
+    {
+      "name": "Short, William",
+      "count": 5,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Staël de Holstein, Eric Magnus, Baron de",
+      "count": 5,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Strachey, Henry",
+      "count": 5,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Sykes, H.",
+      "count": 5,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Thun, Ulrich, baron de",
+      "count": 5,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Tyler, Royall",
+      "count": 5,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Valmont de Bomare, Jacques-Christophe",
+      "count": 5,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Walterstorff, Ernst Frederick",
+      "count": 5,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Watson, William",
+      "count": 5,
+      "from": 1750,
+      "to": 1772
+    },
+    {
+      "name": "Weems, Mason Locke",
+      "count": 5,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Wharton, Joseph, Jr.",
+      "count": 5,
+      "from": 1778,
+      "to": 1780
+    },
+    {
+      "name": "Alexander, Alexander John",
+      "count": 4,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Amiel, Charlotte",
+      "count": 4,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Angus, John",
+      "count": 4,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Auzoüer, ——, marquis d’",
+      "count": 4,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Avery, John",
+      "count": 4,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Baldwin, Jeduthun",
+      "count": 4,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Balfour, John",
+      "count": 4,
+      "from": 1761,
+      "to": 1771
+    },
+    {
+      "name": "Barrett, Nathaniel",
+      "count": 4,
+      "from": 1782,
+      "to": 1785
+    },
+    {
+      "name": "Baskerville, John",
+      "count": 4,
+      "from": 1760,
+      "to": 1773
+    },
+    {
+      "name": "Bell, Thomas",
+      "count": 4,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Bérenger, Laurent",
+      "count": 4,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Blagden, Charles",
+      "count": 4,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Board of Admiralty",
+      "count": 4,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Bordot, François",
+      "count": 4,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Boston Gazette",
+      "count": 4,
+      "from": 1768,
+      "to": 1774
+    },
+    {
+      "name": "Bowens, François-Jacques-Arnould",
+      "count": 4,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Brongniart, Alexandre-Théodore",
+      "count": 4,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Brown, James",
+      "count": 4,
+      "from": 1761,
+      "to": 1762
+    },
+    {
+      "name": "Calder, John",
+      "count": 4,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Chantereyne, —— de",
+      "count": 4,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Chaulnes, Yves-Marie-Joseph d’Albert d’Ailly, duc de",
+      "count": 4,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Collinson, Michael",
+      "count": 4,
+      "from": 1767,
+      "to": 1772
+    },
+    {
+      "name": "Conkling, Joseph",
+      "count": 4,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Corny, Dominique-Louis Ethis de",
+      "count": 4,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Crafton, Robert",
+      "count": 4,
+      "from": 1767,
+      "to": 1775
+    },
+    {
+      "name": "Croÿ, Anne-Emmanuel-Ferdinand-François, duc de",
+      "count": 4,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Curson, Samuel",
+      "count": 4,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Cushing, William",
+      "count": 4,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Dalton, John",
+      "count": 4,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Daniell, William",
+      "count": 4,
+      "from": 1754,
+      "to": 1755
+    },
+    {
+      "name": "Destouches, ——",
+      "count": 4,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Dowlin, Patrick",
+      "count": 4,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "du Plessis, Thomas-Antoine Mauduit, chevalier",
+      "count": 4,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Dubuysson des Aix, Charles-François, chevalier",
+      "count": 4,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Duchemin, Daniel",
+      "count": 4,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Dufriche de Valazé, Charles-Eléonor",
+      "count": 4,
+      "from": 1779,
+      "to": 1784
+    },
+    {
+      "name": "Dutartre, Antoinette-Thérèse Melin",
+      "count": 4,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Edes, Caroline",
+      "count": 4,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Ellery, William",
+      "count": 4,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Ellis, John",
+      "count": 4,
+      "from": 1773,
+      "to": 1774
+    },
+    {
+      "name": "Embser, Johann Valentin",
+      "count": 4,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Enville, Marie-Louise-Nicole-Elisabeth de La Rochefoucauld, duchesse d’",
+      "count": 4,
+      "from": 1777,
+      "to": 1781
+    },
+    {
+      "name": "Ewing, John",
+      "count": 4,
+      "from": 1770,
+      "to": 1783
+    },
+    {
+      "name": "Eyre, Francis",
+      "count": 4,
+      "from": 1760,
+      "to": 1761
+    },
+    {
+      "name": "Feriet, ——, baron de",
+      "count": 4,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Foster, Jedediah",
+      "count": 4,
+      "from": 1770,
+      "to": 1776
+    },
+    {
+      "name": "Fox, Charles James",
+      "count": 4,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Franklin, Josiah",
+      "count": 4,
+      "from": 1738,
+      "to": 1744
+    },
+    {
+      "name": "Franklin, Sarah",
+      "count": 4,
+      "from": 1761,
+      "to": 1765
+    },
+    {
+      "name": "Frazer, John G.",
+      "count": 4,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Gale, Benjamin",
+      "count": 4,
+      "from": 1767,
+      "to": 1780
+    },
+    {
+      "name": "Gargaz, Pierre André",
+      "count": 4,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Garrigues, Rebecca Haydock",
+      "count": 4,
+      "from": 1772,
+      "to": 1773
+    },
+    {
+      "name": "Gibbes, Sir Philip",
+      "count": 4,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Grasse, François-Joseph-Paul, comte de",
+      "count": 4,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Hancock, Philip",
+      "count": 4,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Hawkesworth, John",
+      "count": 4,
+      "from": 1769,
+      "to": 1772
+    },
+    {
+      "name": "Hills, Stephen",
+      "count": 4,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Hobart, George",
+      "count": 4,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Hodge, William",
+      "count": 4,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Hopkinson, Mary",
+      "count": 4,
+      "from": 1765,
+      "to": 1770
+    },
+    {
+      "name": "Houston, William Churchill",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Huske, John",
+      "count": 4,
+      "from": 1767,
+      "to": 1772
+    },
+    {
+      "name": "Izard, Alice",
+      "count": 4,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Jackson, Charles",
+      "count": 4,
+      "from": 1767,
+      "to": 1783
+    },
+    {
+      "name": "Kent, Benjamin",
+      "count": 4,
+      "from": 1769,
+      "to": 1776
+    },
+    {
+      "name": "King, Rufus",
+      "count": 4,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Langdon, John",
+      "count": 4,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Le Brun, Charles-François",
+      "count": 4,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Le Fort, Marc",
+      "count": 4,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Le Roux, C.-J.",
+      "count": 4,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Limozin, Andrew",
+      "count": 4,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Lincoln, Benjamin",
+      "count": 4,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Littlepage, Lewis",
+      "count": 4,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Logan, George",
+      "count": 4,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Loudoun, John Campbell, 4th Earl of",
+      "count": 4,
+      "from": 1757,
+      "to": 1757
+    },
+    {
+      "name": "Mandrillon, Joseph",
+      "count": 4,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Marine Committee",
+      "count": 4,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Maseres, Francis",
+      "count": 4,
+      "from": 1772,
+      "to": 1773
+    },
+    {
+      "name": "Mason, Jonathan, Jr.",
+      "count": 4,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Masonic Lodge, Commandeurs du Temple",
+      "count": 4,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Masonic Lodge, Neuf Soeurs",
+      "count": 4,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Mesmer, Franz Anton",
+      "count": 4,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Montbarey, Alexandre-Marie-Léonor de Saint-Mauris, prince de",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Montieu, Jean-Joseph Carié de",
+      "count": 4,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Morton, Perez",
+      "count": 4,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Officers of the “Alliance”",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Ogle, Anne",
+      "count": 4,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Oliver, Andrew",
+      "count": 4,
+      "from": 1767,
+      "to": 1769
+    },
+    {
+      "name": "Otis, James, Jr.",
+      "count": 4,
+      "from": 1768,
+      "to": 1776
+    },
+    {
+      "name": "Oudermeulen, Cornelis van der",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Paradise, John",
+      "count": 4,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Parke, Matthew",
+      "count": 4,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Pearce, Charles",
+      "count": 4,
+      "from": 1770,
+      "to": 1770
+    },
+    {
+      "name": "Petrie, Samuel",
+      "count": 4,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Poissonnier, Pierre-Isaac",
+      "count": 4,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Politique hollandais (newspaper)",
+      "count": 4,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Read, Sarah",
+      "count": 4,
+      "from": 1734,
+      "to": 1746
+    },
+    {
+      "name": "Reischach, Baron Franz von",
+      "count": 4,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Rinquin, ——",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Rïou, Pierre",
+      "count": 4,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Rousseau, Jean",
+      "count": 4,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Roussille, Pierre",
+      "count": 4,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Roze de Chantoiseau, ——",
+      "count": 4,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Rozier, abbé François",
+      "count": 4,
+      "from": 1773,
+      "to": 1779
+    },
+    {
+      "name": "Russell, James",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Ruston, Thomas",
+      "count": 4,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Rutledge, John",
+      "count": 4,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Sage, Balthazar-Georges",
+      "count": 4,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Saussure, Horace-Bénédict de",
+      "count": 4,
+      "from": 1772,
+      "to": 1783
+    },
+    {
+      "name": "Sherwood, Joseph",
+      "count": 4,
+      "from": 1767,
+      "to": 1771
+    },
+    {
+      "name": "Shipley, William",
+      "count": 4,
+      "from": 1755,
+      "to": 1756
+    },
+    {
+      "name": "Smith, John",
+      "count": 4,
+      "from": 1752,
+      "to": 1779
+    },
+    {
+      "name": "Smith, William Stephens",
+      "count": 4,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Sons, Herman Heyman’s",
+      "count": 4,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "St. Clair de Roslin, ——",
+      "count": 4,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Taunton, Thomas",
+      "count": 4,
+      "from": 1760,
+      "to": 1760
+    },
+    {
+      "name": "Thaxter, John, Jr.",
+      "count": 4,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Timothée, Louis",
+      "count": 4,
+      "from": 1732,
+      "to": 1733
+    },
+    {
+      "name": "Trustees of the Loan Office",
+      "count": 4,
+      "from": 1762,
+      "to": 1762
+    },
+    {
+      "name": "Turgot",
+      "count": 4,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Turgot, Etienne-François, marquis de Sousmont",
+      "count": 4,
+      "from": 1778,
+      "to": 1781
+    },
+    {
+      "name": "Valnais, Joseph (Jean) Dupas de Iden de",
+      "count": 4,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Webbe, John",
+      "count": 4,
+      "from": 1740,
+      "to": 1740
+    },
+    {
+      "name": "White, Thomas",
+      "count": 4,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Whitefoord, Caleb",
+      "count": 4,
+      "from": 1762,
+      "to": 1783
+    },
+    {
+      "name": "Whiting, Nathan",
+      "count": 4,
+      "from": 1754,
+      "to": 1754
+    },
+    {
+      "name": "Wild, Bartholomé",
+      "count": 4,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Wilkinson, William",
+      "count": 4,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Williams, David",
+      "count": 4,
+      "from": 1774,
+      "to": 1778
+    },
+    {
+      "name": "Wright, James",
+      "count": 4,
+      "from": 1755,
+      "to": 1759
+    },
+    {
+      "name": "Wright, John",
+      "count": 4,
+      "from": 1765,
+      "to": 1783
+    },
+    {
+      "name": "Young, Moses",
+      "count": 4,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Zeebergh, Adriaan van",
+      "count": 4,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Abbema, Balthasar Elias",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Adams, Zabdiel",
+      "count": 3,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "All Captains and Commanders of Vessels of War",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Amelot de Chaillou, Antoine-Jean",
+      "count": 3,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Arrenberg, Reinier",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Auer, Deacon M.",
+      "count": 3,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Bache, Mary",
+      "count": 3,
+      "from": 1771,
+      "to": 1772
+    },
+    {
+      "name": "Baldwin, Christopher",
+      "count": 3,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Barbançon, Augustin-Jean-Louis-Antoine du Prat, comte de",
+      "count": 3,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Baussan, Madame N.",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Bayard, François-Louis",
+      "count": 3,
+      "from": 1778,
+      "to": 1784
+    },
+    {
+      "name": "Belton, Joseph",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Bérard Frères",
+      "count": 3,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Bérenger, Jean-Pierre",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Berubé de Costentin, ——",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Besse, Jacques",
+      "count": 3,
+      "from": 1781,
+      "to": 1784
+    },
+    {
+      "name": "Biheron, Marie-Catherine",
+      "count": 3,
+      "from": 1772,
+      "to": 1774
+    },
+    {
+      "name": "Bissy, Stefano, baron de",
+      "count": 3,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Boy, Pierre-François de",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Breintnall, Joseph",
+      "count": 3,
+      "from": 1729,
+      "to": 1732
+    },
+    {
+      "name": "Breteuil, Louis-Auguste Le Tonnelier, baron de",
+      "count": 3,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Brouttin Mollien de Sombres, Marie-Françoise-Dominique",
+      "count": 3,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Brouwer, Hendrik, Chs. zoon",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Brown, Henton",
+      "count": 3,
+      "from": 1760,
+      "to": 1763
+    },
+    {
+      "name": "Brown, John",
+      "count": 3,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Brownrigg, William",
+      "count": 3,
+      "from": 1772,
+      "to": 1773
+    },
+    {
+      "name": "Brühl, Hans Moritz Graf von",
+      "count": 3,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Brutiere, G. Anquetil",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Buchan, David Steuart Erskine, Earl of",
+      "count": 3,
+      "from": 1774,
+      "to": 1783
+    },
+    {
+      "name": "Buyck, Pieter",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Cabarrus, B. de, Jeune",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Calvet, Pierre du",
+      "count": 3,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Cambray-Digny, Louis-Antoine-Jean-Baptiste, chevalier de",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Capellen tot den Pol, Joan Derk van der",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Caracciolo, Domenico, Marchesse di Villa Marina",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Ceronio, Joseph",
+      "count": 3,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Chase, Joseph",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Chastellux, François Jean de Beauvoir, Marquis de",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Chauncy, Charles",
+      "count": 3,
+      "from": 1776,
+      "to": 1785
+    },
+    {
+      "name": "Clap, Thomas",
+      "count": 3,
+      "from": 1751,
+      "to": 1753
+    },
+    {
+      "name": "Clarke, William",
+      "count": 3,
+      "from": 1754,
+      "to": 1755
+    },
+    {
+      "name": "Colden, Richard Nicholls",
+      "count": 3,
+      "from": 1774,
+      "to": 1774
+    },
+    {
+      "name": "Coleman, William",
+      "count": 3,
+      "from": 1757,
+      "to": 1761
+    },
+    {
+      "name": "Commerce Committee",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Conway, Thomas",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Coombe, Thomas",
+      "count": 3,
+      "from": 1769,
+      "to": 1773
+    },
+    {
+      "name": "Coombe, Thomas, Jr.",
+      "count": 3,
+      "from": 1770,
+      "to": 1774
+    },
+    {
+      "name": "Courtanvaux, François-César Le Tellier, marquis de",
+      "count": 3,
+      "from": 1776,
+      "to": 1778
+    },
+    {
+      "name": "Cranch, John",
+      "count": 3,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Crocco, Giacomo Francisco",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Cumming, Thomas",
+      "count": 3,
+      "from": 1763,
+      "to": 1767
+    },
+    {
+      "name": "Daubenton, Edmé-Louis",
+      "count": 3,
+      "from": 1773,
+      "to": 1780
+    },
+    {
+      "name": "Davies, Cecilia",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Davis, Caleb",
+      "count": 3,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Deane, Barnabas",
+      "count": 3,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Deane, Simeon",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Defay, Mademoiselle ——",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Dehez, Bernard",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Dessin, Pierre",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Directors of the Library Company of Philadelphia",
+      "count": 3,
+      "from": 1733,
+      "to": 1763
+    },
+    {
+      "name": "Dobrée, Peter Frederick",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Dohrman, Arnold Henry",
+      "count": 3,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Doria Pamphili, Giuseppe",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Douglas, Archibald",
+      "count": 3,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Du Rouzeau, abbé Thomas",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Duché, Jacob, Jr.",
+      "count": 3,
+      "from": 1757,
+      "to": 1783
+    },
+    {
+      "name": "Dudley, John",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Duvivier, Pierre-Simon-Benjamin",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Ellicott, John",
+      "count": 3,
+      "from": 1763,
+      "to": 1764
+    },
+    {
+      "name": "Faujas de Saint-Fond, Barthélemy",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Fevre, Lewis",
+      "count": 3,
+      "from": 1773,
+      "to": 1778
+    },
+    {
+      "name": "Field, Job",
+      "count": 3,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Fitzmaurice, Thomas",
+      "count": 3,
+      "from": 1770,
+      "to": 1771
+    },
+    {
+      "name": "Forster, Johann Reinhold",
+      "count": 3,
+      "from": 1771,
+      "to": 1782
+    },
+    {
+      "name": "French Minister to the U.S.",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Frey, Joseph-Pierre-Charles, baron de",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Gadsden, Christopher",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Garth, Charles",
+      "count": 3,
+      "from": 1765,
+      "to": 1775
+    },
+    {
+      "name": "Gaucher, Charles-Etienne",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Gellée, Nicolas Maurice",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Gellée, Nicolas-Maurice",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "George III, King of Great Britain",
+      "count": 3,
+      "from": 1752,
+      "to": 1783
+    },
+    {
+      "name": "Gérard, Marie-Nicole Grossart de Virly",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Godet, Henricus",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Gorham, Nathaniel",
+      "count": 3,
+      "from": 1774,
+      "to": 1780
+    },
+    {
+      "name": "Gouverneur, Isaac",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Gratien, ——",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Green, John",
+      "count": 3,
+      "from": 1779,
+      "to": 1781
+    },
+    {
+      "name": "Greenleaf, Joseph",
+      "count": 3,
+      "from": 1775,
+      "to": 1779
+    },
+    {
+      "name": "Greenleaf, Thomas",
+      "count": 3,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Grimm, Friedrich Melchior, Baron von",
+      "count": 3,
+      "from": 1780,
+      "to": 1785
+    },
+    {
+      "name": "Grubb, James",
+      "count": 3,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Gunnison, Benjamin",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Hall, Elijah",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Hamilton, Alexander",
+      "count": 3,
+      "from": 1780,
+      "to": 1786
+    },
+    {
+      "name": "Harris, John",
+      "count": 3,
+      "from": 1755,
+      "to": 1779
+    },
+    {
+      "name": "Harvey, Reuben",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Henshaw, Andrew",
+      "count": 3,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Heyman, Herman",
+      "count": 3,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Higginson, Stephen",
+      "count": 3,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Hope, John",
+      "count": 3,
+      "from": 1765,
+      "to": 1772
+    },
+    {
+      "name": "Hopkins, Stephen",
+      "count": 3,
+      "from": 1776,
+      "to": 1784
+    },
+    {
+      "name": "Howard, Martin, Jr.",
+      "count": 3,
+      "from": 1764,
+      "to": 1775
+    },
+    {
+      "name": "Hughes, Hugh",
+      "count": 3,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Hunter, James, Jr.",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Hunter, John",
+      "count": 3,
+      "from": 1755,
+      "to": 1761
+    },
+    {
+      "name": "Huquier, A. Benoist",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Illens, —— de",
+      "count": 3,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Ingersoll, Jared",
+      "count": 3,
+      "from": 1762,
+      "to": 1763
+    },
+    {
+      "name": "Ingraham, Duncan, Jr.",
+      "count": 3,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Jaume, Guillaume",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Jay, Sarah",
+      "count": 3,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Jenifer, Daniel of St. Thomas",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Jones, Edward Jackson",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Juppin, Mademoiselle ——",
+      "count": 3,
+      "from": 1779,
+      "to": 1782
+    },
+    {
+      "name": "Kalm, Peter",
+      "count": 3,
+      "from": 1749,
+      "to": 1750
+    },
+    {
+      "name": "Keay, Philip",
+      "count": 3,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Kemtenstrauss, M. de",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Kinnier, John",
+      "count": 3,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "La Condamine, Antoine La Sablière de",
+      "count": 3,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "La Faye, Julien-Pierre de",
+      "count": 3,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "La Vauguyon, Paul-François de Quélen de Stuer de Caussade, duc de",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Lacépède, Bernard Germain Étienne de La Ville-Sur-Illon, comte de",
+      "count": 3,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Lancaster County Committee",
+      "count": 3,
+      "from": 1775,
+      "to": 1776
+    },
+    {
+      "name": "Lavallée, Gilles de",
+      "count": 3,
+      "from": 1777,
+      "to": 1784
+    },
+    {
+      "name": "Le Coeur, ——",
+      "count": 3,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Le Rouge, Georges-Louis",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Le Roy, Pétronille",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Lee, Thomas Sim",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Lelyveld, Frans van",
+      "count": 3,
+      "from": 1774,
+      "to": 1777
+    },
+    {
+      "name": "Lieutenant Governor of Massachusetts Bay Colony",
+      "count": 3,
+      "from": 1770,
+      "to": 1770
+    },
+    {
+      "name": "Lining, John",
+      "count": 3,
+      "from": 1755,
+      "to": 1758
+    },
+    {
+      "name": "Lloyd, Thomas",
+      "count": 3,
+      "from": 1756,
+      "to": 1783
+    },
+    {
+      "name": "Lolme, Jean-Louis de",
+      "count": 3,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Louis XVI (of France)",
+      "count": 3,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Mallet, ——",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Manini, Lorenzo",
+      "count": 3,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Marchant, Henry",
+      "count": 3,
+      "from": 1772,
+      "to": 1779
+    },
+    {
+      "name": "Marchant, Henry L.",
+      "count": 3,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Maskelyne, Nevil",
+      "count": 3,
+      "from": 1769,
+      "to": 1770
+    },
+    {
+      "name": "Mayo, Joseph",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Mendes da Costa, Emanuel",
+      "count": 3,
+      "from": 1765,
+      "to": 1767
+    },
+    {
+      "name": "Michell, John",
+      "count": 3,
+      "from": 1767,
+      "to": 1772
+    },
+    {
+      "name": "Middleton, Arthur",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Milly, Nicolas-Christiern de Thy, comte de",
+      "count": 3,
+      "from": 1777,
+      "to": 1783
+    },
+    {
+      "name": "Mitchell, John",
+      "count": 3,
+      "from": 1745,
+      "to": 1749
+    },
+    {
+      "name": "Moffat, Thomas",
+      "count": 3,
+      "from": 1768,
+      "to": 1768
+    },
+    {
+      "name": "Monchy, François Willem de",
+      "count": 3,
+      "from": 1767,
+      "to": 1781
+    },
+    {
+      "name": "Montfort de Prat, “comte” Julius de",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Moore, Charles",
+      "count": 3,
+      "from": 1774,
+      "to": 1775
+    },
+    {
+      "name": "Moore, William",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Morand, Jean-François-Clément",
+      "count": 3,
+      "from": 1777,
+      "to": 1780
+    },
+    {
+      "name": "Morgan, George",
+      "count": 3,
+      "from": 1773,
+      "to": 1773
+    },
+    {
+      "name": "Morgan, Joseph",
+      "count": 3,
+      "from": 1735,
+      "to": 1738
+    },
+    {
+      "name": "Mumford, Gurdon Saltonstall",
+      "count": 3,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Mumford, Thomas",
+      "count": 3,
+      "from": 1775,
+      "to": 1782
+    },
+    {
+      "name": "Murray, David, Viscount Stormont",
+      "count": 3,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Mylius, Anthony",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Neate, William",
+      "count": 3,
+      "from": 1765,
+      "to": 1774
+    },
+    {
+      "name": "Nixon, William",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Nolet, Jacobus",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "North, Lord Frederick",
+      "count": 3,
+      "from": 1775,
+      "to": 1778
+    },
+    {
+      "name": "Oliver, Richard",
+      "count": 3,
+      "from": 1775,
+      "to": 1779
+    },
+    {
+      "name": "Paddack, Seth",
+      "count": 3,
+      "from": 1769,
+      "to": 1777
+    },
+    {
+      "name": "Palmer, Mary",
+      "count": 3,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Paris, Ferdinand John",
+      "count": 3,
+      "from": 1757,
+      "to": 1758
+    },
+    {
+      "name": "Parker, Mary",
+      "count": 3,
+      "from": 1763,
+      "to": 1770
+    },
+    {
+      "name": "Parker, Samuel",
+      "count": 3,
+      "from": 1768,
+      "to": 1771
+    },
+    {
+      "name": "Pauli, Johann Ulrich",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Penn, Richard, Jr.",
+      "count": 3,
+      "from": 1778,
+      "to": 1783
+    },
+    {
+      "name": "Perygnon, —— de",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Philadelphia Merchants",
+      "count": 3,
+      "from": 1768,
+      "to": 1769
+    },
+    {
+      "name": "Pickering, John, Jr.",
+      "count": 3,
+      "from": 1770,
+      "to": 1778
+    },
+    {
+      "name": "Pierce, Benjamin",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Poellnitz, Friedrich Karl Hans Bruno, baron von",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Printer of The London Chronicle",
+      "count": 3,
+      "from": 1758,
+      "to": 1759
+    },
+    {
+      "name": "Pulteney, William Johnstone",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Quadt Wykeradt, Comtesse de",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Quincy, Josiah",
+      "count": 3,
+      "from": 1774,
+      "to": 1776
+    },
+    {
+      "name": "Rainey, John",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Raynal, Guillaume Thomas François, Abbé",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Regnier, ——",
+      "count": 3,
+      "from": 1778,
+      "to": 1782
+    },
+    {
+      "name": "Richard, ——",
+      "count": 3,
+      "from": 1777,
+      "to": 1782
+    },
+    {
+      "name": "Ringgold, Thomas",
+      "count": 3,
+      "from": 1753,
+      "to": 1761
+    },
+    {
+      "name": "Rittenhouse, David",
+      "count": 3,
+      "from": 1780,
+      "to": 1783
+    },
+    {
+      "name": "Roberdeau, Jacques-Dominique de",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Rochambeau, Donatien-Marie-Joseph de Vimeur, vicomte de",
+      "count": 3,
+      "from": 1780,
+      "to": 1784
+    },
+    {
+      "name": "Rogers, Robert",
+      "count": 3,
+      "from": 1770,
+      "to": 1775
+    },
+    {
+      "name": "Rolandeau, Louis-François",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Ronayne, Thomas",
+      "count": 3,
+      "from": 1761,
+      "to": 1772
+    },
+    {
+      "name": "Royal Society",
+      "count": 3,
+      "from": 1752,
+      "to": 1773
+    },
+    {
+      "name": "Ruault, Nicolas",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Rulhière, Claude-Carloman de",
+      "count": 3,
+      "from": 1777,
+      "to": 1779
+    },
+    {
+      "name": "Russell, William",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Rutledge, Edward",
+      "count": 3,
+      "from": 1776,
+      "to": 1782
+    },
+    {
+      "name": "Sargeant, William Hill",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Sargent, Rosamond",
+      "count": 3,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Schönfeld, Johann Hilmar Adolf Graf von, baron de",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Schulenburg, Friedrich Wilhelm, baron von der",
+      "count": 3,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Sears, David",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Seward, William Wenman",
+      "count": 3,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Shipley, Anna Maria",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Shirley, William, Jr.",
+      "count": 3,
+      "from": 1755,
+      "to": 1755
+    },
+    {
+      "name": "Shuttleworth, John",
+      "count": 3,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Smith, Isaac, Jr.",
+      "count": 3,
+      "from": 1770,
+      "to": 1783
+    },
+    {
+      "name": "Smith, Samuel",
+      "count": 3,
+      "from": 1772,
+      "to": 1779
+    },
+    {
+      "name": "Steinsky, François",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Steuben, Friedrich Wilhelm Ludolf Gerhard Augustin, Baron von",
+      "count": 3,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Stockar zur Sonnenbourg, ——",
+      "count": 3,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Strange, Isabella",
+      "count": 3,
+      "from": 1779,
+      "to": 1783
+    },
+    {
+      "name": "Talbot, Silas",
+      "count": 3,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Taverne Demont Dhiver, ——",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Taylor, Jesse",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Templeman, Peter",
+      "count": 3,
+      "from": 1763,
+      "to": 1767
+    },
+    {
+      "name": "Trent, William",
+      "count": 3,
+      "from": 1767,
+      "to": 1775
+    },
+    {
+      "name": "Tressan, Louis-Elisabeth de La Vergne, comte de",
+      "count": 3,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Uhl, Jean Henri David",
+      "count": 3,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "United States Congress",
+      "count": 3,
+      "from": 1775,
+      "to": 1776
+    },
+    {
+      "name": "Ussieux, Louis d’",
+      "count": 3,
+      "from": 1780,
+      "to": 1782
+    },
+    {
+      "name": "Vaughan, William",
+      "count": 3,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Verheyk, H.",
+      "count": 3,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Viny, John",
+      "count": 3,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Walker, Thomas",
+      "count": 3,
+      "from": 1773,
+      "to": 1777
+    },
+    {
+      "name": "Ward, Samuel",
+      "count": 3,
+      "from": 1757,
+      "to": 1775
+    },
+    {
+      "name": "Welsh, David",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Whately, William",
+      "count": 3,
+      "from": 1774,
+      "to": 1774
+    },
+    {
+      "name": "Wheelock, John",
+      "count": 3,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Wilcox, Charles",
+      "count": 3,
+      "from": 1773,
+      "to": 1774
+    },
+    {
+      "name": "Williams, Griffith",
+      "count": 3,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Windisch-Grätz, Josef Niclas Reichsgraf",
+      "count": 3,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Winn, Isaac L.",
+      "count": 3,
+      "from": 1769,
+      "to": 1773
+    },
+    {
+      "name": "Wister, Daniel",
+      "count": 3,
+      "from": 1765,
+      "to": 1773
+    },
+    {
+      "name": "Withering, William",
+      "count": 3,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Woestyn frères",
+      "count": 3,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Wright, Elizabeth",
+      "count": 3,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Wright, Patience Lovell",
+      "count": 3,
+      "from": 1783,
+      "to": 1785
+    },
+    {
+      "name": "Wright, Susanna",
+      "count": 3,
+      "from": 1751,
+      "to": 1755
+    },
+    {
+      "name": "Wuybert, Antoine-Félix",
+      "count": 3,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Wythe, George",
+      "count": 3,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "“Charles de Weissenstein”",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "“Job Prince”",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Abercromby, John",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Académie Royale des Sciences",
+      "count": 2,
+      "from": 1772,
+      "to": 1784
+    },
+    {
+      "name": "Acarq, Jean-Pierre d’",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Adam, Mr.",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Adamoli, ——",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Adams, Charles",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Adams, Peter Boylston",
+      "count": 2,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Adams, Thomas",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Adams, Thomas Boylston",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Alagnac",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Albany Committee",
+      "count": 2,
+      "from": 1775,
+      "to": 1775
+    },
+    {
+      "name": "Alexander, Robert",
+      "count": 2,
+      "from": 1767,
+      "to": 1770
+    },
+    {
+      "name": "All Captains and Commanders of American Armed Ships",
+      "count": 2,
+      "from": 1779,
+      "to": 1781
+    },
+    {
+      "name": "Allcock, William",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Allen, William",
+      "count": 2,
+      "from": 1745,
+      "to": 1754
+    },
+    {
+      "name": "Almon, John",
+      "count": 2,
+      "from": 1774,
+      "to": 1774
+    },
+    {
+      "name": "Ameloo, Anthony",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Anderson, George",
+      "count": 2,
+      "from": 1778,
+      "to": 1779
+    },
+    {
+      "name": "Archer, Henry Waldegrave",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Armbruster, Anthony",
+      "count": 2,
+      "from": 1763,
+      "to": 1765
+    },
+    {
+      "name": "Assembly Committee of Correspondence",
+      "count": 2,
+      "from": 1758,
+      "to": 1758
+    },
+    {
+      "name": "Autun, Remy d’",
+      "count": 2,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Ayres, John",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Babson, James",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Bache, Theophylact",
+      "count": 2,
+      "from": 1772,
+      "to": 1773
+    },
+    {
+      "name": "Baraux, M.",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Barber, David F.",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Barber, Nathaniel, Jr.",
+      "count": 2,
+      "from": 1776,
+      "to": 1776
+    },
+    {
+      "name": "Barclay, Mary",
+      "count": 2,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Barnes, Thomas",
+      "count": 2,
+      "from": 1778,
+      "to": 1778
+    },
+    {
+      "name": "Bartoli, Giuseppe",
+      "count": 2,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Bass, Jeriah",
+      "count": 2,
+      "from": 1781,
+      "to": 1782
+    },
+    {
+      "name": "Baumberg, Johann Christoph",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Baussay, Elias de",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Beaugeard, Pierre-Marin",
+      "count": 2,
+      "from": 1776,
+      "to": 1777
+    },
+    {
+      "name": "Beaujeu, ——, comte de",
+      "count": 2,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Beaumont, ——",
+      "count": 2,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Becket, Thomas",
+      "count": 2,
+      "from": 1763,
+      "to": 1764
+    },
+    {
+      "name": "Beckwith, John",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Beckwith, Sally",
+      "count": 2,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Bedford, Jane Parker",
+      "count": 2,
+      "from": 1773,
+      "to": 1773
+    },
+    {
+      "name": "Bedtinger, Jean-Joseph",
+      "count": 2,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Beerenbroek, Arnold-Barthélemy",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Bell, William",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Berckel, Pieter Johan van",
+      "count": 2,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Bernstorff, Andreas Peter, Graf von",
+      "count": 2,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Bertin, Caroline (Charlotte)-Bertrande Chapelle de Jumilhac-Cubjac",
+      "count": 2,
+      "from": 1776,
+      "to": 1783
+    },
+    {
+      "name": "Bertin, Henri-Léonard-Jean-Baptiste",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Beyer, ——",
+      "count": 2,
+      "from": 1784,
+      "to": 1785
+    },
+    {
+      "name": "Bicker, Lambertus",
+      "count": 2,
+      "from": 1774,
+      "to": 1777
+    },
+    {
+      "name": "Birch, Thomas",
+      "count": 2,
+      "from": 1762,
+      "to": 1762
+    },
+    {
+      "name": "Birckel, ——",
+      "count": 2,
+      "from": 1781,
+      "to": 1783
+    },
+    {
+      "name": "Blackwell, George",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Blake, Peter",
+      "count": 2,
+      "from": 1781,
+      "to": 1781
+    },
+    {
+      "name": "Blanchard, Jean-Pierre-François",
+      "count": 2,
+      "from": 1782,
+      "to": 1784
+    },
+    {
+      "name": "Blodget, Nathan",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Blomberg, Hendrik van",
+      "count": 2,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Blunt, Sir Charles William",
+      "count": 2,
+      "from": 1779,
+      "to": 1779
+    },
+    {
+      "name": "Board of Trade",
+      "count": 2,
+      "from": 1759,
+      "to": 1760
+    },
+    {
+      "name": "Bolling, Thomas Tabb",
+      "count": 2,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Bon de Corcelles, Pierre",
+      "count": 2,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Bonnefoux, Pierre",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Bonvouloir et Loyauté, Julien-Alexandre Achard de",
+      "count": 2,
+      "from": 1775,
+      "to": 1778
+    },
+    {
+      "name": "Born, Ignaz Edler von",
+      "count": 2,
+      "from": 1783,
+      "to": 1784
+    },
+    {
+      "name": "Borsselert, W. Z. van",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Boulainvilliers, Anne-Gabriel-Henri Bernard, marquis de",
+      "count": 2,
+      "from": 1780,
+      "to": 1781
+    },
+    {
+      "name": "Boulton, Matthew",
+      "count": 2,
+      "from": 1765,
+      "to": 1772
+    },
+    {
+      "name": "Bourdic, Marie-Anne-Henriette Payan de l’Estaing, baronne de",
+      "count": 2,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Bourne, John",
+      "count": 2,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Bowen, Jabez",
+      "count": 2,
+      "from": 1785,
+      "to": 1785
+    },
+    {
+      "name": "Bowens, Francis",
+      "count": 2,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Boyd, William R.",
+      "count": 2,
+      "from": 1779,
+      "to": 1780
+    },
+    {
+      "name": "Bra[iez?], ——",
+      "count": 2,
+      "from": 1784,
+      "to": 1784
+    },
+    {
+      "name": "Brantsen, Gerard van de",
+      "count": 2,
+      "from": 1782,
+      "to": 1783
+    },
+    {
+      "name": "Brétigney, Charles-François Sevelinges, marquis? de",
+      "count": 2,
+      "from": 1777,
+      "to": 1778
+    },
+    {
+      "name": "Brillon, ——",
+      "count": 2,
+      "from": 1777,
+      "to": 1777
+    },
+    {
+      "name": "Montgolfier, Maurice-Augustin",
+      "count": 2,
+      "from": 1782,
+      "to": 1782
+    },
+    {
+      "name": "Caillot, Joseph",
+      "count": 1,
+      "from": 1780,
+      "to": 1780
+    },
+    {
+      "name": "Montgolfier, Jacques-Etienne",
+      "count": 1,
+      "from": 1783,
+      "to": 1783
+    },
+    {
+      "name": "Montgolfier, Jacques-Étienne",
+      "count": 1,
+      "from": 1783,
+      "to": 1783
+    }
+  ]
+}
