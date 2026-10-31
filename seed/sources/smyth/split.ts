@@ -32,6 +32,8 @@ export type SmythDocument = {
   page?: number;
   text: string;
   flags: SplitFlag[];
+  /** The contents table and the printed dateline independently gave this exact date. */
+  dateConfirmed: boolean;
 };
 
 const MONTHS = [
@@ -52,8 +54,6 @@ const MONTH_PATTERN = MONTHS.join('|');
 const FIRST_YEAR = 1706;
 const LAST_YEAR = 1790;
 
-/** A printed page rarely holds this many lines, so a longer "footnote" is really body text. */
-const MAX_FOOTNOTE_LINES = 30;
 /** Generous bounds on OCR characters per printed page, for the length plausibility check. */
 const MAX_CHARS_PER_PAGE = 3000;
 const MIN_CHARS_PER_PAGE = 150;
@@ -124,7 +124,9 @@ function finishEntry(number: number, buffer: string): ContentsEntry {
   const page = pageMatch ? Number(pageMatch[1]) : undefined;
   const row = squeeze(buffer);
   const dateMatch = ROW_DATE.exec(row);
-  const beforeDate = dateMatch ? row.slice(0, dateMatch.index) : row.replace(/[\s\d.,•·'‘’`:;v\-—]+$/, '');
+  const beforeDate = dateMatch
+    ? row.slice(0, dateMatch.index)
+    : row.replace(/[\s\d.,•·'‘’`:;v\-—]+$/, '');
   const titleEnd = beforeDate.lastIndexOf('. ');
   if (!dateMatch) return { number, title: beforeDate, page };
   if (titleEnd === -1) return { number, title: beforeDate.replace(/[\s.,]+$/, ''), page };
@@ -182,87 +184,119 @@ export function parseContents(lines: string[]): ContentsEntry[] {
   return readContents(lines).entries;
 }
 
-const WRITINGS_HEAD = /THE\s+WRITINGS\s+OF\s+BENJAMIN\s+FRANKLIN/;
-const YEAR_HEAD = /^\s*\W?[1Il][\dIlO]{3}\s*\]/;
+const WRITINGS_HEAD = /THE\s+WRITINGS\s+OF\s+BENJ/;
+/** Even pages end "[1744"; the rest of the line varies with the OCR. */
+const BRACKETED_YEAR_AT_END = /\[\s*[1Il]\s*[7I]\s*[\dIlOo]\s*[\dIlOo]\S?\s*$/;
+/** Odd pages: "1778] AURORA BOREALIS 209", also read as "1 78 1]", "I75o]", "•750]", "I755J", "1750". */
+const YEAR_THEN_CAPS = /^\s*\W?[\dIl•][\dIlOoiS ]{2,6}[\]J}]?\s+[A-Z"'“‘(]/;
+/** Printer's sheet mark at the foot of a page: "VOL. IX — L". */
+const SHEET_MARK = /^\s*VOL\.?\s+[IVXLl1]+\s*[—–-]\s*[\dA-Za-z]{1,2}(?:\s+[\dA-Za-z]{1,2})?\s*$/;
+const MAX_RUNNING_HEAD_LENGTH = 80;
+/** A head the OCR broke over several lines opens with the year alone: "1777]". */
+const YEAR_ONLY_HEAD = /^\s*\W?[\dIl•][\dIlOoiS ]{2,6}[\]J}]\s*$/;
+/** An odd-page head that lost its year: "TO PHILIP SCHUYLER 447". */
+const CAPS_TITLE_WITH_PAGE = /^\s*TO\s+[A-Z][A-Z .,'’-]*\s\d{1,3}\s*$/;
+/** How far the rest of a broken head can trail its year, in non-blank lines. */
+const BROKEN_HEAD_EXTRA_LINES = 2;
 /** OCR often reads the note mark 2 as "a". */
 const FOOTNOTE_START = /^\s*[1-9a*†‡§]\s+["“'‘(]?[A-Z]/;
 /** Smyth signs his own notes "— ED."; a line ending that way is never Franklin's text. */
 const EDITOR_SIGNATURE = /[—–-]\s*ED[.,]?\s*$/;
 
 function isRunningHead(line: string): boolean {
-  return (WRITINGS_HEAD.test(line) && line.trim().length < 70) || YEAR_HEAD.test(line);
+  if (line.trim().length > MAX_RUNNING_HEAD_LENGTH) return false;
+  if (WRITINGS_HEAD.test(line)) return true;
+  if (/[a-z]{3}/.test(line)) return false;
+  return (
+    BRACKETED_YEAR_AT_END.test(line) || YEAR_THEN_CAPS.test(line) || CAPS_TITLE_WITH_PAGE.test(line)
+  );
 }
 
-/** Splits lines into pages at running heads, discarding the heads. */
+/** Splits lines into pages at running heads, discarding the heads and sheet marks. */
 function splitPages(lines: string[]): string[][] {
   const pages: string[][] = [[]];
+  let brokenHeadLinesLeft = 0;
   for (const line of lines) {
-    if (isRunningHead(line)) pages.push([]);
-    else pages[pages.length - 1].push(line);
+    if (brokenHeadLinesLeft > 0 && line.trim()) {
+      brokenHeadLinesLeft = /[a-z]{3}/.test(line) ? 0 : brokenHeadLinesLeft - 1;
+      if (brokenHeadLinesLeft > 0 || !/[a-z]{3}/.test(line)) continue;
+    }
+    if (YEAR_ONLY_HEAD.test(line)) {
+      pages.push([]);
+      brokenHeadLinesLeft = BROKEN_HEAD_EXTRA_LINES;
+    } else if (isRunningHead(line)) pages.push([]);
+    else if (!SHEET_MARK.test(line)) pages[pages.length - 1].push(line);
   }
   return pages;
 }
 
-/** Removes every paragraph up to a line signed by the editor, wherever it sits on the page. */
-function stripSignedNotes(page: string[]): string[] {
-  const kept: string[] = [];
-  let paragraphStart = 0;
+/** Groups a page's lines into paragraphs, which are separated by blank lines. */
+function pageParagraphs(page: string[]): string[][] {
+  const paragraphs: string[][] = [[]];
   for (const line of page) {
-    if (!line.trim()) {
+    if (line.trim()) paragraphs[paragraphs.length - 1].push(line);
+    else if (paragraphs[paragraphs.length - 1].length > 0) paragraphs.push([]);
+  }
+  return paragraphs.filter((p) => p.length > 0);
+}
+
+/**
+ * Removes Smyth's notes from a paragraph. A line signed "— ED." ends a note,
+ * which starts at the nearest marked line above it, or else at the top of the
+ * paragraph. Text before that mark, such as a signature, stays.
+ */
+function stripSignedNotes(paragraph: string[]): string[] {
+  const kept: string[] = [];
+  for (const line of paragraph) {
+    if (!EDITOR_SIGNATURE.test(line)) {
       kept.push(line);
-      paragraphStart = kept.length;
-    } else if (EDITOR_SIGNATURE.test(line)) {
-      kept.length = paragraphStart;
-    } else {
-      kept.push(line);
+      continue;
     }
+    if (FOOTNOTE_START.test(line)) continue; // a whole note on one line
+    let noteStart = kept.length - 1;
+    while (noteStart >= 0 && !FOOTNOTE_START.test(kept[noteStart])) noteStart--;
+    kept.length = Math.max(noteStart, 0);
   }
   return kept;
 }
 
-/** Removes the footnote block at the foot of a page, if one is close enough to the end. */
-function stripFootnotes(page: string[]): string[] {
-  for (let i = 0; i < page.length; i++) {
-    const startsNote = i === 0 || !page[i - 1].trim() || EDITOR_SIGNATURE.test(page[i - 1]);
-    if (startsNote && FOOTNOTE_START.test(page[i]) && page.length - i <= MAX_FOOTNOTE_LINES) {
-      return page.slice(0, i);
-    }
+/**
+ * Removes the notes at the foot of a page. Only paragraphs recognisable as
+ * notes go: if a running head was missed, the next page's text must survive,
+ * since a stray note in the text is far better than a lost passage.
+ */
+function stripFootnotes(page: string[]): string[][] {
+  const paragraphs = pageParagraphs(page)
+    .map(stripSignedNotes)
+    .filter((p) => p.length > 0);
+  while (paragraphs.length > 0 && FOOTNOTE_START.test(paragraphs[paragraphs.length - 1][0])) {
+    paragraphs.pop();
   }
-  return page;
+  return paragraphs;
 }
 
 /** Turns raw body lines into reading text: no page furniture, joined lines, one blank between paragraphs. */
 export function cleanBody(lines: string[]): string {
   const paragraphs: string[] = [];
-  let current = '';
-  let continuePrevious = false;
 
-  const flush = () => {
-    if (current) paragraphs.push(current);
-    current = '';
-  };
+  const clean = (raw: string) =>
+    squeeze(raw).replace(/([A-Za-z.,;:!?'"’”)\]])[1-9](?=\s|$)/g, '$1');
 
-  const pages = splitPages(lines).map((page) => stripSignedNotes(stripFootnotes(page)));
-  pages.forEach((page, pageIndex) => {
-    if (pageIndex > 0 && current === '' && paragraphs.length > 0) continuePrevious = true;
-    for (const raw of page) {
-      const line = squeeze(raw).replace(/([A-Za-z.,;:!?'"’”)\]])[1-9](?=\s|$)/g, '$1');
-      if (!line) {
-        flush();
-        continue;
+  const joinLine = (text: string, line: string) =>
+    /[a-z]-$/.test(text) ? text.slice(0, -1) + line : `${text} ${line}`;
+
+  for (const page of splitPages(lines).map(stripFootnotes)) {
+    page.forEach((paragraph, index) => {
+      const text = paragraph.map(clean).reduce(joinLine);
+      const previous = paragraphs[paragraphs.length - 1];
+      // A paragraph left open at the foot of a page continues at the top of the next.
+      if (index === 0 && previous !== undefined && !/[.!?:;"”]$/.test(previous)) {
+        paragraphs[paragraphs.length - 1] = joinLine(previous, text);
+      } else {
+        paragraphs.push(text);
       }
-      if (continuePrevious) {
-        continuePrevious = false;
-        const previous = paragraphs[paragraphs.length - 1];
-        // A paragraph left open at the foot of a page continues on the next.
-        if (!/[.!?:;"”]$/.test(previous)) current = paragraphs.pop() as string;
-      }
-      if (!current) current = line;
-      else if (/[a-z]-$/.test(current)) current = current.slice(0, -1) + line;
-      else current += ` ${line}`;
-    }
-    flush();
-  });
+    });
+  }
   return paragraphs.join('\n\n');
 }
 
@@ -399,7 +433,11 @@ export function splitVolume(raw: string, volume: number): SmythDocument[] {
       if (tooLong || tooShort) flags.push('implausible-length');
     }
 
+    const dateConfirmed =
+      entry?.date?.precision === 'day' && dateline !== undefined && dateline.iso === entry.date.iso;
+
     return {
+      dateConfirmed,
       volume,
       number: heading.number,
       title: entry?.title ?? titleCaseHeading(heading.text),

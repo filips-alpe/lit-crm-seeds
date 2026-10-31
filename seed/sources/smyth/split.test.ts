@@ -91,7 +91,9 @@ describe('parseContents date extraction', () => {
   const entry = (row: string) => parseContents(['CONTENTS', row])[0];
 
   it('reads the date despite OCR junk before the page number', () => {
-    expect(entry('1200.  To  John  Jay.     April  12, 1781     .   .»,./•   •  238 ')).toMatchObject({
+    expect(
+      entry('1200.  To  John  Jay.     April  12, 1781     .   .»,./•   •  238 '),
+    ).toMatchObject({
       title: 'To John Jay',
       date: { iso: '1781-04-12' },
       page: 238,
@@ -99,13 +101,15 @@ describe('parseContents date extraction', () => {
   });
 
   it('rejoins a day split in two by OCR', () => {
-    expect(entry('1386.  To  Comte  de  Vergennes.     January  1 8,  1783   ...  8 ').date?.iso).toBe(
-      '1783-01-18',
-    );
+    expect(
+      entry('1386.  To  Comte  de  Vergennes.     January  1 8,  1783   ...  8 ').date?.iso,
+    ).toBe('1783-01-18');
   });
 
   it('reads a bracketed year', () => {
-    expect(entry('1202.  To  Miss  Georgiana  Shipley.     [1781]     L,,,,;    242 ').date).toEqual({
+    expect(
+      entry('1202.  To  Miss  Georgiana  Shipley.     [1781]     L,,,,;    242 ').date,
+    ).toEqual({
       iso: '1781',
       precision: 'year',
     });
@@ -122,11 +126,15 @@ describe('parseContents date extraction', () => {
   });
 
   it('treats a qualified date as no exact date', () => {
-    expect(entry('13.  Dialogues  on  Virtue.     June  23,  and  July  9,  1730 157 ')).toMatchObject({
+    expect(
+      entry('13.  Dialogues  on  Virtue.     June  23,  and  July  9,  1730 157 '),
+    ).toMatchObject({
       title: 'Dialogues on Virtue',
       page: 157,
     });
-    expect(entry('13.  Dialogues  on  Virtue.     June  23,  and  July  9,  1730 157 ').date).toBeUndefined();
+    expect(
+      entry('13.  Dialogues  on  Virtue.     June  23,  and  July  9,  1730 157 ').date,
+    ).toBeUndefined();
   });
 });
 
@@ -154,7 +162,7 @@ describe('cleanBody', () => {
     const text = cleanBody([
       'the  ever  amiable  Brillante.1',
       '',
-      '1  For  the  history  of  this  bagatelle  see  Franklin\'s  letter.',
+      "1  For  the  history  of  this  bagatelle  see  Franklin's  letter.",
       'It  has  been  generally  said.  —  ED.',
       '',
       '',
@@ -163,12 +171,6 @@ describe('cleanBody', () => {
       'To  me,  after  all.',
     ]);
     expect(text).toBe('the ever amiable Brillante.\n\nTo me, after all.');
-  });
-
-  it('keeps a numbered paragraph that is too far from a page end to be a footnote', () => {
-    const lines = ['1  First  of  all,  the  thing.', ''];
-    for (let i = 0; i < 40; i++) lines.push(`Line  number  ${i}  of  the  body.`);
-    expect(cleanBody(lines)).toContain('First of all');
   });
 
   it('removes a footnote whose mark OCR read as the letter a', () => {
@@ -185,6 +187,84 @@ describe('cleanBody', () => {
         'Franklin  resumes  his  letter.',
       ]),
     ).toBe('Franklin resumes his letter.');
+  });
+
+  it.each([
+    '1 78 1]  TO  MRS.   CAROLINE  EDES  339 ',
+    '1  73i]  AN  APOLOGY  FOR  PRINTERS  177 ',
+    'I75o]  TO  PETER  COLLINSON  425 ',
+    '•750]  TO  MRS.  ABIAH  FRANKLIN  3 ',
+    'I755J  TO  JARED  ELIOT  281 ',
+    '1750  TO  JARED  ELIOT  53 ',
+    '1750  TO  PETER  COLLINSOtf  49 ',
+    '1760]  TO  PETER  FRANKLIN  t$ ',
+    'I74SJ  TO  JOHN"  FRANKLIN,  AT  BOSTON  283 ',
+    'TO  PHILIP  SCHUYLER  447 ',
+    '14      THE  WRITINGS  OF  BENJAMIN  FRANKUN      [1750 ',
+    '54      THE  WRITINGS  OF  BENJAMIN-  FRANKLIN     [1751 ',
+    '1 82      THE  WRITINGS  OF  BENJAMIN  FRANKLIN     [1774 ',
+  ])('recognises the garbled running head %s', (head) => {
+    expect(cleanBody(['Permit  me', '', '', head, '', 'to  repeat  my  Thanks.'])).toBe(
+      'Permit me to repeat my Thanks.',
+    );
+  });
+
+  it('removes a running head the OCR broke over several lines', () => {
+    expect(
+      cleanBody([
+        'the  cost  to  have',
+        '',
+        '1779] ',
+        '',
+        'TO  CHARLES  EPP ',
+        '',
+        '371 ',
+        '',
+        'it  sent.',
+      ]),
+    ).toBe('the cost to have it sent.');
+  });
+
+  it('stops skipping a broken head at the first line of prose', () => {
+    expect(cleanBody(['Ending.', '', '1779] ', '', 'Prose  resumes  here.', '', 'More.'])).toBe(
+      'Ending.\n\nProse resumes here.\n\nMore.',
+    );
+  });
+
+  it('keeps the next page when a note precedes a running head it cannot recognise', () => {
+    const text = cleanBody([
+      'Permit  me',
+      '',
+      '1  See  the  Duke,  who  said  they  were  well  combined.  —  ED. ',
+      '',
+      'to  repeat  my  Thanks  for  your  elegant  Present.',
+    ]);
+    expect(text).toContain('to repeat my Thanks');
+    expect(text).not.toContain('Duke');
+  });
+
+  it('keeps a signature directly above a signed note', () => {
+    expect(
+      cleanBody([
+        'most  humble  Servant, ',
+        '',
+        'B.   FRANKLIN1 ',
+        "1  For  Josiah  Tucker's  reply,  see  page  198.  —  ED. ",
+      ]),
+    ).toBe('most humble Servant,\n\nB. FRANKLIN');
+  });
+
+  it('removes a printer sheet mark', () => {
+    for (const mark of ['VOL.  IX  —  L ', 'VOL.  Ill  —  2  D ']) {
+      expect(cleanBody(['Your  humble  Servant.', '', mark, '', 'Return  that.'])).toBe(
+        'Your humble Servant.\n\nReturn that.',
+      );
+    }
+  });
+
+  it('keeps a numbered list item in the middle of a page', () => {
+    const text = cleanBody(['1  Hogshead  of  sugar.', '', 'And  the  rest  of  the  account.']);
+    expect(text).toContain('Hogshead');
   });
 
   it('joins words hyphenated across a line end', () => {
@@ -274,6 +354,19 @@ describe('splitVolume', () => {
     expect(docs.find((d) => d.number === 47)?.flags).not.toContain('followed-by-gap');
   });
 
+  it('records when contents and dateline independently agree on the date', () => {
+    const [confirmed] = splitVolume(
+      volume(['46.    TO  WILLIAM  STRAHAN ', '', 'July  31,  1744. ', '', 'Text.'], contents),
+      2,
+    );
+    expect(confirmed.dateConfirmed).toBe(true);
+    const [unconfirmed] = splitVolume(
+      volume(['46.    TO  WILLIAM  STRAHAN ', '', 'Text.'], contents),
+      2,
+    );
+    expect(unconfirmed.dateConfirmed).toBe(false);
+  });
+
   it('flags a document whose contents and dateline dates disagree', () => {
     const [doc] = splitVolume(
       volume(['46.    TO  WILLIAM  STRAHAN ', '', 'August  2,  1744. ', '', 'Text.'], contents),
@@ -306,12 +399,18 @@ describe('splitVolume', () => {
   });
 
   it('flags a document far longer than its contents page span allows', () => {
-    const long = Array.from({ length: 300 }, () => 'A  full  line  of  ordinary  prose  text  here,');
+    const long = Array.from(
+      { length: 300 },
+      () => 'A  full  line  of  ordinary  prose  text  here,',
+    );
     const [doc] = splitVolume(
-      volume(['46.    TO  WILLIAM  STRAHAN ', '', 'July  31,  1744. ', '', ...long], [
-        '46.  To  William  Strahan.     July  31,  1744      .  280 ',
-        '47.  To  Josiah  Franklin.     April  13,  1745    .  281 ',
-      ]),
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN ', '', 'July  31,  1744. ', '', ...long],
+        [
+          '46.  To  William  Strahan.     July  31,  1744      .  280 ',
+          '47.  To  Josiah  Franklin.     April  13,  1745    .  281 ',
+        ],
+      ),
       2,
     );
     expect(doc.flags).toContain('implausible-length');

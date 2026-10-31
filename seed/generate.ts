@@ -8,6 +8,9 @@
  *   - seed/sources/wikidata-snapshot.json      (cached Wikidata results for the circle, CC0)
  *   - seed/sources/fo-franklin-text.json       (public-domain full text matched to FO docs by
  *                                                       permalink — Wikisource/Gutenberg, optional)
+ *   - seed/sources/fo-smyth-text.json          (Smyth's edition, uncorrected OCR, matched by
+ *                                                       sources/smyth/build.ts — used only where the
+ *                                                       cleaner file above has no text, optional)
  * Writes:
  *   - seed/generated/records.generated.*.json  (chunked, ~10MB each)
  *   - seed/data/projects.yaml                  (regenerated in full: period + thematic projects)
@@ -22,7 +25,7 @@ import * as YAML from 'yaml';
 import type { CircleRoster, FranklinDoc } from './sources/extract-fo';
 import { fillMissingDates } from './pipeline/undated';
 import { mapRecord, type GeneratedRecord } from './pipeline/record-mapper';
-import { mergeText, type MatchedText } from './pipeline/text-merge';
+import { mergeText, preferEarlierSources, type MatchedText } from './pipeline/text-merge';
 import { ASSIGNEES, PERIOD_PROJECTS, THEMATIC_RULES } from './pipeline/projects';
 import { mapWikidata } from './sources/wikidata/map';
 import type { WikidataSnapshot } from './sources/wikidata/fetch';
@@ -32,6 +35,7 @@ const SNAPSHOT_PATH = resolve(here, 'sources/fo-circle.json');
 const WIKIDATA_PATH = resolve(here, 'sources/wikidata-snapshot.json');
 const ROSTER_PATH = resolve(here, 'sources/circle.json');
 const MATCHED_TEXT_PATH = resolve(here, 'sources/fo-franklin-text.json');
+const SMYTH_TEXT_PATH = resolve(here, 'sources/fo-smyth-text.json');
 const GENERATED_DIR = resolve(here, 'generated');
 const PROJECTS_YAML_PATH = resolve(here, 'data/projects.yaml');
 
@@ -138,9 +142,13 @@ function buildProjectsYaml(records: GeneratedRecord[]): string {
   );
 }
 
+function loadTextFile(path: string): MatchedText[] {
+  if (!existsSync(path)) return [];
+  return JSON.parse(readFileSync(path, 'utf8')) as MatchedText[];
+}
+
 function loadMatchedText(): MatchedText[] {
-  if (!existsSync(MATCHED_TEXT_PATH)) return [];
-  return JSON.parse(readFileSync(MATCHED_TEXT_PATH, 'utf8')) as MatchedText[];
+  return preferEarlierSources(loadTextFile(MATCHED_TEXT_PATH), loadTextFile(SMYTH_TEXT_PATH));
 }
 
 function main() {

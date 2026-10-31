@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mergeText, type MatchedText } from './text-merge';
+import { mergeText, preferEarlierSources, type MatchedText } from './text-merge';
 import type { GeneratedRecord } from './record-mapper';
 
 function record(partial: Partial<GeneratedRecord>): GeneratedRecord {
@@ -79,5 +79,14 @@ describe('mergeText', () => {
       [match({ description: 'Son of Josiah and Abiah.' })],
     );
     expect(merged.description).toBe('Existing account.');
+  });
+});
+
+describe('preferEarlierSources', () => {
+  it('keeps the first source for a permalink and adds the rest', () => {
+    const cleaner = match({ text: 'Clean text' });
+    const ocr = match({ text: 'OCR text' });
+    const other = match({ permalink: 'other', text: 'Other text' });
+    expect(preferEarlierSources([cleaner], [ocr, other])).toEqual([cleaner, other]);
   });
 });

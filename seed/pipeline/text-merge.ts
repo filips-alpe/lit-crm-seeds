@@ -20,6 +20,15 @@ export type MatchedText = {
   description?: string;
 };
 
+/** Combines text sources, best first: a later source never replaces an earlier one's text. */
+export function preferEarlierSources(...sources: MatchedText[][]): MatchedText[] {
+  const byPermalink = new Map<string, MatchedText>();
+  for (const match of sources.flat()) {
+    if (!byPermalink.has(match.permalink)) byPermalink.set(match.permalink, match);
+  }
+  return [...byPermalink.values()];
+}
+
 /**
  * Merges matched full text into generated records by FO permalink. Records
  * with no match are returned unchanged. Mutates nothing; returns new
