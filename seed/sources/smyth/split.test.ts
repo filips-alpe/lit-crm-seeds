@@ -175,7 +175,7 @@ describe('cleanBody', () => {
 
   it('removes a footnote whose mark OCR read as the letter a', () => {
     expect(
-      cleanBody(['Body  text  here.', '', 'a  Richard  Boulton,  The  Works,  London.', '']),
+      cleanBody(['Body  text  here.2', '', 'a  Richard  Boulton,  The  Works,  London.', '']),
     ).toBe('Body text here.');
   });
 
@@ -252,6 +252,24 @@ describe('cleanBody', () => {
         "1  For  Josiah  Tucker's  reply,  see  page  198.  —  ED. ",
       ]),
     ).toBe('most humble Servant,\n\nB. FRANKLIN');
+  });
+
+  it('keeps a page that is one paragraph opening like a note', () => {
+    expect(
+      cleanBody([
+        'I  shall  apply  Myself  to  such',
+        '',
+        '',
+        '212   THE  WRITINGS  OF  BENJAMIN  FRANKLIN  [1763 ',
+        '',
+        'a  Settlement  of  all  my  Affairs.',
+      ]),
+    ).toBe('I shall apply Myself to such a Settlement of all my Affairs.');
+  });
+
+  it('keeps a last paragraph opening like a note when the page has no such mark', () => {
+    const text = cleanBody(['First  paragraph.', '', '3  Pounds  more  were  still  wanting.']);
+    expect(text).toContain('3 Pounds more were still wanting.');
   });
 
   it('removes a printer sheet mark', () => {
@@ -467,6 +485,48 @@ describe('splitVolume', () => {
     );
     expect(doc.flags).toContain('unknown-end');
     expect(doc.text).toBe('Text.');
+  });
+
+  it('ends the last listed document at a heading past the end of the contents', () => {
+    const docs = splitVolume(
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN ', '', 'Letter.', '', '47.    THE  LEVEE ', '', 'Essay.'],
+        contents.slice(0, 1),
+      ),
+      7,
+    );
+    expect(docs.map((d) => d.number)).toEqual([46, 47]);
+    expect(docs[0].text).toBe('Letter.');
+  });
+
+  it('does not treat a far higher number past the contents as a heading', () => {
+    const docs = splitVolume(
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN ', '', 'Letter.', '', '9000.    A  P.  S. '],
+        contents.slice(0, 1),
+      ),
+      7,
+    );
+    expect(docs.map((d) => d.number)).toEqual([46]);
+  });
+
+  it('drops the source mark left by a wrapped heading, keeping the salutation', () => {
+    const [doc] = splitVolume(
+      volume(
+        [
+          '46.    TO  WILLIAM  STRAHAN ',
+          '',
+          'SOUTH  CAROLINA  (A.  P.  S.) ',
+          '',
+          'DEAR  SIR,',
+          '',
+          'Text.',
+        ],
+        contents.slice(0, 1),
+      ),
+      2,
+    );
+    expect(doc.text).toBe('DEAR SIR,\n\nText.');
   });
 
   it('is deterministic', () => {

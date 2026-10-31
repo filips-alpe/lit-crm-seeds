@@ -7,12 +7,12 @@ University of Toronto scans on the Internet Archive (`writingsofbenjam01franuoft
 
 ## Result
 
-- Documents split: **1729**
-- Matched to a Founders Online record: **1016** (58.8% of documents)
-- Matches whose exact date is printed twice and agrees (contents table and dateline): 506 of 1016
-- Left unmatched: **713**
+- Documents split: **1743**
+- Matched to a Founders Online record: **1005** (57.7% of documents)
+- Matches whose exact date is printed twice and agrees (contents table and dateline): 500 of 1005
+- Left unmatched: **738**
 - Matched, but not used because the record already has cleaner text: 0
-- Records with full text: 17 before, **1033** after, out of 24550 Founders Online records (0.1% to 4.2%)
+- Records with full text: 17 before, **1022** after, out of 24550 Founders Online records (0.1% to 4.2%)
 
 Coverage of all records stays low because Founders Online holds far more than Smyth printed, including
 every letter written to Franklin and every letter among his circle.
@@ -21,7 +21,7 @@ every letter written to Franklin and every letter among his circle.
 
 | Method | Documents |
 | --- | ---: |
-| exact-date+recipient | 954 |
+| exact-date+recipient | 943 |
 | exact-date+recipient-ocr-tolerant | 46 |
 | exact-date+title | 10 |
 | same-period+title | 6 |
@@ -30,8 +30,8 @@ every letter written to Franklin and every letter among his circle.
 
 | Reason | Documents |
 | --- | ---: |
-| no-name-or-title-match | 285 |
-| no-exact-date | 213 |
+| no-name-or-title-match | 296 |
+| no-exact-date | 227 |
 | no-record-on-date | 99 |
 | split-flagged | 71 |
 | contested-record | 26 |
@@ -51,15 +51,15 @@ Every document's outcome is listed in `outcomes.json`.
 
 | Volume | Documents | Matched | Rate |
 | ---: | ---: | ---: | ---: |
-| 1 | 1 | 0 | 0.0% |
+| 1 | 9 | 0 | 0.0% |
 | 2 | 95 | 45 | 47.4% |
 | 3 | 167 | 122 | 73.1% |
 | 4 | 142 | 86 | 60.6% |
-| 5 | 199 | 128 | 64.3% |
+| 5 | 199 | 123 | 61.8% |
 | 6 | 177 | 126 | 71.2% |
-| 7 | 246 | 153 | 62.2% |
+| 7 | 252 | 148 | 58.7% |
 | 8 | 295 | 231 | 78.3% |
-| 9 | 359 | 124 | 34.5% |
+| 9 | 359 | 123 | 34.3% |
 | 10 | 48 | 1 | 2.1% |
 
 Volume 1 is Smyth's introduction and the Autobiography, so it has almost nothing to match.
@@ -83,9 +83,11 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
   "Novembers" for "November 5".
 - **Hyphens at line ends** are removed when joining lines, so a real compound broken at a line end
   ("self-\ngovernment") loses its hyphen.
-- **Smyth's footnotes** are removed by pattern. A note with an unreadable mark and no "— ED." signature can
-  survive in the text, and a real paragraph opening with a lone digit near a page end could be lost.
-- **Smyth's archive marks** such as "(A. P. S.)" go with the heading, so they are not in the text.
+- **Smyth's footnotes** are removed only when clearly notes: signed "— ED.", or at the foot of a page with
+  a matching mark in the text. Anything less certain stays, so notes do survive in some texts.
+- **Smyth's source marks** such as "(A. P. S.)" are removed with the heading, but one that OCR ran into other
+  text can remain at the start of a document.
+- **Some printed letters break off** where Smyth's copy did, with a footnote mark after the last words.
 - **Contents rows** are sometimes garbled. The printed dateline is used instead, and a document with
   neither readable has no exact date, so it stays unmatched.
 - **Wording** follows Smyth's edition, not Franklin's manuscript, so it can differ from Founders Online.

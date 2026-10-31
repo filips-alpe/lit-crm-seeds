@@ -261,15 +261,31 @@ function stripSignedNotes(paragraph: string[]): string[] {
 }
 
 /**
+ * A note's mark must also appear in the page's text ("Brillante.1"). Franklin
+ * capitalises his nouns, so "a Settlement of all my Affairs" or "3 Pounds more"
+ * can open a real paragraph, and the mark is what tells them apart. OCR "a" is
+ * a misread 2.
+ */
+function hasMarkInText(note: string[], text: string[][]): boolean {
+  const marker = note[0].trim()[0];
+  const mark = marker === 'a' ? '2' : marker;
+  if (!/[1-9]/.test(mark)) return text.some((p) => p.some((line) => line.includes(mark)));
+  const inText = new RegExp(`[A-Za-z.,;:!?'"’”)\\]]${mark}(?=\\s|$)`);
+  return text.some((p) => p.some((line) => inText.test(line)));
+}
+
+/**
  * Removes the notes at the foot of a page. Only paragraphs recognisable as
- * notes go: if a running head was missed, the next page's text must survive,
- * since a stray note in the text is far better than a lost passage.
+ * notes go: when in doubt the paragraph stays, since a stray note in the text
+ * is far better than a lost passage.
  */
 function stripFootnotes(page: string[]): string[][] {
   const paragraphs = pageParagraphs(page)
     .map(stripSignedNotes)
     .filter((p) => p.length > 0);
-  while (paragraphs.length > 0 && FOOTNOTE_START.test(paragraphs[paragraphs.length - 1][0])) {
+  while (paragraphs.length > 1) {
+    const last = paragraphs[paragraphs.length - 1];
+    if (!FOOTNOTE_START.test(last[0]) || !hasMarkInText(last, paragraphs.slice(0, -1))) break;
     paragraphs.pop();
   }
   return paragraphs;
@@ -347,6 +363,18 @@ const DATELINE_LAST_WORDS = new RegExp(`(?:${MONTH_PATTERN}) \\d{1,2},? [\\dIlO]
 const MAX_DATELINE_LENGTH = 60;
 const DATELINE_SEARCH_LINES = 4;
 
+/** Smyth's source mark, as in "(A. P. S.)" or "(L. c.)". */
+const ARCHIVE_MARK = /\([A-Za-z][A-Za-z. ]{0,14}\)/;
+
+/** Drops the end of a wrapped heading, recognisable by its capitals and source mark. */
+function dropHeadingRemainder(body: string[]): string[] {
+  const first = body.findIndex((l) => l.trim());
+  if (first === -1) return body;
+  const line = body[first];
+  const isRemainder = ARCHIVE_MARK.test(line) && isCapsHeading(line);
+  return isRemainder ? body.slice(first + 1) : body;
+}
+
 /** The date printed above the letter text, if the first few lines end in an exact date. */
 function findDateline(lines: string[]): SmythDate | undefined {
   const firstLines = lines.filter((l) => l.trim()).slice(0, DATELINE_SEARCH_LINES);
@@ -373,13 +401,19 @@ function findHeadings(lines: string[], entries: ContentsEntry[], fromLine: numbe
     const match = ENTRY_START.exec(lines[i]);
     if (!match || !isCapsHeading(match[2]) || !/^[A-Z"'“‘]/.test(match[2])) continue;
     const number = Number(match[1]);
-    if (number <= previous || number < first || number > last) continue;
+    // The contents table can stop short of the volume's real end (vol. 7 lists to 1064 but
+    // prints to 1071), so the next number past it still ends the document before it.
+    const pastContents = number > last;
+    if (number <= previous || number < first || (pastContents && number !== previous + 1)) continue;
 
     const entry = byNumber.get(number);
     const nextLine = lines.slice(i + 1, i + 4).find((l) => l.trim()) ?? '';
     const text = isCapsHeading(nextLine) ? `${match[2]} ${nextLine}` : match[2];
     // Numbers absent from the contents (an OCR miss there) must at least look like a letter.
-    if (entry ? !agreesWithContents(text, entry.title) : !/^TO\s/.test(match[2])) continue;
+    const accepted = entry
+      ? agreesWithContents(text, entry.title)
+      : pastContents || /^TO\s/.test(match[2]);
+    if (!accepted) continue;
 
     headings.push({ number, line: i, text: squeeze(match[2]) });
     previous = number;
@@ -409,6 +443,7 @@ export function splitVolume(raw: string, volume: number): SmythDocument[] {
     if (backMatter !== -1) body = body.slice(0, backMatter);
 
     const entry = entryByNumber.get(heading.number);
+    body = dropHeadingRemainder(body);
     const dateline = findDateline(body);
     const date = entry?.date?.precision === 'day' ? entry.date : (dateline ?? entry?.date);
     const text = cleanBody(body);

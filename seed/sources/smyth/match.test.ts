@@ -79,6 +79,28 @@ describe('matchDocuments: letters', () => {
     );
   });
 
+  it('does not correct a surname with no given name to support it', () => {
+    expect(
+      onlyOutcome([smyth({ title: 'To Mr. Morris' })], [fo({ recipients: ['Norris, Isaac'] })])
+        .reason,
+    ).toBe('no-name-or-title-match');
+  });
+
+  it('does not match one institution to another sharing its first word', () => {
+    expect(
+      onlyOutcome(
+        [smyth({ title: 'To the Committee of Foreign Affairs' })],
+        [fo({ recipients: ['Committee of Secret Correspondence'] })],
+      ).reason,
+    ).toBe('no-name-or-title-match');
+    expect(
+      matchDocuments(
+        [smyth({ title: 'To the Committee of Foreign Affairs' })],
+        [fo({ recipients: ['Committee of Foreign Affairs'] })],
+      ).matches,
+    ).toHaveLength(1);
+  });
+
   it('does not tolerate an OCR error in a short surname', () => {
     expect(
       onlyOutcome([smyth({ title: 'To John Ray' })], [fo({ recipients: ['Jay, John'] })]).reason,

@@ -7,6 +7,62 @@
   "reason": "no-exact-date"
  },
  {
+  "volume": 1,
+  "number": 3,
+  "title": "Order.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 4,
+  "title": "Resolution.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 5,
+  "title": "Frugality.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 6,
+  "title": "Industry.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 7,
+  "title": "Sincerity.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 8,
+  "title": "Justice.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 9,
+  "title": "Moderation.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 1,
+  "number": 10,
+  "title": "Cleanliness.",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
   "volume": 2,
   "number": 3,
   "title": "The Dogood Papers",
@@ -3703,18 +3759,16 @@
   "number": 466,
   "title": "To the Committee of Correspondence in Pennsylvania",
   "date": "1768-03-13",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-15-02-0043",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 5,
   "number": 467,
   "title": "To the Committee of Correspondence in Pennsylvania",
   "date": "1768-04-16",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-15-02-0060",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 5,
@@ -3993,9 +4047,8 @@
   "number": 504,
   "title": "To the Committee of Merchants in Philadelphia",
   "date": "1769-07-09",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-16-02-0090",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 5,
@@ -4391,9 +4444,8 @@
   "number": 550,
   "title": "To the Committee of Correspondence in Massachusetts",
   "date": "1771-05-15",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-18-02-0071",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 5,
@@ -4549,9 +4601,8 @@
   "number": 568,
   "title": "To the Committee of Correspondence in Massachusetts",
   "date": "1772-01-13",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-19-02-0010",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 5,
@@ -6644,9 +6695,8 @@
   "number": 816,
   "title": "To The Committee Of Secret Corre-",
   "date": "1777-01-04",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-23-02-0066",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 7,
@@ -8260,9 +8310,8 @@
   "number": 1008,
   "title": "To the Committee of Foreign Affairs",
   "date": "1779-05-26",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-29-02-0456",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 7,
@@ -8365,9 +8414,8 @@
   "number": 1021,
   "title": "To the Council of Massachusetts Bay",
   "date": "1779-06-04",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-29-02-0502",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 7,
@@ -8602,9 +8650,8 @@
   "number": 1048,
   "title": "To the Commissioners of the Navy for the Eastern Depart- ment",
   "date": "1779-10-17",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-30-02-0427",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 7,
@@ -8637,9 +8684,8 @@
   "number": 1052,
   "title": "To the Commercial Committee of Congress",
   "date": "1779-10-21",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-30-02-0452",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 7,
@@ -8743,6 +8789,48 @@
   "status": "matched",
   "permalink": "https://founders.archives.gov/documents/Franklin/01-31-02-0200",
   "matchMethod": "exact-date+recipient"
+ },
+ {
+  "volume": 7,
+  "number": 1065,
+  "title": "The Lord'S Prayer",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 7,
+  "number": 1066,
+  "title": "The Levee",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 7,
+  "number": 1067,
+  "title": "Proposed New Version Of The Bible",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 7,
+  "number": 1068,
+  "title": "A Monsieur L'Abbe De La Roche,",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 7,
+  "number": 1069,
+  "title": "A Monsieur L'Abbe Morellet",
+  "status": "unmatched",
+  "reason": "no-exact-date"
+ },
+ {
+  "volume": 7,
+  "number": 1070,
+  "title": "Some Directions For The Drawing",
+  "status": "unmatched",
+  "reason": "no-exact-date"
  },
  {
   "volume": 8,
@@ -12448,9 +12536,8 @@
   "number": 1519,
   "title": "To Messrs. Sears and Smith",
   "date": "1784-08-04",
-  "status": "matched",
-  "permalink": "https://founders.archives.gov/documents/Franklin/01-42-02-0295",
-  "matchMethod": "exact-date+recipient"
+  "status": "unmatched",
+  "reason": "no-name-or-title-match"
  },
  {
   "volume": 9,

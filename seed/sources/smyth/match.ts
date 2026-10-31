@@ -76,11 +76,12 @@ function overlap(a: Set<string>, b: Set<string>): number {
 
 type NameFit = 'exact' | 'ocr-tolerant' | 'none';
 
-function surnameFit(partyWords: string[], surname: string[]): NameFit {
+function surnameFit(partyWords: string[], surname: string[], isPerson: boolean): NameFit {
   if (surname.length === 0) return 'none';
   const run = surname.join(' ');
   if (` ${partyWords.join(' ')} `.includes(` ${run} `)) return 'exact';
   if (
+    isPerson && // "Committee of Foreign Affairs" must not match "Committee of Secret Correspondence"
     surname.length > 1 &&
     surname[0].length >= MIN_COMPOUND_SURNAME_WORD_LENGTH &&
     partyWords.includes(surname[0])
@@ -115,7 +116,7 @@ function fitPersonName(party: string, recordName: string): NameFit {
   const partyWords = nameWords(party);
   const surname = nameWords(surnamePart);
   if (isMaidenName(partyWords, nameWords(givenPart))) return 'exact';
-  const fit = surnameFit(partyWords, surname);
+  const fit = surnameFit(partyWords, surname, recordName.includes(','));
   if (fit === 'none') return 'none';
 
   const surnameWords = new Set(surname);
@@ -127,7 +128,10 @@ function fitPersonName(party: string, recordName: string): NameFit {
   const conflicts =
     partyGivenNames.length > 0 &&
     partyGivenNames.every((given) => givenNameConflicts(given, recordGiven));
-  return conflicts ? 'none' : fit;
+  if (conflicts) return 'none';
+  // A corrected surname needs a given name to back it up: "Mr. Morris" could be Norris.
+  if (fit === 'ocr-tolerant' && (partyGivenNames.length === 0 || !recordGiven)) return 'none';
+  return fit;
 }
 
 function bestFit(party: string, recordNames: string[]): NameFit {
