@@ -205,7 +205,7 @@ const BROKEN_HEAD_EXTRA_LINES = 2;
 /** OCR often reads the note mark 2 as "a". */
 const FOOTNOTE_START = /^\s*[1-9a*†‡§]\s+["“'‘(]?[A-Z]/;
 /** Smyth signs his own notes "— ED."; a line with that signature is never Franklin's text. */
-const EDITOR_SIGNATURE = /[—–-]\s*E[Ddn](?:[.,\-'"’”*\d]|\s*$)|^\s*ED[.,]\s*$/;
+const EDITOR_SIGNATURE = /[—–-]\s*E[Ddn](?:[.,\-'"’”*\d]|\s*$)|^\s*E[Ddn][.,]\s*$/;
 /** Franklin signs his own notes "— F."; those are his words and stay. */
 const FRANKLIN_SIGNATURE = /[—–-]\s*F\.\s*$/;
 /** The signature's dash left at the end of the line above a bare "ED.". */

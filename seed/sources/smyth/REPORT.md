@@ -90,7 +90,7 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
   ("self-\ngovernment") loses its hyphen.
 - **Smyth's footnotes** are removed only when clearly notes: a line signed "— ED." and the lines back to its
   mark, or a paragraph at the foot of a page with a matching mark in the text. Anything less certain stays,
-  because a stray note is better than a lost passage. **116 of 1005** merged texts can still contain some of Smyth's
+  because a stray note is better than a lost passage. **115 of 1005** merged texts can still contain some of Smyth's
   note text: a paragraph that opens like a note, or the rest of a note whose signed line had no recognisable
   mark (88 such lines, where only the signed line was removed). This count is a floor, since a note with
   neither sign cannot be detected. Franklin's own notes, signed "— F.", are kept, wherever they fell on the page.

@@ -380,6 +380,12 @@ describe('cleanBody', () => {
     );
   });
 
+  it('removes a note whose misread signature broke across two lines', () => {
+    expect(
+      cleanBody(['Body  text.', '', '1  Vast  fields  for  physicists. — ', 'En. ', '', 'More.']),
+    ).toBe('Body text.\n\nMore.');
+  });
+
   it('does not take a word starting ED for a signature', () => {
     expect(cleanBody(['Signed  by  him  —  EDMUND  BURKE'])).toContain('EDMUND');
   });
