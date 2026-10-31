@@ -13,6 +13,7 @@ function smyth(partial: Partial<SmythDocument>): SmythDocument {
     text: 'SIR: — This encloses bills for twenty pounds, and more besides.',
     flags: [],
     dateConfirmed: true,
+    unmarkedNotes: 0,
     ...partial,
   };
 }

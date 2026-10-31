@@ -64,6 +64,11 @@ Every document's outcome is listed in `outcomes.json`.
 
 Volume 1 is Smyth's introduction and the Autobiography, so it has almost nothing to match.
 
+Volumes 9 and 10 match poorly because of where Founders Online stops, not because of the OCR. Its Franklin
+Papers series has no letter by Franklin after 1785-03-14, so later letters can only match a copy filed in
+another correspondent's papers. Of the 221 Smyth documents dated after that, 6 matched. The rest
+mostly show as `no-name-or-title-match` or `no-record-on-date`.
+
 ## Split flags
 
 A flagged document is never merged.
@@ -71,7 +76,7 @@ A flagged document is never merged.
 | Flag | Documents |
 | --- | ---: |
 | followed-by-gap | 58 |
-| implausible-length | 19 |
+| implausible-length | 20 |
 | swallowed-heading | 15 |
 | unknown-end | 1 |
 
@@ -83,9 +88,14 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
   "Novembers" for "November 5".
 - **Hyphens at line ends** are removed when joining lines, so a real compound broken at a line end
   ("self-\ngovernment") loses its hyphen.
-- **Smyth's footnotes** are removed only when clearly notes: signed "— ED.", or at the foot of a page with
-  a matching mark in the text. Anything less certain stays, because a stray note is better than a lost
-  passage: 60 of 1005 merged texts contain a paragraph that opens like a note.
+- **Smyth's footnotes** are removed only when clearly notes: a line signed "— ED." and the lines back to its
+  mark, or a paragraph at the foot of a page with a matching mark in the text. Anything less certain stays,
+  because a stray note is better than a lost passage. 70 of 1005 merged texts still contain a paragraph
+  that opens like a note. 88 signed lines in merged texts had no recognisable mark: only the signed line was
+  removed, so the rest of those notes can remain in the letter.
+- **Page furniture and heading fragments** can survive. A page number or speck is removed as the last
+  paragraph of a document but not elsewhere, and a wrapped heading is removed only when it is recognisably
+  part of the heading, so a fragment can remain at the start of a document.
 - **Smyth's source marks** such as "(A. P. S.)" are removed with the heading, but one that OCR ran into other
   text can remain at the start of a document.
 - **Some printed letters break off** where Smyth's copy did, with a footnote mark after the last words.

@@ -295,6 +295,91 @@ describe('cleanBody', () => {
     expect(doc.text).toBe('Letter text.');
   });
 
+  it('keeps the letter above a note whose mark OCR garbled (vol. 3, letter to Samuel Johnson)', () => {
+    expect(
+      cleanBody([
+        "Enclos'd  is  a  Bill  of  50^  Sterling,  drawn  by  Pole  & ",
+        'procure  the  Books  as  cheap  as  possible.  The  Company ',
+        'iSee  p.  62.  —  ED. ',
+      ]),
+    ).toBe(
+      "Enclos'd is a Bill of 50^ Sterling, drawn by Pole & procure the Books as cheap as possible. The Company",
+    );
+  });
+
+  it('keeps the answer above a note whose mark has a lowercase word (vol. 4, the Examination)', () => {
+    expect(
+      cleanBody([
+        'A.  The  balance  is  paid  by  our  produce  carried  to  the ',
+        'West-Indies,  and  sold  in  our  own  islands. ',
+        '1  doubled,  2d  ed.  —  ED. ',
+      ]),
+    ).toBe(
+      'A. The balance is paid by our produce carried to the West-Indies, and sold in our own islands.',
+    );
+  });
+
+  it.each([
+    'iSee  p.  62.  —  ED. ',
+    'i William  Lee.  —  ED. ',
+    'iln  A.  P.  S.—  ED. ',
+    'UnA.  P.  S.—  ED. ',
+  ])('recognises the garbled note mark in %s', (note) => {
+    expect(cleanBody(['Letter  text  here.', note])).toBe('Letter text here.');
+  });
+
+  it('removes only the signed line when no mark can be found', () => {
+    expect(cleanBody(['Letter  text  here.', 'The  tail  of  a  note.  —  ED. '])).toBe(
+      'Letter text here.',
+    );
+  });
+
+  it('removes a note signed mid-line or with a stray mark after the signature', () => {
+    expect(
+      cleanBody([
+        'Body  text.',
+        '',
+        '* From  France  to  England.  —  ED.  a  First  printed  by  Sparks. ',
+      ]),
+    ).toBe('Body text.');
+    expect(cleanBody(['Body  text.', '', '27.  I779-  — ED- ', '', 'More  text.'])).toBe(
+      'Body text.\n\nMore text.',
+    );
+    expect(cleanBody(['Body  text.', '', 'Printed  in  1783.  —  ED.2 ', '', 'More  text.'])).toBe(
+      'Body text.\n\nMore text.',
+    );
+  });
+
+  it('removes a note whose signature broke across two lines', () => {
+    expect(
+      cleanBody([
+        'Body  text.',
+        '',
+        "1  Physician  to  St.  George's  Hospital. — ",
+        'ED. ',
+        '',
+        'More  text.',
+      ]),
+    ).toBe('Body text.\n\nMore text.');
+    expect(cleanBody(['Body  text.', "Physician  to  St.  George's  Hospital. — ", 'ED. '])).toBe(
+      'Body text.',
+    );
+  });
+
+  it('does not take a word starting ED for a signature', () => {
+    expect(cleanBody(['Signed  by  him  —  EDMUND  BURKE'])).toContain('EDMUND');
+  });
+
+  it.each(['585 ', 'CJ', 'V,'])('drops the stray last paragraph %s', (tail) => {
+    expect(cleanBody(['Your  humble  Servant.', '', tail])).toBe('Your humble Servant.');
+  });
+
+  it('removes a running head with no year, broken over two lines', () => {
+    expect(cleanBody(['Frankfort  sur  la  Maine.', '', 'TO  EDWARD  BANCROFT ', '', '141 '])).toBe(
+      'Frankfort sur la Maine.',
+    );
+  });
+
   it('removes a printer sheet mark', () => {
     for (const mark of ['VOL.  IX  —  L ', 'VOL.  Ill  —  2  D ']) {
       expect(cleanBody(['Your  humble  Servant.', '', mark, '', 'Return  that.'])).toBe(
@@ -550,6 +635,59 @@ describe('splitVolume', () => {
       2,
     );
     expect(doc.text).toBe('DEAR SIR,\n\nText.');
+  });
+
+  it.each([
+    [
+      'To Toleration',
+      ['ENGLAND  l ', 'SIR, ', '', 'Text.'],
+      'Toleration in Old England and New England',
+      'SIR,\n\nText.',
+    ],
+    [
+      'connecting words',
+      ['AND ', '', 'ACTS  OF  RELIGION ', '', 'IN  Two  PARTS ', '', 'Here  will  I  hold.'],
+      'Articles of Belief and Acts of Religion',
+      'Here will I hold.',
+    ],
+    [
+      'a hyphen carried over',
+      ['OF  THE  COMMITTEE  OF  THE  AS- ', 'SEMBLY  OF  PENNSYLVANIA1 ', '', 'Date  given.'],
+      'Report',
+      'Date given.',
+    ],
+  ])('drops a wrapped heading remainder: %s', (_name, body, title, expected) => {
+    const [doc] = splitVolume(
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN  ' + title.toUpperCase(), '', ...body],
+        [`46.  ${title}.     July  31,  1744      .  280 `],
+      ),
+      2,
+    );
+    expect(doc.text).toBe(expected);
+  });
+
+  it('keeps a capitalised salutation at the top of a document', () => {
+    const [doc] = splitVolume(
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN ', '', 'DEAR  STRAHAN, ', '', 'Text.'],
+        contents.slice(0, 1),
+      ),
+      2,
+    );
+    expect(doc.text).toBe('DEAR STRAHAN,\n\nText.');
+  });
+
+  it('counts signed note lines with no recognisable mark', () => {
+    const [doc] = splitVolume(
+      volume(
+        ['46.    TO  WILLIAM  STRAHAN ', '', 'Text.', 'A  note  tail.  —  ED. '],
+        contents.slice(0, 1),
+      ),
+      2,
+    );
+    expect(doc.unmarkedNotes).toBe(1);
+    expect(doc.text).toBe('Text.');
   });
 
   it('is deterministic', () => {

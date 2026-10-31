@@ -94,6 +94,8 @@ describe('renderReport', () => {
     expect(report).toContain('Matched to a Founders Online record: **1** (50.0% of documents)');
     expect(report).toContain('| no-record-on-date | 1 |');
     expect(report).toContain('## OCR quality issues');
+    expect(report).toContain('no letter by Franklin after 1744-07-31');
+    expect(report).toContain('signed lines in merged texts had no recognisable mark');
     expect(report).toContain('printed twice and agrees (contents table and dateline): 1 of 1');
   });
 });

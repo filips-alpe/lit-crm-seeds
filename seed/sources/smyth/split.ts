@@ -34,6 +34,8 @@ export type SmythDocument = {
   flags: SplitFlag[];
   /** The contents table and the printed dateline independently gave this exact date. */
   dateConfirmed: boolean;
+  /** Signed note lines with no recognisable mark: the signature went, the rest of the note may remain. */
+  unmarkedNotes: number;
 };
 
 const MONTHS = [
@@ -196,12 +198,23 @@ const MAX_RUNNING_HEAD_LENGTH = 80;
 const YEAR_ONLY_HEAD = /^\s*\W?[\dIl•][\dIlOoiS ]{2,6}[\]J}]\s*$/;
 /** An odd-page head that lost its year: "TO PHILIP SCHUYLER 447". */
 const CAPS_TITLE_WITH_PAGE = /^\s*TO\s+[A-Z][A-Z .,'’-]*\s\d{1,3}\s*$/;
+/** The same head broken over two lines: "TO EDWARD BANCROFT", then "141". */
+const CAPS_TITLE_ALONE = /^\s*TO\s+[A-Z][A-Z .,'’-]*$/;
 /** How far the rest of a broken head can trail its year, in non-blank lines. */
 const BROKEN_HEAD_EXTRA_LINES = 2;
 /** OCR often reads the note mark 2 as "a". */
 const FOOTNOTE_START = /^\s*[1-9a*†‡§]\s+["“'‘(]?[A-Z]/;
-/** Smyth signs his own notes "— ED."; a line ending that way is never Franklin's text. */
-const EDITOR_SIGNATURE = /[—–-]\s*ED[.,]?\s*$/;
+/** Smyth signs his own notes "— ED."; a line with that signature is never Franklin's text. */
+const EDITOR_SIGNATURE = /[—–-]\s*ED(?:[.,\-'"’”*\d]|\s*$)|^\s*ED[.,]\s*$/;
+/** The signature's dash left at the end of the line above a bare "ED.". */
+const TRAILING_DASH = /[—–-]\s*$/;
+/**
+ * The first line of a signed note, with the mark as OCR left it: "1 doubled",
+ * "iSee p. 62", "i William Lee", "iln A. P. S.", "UnA. P. S.". Looser than
+ * FOOTNOTE_START because a signature below already says a note is present.
+ */
+const SIGNED_NOTE_START =
+  /^\s*(?:[1-9*†‡§]\s+\S|a\s+["“'‘(]?[A-Z]|[1il!]\s?["“'‘(]?[A-Z]|[iU1]n\s?[A-Z])/;
 
 function isRunningHead(line: string): boolean {
   if (line.trim().length > MAX_RUNNING_HEAD_LENGTH) return false;
@@ -212,11 +225,16 @@ function isRunningHead(line: string): boolean {
   );
 }
 
+function nextLineIsPageNumber(lines: string[], index: number): boolean {
+  const next = lines.slice(index + 1, index + 4).find((l) => l.trim());
+  return next !== undefined && /^\s*\d{1,3}\s*$/.test(next);
+}
+
 /** Splits lines into pages at running heads, discarding the heads and sheet marks. */
 function splitPages(lines: string[]): string[][] {
   const pages: string[][] = [[]];
   let brokenHeadLinesLeft = 0;
-  for (const line of lines) {
+  for (const [index, line] of lines.entries()) {
     if (brokenHeadLinesLeft > 0 && line.trim()) {
       brokenHeadLinesLeft = /[a-z]{3}/.test(line) ? 0 : brokenHeadLinesLeft - 1;
       if (brokenHeadLinesLeft > 0 || !/[a-z]{3}/.test(line)) continue;
@@ -224,6 +242,9 @@ function splitPages(lines: string[]): string[][] {
     if (YEAR_ONLY_HEAD.test(line)) {
       pages.push([]);
       brokenHeadLinesLeft = BROKEN_HEAD_EXTRA_LINES;
+    } else if (CAPS_TITLE_ALONE.test(line) && nextLineIsPageNumber(lines, index)) {
+      pages.push([]);
+      brokenHeadLinesLeft = 1;
     } else if (isRunningHead(line)) pages.push([]);
     else if (!SHEET_MARK.test(line)) pages[pages.length - 1].push(line);
   }
@@ -241,23 +262,30 @@ function pageParagraphs(page: string[]): string[][] {
 }
 
 /**
- * Removes Smyth's notes from a paragraph. A line signed "— ED." ends a note,
- * which starts at the nearest marked line above it, or else at the top of the
- * paragraph. Text before that mark, such as a signature, stays.
+ * Removes Smyth's notes from a paragraph. A signed line ends a note, which
+ * starts at the nearest marked line above it. With no recognisable mark, only
+ * the signed line goes: the lines above may well be the letter, so an unsigned
+ * remnant of a note is the price of never deleting Franklin's text.
  */
-function stripSignedNotes(paragraph: string[]): string[] {
+function stripSignedNotes(paragraph: string[]): { kept: string[]; unmarked: number } {
   const kept: string[] = [];
+  let unmarked = 0;
   for (const line of paragraph) {
     if (!EDITOR_SIGNATURE.test(line)) {
       kept.push(line);
       continue;
     }
-    if (FOOTNOTE_START.test(line)) continue; // a whole note on one line
+    if (SIGNED_NOTE_START.test(line)) continue; // a whole note on one line
     let noteStart = kept.length - 1;
-    while (noteStart >= 0 && !FOOTNOTE_START.test(kept[noteStart])) noteStart--;
-    kept.length = Math.max(noteStart, 0);
+    while (noteStart >= 0 && !SIGNED_NOTE_START.test(kept[noteStart])) noteStart--;
+    if (noteStart >= 0) {
+      kept.length = noteStart;
+    } else {
+      unmarked++;
+      if (kept.length > 0 && TRAILING_DASH.test(kept[kept.length - 1])) kept.pop();
+    }
   }
-  return kept;
+  return { kept, unmarked };
 }
 
 /**
@@ -280,21 +308,34 @@ function hasMarkInText(note: string[], text: string[][]): boolean {
  * notes go: when in doubt the paragraph stays, since a stray note in the text
  * is far better than a lost passage.
  */
-function stripFootnotes(page: string[], context: string[] = []): string[][] {
-  const paragraphs = pageParagraphs(page)
-    .map(stripSignedNotes)
-    .filter((p) => p.length > 0);
+function stripFootnotes(
+  page: string[],
+  context: string[] = [],
+): { paragraphs: string[][]; unmarked: number } {
+  const stripped = pageParagraphs(page).map(stripSignedNotes);
+  const unmarked = stripped.reduce((total, p) => total + p.unmarked, 0);
+  const paragraphs = stripped.map((p) => p.kept).filter((p) => p.length > 0);
   while (paragraphs.length > 1) {
     const last = paragraphs[paragraphs.length - 1];
     const textAbove = [...paragraphs.slice(0, -1), context];
     if (!FOOTNOTE_START.test(last[0]) || !hasMarkInText(last, textAbove)) break;
     paragraphs.pop();
   }
-  return paragraphs;
+  return { paragraphs, unmarked };
 }
 
 /** Turns raw body lines into reading text: no page furniture, joined lines, one blank between paragraphs. */
 export function cleanBody(lines: string[], firstPageContext: string[] = []): string {
+  return cleanBodyDetail(lines, firstPageContext).text;
+}
+
+/** A stray page number or OCR speck left as the last paragraph of a document: "585", "CJ", "V,". */
+const TRAILING_FURNITURE = /^(?:\d{1,3}|[A-Z]{1,2},?)$/;
+
+function cleanBodyDetail(
+  lines: string[],
+  firstPageContext: string[],
+): { text: string; unmarkedNotes: number } {
   const paragraphs: string[] = [];
 
   const clean = (raw: string) =>
@@ -306,7 +347,7 @@ export function cleanBody(lines: string[], firstPageContext: string[] = []): str
   const pages = splitPages(lines).map((page, index) =>
     stripFootnotes(page, index === 0 ? firstPageContext : []),
   );
-  for (const page of pages) {
+  for (const { paragraphs: page } of pages) {
     page.forEach((paragraph, index) => {
       const text = paragraph.map(clean).reduce(joinLine);
       const previous = paragraphs[paragraphs.length - 1];
@@ -318,7 +359,13 @@ export function cleanBody(lines: string[], firstPageContext: string[] = []): str
       }
     });
   }
-  return paragraphs.join('\n\n');
+  while (paragraphs.length > 1 && TRAILING_FURNITURE.test(paragraphs[paragraphs.length - 1])) {
+    paragraphs.pop();
+  }
+  return {
+    text: paragraphs.join('\n\n'),
+    unmarkedNotes: pages.reduce((total, page) => total + page.unmarked, 0),
+  };
 }
 
 const SIGNIFICANT_STOPWORDS = new Set([
@@ -373,13 +420,36 @@ const DATELINE_SEARCH_LINES = 4;
 /** Smyth's source mark, as in "(A. P. S.)" or "(L. c.)". */
 const ARCHIVE_MARK = /\([A-Za-z][A-Za-z. ]{0,14}\)/;
 
-/** Drops the end of a wrapped heading, recognisable by its capitals and source mark. */
-function dropHeadingRemainder(body: string[]): string[] {
-  const first = body.findIndex((l) => l.trim());
-  if (first === -1) return body;
-  const line = body[first];
-  const isRemainder = ARCHIVE_MARK.test(line) && isCapsHeading(line);
-  return isRemainder ? body.slice(first + 1) : body;
+const HEADING_CONTINUATION = /^\s*(?:AND|OF|IN|FOR|ON|AT|BY)\s/;
+
+/**
+ * Drops the end of a wrapped heading from the top of a document: capitals, and
+ * either a source mark, a connecting word, a hyphen carried over, or only words
+ * from the document's title. A salutation ends in punctuation, so it stays.
+ */
+function dropHeadingRemainder(body: string[], title: string): string[] {
+  const titleWords = new Set(significantWords(title));
+  let rest = body;
+  let carriedHyphen = false;
+  for (;;) {
+    const first = rest.findIndex((l) => l.trim());
+    if (first === -1) return rest;
+    const line = rest[first];
+    const hasMark = ARCHIVE_MARK.test(line);
+    if (
+      !isCapsHeading(line) ||
+      (!hasMark && (/\d/.test(line.replace(/\d\s*$/, '')) || /[,:;]\s*$/.test(line)))
+    ) {
+      return rest;
+    }
+    const words = significantWords(line);
+    const onlyTitleWords = words.length > 0 && words.every((w) => titleWords.has(w));
+    if (!hasMark && !carriedHyphen && !HEADING_CONTINUATION.test(line) && !onlyTitleWords) {
+      return rest;
+    }
+    carriedHyphen = /-\s*$/.test(line);
+    rest = rest.slice(first + 1);
+  }
 }
 
 /** The date printed above the letter text, if the first few lines end in an exact date. */
@@ -466,10 +536,10 @@ export function splitVolume(raw: string, volume: number): SmythDocument[] {
     if (backMatter !== -1) body = body.slice(0, backMatter);
 
     const entry = entryByNumber.get(heading.number);
-    body = dropHeadingRemainder(body);
+    body = dropHeadingRemainder(body, entry?.title ?? titleCaseHeading(heading.text));
     const dateline = findDateline(body);
     const date = entry?.date?.precision === 'day' ? entry.date : (dateline ?? entry?.date);
-    const text = cleanBody(body, printedAbove(lines, heading.line));
+    const { text, unmarkedNotes } = cleanBodyDetail(body, printedAbove(lines, heading.line));
 
     const flags: SplitFlag[] = [];
     // A number between this heading and the next that the contents lists, or any skipped number.
@@ -496,6 +566,7 @@ export function splitVolume(raw: string, volume: number): SmythDocument[] {
 
     return {
       dateConfirmed,
+      unmarkedNotes,
       volume,
       number: heading.number,
       title: entry?.title ?? titleCaseHeading(heading.text),
