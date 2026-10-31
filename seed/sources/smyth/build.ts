@@ -84,6 +84,7 @@ function table(header: [string, string], rows: [string, number][]): string {
 }
 
 const NOTE_LIKE_PARAGRAPH = /^[1-9a*†]\s+["“'(]?[A-Z]/;
+const FRANKLIN_NOTE = /[—–-]\s*F\.$/;
 
 const REASON_MEANING: Record<string, string> = {
   'split-flagged': 'the split looked unreliable, so the text was not trusted',
@@ -104,14 +105,15 @@ export function renderReport(result: BuildResult): string {
   const documentKey = (o: { volume: number; number: number }) => `${o.volume}/${o.number}`;
   const confirmedKeys = new Set(documents.filter((d) => d.dateConfirmed).map(documentKey));
   const dateConfirmed = matched.filter((o) => confirmedKeys.has(documentKey(o))).length;
-  const withStrayNote = matches.filter((m) =>
-    m.text.split('\n\n').some((paragraph) => NOTE_LIKE_PARAGRAPH.test(paragraph)),
-  ).length;
   const merged = new Set(matches.map((m) => m.permalink));
   const mergedKeys = new Set(matched.filter((o) => merged.has(o.permalink ?? '')).map(documentKey));
-  const unmarkedNoteLines = documents
-    .filter((d) => mergedKeys.has(documentKey(d)))
-    .reduce((total, d) => total + d.unmarkedNotes, 0);
+  const mergedDocuments = documents.filter((d) => mergedKeys.has(documentKey(d)));
+  const unmarkedNoteLines = mergedDocuments.reduce((total, d) => total + d.unmarkedNotes, 0);
+  const withStrayNote = mergedDocuments.filter(
+    (d) =>
+      d.unmarkedNotes > 0 ||
+      d.text.split('\n\n').some((p) => NOTE_LIKE_PARAGRAPH.test(p) && !FRANKLIN_NOTE.test(p)),
+  ).length;
   const lastDate = result.lastFranklinPapersDate ?? '';
   const later = outcomes.filter((o) => o.date !== undefined && o.date > lastDate);
   const laterMatched = later.filter((o) => o.status === 'matched').length;
@@ -193,12 +195,13 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
   ("self-\\ngovernment") loses its hyphen.
 - **Smyth's footnotes** are removed only when clearly notes: a line signed "— ED." and the lines back to its
   mark, or a paragraph at the foot of a page with a matching mark in the text. Anything less certain stays,
-  because a stray note is better than a lost passage. ${withStrayNote} of ${matches.length} merged texts still contain a paragraph
-  that opens like a note. ${unmarkedNoteLines} signed lines in merged texts had no recognisable mark: only the signed line was
-  removed, so the rest of those notes can remain in the letter.
+  because a stray note is better than a lost passage. **${withStrayNote} of ${matches.length}** merged texts can still contain some of Smyth's
+  note text: a paragraph that opens like a note, or the rest of a note whose signed line had no recognisable
+  mark (${unmarkedNoteLines} such lines, where only the signed line was removed). This count is a floor, since a note with
+  neither sign cannot be detected. Franklin's own notes, signed "— F.", are kept, wherever they fell on the page.
 - **Page furniture and heading fragments** can survive. A page number or speck is removed as the last
   paragraph of a document but not elsewhere, and a wrapped heading is removed only when it is recognisably
-  part of the heading, so a fragment can remain at the start of a document.
+  part of the heading, so a fragment such as "SOUTH CAROLINA" or a stray mark can remain at the start of a document.
 - **Smyth's source marks** such as "(A. P. S.)" are removed with the heading, but one that OCR ran into other
   text can remain at the start of a document.
 - **Some printed letters break off** where Smyth's copy did, with a footnote mark after the last words.

@@ -366,12 +366,37 @@ describe('cleanBody', () => {
     );
   });
 
+  it.each(['— Ed.', '— En.'])('recognises the misread signature %s', (signature) => {
+    expect(
+      cleanBody(['Body  text.', '', `1  A  note  by  Smyth.  ${signature} `, '', 'More.']),
+    ).toBe('Body text.\n\nMore.');
+  });
+
+  it("keeps Franklin's own note, signed F", () => {
+    const note =
+      "1  This  was  a  Discovery  of  Mr.  Kinnersley's,  communicated  to  me.  —  F. ";
+    expect(cleanBody(['The  experiment  succeeded.1', '', note])).toContain(
+      'Discovery of Mr. Kinnersley',
+    );
+  });
+
   it('does not take a word starting ED for a signature', () => {
     expect(cleanBody(['Signed  by  him  —  EDMUND  BURKE'])).toContain('EDMUND');
   });
 
-  it.each(['585 ', 'CJ', 'V,'])('drops the stray last paragraph %s', (tail) => {
-    expect(cleanBody(['Your  humble  Servant.', '', tail])).toBe('Your humble Servant.');
+  it.each(['585 ', 'CJ', 'V,', '..', "' 1", '_ i', 'SIR, ', 'DEAR  SIR, '])(
+    'drops the stray last paragraph %s',
+    (tail) => {
+      expect(cleanBody(['Your  humble  Servant.', '', tail])).toBe('Your humble Servant.');
+    },
+  );
+
+  it('keeps a signature of initials as the last paragraph', () => {
+    expect(cleanBody(['Your  humble  Servant.', '', 'F. '])).toBe('Your humble Servant.\n\nF.');
+  });
+
+  it.each(['*', '•»'])('drops the speck %s at the top of a document', (speck) => {
+    expect(cleanBody([speck, '', 'DEAR  SIR,', '', 'Text.'])).toBe('DEAR SIR,\n\nText.');
   });
 
   it('removes a running head with no year, broken over two lines', () => {

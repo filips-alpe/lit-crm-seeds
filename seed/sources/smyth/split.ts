@@ -205,7 +205,9 @@ const BROKEN_HEAD_EXTRA_LINES = 2;
 /** OCR often reads the note mark 2 as "a". */
 const FOOTNOTE_START = /^\s*[1-9a*†‡§]\s+["“'‘(]?[A-Z]/;
 /** Smyth signs his own notes "— ED."; a line with that signature is never Franklin's text. */
-const EDITOR_SIGNATURE = /[—–-]\s*ED(?:[.,\-'"’”*\d]|\s*$)|^\s*ED[.,]\s*$/;
+const EDITOR_SIGNATURE = /[—–-]\s*E[Ddn](?:[.,\-'"’”*\d]|\s*$)|^\s*ED[.,]\s*$/;
+/** Franklin signs his own notes "— F."; those are his words and stay. */
+const FRANKLIN_SIGNATURE = /[—–-]\s*F\.\s*$/;
 /** The signature's dash left at the end of the line above a bare "ED.". */
 const TRAILING_DASH = /[—–-]\s*$/;
 /**
@@ -319,6 +321,7 @@ function stripFootnotes(
     const last = paragraphs[paragraphs.length - 1];
     const textAbove = [...paragraphs.slice(0, -1), context];
     if (!FOOTNOTE_START.test(last[0]) || !hasMarkInText(last, textAbove)) break;
+    if (FRANKLIN_SIGNATURE.test(last[last.length - 1])) break;
     paragraphs.pop();
   }
   return { paragraphs, unmarked };
@@ -329,8 +332,16 @@ export function cleanBody(lines: string[], firstPageContext: string[] = []): str
   return cleanBodyDetail(lines, firstPageContext).text;
 }
 
-/** A stray page number or OCR speck left as the last paragraph of a document: "585", "CJ", "V,". */
-const TRAILING_FURNITURE = /^(?:\d{1,3}|[A-Z]{1,2},?)$/;
+/**
+ * Left as the last paragraph of a document: a page number or OCR speck ("585",
+ * "CJ", "V,", "' 1", ".."), or the next letter's salutation where OCR printed
+ * it above that letter's heading. A letter followed by a full stop may be a
+ * signature ("F."), so it stays.
+ */
+const TRAILING_FURNITURE =
+  /^(?:[^A-Za-z0-9]*(?:\d{1,3}|[A-Z]{1,2},?|[a-z])?[^A-Za-z0-9.]*|(?:DEAR )?SIR[,:]?)$/;
+/** A speck with no letters or digits at the top of a document: "*", "•»". */
+const LEADING_SPECK = /^[^A-Za-z0-9]{1,4}$/;
 
 function cleanBodyDetail(
   lines: string[],
@@ -362,6 +373,7 @@ function cleanBodyDetail(
   while (paragraphs.length > 1 && TRAILING_FURNITURE.test(paragraphs[paragraphs.length - 1])) {
     paragraphs.pop();
   }
+  while (paragraphs.length > 1 && LEADING_SPECK.test(paragraphs[0])) paragraphs.shift();
   return {
     text: paragraphs.join('\n\n'),
     unmarkedNotes: pages.reduce((total, page) => total + page.unmarked, 0),
