@@ -84,7 +84,8 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
 - **Hyphens at line ends** are removed when joining lines, so a real compound broken at a line end
   ("self-\ngovernment") loses its hyphen.
 - **Smyth's footnotes** are removed only when clearly notes: signed "— ED.", or at the foot of a page with
-  a matching mark in the text. Anything less certain stays, so notes do survive in some texts.
+  a matching mark in the text. Anything less certain stays, because a stray note is better than a lost
+  passage: 60 of 1005 merged texts contain a paragraph that opens like a note.
 - **Smyth's source marks** such as "(A. P. S.)" are removed with the heading, but one that OCR ran into other
   text can remain at the start of a document.
 - **Some printed letters break off** where Smyth's copy did, with a footnote mark after the last words.

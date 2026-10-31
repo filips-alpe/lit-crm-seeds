@@ -272,6 +272,29 @@ describe('cleanBody', () => {
     expect(text).toContain('3 Pounds more were still wanting.');
   });
 
+  it('accepts a mark at the end of a line set apart by OCR', () => {
+    expect(cleanBody(['and  so  he  went  and 1', '', '1  The  rest  is  wanting.'])).toBe(
+      'and so he went and 1',
+    );
+  });
+
+  it('removes a note whose mark is on the heading', () => {
+    const [doc] = splitVolume(
+      volume(
+        [
+          '46.    TO  WILLIAM  STRAHAN1 ',
+          '',
+          'Letter  text.',
+          '',
+          '1  From  the  original  in  the  collection.',
+        ],
+        ['46.  To  William  Strahan.     July  31,  1744      .  280 '],
+      ),
+      2,
+    );
+    expect(doc.text).toBe('Letter text.');
+  });
+
   it('removes a printer sheet mark', () => {
     for (const mark of ['VOL.  IX  —  L ', 'VOL.  Ill  —  2  D ']) {
       expect(cleanBody(['Your  humble  Servant.', '', mark, '', 'Return  that.'])).toBe(

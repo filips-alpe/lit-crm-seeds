@@ -76,6 +76,8 @@ function table(header: [string, string], rows: [string, number][]): string {
   ].join('\n');
 }
 
+const NOTE_LIKE_PARAGRAPH = /^[1-9a*†]\s+["“'(]?[A-Z]/;
+
 const REASON_MEANING: Record<string, string> = {
   'split-flagged': 'the split looked unreliable, so the text was not trusted',
   'text-too-short': 'the text is a fragment',
@@ -95,6 +97,9 @@ export function renderReport(result: BuildResult): string {
   const documentKey = (o: { volume: number; number: number }) => `${o.volume}/${o.number}`;
   const confirmedKeys = new Set(documents.filter((d) => d.dateConfirmed).map(documentKey));
   const dateConfirmed = matched.filter((o) => confirmedKeys.has(documentKey(o))).length;
+  const withStrayNote = matches.filter((m) =>
+    m.text.split('\n\n').some((paragraph) => NOTE_LIKE_PARAGRAPH.test(paragraph)),
+  ).length;
   const flagRows = countBy(
     documents.flatMap((d) => d.flags),
     (flag) => flag,
@@ -167,7 +172,8 @@ The text is uncorrected OCR. Known problems, none of them repaired in the merged
 - **Hyphens at line ends** are removed when joining lines, so a real compound broken at a line end
   ("self-\\ngovernment") loses its hyphen.
 - **Smyth's footnotes** are removed only when clearly notes: signed "— ED.", or at the foot of a page with
-  a matching mark in the text. Anything less certain stays, so notes do survive in some texts.
+  a matching mark in the text. Anything less certain stays, because a stray note is better than a lost
+  passage: ${withStrayNote} of ${matches.length} merged texts contain a paragraph that opens like a note.
 - **Smyth's source marks** such as "(A. P. S.)" are removed with the heading, but one that OCR ran into other
   text can remain at the start of a document.
 - **Some printed letters break off** where Smyth's copy did, with a footnote mark after the last words.

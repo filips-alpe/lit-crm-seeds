@@ -270,7 +270,8 @@ function hasMarkInText(note: string[], text: string[][]): boolean {
   const marker = note[0].trim()[0];
   const mark = marker === 'a' ? '2' : marker;
   if (!/[1-9]/.test(mark)) return text.some((p) => p.some((line) => line.includes(mark)));
-  const inText = new RegExp(`[A-Za-z.,;:!?'"’”)\\]]${mark}(?=\\s|$)`);
+  // Attached to a word, or set apart by OCR at the end of a line ("and 1").
+  const inText = new RegExp(`[A-Za-z.,;:!?'"’”)\\]]${mark}(?=\\s|$)|\\s${mark}\\s*$`);
   return text.some((p) => p.some((line) => inText.test(line)));
 }
 
@@ -279,20 +280,21 @@ function hasMarkInText(note: string[], text: string[][]): boolean {
  * notes go: when in doubt the paragraph stays, since a stray note in the text
  * is far better than a lost passage.
  */
-function stripFootnotes(page: string[]): string[][] {
+function stripFootnotes(page: string[], context: string[] = []): string[][] {
   const paragraphs = pageParagraphs(page)
     .map(stripSignedNotes)
     .filter((p) => p.length > 0);
   while (paragraphs.length > 1) {
     const last = paragraphs[paragraphs.length - 1];
-    if (!FOOTNOTE_START.test(last[0]) || !hasMarkInText(last, paragraphs.slice(0, -1))) break;
+    const textAbove = [...paragraphs.slice(0, -1), context];
+    if (!FOOTNOTE_START.test(last[0]) || !hasMarkInText(last, textAbove)) break;
     paragraphs.pop();
   }
   return paragraphs;
 }
 
 /** Turns raw body lines into reading text: no page furniture, joined lines, one blank between paragraphs. */
-export function cleanBody(lines: string[]): string {
+export function cleanBody(lines: string[], firstPageContext: string[] = []): string {
   const paragraphs: string[] = [];
 
   const clean = (raw: string) =>
@@ -301,7 +303,10 @@ export function cleanBody(lines: string[]): string {
   const joinLine = (text: string, line: string) =>
     /[a-z]-$/.test(text) ? text.slice(0, -1) + line : `${text} ${line}`;
 
-  for (const page of splitPages(lines).map(stripFootnotes)) {
+  const pages = splitPages(lines).map((page, index) =>
+    stripFootnotes(page, index === 0 ? firstPageContext : []),
+  );
+  for (const page of pages) {
     page.forEach((paragraph, index) => {
       const text = paragraph.map(clean).reduce(joinLine);
       const previous = paragraphs[paragraphs.length - 1];
@@ -355,9 +360,11 @@ function agreesWithContents(heading: string, title: string): boolean {
   );
 }
 
+/** Upper bound when looking back for the top of a page. */
+const MAX_LINES_PER_PAGE = 60;
 const LIFE_OF_FRANKLIN = /^\s*CHAPTER\s+I\s*$/;
 const BACK_MATTER =
-  /University\s+of\s+T[o0]r|DO\s+NOT\s+REMOVE|LOWE-MARTIN|Acme\s+Library|^\s*\d{9,}/;
+  /^\s*APPENDIX\s*$|University\s+of\s+T[o0]r|DO\s+NOT\s+REMOVE|LOWE-MARTIN|Acme\s+Library|^\s*\d{9,}/;
 const LETTER_HEADING_LIKE = /^\s*\S{1,6}[.,]\s+TO\s+[A-Z][A-Z.' -]+\d?\s*(\(.*\))?\s*$/;
 const DATELINE_LAST_WORDS = new RegExp(`(?:${MONTH_PATTERN}) \\d{1,2},? [\\dIlO]{4}\\.?$`);
 const MAX_DATELINE_LENGTH = 60;
@@ -427,6 +434,22 @@ function titleCaseHeading(heading: string): string {
     .replace(/\b[a-z]/g, (c) => c.toUpperCase());
 }
 
+/**
+ * The heading and whatever shares its page: a note at the foot of a document's
+ * first page can belong to a mark in either ("TO JAMES READ1").
+ */
+function printedAbove(lines: string[], headingLine: number): string[] {
+  let start = headingLine;
+  while (
+    start > 0 &&
+    headingLine - start < MAX_LINES_PER_PAGE &&
+    !isRunningHead(lines[start - 1])
+  ) {
+    start--;
+  }
+  return lines.slice(start, headingLine + 1);
+}
+
 /** Splits one volume's raw OCR into documents, in edition order. */
 export function splitVolume(raw: string, volume: number): SmythDocument[] {
   const lines = raw.split('\n');
@@ -446,7 +469,7 @@ export function splitVolume(raw: string, volume: number): SmythDocument[] {
     body = dropHeadingRemainder(body);
     const dateline = findDateline(body);
     const date = entry?.date?.precision === 'day' ? entry.date : (dateline ?? entry?.date);
-    const text = cleanBody(body);
+    const text = cleanBody(body, printedAbove(lines, heading.line));
 
     const flags: SplitFlag[] = [];
     // A number between this heading and the next that the contents lists, or any skipped number.
