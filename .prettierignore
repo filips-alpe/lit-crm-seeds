@@ -1,0 +1,7 @@
+bun.lock
+# Formatted by lit-crm's prettier config (svelte + tailwind plugins) once installed
+/extension/
+# Generated seed data and source snapshots
+/seed/generated/
+/seed/data/projects.yaml
+/seed/sources/*.json

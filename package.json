@@ -1,0 +1,26 @@
+{
+  "name": "lit-crm-seeds",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Franklin demo dataset, seed loader and installable extension for lit-crm",
+  "scripts": {
+    "seed": "bun seed/cli.ts",
+    "generate": "bun seed/generate.ts",
+    "test": "vitest run",
+    "check": "tsc --noEmit",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "pg": "^8.20.0",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "@types/pg": "^8.20.0",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  }
+}
