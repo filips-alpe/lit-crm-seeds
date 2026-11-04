@@ -3,7 +3,7 @@
  * query results as a committed snapshot (../wikidata-snapshot.json). This is
  * the only place that touches the network; seed generation reads the snapshot.
  *
- * Run with: `tsx prisma/seed/sources/wikidata/fetch.ts`
+ * Run with: `tsx seed/sources/wikidata/fetch.ts`
  * Reads:  ../circle.json (written by ../extract-fo.ts)
  * Writes: ../wikidata-snapshot.json
  *

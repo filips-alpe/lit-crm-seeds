@@ -1,4 +1,4 @@
-# Types derived from the actual Founders Online / Wikidata data (see prisma/seed/pipeline/classifier.ts).
+# Types derived from the actual Founders Online / Wikidata data (see seed/pipeline/classifier.ts).
 # Each layout maps its fields onto the shared record columns.
 - code: letter
   description: Letter or dispatch between correspondents (people or institutions)

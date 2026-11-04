@@ -3,7 +3,6 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
-import { layoutSchema, typeSchema } from '../../../src/lib/schemas/types';
 import type { SeedType } from '../types-defs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -48,15 +47,11 @@ const EXPECTED = [
   'membership',
 ];
 
+// The check that these types parse with lit-crm's own schemas needs the app, so it
+// lives in extension/seed-types.test.ts and runs in lit-crm.
 describe('seed types.yaml', () => {
   it('defines exactly the regenerated type set', () => {
     expect(types.map((t) => t.code)).toEqual(EXPECTED);
-  });
-
-  it.each(EXPECTED)('%s parses with typeSchema and layoutSchema', (code) => {
-    const t = types.find((x) => x.code === code);
-    expect(typeSchema.safeParse(t).success).toBe(true);
-    expect(layoutSchema.safeParse(t?.layout).success).toBe(true);
   });
 
   it.each(EXPECTED)('%s writes every field to a column its kind allows', (code) => {

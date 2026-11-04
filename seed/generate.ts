@@ -2,15 +2,15 @@
  * Generator: turns the committed source snapshots into the generated seed
  * data the loader reads. There is no hand-curated data.
  *
- * Run with: `tsx prisma/seed/generate.ts`
+ * Run with: `tsx seed/generate.ts`
  * Reads:
- *   - prisma/seed/sources/fo-circle.json              (Founders Online: Franklin + circle documents)
- *   - prisma/seed/sources/wikidata-snapshot.json      (cached Wikidata results for the circle, CC0)
- *   - prisma/seed/sources/fo-franklin-text.json       (public-domain full text matched to FO docs by
+ *   - seed/sources/fo-circle.json              (Founders Online: Franklin + circle documents)
+ *   - seed/sources/wikidata-snapshot.json      (cached Wikidata results for the circle, CC0)
+ *   - seed/sources/fo-franklin-text.json       (public-domain full text matched to FO docs by
  *                                                       permalink — Wikisource/Gutenberg, optional)
  * Writes:
- *   - prisma/seed/generated/records.generated.*.json  (chunked, ~10MB each)
- *   - prisma/seed/data/projects.yaml                  (regenerated in full: period + thematic projects)
+ *   - seed/generated/records.generated.*.json  (chunked, ~10MB each)
+ *   - seed/data/projects.yaml                  (regenerated in full: period + thematic projects)
  *
  * Deterministic and reproducible: no randomness, no network. Re-running
  * against the same inputs always produces the same output.

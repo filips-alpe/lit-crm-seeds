@@ -10,10 +10,10 @@
  * project) are merged into a single entry, the first permalink kept primary
  * and the other project's permalink appended.
  *
- * Run with: `tsx prisma/seed/sources/extract-fo.ts [path/to/founders-online-metadata.json]`
+ * Run with: `tsx seed/sources/extract-fo.ts [path/to/founders-online-metadata.json]`
  * Reads:  .workflow/scratch/founders-online-metadata.json (not committed, 54MB) unless a path is given
- * Writes: prisma/seed/sources/fo-circle.json (committed snapshot)
- *         prisma/seed/sources/circle.json    (committed circle roster, input to the Wikidata importer)
+ * Writes: seed/sources/fo-circle.json (committed snapshot)
+ *         seed/sources/circle.json    (committed circle roster, input to the Wikidata importer)
  *
  * Reproducible: re-running against the same raw download always produces the
  * same output (pure filter/dedupe, no randomness, no network).

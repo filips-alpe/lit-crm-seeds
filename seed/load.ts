@@ -26,7 +26,7 @@ export const types = load<SeedType[]>('types.yaml');
 export const projects = load<SeedProjectMeta[]>('projects.yaml');
 
 /**
- * Records come entirely from the generated import (prisma/seed/generate.ts):
+ * Records come entirely from the generated import (seed/generate.ts):
  * Founders Online documents plus Wikidata life/office/membership records.
  * Chunk files are read in filename order and concatenated; the generator
  * writes records.generated.0.json, .1.json, ... so lexical sort matches

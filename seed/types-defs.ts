@@ -34,15 +34,7 @@ export type SeedLayoutField = {
   id: string;
   label: string;
   kind:
-    | 'text'
-    | 'markdown'
-    | 'number'
-    | 'date'
-    | 'datetime'
-    | 'list'
-    | 'location'
-    | 'user'
-    | 'record';
+    'text' | 'markdown' | 'number' | 'date' | 'datetime' | 'list' | 'location' | 'user' | 'record';
   writeTo: string;
 };
 
