@@ -9,6 +9,25 @@
  * rather than invented narrative.
  */
 
+/**
+ * Why each non-admin assignee holds a project (all projects are created by
+ * bfranklin, the admin). Without these, every project would belong to the
+ * admin and the project rule of lit-crm's read-only gateway (a user sees the
+ * records of projects they created or are assigned to) would never show in
+ * the data. Each pairing is chosen for the person's historical role.
+ */
+export const ASSIGNEES: Record<string, string> = {
+  'theme-electricite':
+    'Peter Collinson forwarded the electrical letters and the glass tube that began the experiments',
+  'theme-hutchinson-letters':
+    'the Hutchinson letters were sent to Thomas Cushing, Speaker of the Massachusetts House',
+  'periode-france-1776-1785':
+    "William Temple Franklin was his grandfather's secretary at Passy for the whole mission",
+  'theme-alliance-france':
+    'Lafayette served the American cause at the French court and in the field during the alliance',
+  'theme-paix-1783': 'John Adams was a fellow commissioner for the peace negotiations in Paris',
+};
+
 export type PeriodProject = {
   code: string;
   label: string;
@@ -17,6 +36,8 @@ export type PeriodProject = {
   /** Exclusive NS end date, ISO yyyy-mm-dd. Undefined = open end. */
   endNs?: string;
   color: string;
+  /** Non-admin project assignee (username); see ASSIGNEES. */
+  assignee?: string;
 };
 
 // Ordered chronologically; the first range whose [startNs, endNs) contains
@@ -77,6 +98,7 @@ export const PERIOD_PROJECTS: PeriodProject[] = [
     startNs: '1776-10-27',
     endNs: '1785-07-01',
     color: '#5c2c2c',
+    assignee: 'wtfranklin',
   },
   {
     code: 'periode-philadelphie-1785-1790',
@@ -102,6 +124,8 @@ export type ThematicRule = {
   label: string;
   color: string;
   keywords: RegExp;
+  /** Non-admin project assignee (username); see ASSIGNEES. */
+  assignee?: string;
 };
 
 // Keyword lists favor precision over recall per the brief: literal, specific
@@ -111,6 +135,7 @@ export const THEMATIC_RULES: ThematicRule[] = [
     code: 'theme-electricite',
     label: 'Electrical experiments',
     color: '#d4af37',
+    assignee: 'pcollinson',
     keywords: /\b(electric|electricity|lightning|armonica|leyden)\b/i,
   },
   {
@@ -160,18 +185,21 @@ export const THEMATIC_RULES: ThematicRule[] = [
     code: 'theme-hutchinson-letters',
     label: 'Hutchinson letters affair',
     color: '#5c2c2c',
+    assignee: 'tcushing',
     keywords: /\bHutchinson\b.*\bletters\b|\bletters\b.*\bHutchinson\b/i,
   },
   {
     code: 'theme-alliance-france',
     label: 'French alliance & loans',
     color: '#2f4f8a',
+    assignee: 'lafayette',
     keywords: /\b(Treaty of Alliance|French (court|treasury|loan)|Vergennes)\b/i,
   },
   {
     code: 'theme-paix-1783',
     label: 'Peace of Paris, 1782–1783',
     color: '#3a5a40',
+    assignee: 'jadams',
     keywords: /\b(Peace of Paris|preliminary articles of peace|definitive treaty)\b/i,
   },
   {

@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { assignPeriod, assignThematic, PERIOD_PROJECTS } from './projects';
+import {
+  ASSIGNEES,
+  assignPeriod,
+  assignThematic,
+  PERIOD_PROJECTS,
+  THEMATIC_RULES,
+} from './projects';
+import { projects, records, users } from '../load';
 
 describe('assignPeriod', () => {
   it("places Franklin's birth date (NS) in Boston", () => {
@@ -71,3 +78,47 @@ describe('assignThematic', () => {
     expect(themes).toContain('theme-pennsylvania-hospital');
   });
 });
+
+describe('project assignees (so the gateway project rule shows in the data)', () => {
+  it('the seeded projects.yaml assigns the non-admin users from ASSIGNEES, everything else defaults to the admin', () => {
+    expect(
+      projects
+        .filter((p) => p.assignee)
+        .map((p) => [p.code, p.assignee])
+        .sort(),
+    ).toEqual(Object.entries(expected()).sort());
+    expect(Object.keys(ASSIGNEES).sort()).toEqual(Object.keys(expected()).sort());
+  });
+
+  it('every assignee is a seeded non-admin user', () => {
+    const byName = new Map(users.map((u) => [u.username, u]));
+    for (const p of projects.filter((p) => p.assignee)) {
+      const u = byName.get(p.assignee!);
+      expect(u, `${p.code} -> ${p.assignee}`).toBeDefined();
+      expect(u!.isAdmin ?? false).toBe(false);
+    }
+  });
+
+  it('at least four projects, held by at least four different non-admin users', () => {
+    const assigned = projects.filter((p) => p.assignee);
+    expect(assigned.length).toBeGreaterThanOrEqual(4);
+    expect(new Set(assigned.map((p) => p.assignee)).size).toBeGreaterThanOrEqual(4);
+  });
+
+  it('every assigned project has records, so its assignee sees them by the project rule', () => {
+    for (const p of projects.filter((p) => p.assignee)) {
+      expect(
+        records.some((r) => r.projects.includes(p.code)),
+        p.code,
+      ).toBe(true);
+    }
+  });
+});
+
+function expected(): Record<string, string> {
+  return Object.fromEntries(
+    [...PERIOD_PROJECTS, ...THEMATIC_RULES]
+      .filter((p) => p.assignee)
+      .map((p) => [p.code, p.assignee!]),
+  );
+}

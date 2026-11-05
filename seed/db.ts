@@ -64,11 +64,28 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
   try {
     for (const table of WIPE_ORDER) await client.query(`DELETE FROM "${table}"`);
 
+    // lit_user.isAdmin exists only in lit-crm versions that carry the RLS gateway
+    // migration. Write it when the column is there, so the seeds work against both.
+    const adminCol = await client.query(
+      `SELECT 1 FROM information_schema.columns
+       WHERE table_schema = current_schema() AND table_name = 'lit_user' AND column_name = 'isAdmin'`,
+    );
+    const hasAdmin = (adminCol.rowCount ?? adminCol.rows?.length ?? 0) > 0;
+
     const userId = new Map(users.map((u) => [u.username, createId()]));
     await insertRows(
       client,
       'lit_user',
-      ['id', 'updatedAt', 'username', 'name', 'bio', 'color', 'avatarSeed', 'isAdmin'],
+      [
+        'id',
+        'updatedAt',
+        'username',
+        'name',
+        'bio',
+        'color',
+        'avatarSeed',
+        ...(hasAdmin ? ['isAdmin'] : []),
+      ],
       users.map((u) => [
         userId.get(u.username),
         now,
@@ -77,7 +94,7 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
         u.bio ?? null,
         u.color ?? DEFAULT_COLOR,
         u.avatarSeed ?? null,
-        u.isAdmin ?? false,
+        ...(hasAdmin ? [u.isAdmin ?? false] : []),
       ]),
     );
     const owner = userId.get('bfranklin');

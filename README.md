@@ -21,9 +21,9 @@ bun run seed --db "postgresql://postgres:postgres@localhost:5433/lit_crm?schema=
 
 > **This deletes every user, type, project and record** in the database it is pointed at, then loads 17 users, 12 types, 23 projects, 25,827 records and 26,118 project links in one transaction. `--db` is required: there is no default and no environment fallback, so it cannot hit a database by accident. Do not point it at a database that holds data you want to keep.
 
-The user `bfranklin` is loaded with `isAdmin: true` (set in `seed/data/user.yaml`); lit-crm's read-only RLS gateway role lets an admin see every record, everyone else only their own records and their projects'. See lit-crm's README.
+The user `bfranklin` is loaded with `isAdmin: true` (set in `seed/data/user.yaml`). lit-crm's read-only RLS gateway role lets an admin see every record; everyone else sees only their own records and those of the projects they created or are assigned to. All projects are created by `bfranklin`; five are assigned to historically fitting non-admin users (`theme-electricite` to `pcollinson`, `theme-hutchinson-letters` to `tcushing`, `periode-france-1776-1785` to `wtfranklin`, `theme-alliance-france` to `lafayette`, `theme-paix-1783` to `jadams`), with the reasons in `seed/data/projects.yaml`. See lit-crm's README.
 
-The loader sets ids and `updatedAt` itself (lit-crm's Prisma schema generates them client-side), so it works against any database migrated with lit-crm's `prisma migrate deploy`.
+The loader sets ids and `updatedAt` itself (lit-crm's Prisma schema generates them client-side). It works against a database migrated with lit-crm's `prisma migrate deploy` both with and without the `lit_user.isAdmin` column: it looks the column up in `information_schema` and writes `isAdmin` only if it exists, so these seeds can be used before the lit-crm version that adds the RLS gateway (the `isAdmin` values are then simply not stored).
 
 ## Install the extension
 

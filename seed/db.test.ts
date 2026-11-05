@@ -4,12 +4,17 @@ import { seed, type SeedData } from './db';
 
 type Call = { sql: string; params: unknown[] };
 
-function fakeClient(failOn?: RegExp) {
+function fakeClient(failOn?: RegExp, opts: { isAdminColumn?: boolean } = {}) {
+  const { isAdminColumn = true } = opts;
   const calls: Call[] = [];
   const client = {
     query: async (sql: string, params: unknown[] = []) => {
       calls.push({ sql, params });
       if (failOn?.test(sql)) throw new Error('boom');
+      if (sql.includes('information_schema.columns'))
+        return isAdminColumn
+          ? { rows: [{ '?column?': 1 }], rowCount: 1 }
+          : { rows: [], rowCount: 0 };
       return { rows: [] };
     },
   } as unknown as ClientBase;
@@ -45,6 +50,15 @@ describe('seed', () => {
     // params per user: id, updatedAt, username, name, bio, color, avatarSeed, isAdmin
     expect(insert.params![7]).toBe(true);
     expect(insert.params![15]).toBe(false);
+  });
+
+  it('omits isAdmin when lit_user has no such column (lit-crm without the RLS migration)', async () => {
+    const { client, calls } = fakeClient(undefined, { isAdminColumn: false });
+    const counts = await seed(client, data(1));
+    const insert = calls.find((c) => c.sql.startsWith('INSERT INTO "lit_user"'))!;
+    expect(insert.sql).not.toContain('isAdmin');
+    expect(insert.params).toHaveLength(14); // 7 columns x 2 users
+    expect(counts.users).toBe(2);
   });
 
   it('wipes children first, inside one transaction, and reports counts', async () => {
