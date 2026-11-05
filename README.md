@@ -21,6 +21,8 @@ bun run seed --db "postgresql://postgres:postgres@localhost:5433/lit_crm?schema=
 
 > **This deletes every user, type, project and record** in the database it is pointed at, then loads 17 users, 12 types, 23 projects, 25,827 records and 26,118 project links in one transaction. `--db` is required: there is no default and no environment fallback, so it cannot hit a database by accident. Do not point it at a database that holds data you want to keep.
 
+The user `bfranklin` is loaded with `isAdmin: true` (set in `seed/data/user.yaml`); lit-crm's read-only RLS gateway role lets an admin see every record, everyone else only their own records and their projects'. See lit-crm's README.
+
 The loader sets ids and `updatedAt` itself (lit-crm's Prisma schema generates them client-side), so it works against any database migrated with lit-crm's `prisma migrate deploy`.
 
 ## Install the extension

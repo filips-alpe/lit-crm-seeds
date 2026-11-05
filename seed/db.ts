@@ -68,7 +68,7 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
     await insertRows(
       client,
       'lit_user',
-      ['id', 'updatedAt', 'username', 'name', 'bio', 'color', 'avatarSeed'],
+      ['id', 'updatedAt', 'username', 'name', 'bio', 'color', 'avatarSeed', 'isAdmin'],
       users.map((u) => [
         userId.get(u.username),
         now,
@@ -77,6 +77,7 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
         u.bio ?? null,
         u.color ?? DEFAULT_COLOR,
         u.avatarSeed ?? null,
+        u.isAdmin ?? false,
       ]),
     );
     const owner = userId.get('bfranklin');

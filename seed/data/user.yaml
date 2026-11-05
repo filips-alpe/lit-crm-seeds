@@ -2,6 +2,7 @@
   name: Benjamin Franklin
   bio: Printer, postmaster, philosopher, agent, minister plenipotentiary. Lately President of the Pennsylvania Society for Promoting the Abolition of Slavery.
   color: '#7a5230'
+  isAdmin: true
 - username: dfranklin
   name: Deborah Read Franklin
   bio: Wife and partner in the Market Street shop. Kept the household and accounts during the long absences in London.

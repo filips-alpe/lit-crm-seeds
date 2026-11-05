@@ -18,6 +18,8 @@ export type SeedUser = {
   bio?: string;
   color: string;
   avatarSeed?: string;
+  /** Sees every record through lit-crm's read-only RLS gateway role. */
+  isAdmin?: boolean;
 };
 
 export const users = load<SeedUser[]>('user.yaml');

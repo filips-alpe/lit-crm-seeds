@@ -18,7 +18,7 @@ function fakeClient(failOn?: RegExp) {
 
 const data = (n: number): SeedData => ({
   users: [
-    { username: 'bfranklin', name: 'Ben', color: '#111' },
+    { username: 'bfranklin', name: 'Ben', color: '#111', isAdmin: true },
     { username: 'dfranklin', name: 'Deb', color: '#222' },
   ],
   types: [{ code: 'letter', description: 'L', color: '#333', layout: { fields: [] } }],
@@ -37,6 +37,16 @@ const data = (n: number): SeedData => ({
 });
 
 describe('seed', () => {
+  it('writes isAdmin for users, false when unset', async () => {
+    const { client, calls } = fakeClient();
+    await seed(client, data(1));
+    const insert = calls.find((c) => c.sql.startsWith('INSERT INTO "lit_user"'))!;
+    expect(insert.sql).toContain('"isAdmin"');
+    // params per user: id, updatedAt, username, name, bio, color, avatarSeed, isAdmin
+    expect(insert.params![7]).toBe(true);
+    expect(insert.params![15]).toBe(false);
+  });
+
   it('wipes children first, inside one transaction, and reports counts', async () => {
     const { client, calls } = fakeClient();
     const counts = await seed(client, data(5));
