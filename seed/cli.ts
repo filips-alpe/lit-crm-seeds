@@ -1,5 +1,6 @@
 import pg from 'pg';
 import { seed } from './db';
+import { parseDbUrl } from './db-url';
 import { users, types, projects, records } from './load';
 
 const USAGE = `Usage: bun run seed --db <postgres-url>
@@ -27,9 +28,9 @@ async function main() {
   }
   let conn: URL;
   try {
-    conn = new URL(url);
-  } catch {
-    console.error('--db must be a postgres:// connection URL.');
+    conn = parseDbUrl(url);
+  } catch (e) {
+    console.error((e as Error).message);
     process.exitCode = 1;
     return;
   }

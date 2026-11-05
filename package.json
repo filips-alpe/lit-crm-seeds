@@ -1,6 +1,7 @@
 {
   "name": "lit-crm-seeds",
   "private": true,
+  "license": "MIT",
   "version": "0.1.0",
   "type": "module",
   "description": "Franklin demo dataset, seed loader and installable extension for lit-crm",

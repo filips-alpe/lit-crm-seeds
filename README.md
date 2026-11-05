@@ -74,6 +74,13 @@ Types are defined in `seed/data/types.yaml`, users in `seed/data/user.yaml`. The
 
 Founders Online types are assigned from document titles, so some documents outside `letter` land in a neighbouring type. Wikidata people are matched by name, so a few obscure names may be the wrong person. Only 17 records have full text.
 
-## Sources and licence
+## Data sources and licensing
 
-Founders Online metadata and text come from the US National Archives' [Founders Online](https://founders.archives.gov/); full text where present is public-domain (Wikisource, Gutenberg). Wikidata is CC0.
+The code in this repository is MIT licensed (see [LICENSE](LICENSE)).
+
+The data is not ours and is not covered by the MIT license. It comes from:
+
+- [Founders Online](https://founders.archives.gov/) (National Archives and the University of Virginia Press). Its own terms of use apply to the metadata and text taken from it; check them before reusing the data.
+- [Wikidata](https://www.wikidata.org/), released under CC0.
+
+Full text where present comes from public-domain sources (Wikisource, Gutenberg).
