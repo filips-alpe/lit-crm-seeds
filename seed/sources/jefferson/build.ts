@@ -26,36 +26,15 @@ import {
   type GazetteerEntity,
 } from './entities';
 import { renderReport } from './report';
+import type { JeffersonDataset, JeffersonMention, JeffersonRecord } from './dataset';
+
+export type { JeffersonDataset, JeffersonMention, JeffersonRecord } from './dataset';
 
 const here = dirname(fileURLToPath(import.meta.url));
 export const GAZETTEER_PATH = resolve(here, 'gazetteer.yaml');
 export const OUTPUT_PATH = resolve(here, '../../generated/jefferson.generated.json');
 const CORRECTIONS_PATH = resolve(here, 'corrections.tsv');
 const REPORT_PATH = resolve(here, 'REPORT.md');
-
-/** A record in the generated dataset; `key` is stable across rebuilds. */
-export type JeffersonRecord = {
-  key: string;
-  type: string;
-  title: string;
-  description?: string;
-  text?: string;
-  note?: string;
-  references: string[];
-  entered: string;
-  date?: string;
-  from?: string;
-  to?: string;
-};
-
-/** A linked mention: characters [start, end) of `record`'s text name `entity`. */
-export type JeffersonMention = { record: string; entity: string; start: number; end: number };
-
-export type JeffersonDataset = {
-  source: { item: string; url: string; edition: string };
-  records: JeffersonRecord[];
-  mentions: JeffersonMention[];
-};
 
 export const EDITION =
   'The Writings of Thomas Jefferson, Definitive Edition, ed. Andrew A. Lipscomb and Albert Ellery Bergh (Washington, D.C.: Thomas Jefferson Memorial Association, 1905), vols. I–II';
@@ -66,6 +45,8 @@ export type BuildStats = {
   documents: { span: RecordSpan; record: JeffersonRecord; corrections: Correction[] }[];
   entities: { entity: GazetteerEntity; mentions: number; records: number }[];
   linked: number;
+  /** Documents with at least one linked mention. */
+  linkedDocuments: number;
   ambiguous: Map<string, number>;
   candidates: Map<string, number>;
   rawLines: number;
@@ -84,7 +65,12 @@ export function citePages(pm: PageMap, from: number, to: number): string {
 }
 
 /** Book-reader link to the first numbered page of a span, else the item page. */
-export function pageUrl(pm: PageMap, leaves: Map<string, number>, from: number, to: number): string {
+export function pageUrl(
+  pm: PageMap,
+  leaves: Map<string, number>,
+  from: number,
+  to: number,
+): string {
   for (let i = from; i < to; i++) {
     if (!pm.page[i]) continue;
     const leaf = leaves.get(`${pm.volume[i]}:${pm.page[i]}`);
@@ -123,10 +109,14 @@ export function buildDataset(
   const ambiguous = new Map<string, number>();
   const candidates = new Map<string, number>();
   // Per entity: mention count, records, first mention (document order) and variants seen.
-  const seen = new Map<
-    string,
-    { mentions: number; records: Set<string>; first?: { record: string; line: number }; entered?: string; variants: Map<string, number> }
-  >();
+  type Seen = {
+    mentions: number;
+    records: Set<string>;
+    first?: { record: string; line: number };
+    entered?: string;
+    variants: Map<string, number>;
+  };
+  const seen = new Map<string, Seen>();
 
   for (const span of spans) {
     const cleaned = cleanSpan(lines, span.from, span.to, pm.furniture, lexicon);
@@ -135,7 +125,11 @@ export function buildDataset(
       key: span.key,
       type: span.type,
       title: span.title,
-      description: [span.part, span.author ? `By ${span.author}` : null, span.recipient ? `to ${span.recipient}` : null]
+      description: [
+        span.part,
+        span.author ? `By ${span.author}` : null,
+        span.recipient ? `to ${span.recipient}` : null,
+      ]
         .filter(Boolean)
         .join('. ')
         .replace('. to ', ' to '),
@@ -154,11 +148,18 @@ export function buildDataset(
     const found = findMentions(cleaned.text, index);
     for (const m of found) {
       if (!m.entity) {
-        ambiguous.set(m.surface.replace(/\s+/g, ' '), (ambiguous.get(m.surface.replace(/\s+/g, ' ')) ?? 0) + 1);
+        ambiguous.set(
+          m.surface.replace(/\s+/g, ' '),
+          (ambiguous.get(m.surface.replace(/\s+/g, ' ')) ?? 0) + 1,
+        );
         continue;
       }
       mentions.push({ record: span.key, entity: m.entity, start: m.start, end: m.end });
-      const s = seen.get(m.entity) ?? { mentions: 0, records: new Set(), variants: new Map() };
+      const s: Seen = seen.get(m.entity) ?? {
+        mentions: 0,
+        records: new Set(),
+        variants: new Map(),
+      };
       s.mentions++;
       s.records.add(span.key);
       s.first ??= { record: span.key, line: lineAtOffset(cleaned.paragraphs, m.start) };
@@ -167,7 +168,8 @@ export function buildDataset(
       s.variants.set(v, (s.variants.get(v) ?? 0) + 1);
       seen.set(m.entity, s);
     }
-    for (const c of unlinkedCandidates(cleaned.text, found)) candidates.set(c, (candidates.get(c) ?? 0) + 1);
+    for (const c of unlinkedCandidates(cleaned.text, found))
+      candidates.set(c, (candidates.get(c) ?? 0) + 1);
   }
 
   // Entities that the text actually mentions become records; the rest of the
@@ -209,6 +211,7 @@ export function buildDataset(
       documents,
       entities: entityStats,
       linked: mentions.length,
+      linkedDocuments: new Set(mentions.map((m) => m.record)).size,
       ambiguous,
       candidates,
       rawLines: lines.length,
@@ -220,7 +223,9 @@ export function buildDataset(
 function main() {
   const cacheDir = process.argv[2] ?? DEFAULT_CACHE_DIR;
   const raw = readFileSync(cachePath(cacheDir, 'raw'), 'utf8');
-  const pageNumbers = JSON.parse(readFileSync(cachePath(cacheDir, 'pageNumbers'), 'utf8')) as IaPageNumbers;
+  const pageNumbers = JSON.parse(
+    readFileSync(cachePath(cacheDir, 'pageNumbers'), 'utf8'),
+  ) as IaPageNumbers;
   const gazetteer = YAML.parse(readFileSync(GAZETTEER_PATH, 'utf8')) as Gazetteer;
   const { dataset, stats } = buildDataset(raw, pageNumbers, gazetteer);
 
@@ -228,7 +233,11 @@ function main() {
   const tsv = ['line\tkind\trecord\traw\tresult'];
   for (const d of stats.documents) {
     for (const c of d.corrections) {
-      tsv.push([c.line, c.kind, d.record.key, c.raw, c.result].map((v) => String(v).replace(/\t/g, ' ')).join('\t'));
+      tsv.push(
+        [c.line, c.kind, d.record.key, c.raw, c.result]
+          .map((v) => String(v).replace(/\t/g, ' '))
+          .join('\t'),
+      );
     }
   }
   writeFileSync(CORRECTIONS_PATH, tsv.join('\n') + '\n');

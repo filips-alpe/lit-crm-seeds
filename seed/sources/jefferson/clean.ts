@@ -212,7 +212,7 @@ export function cleanSpan(
   const joinLines = (ls: Line[]): string => {
     let out = '';
     for (let k = 0; k < ls.length; k++) {
-      const { text, n } = ls[k];
+      const { text } = ls[k];
       if (k === 0) {
         out = text;
         continue;

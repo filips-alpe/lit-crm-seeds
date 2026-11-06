@@ -1,0 +1,2035 @@
+entities:
+  - key: aaron-burr
+    type: person
+    name: 'Aaron Burr'
+    description: 'Vice President of the United States (1801–1805), later tried for treason.'
+    aliases: ['Burr', 'Colonel Burr']
+  - key: abraham-lincoln
+    type: person
+    name: 'Abraham Lincoln'
+    description: 'Sixteenth President of the United States.'
+    aliases: ['Lincoln']
+  - key: albert-gallatin
+    type: person
+    name: 'Albert Gallatin'
+    description: 'Secretary of the Treasury under Jefferson and Madison (1801–1814).'
+    aliases: ['Gallatin', 'Mr. Gallatin']
+  - key: alexander-hamilton
+    type: person
+    name: 'Alexander Hamilton'
+    description: 'First Secretary of the Treasury of the United States (1789–1795).'
+    aliases: ['Hamilton', 'Mr. Hamilton', 'Colonel Hamilton', 'A. Hamilton', 'ALEXANDER HAMILTON']
+  - key: andrew-lewis
+    type: person
+    name: 'Andrew Lewis'
+    description: 'Virginia militia general at the Battle of Point Pleasant (1774).'
+    aliases: ['Colonel Andrew Lewis']
+  - key: anthony-wayne
+    type: person
+    name: 'Anthony Wayne'
+    description: 'General who defeated the Northwest Indians at Fallen Timbers.'
+    aliases: ['Wayne']
+  - key: antonio-de-ulloa
+    type: person
+    name: 'Antonio de Ulloa'
+    description: 'Spanish naval officer and scientist.'
+    aliases: ['Don Ulloa']
+  - key: arthur-st-clair
+    type: person
+    name: 'Arthur St. Clair'
+    description: 'Governor of the Northwest Territory, defeated by Indians in 1791.'
+    aliases: ['General St. Clair', 'St. Clair']
+  - key: benjamin-franklin
+    type: person
+    name: 'Benjamin Franklin'
+    description: 'American statesman, scientist and diplomat; minister to France (1778–1785).'
+    aliases: ['Dr. Franklin', 'Doctor Franklin', 'Franklin', 'Mr. Franklin']
+  - key: benjamin-harrison
+    type: person
+    name: 'Benjamin Harrison'
+    description: 'Virginia signer of the Declaration of Independence and later governor.'
+  - key: captain-james-cook
+    type: person
+    name: 'Captain James Cook'
+    description: 'British navigator and explorer of the Pacific.'
+    aliases: ['Captain Cook']
+  - key: catherine-the-great
+    type: person
+    name: 'Catherine the Great'
+    description: 'Empress of Russia (1762–1796).'
+    aliases: ['Empress of Russia']
+  - key: cesare-beccaria
+    type: person
+    name: 'Cesare Beccaria'
+    description: 'Italian jurist and author of On Crimes and Punishments.'
+    aliases: ['Beccaria']
+  - key: charles-alexandre-de-calonne
+    type: person
+    name: 'Charles Alexandre de Calonne'
+    description: 'French controller general of finances (1783–1787).'
+    aliases: ['Calonne']
+  - key: charles-cotesworth-pinckney
+    type: person
+    name: 'Charles Cotesworth Pinckney'
+    description: 'South Carolina Federalist, envoy to France and presidential candidate.'
+    aliases: ['General Pinckney']
+  - key: charles-ii
+    type: person
+    name: 'Charles II'
+    description: 'King of England (1660–1685).'
+  - key: comte-de-buffon
+    type: person
+    name: 'Comte de Buffon'
+    description: 'French naturalist whose theory of American degeneracy Jefferson rebutted.'
+    aliases:
+      [
+        'Buffon',
+        'Monsieur de Buffon',
+        'Count de Buffon',
+        'Mons. de Buffon',
+        'M. de Buffon',
+        'Monsieur Buffon',
+      ]
+  - key: comte-de-montmorin
+    type: person
+    name: 'Comte de Montmorin'
+    description: 'French foreign minister (1787–1791).'
+    aliases: ['Montmorin', 'Count de Montmorin', 'Count Montmorin', 'M. de Montmorin']
+  - key: comte-de-vergennes
+    type: person
+    name: 'Comte de Vergennes'
+    description: 'French foreign minister (1774–1787).'
+    aliases: ['Count de Vergennes', 'The Count de Vergennes', 'Vergennes']
+  - key: daniel-greathouse
+    type: person
+    name: 'Daniel Greathouse'
+    description: 'Frontiersman who led the killings at Yellow Creek in 1774.'
+    aliases: ['Daniel Great-house', 'Great-house', 'Greathouse', 'Great-houses']
+  - key: daniel-webster
+    type: person
+    name: 'Daniel Webster'
+    description: 'American statesman and orator.'
+  - key: david-humphreys
+    type: person
+    name: 'David Humphreys'
+    description: 'American diplomat and aide to Washington.'
+    aliases: ['Colonel Humphreys', 'Humphreys']
+  - key: david-montagu-erskine
+    type: person
+    name: 'David Montagu Erskine'
+    description: 'British minister to the United States (1806–1809).'
+    aliases: ['Mr. Erskine']
+  - key: david-rittenhouse
+    type: person
+    name: 'David Rittenhouse'
+    description: 'American astronomer and instrument maker.'
+    aliases: ['Rittenhouse', 'Mr. Rittenhouse']
+  - key: duc-de-verac
+    type: person
+    name: 'Duc de Vérac'
+    description: 'French minister to Russia.'
+    aliases: ['Marquis de Verac']
+  - key: duke-of-brunswick
+    type: person
+    name: 'Duke of Brunswick'
+    description: 'Prussian commander, invaded the Dutch Republic in 1787.'
+  - key: duke-of-orleans
+    type: person
+    name: 'Duke of Orleans'
+    description: 'French prince, cousin of Louis XVI.'
+  - key: edmond-charles-genet
+    type: person
+    name: 'Edmond-Charles Genêt'
+    description: 'French minister to the United States in 1793, recalled after the Genet affair.'
+    aliases: ['Genet', 'Mr. Genet', 'Citizen Genet']
+  - key: edmund-pendleton
+    type: person
+    name: 'Edmund Pendleton'
+    description: 'Virginia jurist and president of the Virginia Convention of 1776.'
+    aliases: ['Pendleton', 'Mr. Pendleton']
+  - key: edmund-randolph
+    type: person
+    name: 'Edmund Randolph'
+    description: 'Attorney General (1789–1794) and Secretary of State (1794–1795) under Washington.'
+    aliases: ['Edmond Randolph', 'E. Randolph', 'EDMUND RANDOLPH']
+  - key: edward-king
+    type: person
+    name: 'Edward King'
+    description: 'Settler associated with the Yellow Creek killings.'
+  - key: edward-preble
+    type: person
+    name: 'Edward Preble'
+    description: 'American naval commodore in the Barbary War.'
+    aliases: ['Preble', 'Commodore Preble']
+  - key: edward-rutledge
+    type: person
+    name: 'Edward Rutledge'
+    description: 'South Carolina signer of the Declaration of Independence.'
+    aliases: ['E. Rutledge']
+  - key: elbridge-gerry
+    type: person
+    name: 'Elbridge Gerry'
+    description: 'Massachusetts delegate, signer of the Declaration and Vice President.'
+    aliases: ['Gerry']
+  - key: euclid
+    type: person
+    name: 'Euclid'
+    description: 'Greek mathematician.'
+  - key: francis-bacon
+    type: person
+    name: 'Francis Bacon'
+    description: 'English philosopher and statesman.'
+    aliases: ['Bacon']
+  - key: francis-lightfoot-lee
+    type: person
+    name: 'Francis Lightfoot Lee'
+    description: 'Virginia signer of the Declaration of Independence.'
+    aliases: ['Fr. L. Lee', 'Francis L. Lee']
+  - key: frederick-william-ii
+    type: person
+    name: 'Frederick William II'
+    description: 'King of Prussia (1786–1797).'
+    aliases: ['King of Prussia']
+  - key: friedrich-melchior-grimm
+    type: person
+    name: 'Friedrich Melchior Grimm'
+    description: 'German-born writer and correspondent in Paris.'
+    aliases: ['Baron Grimm']
+  - key: george-clinton
+    type: person
+    name: 'George Clinton'
+    description: 'Governor of New York and Vice President of the United States.'
+    aliases: ['Governor Clinton']
+  - key: george-hammond
+    type: person
+    name: 'George Hammond'
+    description: 'First British minister to the United States (1791–1795).'
+    aliases: ['Hammond', 'Mr. Hammond']
+  - key: george-ii
+    type: person
+    name: 'George II'
+    description: 'King of Great Britain (1727–1760).'
+  - key: george-mason
+    type: person
+    name: 'George Mason'
+    description: 'Virginia statesman, author of the Virginia Declaration of Rights.'
+    aliases: ['Mr. Mason']
+  - key: george-washington
+    type: person
+    name: 'George Washington'
+    description: 'First President of the United States (1789–1797); commander of the Continental Army.'
+    aliases:
+      [
+        'General Washington',
+        'President Washington',
+        'GEORGE WASHINGTON',
+        'His Excellency General Washington',
+      ]
+  - key: george-wythe
+    type: person
+    name: 'George Wythe'
+    description: "Virginia jurist, signer of the Declaration of Independence and Jefferson's law teacher."
+    aliases: ['Wythe', 'Mr. Wythe']
+  - key: gouverneur-morris
+    type: person
+    name: 'Gouverneur Morris'
+    description: 'American statesman; minister to France (1792–1794).'
+    aliases: ['Gov. Morris', 'G. Morris']
+  - key: henry-dearborn
+    type: person
+    name: 'Henry Dearborn'
+    description: 'Secretary of War under Jefferson (1801–1809).'
+    aliases: ['General Dearborne', 'Dearborne']
+  - key: henry-knox
+    type: person
+    name: 'Henry Knox'
+    description: 'First Secretary of War of the United States (1789–1794).'
+    aliases: ['Knox', 'General Knox']
+  - key: homer
+    type: person
+    name: 'Homer'
+    description: 'Ancient Greek epic poet.'
+  - key: jacques-necker
+    type: person
+    name: 'Jacques Necker'
+    description: 'Swiss banker and French finance minister under Louis XVI.'
+    aliases: ['Necker', 'M. Necker']
+  - key: james-ii
+    type: person
+    name: 'James II'
+    description: 'Duke of York, then King of England (1685–1688).'
+    aliases: ['Duke of York', 'The Duke of York']
+  - key: james-madison
+    type: person
+    name: 'James Madison'
+    description: 'Fourth President of the United States and principal drafter of the Constitution.'
+    aliases: ['Madison', 'Mr. Madison', 'J. Madison']
+  - key: james-mchenry
+    type: person
+    name: 'James McHenry'
+    description: 'Secretary of War (1796–1800).'
+    aliases: ['McHenry']
+  - key: james-monroe
+    type: person
+    name: 'James Monroe'
+    description: 'Fifth President of the United States; minister to France and Governor of Virginia.'
+    aliases: ['Monroe', 'Colonel Monroe']
+  - key: james-thomson-callender
+    type: person
+    name: 'James Thomson Callender'
+    description: 'Journalist who attacked Washington and Adams and later Jefferson.'
+    aliases: ['Callender']
+  - key: james-wilkinson
+    type: person
+    name: 'James Wilkinson'
+    description: 'American general and governor of Louisiana Territory, involved in the Burr conspiracy.'
+    aliases: ['General Wilkinson', 'Wilkinson']
+  - key: james-wilson
+    type: person
+    name: 'James Wilson'
+    description: 'Pennsylvania delegate, signer of the Declaration and later Supreme Court Justice.'
+    aliases: ['Mr. Wilson']
+  - key: jean-baptiste-ternant
+    type: person
+    name: 'Jean-Baptiste Ternant'
+    description: 'French minister to the United States (1791–1793).'
+    aliases: ['Ternant', 'Mr. Ternant']
+  - key: jean-sylvain-bailly
+    type: person
+    name: 'Jean-Sylvain Bailly'
+    description: 'President of the French National Assembly and mayor of Paris.'
+    aliases: ['Bailly', 'M. Bailly']
+  - key: john-adams
+    type: person
+    name: 'John Adams'
+    description: 'Second President of the United States (1797–1801); Vice President under Washington.'
+    aliases: ['J. Adams', 'Mr. John Adams', 'President Adams']
+  - key: john-beckley
+    type: person
+    name: 'John Beckley'
+    description: 'First Clerk of the House of Representatives and Republican organizer.'
+    aliases: ['Beckley', 'Mr. Beckley']
+  - key: john-brown
+    type: person
+    name: 'John Brown'
+    description: 'Kentucky senator.'
+    aliases: ['Brown of Kentucky']
+  - key: john-dawson
+    type: person
+    name: 'John Dawson'
+    description: 'Virginia congressman.'
+    aliases: ['Mr. Dawson']
+  - key: john-dickinson
+    type: person
+    name: 'John Dickinson'
+    description: 'Pennsylvania delegate and author of the Letters from a Farmer in Pennsylvania.'
+    aliases: ['Dickinson', 'Mr. Dickinson']
+  - key: john-fenno
+    type: person
+    name: 'John Fenno'
+    description: 'Editor of the Gazette of the United States.'
+    aliases: ['Fenno']
+  - key: john-gibson
+    type: person
+    name: 'John Gibson'
+    description: "Frontier officer who translated Logan's speech."
+    aliases: ['General Gibson']
+  - key: john-hancock
+    type: person
+    name: 'John Hancock'
+    description: 'President of the Continental Congress and signer of the Declaration of Independence.'
+    aliases: ['Hancock', 'Mr. Hancock']
+  - key: john-jay
+    type: person
+    name: 'John Jay'
+    description: 'First Chief Justice of the United States; negotiator of the Jay Treaty.'
+    aliases: ['Jay', 'Mr. Jay']
+  - key: john-marshall
+    type: person
+    name: 'John Marshall'
+    description: 'Chief Justice of the United States (1801–1835).'
+    aliases: ['Marshall', 'Mr. Marshall']
+  - key: john-milton
+    type: person
+    name: 'John Milton'
+    description: 'English poet and polemicist.'
+    aliases: ['Milton']
+  - key: john-pickering
+    type: person
+    name: 'John Pickering'
+    description: 'New Hampshire federal judge impeached in 1803.'
+    aliases: ['Judge Pickering']
+  - key: john-rutledge
+    type: person
+    name: 'John Rutledge'
+    description: 'South Carolina delegate and statesman, later Chief Justice.'
+    aliases: ['J. Rutledge']
+  - key: john-smith
+    type: person
+    name: 'John Smith'
+    description: 'English captain and early Virginia colonist.'
+    aliases: ['Captain Smith']
+  - key: john-witherspoon
+    type: person
+    name: 'John Witherspoon'
+    description: 'Presbyterian minister, president of Princeton and signer of the Declaration.'
+    aliases: ['Dr. Witherspoon']
+  - key: joseph-cabell
+    type: person
+    name: 'Joseph Cabell'
+    description: 'Virginia state senator; correspondent of Jefferson on the University of Virginia.'
+    aliases: ['Joseph C. Cabell', 'Cabell']
+  - key: joshua-baker
+    type: person
+    name: 'Joshua Baker'
+    description: "Settler at Baker's Bottom, witness in the Logan controversy."
+  - key: josiah-harmar
+    type: person
+    name: 'Josiah Harmar'
+    description: 'American general defeated by Native forces in 1790.'
+    aliases: ['Colonel Harmer']
+  - key: king-george-iii
+    type: person
+    name: 'King George III'
+    description: 'King of Great Britain (1760–1820).'
+    aliases: ['George the Third', 'King George']
+  - key: logan
+    type: person
+    name: 'Logan'
+    description: 'Mingo leader whose speech following the 1774 killing of his family Jefferson quoted in the Notes.'
+  - key: lord-baltimore
+    type: person
+    name: 'Lord Baltimore'
+    description: 'Proprietor of the colony of Maryland.'
+  - key: lord-berkeley
+    type: person
+    name: 'Lord Berkeley'
+    description: 'Co-proprietor of New Jersey.'
+  - key: lord-coke
+    type: person
+    name: 'Lord Coke'
+    description: 'English jurist and author of the Institutes.'
+    aliases: ['Coke']
+  - key: lord-cornbury
+    type: person
+    name: 'Lord Cornbury'
+    description: 'Colonial governor of New York and New Jersey (1701–1708).'
+  - key: lord-culpepper
+    type: person
+    name: 'Lord Culpepper'
+    description: 'Governor of Virginia (1680–1683) and proprietor of the Northern Neck.'
+  - key: lord-dunmore
+    type: person
+    name: 'Lord Dunmore'
+    description: 'Last royal governor of Virginia (1771–1775).'
+    aliases: ['Dunmore']
+  - key: lord-fairfax
+    type: person
+    name: 'Lord Fairfax'
+    description: 'Proprietor of the Northern Neck of Virginia.'
+  - key: lord-north
+    type: person
+    name: 'Lord North'
+    description: 'British prime minister (1770–1782).'
+  - key: louis-xiv
+    type: person
+    name: 'Louis XIV'
+    description: 'King of France (1643–1715).'
+  - key: louis-xvi
+    type: person
+    name: 'Louis XVI'
+    description: 'King of France (1774–1792).'
+  - key: marquis-de-la-luzerne
+    type: person
+    name: 'Marquis de la Luzerne'
+    description: 'French minister to the United States (1779–1784).'
+    aliases: ['Luzerne', 'Count de La Luzerne', 'Marquis de La Luzerne']
+  - key: marquis-de-lafayette
+    type: person
+    name: 'Marquis de Lafayette'
+    description: 'French general and statesman, hero of the American Revolution.'
+    aliases: ['Marquis de La Fayette', 'La Fayette', 'Fayette']
+  - key: mathew-lyon
+    type: person
+    name: 'Mathew Lyon'
+    description: 'Vermont congressman prosecuted under the Sedition Act.'
+    aliases: ['Matthew Lyon']
+  - key: michael-cresap
+    type: person
+    name: 'Michael Cresap'
+    description: 'Frontier militia captain accused by Logan of the 1774 Yellow Creek killings.'
+    aliases:
+      [
+        'Captain Michael Cresap',
+        'Capt. Michael Cresap',
+        'Captain Cresap',
+        'Capt. Cresap',
+        'Mr. Cresap',
+        'Cresap',
+      ]
+  - key: napoleon-bonaparte
+    type: person
+    name: 'Napoleon Bonaparte'
+    description: 'French general, First Consul and Emperor of the French.'
+    aliases: ['Bonaparte']
+  - key: nathanael-greene
+    type: person
+    name: 'Nathanael Greene'
+    description: 'Continental Army general.'
+    aliases: ['General Greene', 'Greene']
+  - key: oliver-wolcott-jr
+    type: person
+    name: 'Oliver Wolcott Jr.'
+    description: 'Secretary of the Treasury (1795–1800).'
+    aliases: ['Wolcott']
+  - key: opechancanough
+    type: person
+    name: 'Opechancanough'
+    description: 'Powhatan chief who led attacks on the Virginia colony in 1622 and 1644.'
+  - key: patrick-henry
+    type: person
+    name: 'Patrick Henry'
+    description: 'Virginia orator and revolutionary leader; Governor of Virginia.'
+    aliases: ['Mr. Henry', 'Governor Henry']
+  - key: peyton-randolph
+    type: person
+    name: 'Peyton Randolph'
+    description: 'President of the First Continental Congress and Speaker of the Virginia House of Burgesses.'
+    aliases: ['Honorable Peyton Randolph']
+  - key: philip-freneau
+    type: person
+    name: 'Philip Freneau'
+    description: 'Poet and editor of the National Gazette.'
+    aliases: ['Freneau']
+  - key: powhatan
+    type: person
+    name: 'Powhatan'
+    description: 'Paramount chief of the Powhatan confederacy in early Virginia.'
+  - key: prince-of-orange
+    type: person
+    name: 'Prince of Orange'
+    description: 'Stadtholder of the Dutch Republic (William V).'
+    aliases: ['Stadtholder']
+  - key: queen-anne
+    type: person
+    name: 'Queen Anne'
+    description: 'Queen of Great Britain (1702–1714).'
+  - key: ralph-izard
+    type: person
+    name: 'Ralph Izard'
+    description: 'South Carolina delegate and senator.'
+    aliases: ['Mr. Izard', 'Izard']
+  - key: raynal
+    type: person
+    name: 'Raynal'
+    description: 'French writer whose Histoire philosophique Jefferson cited; Abbé Raynal.'
+    aliases: ['Abbé Raynal']
+  - key: richard-bland
+    type: person
+    name: 'Richard Bland'
+    description: 'Virginia burgess and pamphleteer on colonial rights.'
+  - key: richard-henry-lee
+    type: person
+    name: 'Richard Henry Lee'
+    description: 'Virginia delegate who moved the resolution for independence in 1776.'
+    aliases: ['R. H. Lee']
+  - key: richard-howe
+    type: person
+    name: 'Richard Howe'
+    description: 'British admiral commanding the fleet in North America.'
+    aliases: ['Lord Howe']
+  - key: robert-liston
+    type: person
+    name: 'Robert Liston'
+    description: 'British minister to the United States (1796–1800).'
+    aliases: ['Liston', 'Mr. Liston']
+  - key: robert-morris
+    type: person
+    name: 'Robert Morris'
+    description: 'Financier of the American Revolution and Superintendent of Finance.'
+    aliases: ['the Financier', 'The Financier']
+  - key: robert-r-livingston
+    type: person
+    name: 'Robert R. Livingston'
+    description: 'New York delegate who sat on the Declaration drafting committee; minister to France.'
+    aliases: ['Chancellor Livingston']
+  - key: roger-sherman
+    type: person
+    name: 'Roger Sherman'
+    description: 'Connecticut delegate and signer of the Declaration of Independence.'
+  - key: rufus-king
+    type: person
+    name: 'Rufus King'
+    description: 'New York Senator and minister to Great Britain.'
+  - key: samuel-adams
+    type: person
+    name: 'Samuel Adams'
+    description: 'Massachusetts patriot and signer of the Declaration of Independence.'
+    aliases: ['Mr. Samuel Adams']
+  - key: samuel-chase
+    type: person
+    name: 'Samuel Chase'
+    description: 'Maryland delegate, signer of the Declaration and later Supreme Court Justice.'
+    aliases: ['Mr. Chase']
+  - key: samuel-smith
+    type: person
+    name: 'Samuel Smith'
+    description: 'Maryland congressman and general.'
+    aliases: ['General Samuel Smith', 'General Smith']
+  - key: sir-george-carteret
+    type: person
+    name: 'Sir George Carteret'
+    description: 'Co-proprietor of New Jersey.'
+  - key: sir-isaac-newton
+    type: person
+    name: 'Sir Isaac Newton'
+    description: 'English physicist and mathematician.'
+    aliases: ['Newton', 'Isaac Newton']
+  - key: sir-john-temple
+    type: person
+    name: 'Sir John Temple'
+    description: 'British consul general in New York.'
+  - key: sir-john-trevor
+    type: person
+    name: 'Sir John Trevor'
+    description: 'Speaker of the English House of Commons.'
+  - key: sir-matthew-hale
+    type: person
+    name: 'Sir Matthew Hale'
+    description: 'English jurist and author of Pleas of the Crown.'
+    aliases: ['Lord Hale', 'Hale']
+  - key: sir-robert-carre
+    type: person
+    name: 'Sir Robert Carre'
+    description: 'English commissioner who took New Netherland in 1664.'
+  - key: sir-thomas-gates
+    type: person
+    name: 'Sir Thomas Gates'
+    description: 'Early governor of the Virginia colony.'
+  - key: sir-walter-raleigh
+    type: person
+    name: 'Sir Walter Raleigh'
+    description: 'English explorer who sponsored the Roanoke colonies.'
+    aliases: ['Sir Walter', 'Raleigh', 'Walter Raleigh']
+  - key: sir-william-alexander
+    type: person
+    name: 'Sir William Alexander'
+    description: 'Scottish colonizer granted Nova Scotia in 1621.'
+  - key: stephen-decatur
+    type: person
+    name: 'Stephen Decatur'
+    description: 'American naval officer.'
+    aliases: ['Decatur']
+  - key: tench-coxe
+    type: person
+    name: 'Tench Coxe'
+    description: 'Federal official and economic writer.'
+    aliases: ['Tenche Coxe', 'Coxe', 'Mr. Coxe']
+  - key: thomas-gage
+    type: person
+    name: 'Thomas Gage'
+    description: 'British general and military governor of Massachusetts (1774–1775).'
+    aliases: ['General Gage', 'Gage']
+  - key: thomas-hutchins
+    type: person
+    name: 'Thomas Hutchins'
+    description: 'Geographer of the United States.'
+    aliases: ['Captain Hutchins']
+  - key: thomas-jefferson
+    type: person
+    name: 'Thomas Jefferson'
+    description: 'Third President of the United States (1801–1809); principal author of the Declaration of Independence.'
+    aliases:
+      [
+        'Th: Jefferson',
+        'Mr. Jefferson',
+        'Jefferson',
+        'THOMAS JEFFERSON',
+        'The Honorable Thomas Jefferson',
+      ]
+  - key: thomas-mann-randolph
+    type: person
+    name: 'Thomas Mann Randolph'
+    description: "Jefferson's son-in-law and later Governor of Virginia."
+    aliases: ['T. M. Randolph']
+  - key: thomas-mifflin
+    type: person
+    name: 'Thomas Mifflin'
+    description: 'Governor of Pennsylvania.'
+    aliases: ['Governor Mifflin', 'Mifflin']
+  - key: thomas-paine
+    type: person
+    name: 'Thomas Paine'
+    description: 'Pamphleteer, author of Common Sense and Rights of Man.'
+    aliases: ['Paine']
+  - key: tobias-lear
+    type: person
+    name: 'Tobias Lear'
+    description: "Washington's private secretary."
+    aliases: ['Mr. Lear', 'Lear']
+  - key: voltaire
+    type: person
+    name: 'Voltaire'
+    description: 'French Enlightenment writer.'
+  - key: william-blackstone
+    type: person
+    name: 'William Blackstone'
+    description: 'English jurist and author of the Commentaries on the Laws of England.'
+    aliases: ['Blackstone']
+  - key: william-byrd-ii
+    type: person
+    name: 'William Byrd II'
+    description: 'Virginia planter and author of the history of the dividing line.'
+    aliases: ['Colonel Byrd', 'Byrd']
+  - key: william-c-c-claiborne
+    type: person
+    name: 'William C. C. Claiborne'
+    description: 'Governor of Mississippi Territory and Orleans Territory.'
+    aliases: ['Governor Claiborne', 'Claiborne']
+  - key: william-hull
+    type: person
+    name: 'William Hull'
+    description: 'American general who surrendered Detroit in 1812.'
+    aliases: ['General Hull']
+  - key: william-penn
+    type: person
+    name: 'William Penn'
+    description: 'Quaker founder of Pennsylvania.'
+    aliases: ['Penn', 'Mr. Penn']
+  - key: william-short
+    type: person
+    name: 'William Short'
+    description: "Jefferson's private secretary in Paris, later chargé d'affaires."
+    aliases: ['Mr. Short']
+  - key: william-the-conqueror
+    type: person
+    name: 'William the Conqueror'
+    description: 'Norman conqueror of England in 1066.'
+    aliases: ['William the Norman']
+  - key: william-wirt
+    type: person
+    name: 'William Wirt'
+    description: 'Virginia lawyer and author of the Life of Patrick Henry.'
+    aliases: ['Mr. Wirt', 'Wirt']
+  - key: africa
+    type: place
+    name: 'Africa'
+    description: 'The continent.'
+  - key: aix
+    type: place
+    name: 'Aix'
+    description: 'City of Provence.'
+  - key: albany
+    type: place
+    name: 'Albany'
+    description: 'Capital of New York.'
+  - key: albemarle-county
+    type: place
+    name: 'Albemarle County'
+    description: 'County of Virginia containing Monticello.'
+    aliases: ['Albemarle']
+  - key: alexandria
+    type: place
+    name: 'Alexandria'
+    description: 'Town in Virginia on the Potomac.'
+  - key: algiers
+    type: place
+    name: 'Algiers'
+    description: 'Barbary regency of North Africa.'
+  - key: alleghany-mountains
+    type: place
+    name: 'Alleghany Mountains'
+    description: 'Mountain range of the Appalachians.'
+    aliases: ['Alleghany']
+  - key: alps
+    type: place
+    name: 'Alps'
+    description: 'European mountain range.'
+  - key: amsterdam
+    type: place
+    name: 'Amsterdam'
+    description: 'Dutch commercial city.'
+  - key: andes
+    type: place
+    name: 'Andes'
+    description: 'South American mountain range.'
+  - key: annapolis
+    type: place
+    name: 'Annapolis'
+    description: 'Capital of Maryland.'
+  - key: appomattox-river
+    type: place
+    name: 'Appomattox River'
+    description: 'River of Virginia.'
+    aliases: ['Appomattox']
+  - key: asia
+    type: place
+    name: 'Asia'
+    description: 'The continent.'
+  - key: atlantic-ocean
+    type: place
+    name: 'Atlantic Ocean'
+    description: 'Ocean east of the Americas.'
+    aliases: ['Atlantic']
+  - key: austria
+    type: place
+    name: 'Austria'
+    description: 'Habsburg monarchy of central Europe.'
+  - key: avignon
+    type: place
+    name: 'Avignon'
+    description: 'City of southern France.'
+  - key: bakers-bottom
+    type: place
+    name: "Baker's Bottom"
+    description: 'Settlement on the Ohio near Yellow Creek.'
+  - key: baltimore
+    type: place
+    name: 'Baltimore'
+    description: 'Port city of Maryland.'
+  - key: barbados
+    type: place
+    name: 'Barbados'
+    description: 'British West Indian island.'
+    aliases: ['Barbadoes']
+  - key: barbary-states
+    type: place
+    name: 'Barbary States'
+    description: 'North African states of Morocco, Algiers, Tunis and Tripoli.'
+    aliases: ['Barbary', 'States of Barbary']
+  - key: bastille
+    type: place
+    name: 'Bastille'
+    description: 'Paris fortress and prison.'
+    aliases: ['Bastile']
+  - key: baton-rouge
+    type: place
+    name: 'Baton Rouge'
+    description: 'Town on the lower Mississippi.'
+  - key: blue-ridge
+    type: place
+    name: 'Blue Ridge'
+    description: 'Mountain range of Virginia.'
+  - key: boonesborough
+    type: place
+    name: 'Boonesborough'
+    description: 'Settlement in Kentucky.'
+    aliases: ['Boonsborough']
+  - key: boston
+    type: place
+    name: 'Boston'
+    description: 'Capital of Massachusetts.'
+  - key: braintree
+    type: place
+    name: 'Braintree'
+    description: 'Massachusetts town, home of John Adams.'
+  - key: campobello
+    type: place
+    name: 'Campobello'
+    description: 'Island of New Brunswick.'
+  - key: canada
+    type: place
+    name: 'Canada'
+    description: 'French and later British territory north of the United States.'
+    aliases: ['Lower Canada', 'Upper Canada']
+  - key: charleston
+    type: place
+    name: 'Charleston'
+    description: 'Port city of South Carolina.'
+  - key: charlottesville
+    type: place
+    name: 'Charlottesville'
+    description: 'Town in Albemarle County, Virginia.'
+  - key: chesapeake-bay
+    type: place
+    name: 'Chesapeake Bay'
+    description: 'Large estuary of Virginia and Maryland.'
+    aliases: ['Chesapeake']
+  - key: chesterfield-county
+    type: place
+    name: 'Chesterfield County'
+    description: 'County of Virginia.'
+    aliases: ['Chesterfield']
+  - key: china
+    type: place
+    name: 'China'
+    description: 'Empire of East Asia.'
+  - key: cincinnati
+    type: place
+    name: 'Cincinnati'
+    description: 'Town on the Ohio River.'
+  - key: connecticut
+    type: place
+    name: 'Connecticut'
+    description: 'Colony and state of the United States.'
+  - key: cowes
+    type: place
+    name: 'Cowes'
+    description: 'Port town on the Isle of Wight.'
+  - key: cuyahoga-river
+    type: place
+    name: 'Cuyahoga River'
+    description: 'River of northern Ohio.'
+    aliases: ['Cuyahoga']
+  - key: delaware-state
+    type: place
+    name: 'Delaware (state)'
+    description: 'Colony and state of the United States.'
+    aliases: ['Delaware']
+  - key: denmark
+    type: place
+    name: 'Denmark'
+    description: 'Kingdom of northern Europe.'
+  - key: detroit
+    type: place
+    name: 'Detroit'
+    description: 'Fort and settlement on the Detroit River.'
+  - key: east-new-jersey
+    type: place
+    name: 'East New Jersey'
+    description: 'Proprietary province, one of the two parts of colonial New Jersey.'
+    aliases: ['East Jersey']
+  - key: england
+    type: place
+    name: 'England'
+    description: 'Kingdom of the British Isles.'
+  - key: europe
+    type: place
+    name: 'Europe'
+    description: 'The continent.'
+  - key: florida
+    type: place
+    name: 'Florida'
+    description: 'Spanish possessions east and south of the United States.'
+    aliases: ['Floridas']
+  - key: fluvanna-county
+    type: place
+    name: 'Fluvanna County'
+    description: 'County of Virginia.'
+    aliases: ['Fluvanna']
+  - key: fort-adams
+    type: place
+    name: 'Fort Adams'
+    description: 'American fort on the Mississippi.'
+  - key: fort-cumberland
+    type: place
+    name: 'Fort Cumberland'
+    description: 'Fort on the upper Potomac.'
+  - key: fort-pitt
+    type: place
+    name: 'Fort Pitt'
+    description: 'British fort at the forks of the Ohio.'
+  - key: france
+    type: place
+    name: 'France'
+    description: 'Kingdom and later republic of western Europe.'
+  - key: fredericksburg
+    type: place
+    name: 'Fredericksburg'
+    description: 'Town in Virginia.'
+  - key: genoa
+    type: place
+    name: 'Genoa'
+    description: 'Italian maritime republic.'
+  - key: georgetown
+    type: place
+    name: 'Georgetown'
+    description: 'Town on the Potomac in the District of Columbia.'
+  - key: georgia-state
+    type: place
+    name: 'Georgia (state)'
+    description: 'Colony and state of the United States.'
+    aliases: ['Georgia']
+  - key: germany
+    type: place
+    name: 'Germany'
+    description: 'Region of central Europe.'
+  - key: goochland-county
+    type: place
+    name: 'Goochland County'
+    description: 'County of Virginia.'
+    aliases: ['Goochland']
+  - key: grave-creek
+    type: place
+    name: 'Grave Creek'
+    description: 'Tributary of the Ohio.'
+  - key: great-britain
+    type: place
+    name: 'Great Britain'
+    description: 'Kingdom comprising England, Scotland and Wales.'
+    aliases: ['Britain', 'Grande-Bretagne', 'Angleterre']
+  - key: great-kanawha-river
+    type: place
+    name: 'Great Kanawha River'
+    description: 'Tributary of the Ohio.'
+    aliases: ['Great Kanhaway', 'The Great Kanhaway', 'Kanhaway']
+  - key: greenbrier-river
+    type: place
+    name: 'Greenbrier River'
+    description: 'River of Virginia.'
+    aliases: ['Greenbriar']
+  - key: greenland
+    type: place
+    name: 'Greenland'
+    description: 'Arctic island.'
+  - key: gulf-of-mexico
+    type: place
+    name: 'Gulf of Mexico'
+    description: 'Gulf bordering the southern United States.'
+  - key: halifax
+    type: place
+    name: 'Halifax'
+    description: 'Town in Nova Scotia.'
+  - key: hamburg
+    type: place
+    name: 'Hamburg'
+    description: 'German free city.'
+  - key: hartford
+    type: place
+    name: 'Hartford'
+    description: 'Capital of Connecticut.'
+  - key: havre
+    type: place
+    name: 'Havre'
+    description: 'French port.'
+  - key: holland
+    type: place
+    name: 'Holland'
+    description: 'Province and, by extension, the Dutch Republic.'
+    aliases:
+      ['United Netherlands', 'Netherlands', 'Provinces-Unies', 'Pays-Bas', 'United Provinces']
+  - key: holston-river
+    type: place
+    name: 'Holston River'
+    description: 'River of southwest Virginia.'
+    aliases: ['Holston']
+  - key: hudson-river
+    type: place
+    name: 'Hudson River'
+    description: 'River of New York.'
+    aliases: ['Hudson', 'North River']
+  - key: iceland
+    type: place
+    name: 'Iceland'
+    description: 'North Atlantic island.'
+  - key: illinois-region
+    type: place
+    name: 'Illinois (region)'
+    description: 'Region of the Mississippi valley, later a state.'
+    aliases: ['Illinois']
+  - key: indiana
+    type: place
+    name: 'Indiana'
+    description: 'Territory and later state northwest of the Ohio.'
+  - key: ireland
+    type: place
+    name: 'Ireland'
+    description: 'Island west of Great Britain.'
+  - key: jamaica
+    type: place
+    name: 'Jamaica'
+    description: 'British West Indian island.'
+  - key: james-river
+    type: place
+    name: 'James River'
+    description: 'River of Virginia.'
+    aliases: ['James river']
+  - key: jamestown
+    type: place
+    name: 'Jamestown'
+    description: 'First permanent English settlement in Virginia (1607).'
+  - key: kamchatka
+    type: place
+    name: 'Kamchatka'
+    description: 'Peninsula of eastern Russia.'
+    aliases: ['Kamschatka']
+  - key: kaskaskia
+    type: place
+    name: 'Kaskaskia'
+    description: 'Settlement in the Illinois country.'
+  - key: kentucky
+    type: place
+    name: 'Kentucky'
+    description: 'Region of Virginia that became a state in 1792.'
+    aliases: ['State of Kentucky']
+  - key: lake-champlain
+    type: place
+    name: 'Lake Champlain'
+    description: 'Lake between New York and Vermont.'
+  - key: lake-erie
+    type: place
+    name: 'Lake Erie'
+    description: 'Great Lake.'
+  - key: lake-ontario
+    type: place
+    name: 'Lake Ontario'
+    description: 'Great Lake.'
+  - key: lake-pontchartrain
+    type: place
+    name: 'Lake Pontchartrain'
+    description: 'Lake in Louisiana.'
+  - key: le-boeuf
+    type: place
+    name: 'Le Boeuf'
+    description: 'French fort in western Pennsylvania.'
+  - key: leyden
+    type: place
+    name: 'Leyden'
+    description: 'Dutch university city.'
+  - key: lisbon
+    type: place
+    name: 'Lisbon'
+    description: 'Capital of Portugal.'
+  - key: little-kanawha-river
+    type: place
+    name: 'Little Kanawha River'
+    description: 'Tributary of the Ohio.'
+    aliases: ['Little Kanhaway']
+  - key: london
+    type: place
+    name: 'London'
+    description: 'Capital of Great Britain.'
+  - key: long-island
+    type: place
+    name: 'Long Island'
+    description: 'Island of New York.'
+  - key: louisiana
+    type: place
+    name: 'Louisiana'
+    description: 'French and Spanish territory purchased by the United States in 1803.'
+  - key: louisville
+    type: place
+    name: 'Louisville'
+    description: 'Town at the falls of the Ohio.'
+  - key: lyons
+    type: place
+    name: 'Lyons'
+    description: 'French city.'
+  - key: madisons-cave
+    type: place
+    name: "Madison's Cave"
+    description: 'Cave in the Blue Ridge, Virginia.'
+  - key: madrid
+    type: place
+    name: 'Madrid'
+    description: 'Capital of Spain.'
+  - key: manhattan
+    type: place
+    name: 'Manhattan'
+    description: 'Island at the mouth of the Hudson.'
+  - key: marietta
+    type: place
+    name: 'Marietta'
+    description: 'Settlement on the Ohio.'
+  - key: marseilles
+    type: place
+    name: 'Marseilles'
+    description: 'French port city.'
+  - key: maryland
+    type: place
+    name: 'Maryland'
+    description: 'Colony and state of the United States.'
+    aliases: ['State of Maryland']
+  - key: massachusetts
+    type: place
+    name: 'Massachusetts'
+    description: 'Colony and state of the United States.'
+    aliases: ['Massachusetts Bay']
+  - key: mattaponi-river
+    type: place
+    name: 'Mattaponi River'
+    description: 'River of Virginia.'
+    aliases: ['Mattapony']
+  - key: mediterranean-sea
+    type: place
+    name: 'Mediterranean Sea'
+    description: 'Sea between Europe, Africa and Asia.'
+    aliases: ['Mediterranean']
+  - key: mexico
+    type: place
+    name: 'Mexico'
+    description: 'Spanish viceroyalty and later nation.'
+  - key: michigan
+    type: place
+    name: 'Michigan'
+    description: 'Territory northwest of the Ohio.'
+  - key: mississippi-river
+    type: place
+    name: 'Mississippi River'
+    description: 'Principal river of North America.'
+    aliases: ['Mississippi', 'The Mississippi']
+  - key: mississippi-territory
+    type: place
+    name: 'Mississippi Territory'
+    description: 'Territory organized in 1798 north of West Florida.'
+  - key: missouri-river
+    type: place
+    name: 'Missouri River'
+    description: 'Tributary of the Mississippi.'
+    aliases: ['Missouri']
+  - key: mobile
+    type: place
+    name: 'Mobile'
+    description: 'Town in West Florida.'
+  - key: monongahela-river
+    type: place
+    name: 'Monongahela River'
+    description: 'River forming the Ohio with the Allegheny.'
+    aliases: ['Monongahela']
+  - key: monticello
+    type: place
+    name: 'Monticello'
+    description: "Jefferson's estate near Charlottesville, Virginia."
+    aliases: ['MONTICELLO']
+  - key: montreal
+    type: place
+    name: 'Montreal'
+    description: 'City in Canada.'
+  - key: mount-vernon
+    type: place
+    name: 'Mount Vernon'
+    description: "Washington's estate on the Potomac."
+  - key: mud-island
+    type: place
+    name: 'Mud Island'
+    description: 'Island in the Delaware River below Philadelphia.'
+  - key: nantes
+    type: place
+    name: 'Nantes'
+    description: 'French port city.'
+  - key: naples
+    type: place
+    name: 'Naples'
+    description: 'Kingdom of southern Italy.'
+  - key: natchez
+    type: place
+    name: 'Natchez'
+    description: 'Town on the Mississippi.'
+  - key: natchitoches
+    type: place
+    name: 'Natchitoches'
+    description: 'Town on the Red River in Louisiana.'
+  - key: new-hampshire
+    type: place
+    name: 'New Hampshire'
+    description: 'Colony and state of the United States.'
+  - key: new-jersey
+    type: place
+    name: 'New Jersey'
+    description: 'Colony and state of the United States.'
+    aliases: ['State of New Jersey', 'Jersey']
+  - key: new-orleans
+    type: place
+    name: 'New Orleans'
+    description: 'City on the lower Mississippi.'
+  - key: new-york-state
+    type: place
+    name: 'New York (state)'
+    description: 'State of the United States, formerly a British colony.'
+    aliases: ['New York', 'New-York']
+  - key: newfoundland
+    type: place
+    name: 'Newfoundland'
+    description: 'Island and British colony in North America.'
+  - key: niagara
+    type: place
+    name: 'Niagara'
+    description: 'River and falls between Lake Erie and Lake Ontario.'
+  - key: norfolk
+    type: place
+    name: 'Norfolk'
+    description: 'Port town of Virginia.'
+  - key: north-america
+    type: place
+    name: 'North America'
+    description: 'The continent.'
+  - key: north-carolina
+    type: place
+    name: 'North Carolina'
+    description: 'Colony and state of the United States.'
+  - key: north-mountain
+    type: place
+    name: 'North Mountain'
+    description: 'Ridge of the Appalachians in Virginia.'
+    aliases: ['North mountain']
+  - key: northern-neck
+    type: place
+    name: 'Northern Neck'
+    description: 'Peninsula between the Potomac and Rappahannock, Virginia.'
+  - key: nova-scotia
+    type: place
+    name: 'Nova Scotia'
+    description: 'Province of British North America.'
+    aliases: ['Acadie']
+  - key: nimes
+    type: place
+    name: 'Nîmes'
+    description: 'French city with Roman remains.'
+    aliases: ['Nismes']
+  - key: ohio-state
+    type: place
+    name: 'Ohio (state)'
+    description: 'State formed from the Northwest Territory.'
+    aliases: ['State of Ohio']
+  - key: ohio-river
+    type: place
+    name: 'Ohio River'
+    description: 'River forming the northwestern border of Virginia.'
+    aliases: ['Ohio']
+  - key: pacific-ocean
+    type: place
+    name: 'Pacific Ocean'
+    description: 'Ocean west of the Americas.'
+    aliases: ['Pacific']
+  - key: pamunkey-river
+    type: place
+    name: 'Pamunkey River'
+    description: 'River of Virginia.'
+    aliases: ['Pamunkey']
+  - key: paris
+    type: place
+    name: 'Paris'
+    description: 'Capital of France.'
+  - key: pennsylvania
+    type: place
+    name: 'Pennsylvania'
+    description: 'Colony and state founded by William Penn.'
+    aliases: ['State of Pennsylvania']
+  - key: peru
+    type: place
+    name: 'Peru'
+    description: 'Spanish viceroyalty in South America.'
+  - key: philadelphia
+    type: place
+    name: 'Philadelphia'
+    description: 'City of Pennsylvania, seat of the U.S. government 1790–1800.'
+  - key: piedmont
+    type: place
+    name: 'Piedmont'
+    description: 'Region of northwestern Italy.'
+  - key: pittsburgh
+    type: place
+    name: 'Pittsburgh'
+    description: 'Town at the head of the Ohio.'
+    aliases: ['Pittsburg']
+  - key: poland
+    type: place
+    name: 'Poland'
+    description: 'Kingdom of eastern Europe.'
+  - key: portsmouth
+    type: place
+    name: 'Portsmouth'
+    description: 'Port town of New Hampshire.'
+  - key: portugal
+    type: place
+    name: 'Portugal'
+    description: 'Kingdom of the Iberian peninsula.'
+  - key: potomac-river
+    type: place
+    name: 'Potomac River'
+    description: 'River between Virginia and Maryland.'
+    aliases: ['Potomac']
+  - key: prussia
+    type: place
+    name: 'Prussia'
+    description: 'Kingdom of northern Germany.'
+  - key: quebec
+    type: place
+    name: 'Quebec'
+    description: 'Capital of Canada.'
+  - key: rappahannock-river
+    type: place
+    name: 'Rappahannock River'
+    description: 'River of Virginia.'
+    aliases: ['Rappahannock']
+  - key: rhode-island
+    type: place
+    name: 'Rhode Island'
+    description: 'Colony and state of the United States.'
+  - key: richmond
+    type: place
+    name: 'Richmond'
+    description: 'Capital of Virginia from 1780.'
+  - key: rio-grande
+    type: place
+    name: 'Rio Grande'
+    description: 'River of the Spanish southwest.'
+    aliases: ['Rio Norte']
+  - key: rivanna-river
+    type: place
+    name: 'Rivanna River'
+    description: 'River of Albemarle County, Virginia.'
+    aliases: ['Rivanna']
+  - key: roanoke
+    type: place
+    name: 'Roanoke'
+    description: 'River and island of Virginia and North Carolina.'
+  - key: rockbridge-county
+    type: place
+    name: 'Rockbridge County'
+    description: 'County of Virginia.'
+    aliases: ['Rockbridge']
+  - key: rockfish-gap
+    type: place
+    name: 'Rockfish Gap'
+    description: 'Gap in the Blue Ridge where the University of Virginia commissioners met.'
+    aliases: ['Rockfish']
+  - key: rome
+    type: place
+    name: 'Rome'
+    description: 'Ancient republic and empire; city of Italy.'
+  - key: russia
+    type: place
+    name: 'Russia'
+    description: 'Empire of eastern Europe and northern Asia.'
+  - key: saint-petersburg
+    type: place
+    name: 'Saint Petersburg'
+    description: 'Capital of Russia.'
+    aliases: ['St. Petersburg', 'Petersburg']
+  - key: saint-domingue
+    type: place
+    name: 'Saint-Domingue'
+    description: 'French colony on Hispaniola, later Haiti.'
+    aliases: ['St. Domingo']
+  - key: savannah
+    type: place
+    name: 'Savannah'
+    description: 'Port city of Georgia.'
+  - key: scotland
+    type: place
+    name: 'Scotland'
+    description: 'Kingdom of the British Isles.'
+  - key: shadwell
+    type: place
+    name: 'Shadwell'
+    description: "Jefferson's birthplace in Albemarle County, Virginia."
+  - key: shenandoah-river
+    type: place
+    name: 'Shenandoah River'
+    description: 'River of the Valley of Virginia.'
+    aliases: ['Shenandoah']
+  - key: snowdon
+    type: place
+    name: 'Snowdon'
+    description: 'Mountain in Wales.'
+  - key: south-america
+    type: place
+    name: 'South America'
+    description: 'The continent.'
+  - key: south-carolina
+    type: place
+    name: 'South Carolina'
+    description: 'Colony and state of the United States.'
+  - key: southampton-county
+    type: place
+    name: 'Southampton County'
+    description: 'County of Virginia.'
+    aliases: ['Southampton']
+  - key: spain
+    type: place
+    name: 'Spain'
+    description: 'Kingdom of the Iberian peninsula.'
+  - key: st-lawrence-river
+    type: place
+    name: 'St. Lawrence River'
+    description: 'Great river of Canada.'
+    aliases: ['St. Lawrence']
+  - key: staunton
+    type: place
+    name: 'Staunton'
+    description: 'Town in Virginia.'
+  - key: strasbourg
+    type: place
+    name: 'Strasbourg'
+    description: 'Alsatian city.'
+    aliases: ['Strasburg']
+  - key: susquehanna-river
+    type: place
+    name: 'Susquehanna River'
+    description: 'River of Pennsylvania.'
+    aliases: ['Susquehanna', 'Susquehannah']
+  - key: sweden
+    type: place
+    name: 'Sweden'
+    description: 'Kingdom of northern Europe.'
+  - key: tennessee
+    type: place
+    name: 'Tennessee'
+    description: 'State admitted to the Union in 1796.'
+  - key: the-hague
+    type: place
+    name: 'The Hague'
+    description: 'Seat of the Dutch government.'
+    aliases: ['Hague']
+  - key: trenton
+    type: place
+    name: 'Trenton'
+    description: 'Town in New Jersey.'
+  - key: tuckahoe
+    type: place
+    name: 'Tuckahoe'
+    description: 'Estate and district in Goochland County, Virginia.'
+  - key: tuscany
+    type: place
+    name: 'Tuscany'
+    description: 'Grand Duchy of central Italy.'
+  - key: united-states
+    type: place
+    name: 'United States'
+    description: 'The federal republic formed from the thirteen states.'
+    aliases:
+      [
+        'United States of America',
+        'The United States',
+        'U. S.',
+        "United States'",
+        'American States',
+        'the United States',
+      ]
+  - key: utrecht
+    type: place
+    name: 'Utrecht'
+    description: 'City of the Dutch Republic.'
+  - key: venice
+    type: place
+    name: 'Venice'
+    description: 'Italian maritime republic.'
+  - key: vermont
+    type: place
+    name: 'Vermont'
+    description: 'State admitted to the Union in 1791.'
+  - key: versailles
+    type: place
+    name: 'Versailles'
+    description: 'Residence of the French court.'
+  - key: vincennes
+    type: place
+    name: 'Vincennes'
+    description: 'Settlement on the Wabash.'
+    aliases: ['St. Vincennes']
+  - key: virginia
+    type: place
+    name: 'Virginia'
+    description: 'Colony and later state of the United States on the Atlantic seaboard.'
+    aliases: ['State of Virginia', 'Commonwealth of Virginia']
+  - key: wabash-river
+    type: place
+    name: 'Wabash River'
+    description: 'Tributary of the Ohio.'
+    aliases: ['Wabash', 'The Wabash']
+  - key: wales
+    type: place
+    name: 'Wales'
+    description: 'Principality of Great Britain.'
+  - key: west-indies
+    type: place
+    name: 'West Indies'
+    description: 'Island chain of the Caribbean.'
+  - key: west-new-jersey
+    type: place
+    name: 'West New Jersey'
+    description: 'Proprietary province, one of the two parts of colonial New Jersey.'
+    aliases: ['West Jersey']
+  - key: wheeling
+    type: place
+    name: 'Wheeling'
+    description: 'Settlement on the Ohio River.'
+  - key: williamsburg
+    type: place
+    name: 'Williamsburg'
+    description: 'Colonial capital of Virginia.'
+    aliases: ['Williamsburgh']
+  - key: yellow-creek
+    type: place
+    name: 'Yellow Creek'
+    description: "Tributary of the Ohio where Logan's family was killed in 1774."
+  - key: york-river
+    type: place
+    name: 'York River'
+    description: 'River of Virginia.'
+  - key: yorktown
+    type: place
+    name: 'Yorktown'
+    description: 'Virginia town where Cornwallis surrendered in 1781.'
+  - key: anglican-church
+    type: organization
+    name: 'Anglican Church'
+    description: 'Established church of England and colonial Virginia.'
+    aliases: ['Church of England']
+  - key: assembly-of-notables
+    type: organization
+    name: 'Assembly of Notables'
+    description: 'French assembly of notables convened in 1787.'
+    aliases: ['Notables']
+  - key: bank-of-the-united-states
+    type: organization
+    name: 'Bank of the United States'
+    description: 'National bank chartered in 1791.'
+  - key: british-parliament
+    type: organization
+    name: 'British Parliament'
+    description: 'Legislature of Great Britain.'
+    aliases: ['Parliament of Great Britain']
+  - key: central-college
+    type: organization
+    name: 'Central College'
+    description: 'Predecessor institution of the University of Virginia.'
+  - key: cherokee
+    type: organization
+    name: 'Cherokee'
+    description: 'Southeastern Native nation.'
+    aliases: ['Cherokees']
+  - key: college-of-william-and-mary
+    type: organization
+    name: 'College of William and Mary'
+    description: 'College in Williamsburg, Virginia, founded 1693.'
+    aliases: ['William and Mary']
+  - key: continental-congress
+    type: organization
+    name: 'Continental Congress'
+    description: 'Governing assembly of the thirteen colonies and states, 1774–1781.'
+    aliases: ['General Congress']
+  - key: council-of-revision
+    type: organization
+    name: 'Council of Revision'
+    description: 'Proposed body to review legislation in Virginia.'
+  - key: council-of-state-virginia
+    type: organization
+    name: 'Council of State (Virginia)'
+    description: 'Executive council advising the Governor of Virginia.'
+    aliases: ['Council of State']
+  - key: court-of-appeals-of-virginia
+    type: organization
+    name: 'Court of Appeals of Virginia'
+    description: "Virginia's court of appeals."
+    aliases: ['Court of Appeals']
+  - key: creek
+    type: organization
+    name: 'Creek'
+    description: 'Southeastern Native confederacy.'
+    aliases: ['Creeks']
+  - key: delaware-lenape-people
+    type: organization
+    name: 'Delaware (Lenape) people'
+    description: 'Algonquian-speaking people of the Delaware valley.'
+    aliases: ['Delawares', 'Lenopi']
+  - key: estates-general
+    type: organization
+    name: 'Estates General'
+    description: 'French representative assembly of the three estates.'
+    aliases: ['States General', 'The States General']
+  - key: federalist-party
+    type: organization
+    name: 'Federalist Party'
+    description: 'Political party led by Hamilton and Adams.'
+    aliases: ['Federalists']
+  - key: french-national-convention
+    type: organization
+    name: 'French National Convention'
+    description: 'Revolutionary assembly of France (1792–1795).'
+    aliases: ['National Convention']
+  - key: heads-of-departments
+    type: organization
+    name: 'Heads of Departments'
+    description: "The heads of the executive departments of the United States, Washington's cabinet."
+    aliases: ['Heads of Department']
+  - key: house-of-commons
+    type: organization
+    name: 'House of Commons'
+    description: 'Lower house of the British Parliament.'
+  - key: house-of-lords
+    type: organization
+    name: 'House of Lords'
+    description: 'Upper house of the British Parliament.'
+  - key: iroquois
+    type: organization
+    name: 'Iroquois'
+    description: 'Confederacy of Native nations of upper New York.'
+    aliases: ['Five Nations', 'Six Nations']
+  - key: mannahoac
+    type: organization
+    name: 'Mannahoac'
+    description: 'Siouan-speaking people of northern Virginia.'
+    aliases: ['Mannahoacs']
+  - key: massawomeck
+    type: organization
+    name: 'Massawomeck'
+    description: 'Native nation north of the Potomac.'
+    aliases: ['Massawomacs']
+  - key: mattaponi
+    type: organization
+    name: 'Mattaponi'
+    description: 'Native people of the Powhatan confederacy.'
+    aliases: ['Mattaponies']
+  - key: meherrin
+    type: organization
+    name: 'Meherrin'
+    description: 'Native nation of southeastern Virginia.'
+    aliases: ['Meherrins']
+  - key: miami
+    type: organization
+    name: 'Miami'
+    description: 'Native nation of the Ohio country.'
+  - key: mingo
+    type: organization
+    name: 'Mingo'
+    description: "Iroquoian-speaking people of the Ohio country, including Logan's band."
+    aliases: ['Mingoes', 'Mingos']
+  - key: mohawk
+    type: organization
+    name: 'Mohawk'
+    description: 'Eastern nation of the Iroquois confederacy.'
+    aliases: ['Mohawks']
+  - key: monacan
+    type: organization
+    name: 'Monacan'
+    description: 'Siouan-speaking people of the Virginia piedmont.'
+    aliases: ['Monacans']
+  - key: national-assembly-france
+    type: organization
+    name: 'National Assembly (France)'
+    description: 'French revolutionary assembly formed in 1789.'
+    aliases: ['National Assembly']
+  - key: nottoway
+    type: organization
+    name: 'Nottoway'
+    description: 'Native nation of southeastern Virginia.'
+    aliases: ['Nottoways']
+  - key: pamunkey-people
+    type: organization
+    name: 'Pamunkey people'
+    description: 'Native people of the Powhatan confederacy.'
+    aliases: ['Pamunkies']
+  - key: powhatan-confederacy
+    type: organization
+    name: 'Powhatan Confederacy'
+    description: 'Confederacy of Algonquian peoples of tidewater Virginia.'
+    aliases: ['Powhatans']
+  - key: quakers
+    type: organization
+    name: 'Quakers'
+    description: 'Religious Society of Friends.'
+  - key: republican-party
+    type: organization
+    name: 'Republican Party'
+    description: 'Jeffersonian political party.'
+    aliases: ['Republicans']
+  - key: seneca
+    type: organization
+    name: 'Seneca'
+    description: 'Western nation of the Iroquois confederacy.'
+    aliases: ['Senecas']
+  - key: shawnee
+    type: organization
+    name: 'Shawnee'
+    description: 'Algonquian-speaking people of the Ohio valley.'
+    aliases: ['Shawanese']
+  - key: state-department
+    type: organization
+    name: 'State Department'
+    description: 'Executive department of the United States for foreign affairs.'
+    aliases: ['Department of State']
+  - key: supreme-court-of-the-united-states
+    type: organization
+    name: 'Supreme Court of the United States'
+    description: 'Highest court of the United States.'
+    aliases: ['Supreme Court']
+  - key: third-estate
+    type: organization
+    name: 'Third Estate'
+    description: 'Commons of the French estates.'
+    aliases: ['Tiers Etat']
+  - key: treasury-department
+    type: organization
+    name: 'Treasury Department'
+    description: 'Executive department of the United States for finance.'
+  - key: tuscarora
+    type: organization
+    name: 'Tuscarora'
+    description: 'Nation that joined the Iroquois confederacy.'
+    aliases: ['Tuscaroras']
+  - key: tutelo
+    type: organization
+    name: 'Tutelo'
+    description: 'Siouan-speaking people.'
+    aliases: ['Tuteloes']
+  - key: united-states-congress
+    type: organization
+    name: 'United States Congress'
+    description: 'Legislature of the United States under the Constitution.'
+    aliases:
+      [
+        'Congress of the United States',
+        'Houses of Congress',
+        'Senate and House of Representatives',
+        'Senate and House',
+      ]
+  - key: united-states-house-of-representatives
+    type: organization
+    name: 'United States House of Representatives'
+    description: 'Lower house of the United States Congress.'
+    aliases:
+      [
+        'House of Representatives',
+        'The House of Representatives',
+        'House of Representatives of the United States',
+      ]
+  - key: united-states-senate
+    type: organization
+    name: 'United States Senate'
+    description: 'Upper house of the United States Congress.'
+    aliases: ['Senate of the United States', 'The Senate of the United States']
+  - key: university-of-virginia
+    type: organization
+    name: 'University of Virginia'
+    description: 'University founded by Jefferson at Charlottesville.'
+    aliases: ['The University of Virginia']
+  - key: virginia-general-assembly
+    type: organization
+    name: 'Virginia General Assembly'
+    description: 'Legislature of Virginia.'
+    aliases: ['General Assembly']
+  - key: virginia-house-of-burgesses
+    type: organization
+    name: 'Virginia House of Burgesses'
+    description: 'Lower house of the colonial Virginia legislature.'
+    aliases: ['House of Burgesses', 'Burgesses', 'The House of Burgesses']
+  - key: virginia-house-of-delegates
+    type: organization
+    name: 'Virginia House of Delegates'
+    description: 'Lower house of the Virginia General Assembly after 1776.'
+    aliases: ['House of Delegates']
+  - key: articles-of-confederation
+    type: work
+    name: 'Articles of Confederation'
+    description: 'Charter of the first federal government of the United States, ratified in 1781.'
+  - key: aurora
+    type: work
+    name: 'Aurora'
+    description: 'Philadelphia Republican newspaper.'
+  - key: autobiography
+    type: work
+    name: 'Autobiography'
+    description: "Jefferson's autobiography, written in 1821."
+  - key: bible
+    type: work
+    name: 'Bible'
+    description: 'Sacred scripture of Christianity.'
+  - key: bracton
+    type: work
+    name: 'Bracton'
+    description: 'Medieval English law treatise De Legibus et Consuetudinibus Angliae.'
+  - key: britton
+    type: work
+    name: 'Britton'
+    description: 'Medieval English law treatise.'
+  - key: cokes-institutes
+    type: work
+    name: "Coke's Institutes"
+    description: "Sir Edward Coke's Institutes of the Laws of England."
+    aliases: ['Inst']
+  - key: common-sense
+    type: work
+    name: 'Common Sense'
+    description: 'Pamphlet by Thomas Paine (1776).'
+  - key: constitution-of-the-united-states
+    type: work
+    name: 'Constitution of the United States'
+    description: 'Fundamental law of the United States, ratified 1787–1788.'
+  - key: dewess-journals
+    type: work
+    name: "D'Ewes's Journals"
+    description: "Sir Simonds D'Ewes's Journals of the Parliaments of Elizabeth."
+    aliases: ["D'Ewes", "D' Ewes"]
+  - key: declaration-of-independence
+    type: work
+    name: 'Declaration of Independence'
+    description: 'Document adopted 4 July 1776 declaring the thirteen colonies independent of Great Britain.'
+    aliases: ['Declaration of American Independence', 'The Declaration of Independence']
+  - key: declaration-of-rights-virginia
+    type: work
+    name: 'Declaration of Rights (Virginia)'
+    description: 'Virginia Declaration of Rights, adopted 1776.'
+    aliases: ['Declaration of Rights']
+  - key: discourses-on-davila
+    type: work
+    name: 'Discourses on Davila'
+    description: "John Adams's essays in the Gazette of the United States."
+    aliases: ['Davila']
+  - key: elsynges-manner-of-holding-parliaments
+    type: work
+    name: "Elsynge's Manner of Holding Parliaments"
+    description: "Henry Elsynge's account of parliamentary procedure."
+    aliases: ['Elsynge']
+  - key: fleta
+    type: work
+    name: 'Fleta'
+    description: 'Medieval English law treatise.'
+  - key: greys-debates
+    type: work
+    name: "Grey's Debates"
+    description: 'Debates of the House of Commons collected by Anchitell Grey.'
+    aliases: ['Grey']
+  - key: hakewills-modus-tenendi-parliamentum
+    type: work
+    name: "Hakewill's Modus tenendi Parliamentum"
+    description: "William Hakewill's treatise on the manner of holding parliaments."
+    aliases: ['Hakew', 'Hakewell', 'Hakew.']
+  - key: hatsells-precedents
+    type: work
+    name: "Hatsell's Precedents"
+    description: "John Hatsell's Precedents of Proceedings in the House of Commons."
+    aliases: ['Hatsell', 'Hats', 'Hats.']
+  - key: jeffersons-works
+    type: work
+    name: "Jefferson's Works"
+    description: "Editions of Jefferson's writings cited in footnotes."
+  - key: lex-parliamentaria
+    type: work
+    name: 'Lex Parliamentaria'
+    description: "George Petyt's Lex Parliamentaria."
+    aliases: ['Lex. Parl.']
+  - key: life-of-washington
+    type: work
+    name: 'Life of Washington'
+    description: "John Marshall's biography of George Washington."
+  - key: magna-carta
+    type: work
+    name: 'Magna Carta'
+    description: 'English charter of liberties of 1215.'
+    aliases: ['Magna Charta']
+  - key: manual-of-parliamentary-practice
+    type: work
+    name: 'Manual of Parliamentary Practice'
+    description: "Jefferson's manual of parliamentary procedure for the U.S. Senate."
+    aliases: ['Parliamentary Manual']
+  - key: mirror-of-justices
+    type: work
+    name: 'Mirror of Justices'
+    description: 'Medieval English law treatise.'
+    aliases: ['The Mirror']
+  - key: notes-on-the-state-of-virginia
+    type: work
+    name: 'Notes on the State of Virginia'
+    description: "Jefferson's book of 1785 answering queries on Virginia."
+    aliases: ['Notes on Virginia']
+  - key: publicola
+    type: work
+    name: 'Publicola'
+    description: "Pamphlet series by John Quincy Adams answering Paine's Rights of Man."
+  - key: rights-of-man
+    type: work
+    name: 'Rights of Man'
+    description: 'Treatise by Thomas Paine (1791–1792).'
+  - key: rushworths-historical-collections
+    type: work
+    name: "Rushworth's Historical Collections"
+    description: "John Rushworth's Historical Collections."
+    aliases: ['Rushw', 'Rushworth', 'Rushw.']
+  - key: scobells-memorials
+    type: work
+    name: "Scobell's Memorials"
+    description: "Henry Scobell's Memorials of the Method and Manner of Proceedings in Parliament."
+    aliases: ['Scob', 'Scobell', 'Scob.']
+  - key: stamp-act
+    type: work
+    name: 'Stamp Act'
+    description: 'British act of 1765 imposing a stamp duty on the colonies.'
+  - key: statute-of-religious-freedom
+    type: work
+    name: 'Statute of Religious Freedom'
+    description: 'Virginia Statute for Religious Freedom, drafted by Jefferson.'
+    aliases: ['Statute of Virginia', 'Religious Freedom']
+  - key: the-anas
+    type: work
+    name: 'The Anas'
+    description: "Jefferson's notes of conversations and cabinet meetings, 1791–1809."
+    aliases: ['Anas']
+  - key: vattels-law-of-nations
+    type: work
+    name: "Vattel's Law of Nations"
+    description: "Emer de Vattel's treatise on the law of nations."
+    aliases: ['Vattel']
+unlinked:
+  - 'Washington'
+  - 'Adams'
+  - 'Mr. Adams'
+  - 'Randolph'
+  - 'Mr. Randolph'
+  - 'Lee'
+  - 'Mr. Lee'
+  - 'Livingston'
+  - 'Governor Livingston'
+  - 'Pinckney'
+  - 'Mr. Pinckney'
+  - 'Morris'
+  - 'Mr. Morris'
+  - 'Clinton'
+  - 'Smith'
+  - 'Mr. Smith'
+  - 'Brown'
+  - 'Mr. Brown'
+  - 'Ross'
+  - 'Butler'
+  - 'Mr. Butler'
+  - 'Jackson'
+  - 'King'
+  - 'The King'
+  - 'Mason'
+  - 'Henry'
+  - 'Pickering'
+  - 'Mr. Pickering'
+  - 'Mr. King'
+  - 'Rutledge'
+  - 'Harrison'
+  - 'Mr. Harrison'
+  - 'Lewis'
+  - 'Mr. Lewis'
+  - 'Wilson'
+  - 'Constitution'
+  - 'The Constitution'
+  - 'Congress'
+  - 'The Congress'
+  - 'Senate'
+  - 'The Senate'
+  - 'House'
+  - 'The House'
+  - 'Houses'
+  - 'Parliament'
+  - 'Assembly'
+  - 'The Assembly'
+  - 'Council'
+  - 'Committee'
+  - 'Convention'
+  - 'Legislature'
+  - 'Commonwealth'
+  - 'Union'
+  - 'Treasury'
+  - 'Government'
+  - 'President'
+  - 'The President'
+  - 'Mr. President'
+  - 'the President'
+  - 'Vice-President'
+  - 'Vice President'
+  - 'Secretary'
+  - 'Secretary of State'
+  - 'The Secretary of State'
+  - 'Secretary of War'
+  - 'Secretary of the Treasury'
+  - 'Attorney General'
+  - 'Governor'
+  - 'The Governor'
+  - 'Speaker'
+  - 'The Speaker'
+  - 'Minister'
+  - 'Ministers'
+  - 'Commissioners'
+  - 'Indians'
+  - 'Indian'
+  - 'America'
+  - 'Americans'
+  - 'Carolina'
+  - 'Jersey'
+  - 'York'

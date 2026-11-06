@@ -16,7 +16,14 @@
  * heading the anchor is the garbled line, and `ocr` records what it reads as.
  */
 
-export type DocumentTypeCode = 'memoir' | 'memorandum' | 'epistle' | 'paper' | 'query' | 'rule' | 'editorial';
+export type DocumentTypeCode =
+  | 'memoir'
+  | 'memorandum'
+  | 'epistle'
+  | 'paper'
+  | 'query'
+  | 'rule'
+  | 'editorial';
 
 export type ContentsEntry = {
   key: string;
@@ -114,7 +121,8 @@ export const CONTENTS: ContentsEntry[] = [
     kind: 'record',
     anchor: '"Proposals for concerted operation among the',
     type: 'paper',
-    title: 'Proposals for concerted operation among the powers at war with the piratical States of Barbary',
+    title:
+      'Proposals for concerted operation among the powers at war with the piratical States of Barbary',
     author: TJ,
     date: '1786-07-01',
     approx: true,
@@ -201,7 +209,8 @@ export const CONTENTS: ContentsEntry[] = [
     kind: 'record',
     anchor: '[Note D.]',
     type: 'paper',
-    title: 'Instructions for the Deputies appointed to meet in General Congress on the part of Virginia',
+    title:
+      'Instructions for the Deputies appointed to meet in General Congress on the part of Virginia',
     author: TJ,
     date: '1774-08-01',
     approx: true,

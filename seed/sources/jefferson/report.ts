@@ -1,6 +1,7 @@
 /** Renders REPORT.md from a build's statistics. */
 import type { BuildStats } from './build';
 import type { CorrectionKind } from './clean';
+import { CONTENTS } from './contents';
 
 const top = (m: Map<string, number>, n: number) =>
   [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, n);
@@ -11,7 +12,8 @@ export function renderReport(stats: BuildStats): string {
   const byType = new Map<string, number>();
   for (const d of stats.documents) byType.set(d.record.type, (byType.get(d.record.type) ?? 0) + 1);
   const entityByType = new Map<string, number>();
-  for (const e of stats.entities) entityByType.set(e.entity.type, (entityByType.get(e.entity.type) ?? 0) + 1);
+  for (const e of stats.entities)
+    entityByType.set(e.entity.type, (entityByType.get(e.entity.type) ?? 0) + 1);
   const corrections = new Map<CorrectionKind, number>();
   for (const d of stats.documents) {
     for (const c of d.corrections) corrections.set(c.kind, (corrections.get(c.kind) ?? 0) + 1);
@@ -19,9 +21,7 @@ export function renderReport(stats: BuildStats): string {
   const ambiguousTotal = [...stats.ambiguous.values()].reduce((a, b) => a + b, 0);
   const candidateTotal = [...stats.candidates.values()].reduce((a, b) => a + b, 0);
   const attempted = stats.linked + ambiguousTotal;
-  const docsWithLinks = new Set<string>();
   const words = stats.documents.reduce((n, d) => n + (d.record.text?.split(/\s+/).length ?? 0), 0);
-  for (const d of stats.documents) docsWithLinks.add(d.record.key);
 
   const lines: string[] = [];
   const row = (...cells: (string | number)[]) => lines.push(`| ${cells.join(' | ')} |`);
@@ -43,7 +43,7 @@ export function renderReport(stats: BuildStats): string {
   row('**entities**', `**${stats.entities.length}**`);
   lines.push('', `Document text: ${words.toLocaleString('en')} words.`, '', '## Linking', '');
   lines.push(
-    `- Linked mentions: **${stats.linked.toLocaleString('en')}** across ${docsWithLinks.size} documents.`,
+    `- Linked mentions: **${stats.linked.toLocaleString('en')}** across ${stats.linkedDocuments} of ${stats.documents.length} documents.`,
     `- Gazetteer matches left unlinked as ambiguous: ${ambiguousTotal.toLocaleString('en')}.`,
     `- Link rate over gazetteer matches: **${pct(stats.linked, attempted)}**.`,
     `- Further name-like phrases the gazetteer does not cover (honorific + name, or capitalised runs in mid-sentence): ${candidateTotal.toLocaleString('en')}. Counting them as missed mentions gives a lower-bound link rate of **${pct(stats.linked, attempted + candidateTotal)}**; many are not entities (titles of acts, sentence fragments), so the true rate is between the two.`,
@@ -56,7 +56,13 @@ export function renderReport(stats: BuildStats): string {
   for (const e of [...stats.entities].sort((a, b) => b.mentions - a.mentions).slice(0, 25)) {
     row(e.entity.name, e.entity.type, e.mentions, e.records);
   }
-  lines.push('', '### Left unlinked: ambiguous names', '', 'Names that refer to more than one entity in this text. They are never guessed.', '');
+  lines.push(
+    '',
+    '### Left unlinked: ambiguous names',
+    '',
+    'Names that refer to more than one entity in this text. They are never guessed.',
+    '',
+  );
   row('Name', 'Occurrences');
   row('---', '---:');
   for (const [s, n] of top(stats.ambiguous, 40)) row(s, n);
@@ -64,7 +70,13 @@ export function renderReport(stats: BuildStats): string {
   row('Phrase', 'Occurrences');
   row('---', '---:');
   for (const [s, n] of top(stats.candidates, 60)) row(s, n);
-  lines.push('', '## OCR cleanup', '', 'Every correction is listed with its raw line in `corrections.tsv`.', '');
+  lines.push(
+    '',
+    '## OCR cleanup',
+    '',
+    'Every correction is listed with its raw line in `corrections.tsv`.',
+    '',
+  );
   row('Kind', 'Count', 'What it is');
   row('---', '---:', '---');
   const what: Record<CorrectionKind, string> = {
@@ -72,11 +84,32 @@ export function renderReport(stats: BuildStats): string {
     noise: 'line of an illustration plate, stamp or other non-text OCR removed',
     'page-join': 'paragraph rejoined across a page break',
     footnote: 'page-foot note moved after the paragraph it interrupts',
-    hyphenation: 'line-end word break rejoined (hyphen kept when the book prints the word hyphenated)',
+    hyphenation:
+      'line-end word break rejoined (hyphen kept when the book prints the word hyphenated)',
   };
-  for (const k of ['furniture', 'noise', 'page-join', 'footnote', 'hyphenation'] as CorrectionKind[]) {
+  for (const k of [
+    'furniture',
+    'noise',
+    'page-join',
+    'footnote',
+    'hyphenation',
+  ] as CorrectionKind[]) {
     row(k, corrections.get(k) ?? 0, what[k]);
   }
-  lines.push('');
+  lines.push(
+    '',
+    '### OCR issues found',
+    '',
+    '- Headings the OCR garbled, used as split anchors as printed in the OCR:',
+    ...CONTENTS.filter((c) => c.ocr).map(
+      (c) => `  - \`${String(c.anchor)}\` reads “${c.ocr}” (${c.key})`,
+    ),
+    '- Container headings with garbled numerals (“SECTION XIL”, “OUERY ETLI:”) are numbered by position; the counts match the book (23 Queries, 53 Sections).',
+    '- Letterspaced and misread words are kept as printed (“JEF FERSON”, “Fefferson”, “ar«”, “tv”): cleanup never corrects spelling.',
+    '- Plate, stamp and sideways-table OCR that is only partly garbled stays in the text; only blocks that fail both noise tests are removed.',
+    '- The scan ends in Section LIII (Impeachment) of the Parliamentary Manual, at vol. II p. 450; the rest of that section is not in the item.',
+    '- The Declaration of Independence draft is printed in two columns (Congress’s changes beside the draft); the OCR interleaves the columns.',
+    '',
+  );
   return lines.join('\n') + '\n';
 }

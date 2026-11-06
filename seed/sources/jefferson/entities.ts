@@ -50,7 +50,8 @@ function apostropheForms(alias: string): string[] {
   return [alias.replace(/’/g, "'"), alias.replace(/'/g, '’')];
 }
 
-const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+');
+// A space in a variant matches one or more spaces, never a paragraph break.
+const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, ' +');
 
 export function buildAliasIndex(gazetteer: Gazetteer): AliasIndex {
   const byAlias = new Map<string, string[]>();
@@ -79,7 +80,7 @@ export function buildAliasIndex(gazetteer: Gazetteer): AliasIndex {
 }
 
 /** Collapses the whitespace in a matched surface so it can be looked up. */
-const lookupForm = (surface: string) => surface.replace(/\s+/g, ' ');
+const lookupForm = (surface: string) => surface.replace(/ +/g, ' ');
 
 export function findMentions(text: string, index: AliasIndex): Mention[] {
   if (!index.pattern) return [];
