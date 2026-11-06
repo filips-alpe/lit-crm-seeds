@@ -5,6 +5,7 @@ import * as YAML from 'yaml';
 import type { SeedProjectMeta, SeedRecordFlat, SeedType } from './types-defs';
 import type { GeneratedRecord } from './pipeline/record-mapper';
 import type { SeedAmounts, SeedGrant, SeedGroup, SeedHidden } from './grants';
+import type { JeffersonDataset } from './sources/jefferson/dataset';
 
 const dataDir = resolve(dirname(fileURLToPath(import.meta.url)), 'data');
 const generatedDir = resolve(dirname(fileURLToPath(import.meta.url)), 'generated');
@@ -25,7 +26,12 @@ export type SeedUser = {
 
 export const users = load<SeedUser[]>('user.yaml');
 
-export const types = load<SeedType[]>('types.yaml');
+// Franklin's types, then the Jefferson dataset's own (kept in a separate file
+// so the Franklin set stays exactly as generated).
+export const types = [
+  ...load<SeedType[]>('types.yaml'),
+  ...load<SeedType[]>('types-jefferson.yaml'),
+];
 export const projects = load<SeedProjectMeta[]>('projects.yaml');
 export const groups = load<SeedGroup[]>('groups.yaml');
 export const grants = load<SeedGrant[]>('grants.yaml');
@@ -74,3 +80,19 @@ function loadGeneratedRecords(): SeedRecordFlat[] {
 }
 
 export const records: SeedRecordFlat[] = loadGeneratedRecords();
+
+/**
+ * The Jefferson dataset (seed/sources/jefferson/build.ts): documents,
+ * entities and the mentions linking them. Empty when the file is absent.
+ */
+export function loadJefferson(): JeffersonDataset {
+  try {
+    return JSON.parse(
+      readFileSync(resolve(generatedDir, 'jefferson.generated.json'), 'utf8'),
+    ) as JeffersonDataset;
+  } catch {
+    return { source: { item: '', url: '', edition: '' }, records: [], mentions: [] };
+  }
+}
+
+export const jefferson = loadJefferson();

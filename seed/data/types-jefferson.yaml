@@ -1,0 +1,96 @@
+# Types for the Jefferson dataset (prisma/seed/sources/jefferson). Kept apart
+# from types.yaml so the Franklin types, and their renderers and counts, are
+# unchanged. The rationale for each type is in sources/jefferson/README.md.
+# None selects a renderer: records use the generic view, and the best page
+# (/page/[id]) presents every type the same way.
+
+# --- Documents: what the two volumes contain ---
+- code: memoir
+  description: Retrospective narrative of the author's own life (the Autobiography)
+  color: '#6d4c41'
+  iconSeed: book
+  layout:
+    fields: &document
+      - { id: title, label: Title, kind: text, writeTo: title }
+      - { id: date, label: Date, kind: date, writeTo: date }
+      - { id: from, label: Author, kind: text, writeTo: from }
+      - { id: to, label: Recipient, kind: text, writeTo: to }
+      - { id: description, label: Part of, kind: text, writeTo: description }
+      - { id: body, label: Text, kind: text, writeTo: text }
+      - { id: note, label: Source, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: memorandum
+  description: Dated private memorandum or note (the Anas, notes written for himself)
+  color: '#8d6e63'
+  iconSeed: pencil
+  layout:
+    fields: *document
+
+- code: epistle
+  description: Letter printed in the Jefferson volumes (from, to and date as printed)
+  color: '#5c6bc0'
+  iconSeed: envelope
+  layout:
+    fields: *document
+
+- code: paper
+  description: 'Public or official paper: draft declaration, bill, report, constitution'
+  color: '#00796b'
+  iconSeed: pen
+  layout:
+    fields: *document
+
+- code: query
+  description: Chapter of Notes on the State of Virginia, answering one of Marbois's queries
+  color: '#558b2f'
+  iconSeed: search
+  layout:
+    fields: *document
+
+- code: rule
+  description: Section of A Manual of Parliamentary Practice
+  color: '#455a64'
+  iconSeed: signpost
+  layout:
+    fields: *document
+
+- code: editorial
+  description: Editors' and contributors' matter of the 1903–05 edition, not by Jefferson
+  color: '#9e9e9e'
+  iconSeed: eyeglasses
+  layout:
+    fields: *document
+
+# --- Entities: what the documents mention ---
+- code: person
+  description: A person mentioned in the Jefferson writings
+  color: '#ad1457'
+  iconSeed: emojiSmile
+  layout:
+    fields: &entity
+      - { id: title, label: Name, kind: text, writeTo: title }
+      - { id: description, label: Description, kind: text, writeTo: description }
+      - { id: note, label: In the text, kind: text, writeTo: note }
+      - { id: refs, label: Sources, kind: list, writeTo: references }
+
+- code: place
+  description: A place mentioned in the Jefferson writings
+  color: '#2e7d32'
+  iconSeed: map
+  layout:
+    fields: *entity
+
+- code: organization
+  description: 'A body mentioned in the Jefferson writings: legislature, college, nation, society'
+  color: '#ef6c00'
+  iconSeed: building
+  layout:
+    fields: *entity
+
+- code: work
+  description: 'A work mentioned in the Jefferson writings: document, law, book, pamphlet'
+  color: '#6a1b9a'
+  iconSeed: bookshelf
+  layout:
+    fields: *entity
