@@ -19,17 +19,17 @@ Source: Internet Archive `writingsofthomas0000vari_v5r4` (Lipscomb & Bergh, vols
 | `place` | 191 |
 | `person` | 143 |
 | `organization` | 49 |
-| `work` | 33 |
-| **entities** | **416** |
+| `work` | 31 |
+| **entities** | **414** |
 
-Document text: 263,225 words.
+Document text: 263,026 words.
 
 ## Linking
 
-- Linked mentions: **5,269** across 207 of 217 documents.
-- Gazetteer matches left unlinked as ambiguous: 2,775.
-- Link rate over gazetteer matches: **65.5%**.
-- Further name-like phrases the gazetteer does not cover (honorific + name, or capitalised runs in mid-sentence): 749. Counting them as missed mentions gives a lower-bound link rate of **59.9%**; many are not entities (titles of acts, sentence fragments), so the true rate is between the two.
+- Linked mentions: **5,210** across 207 of 217 documents.
+- Gazetteer matches left unlinked as ambiguous: 2,789.
+- Link rate over gazetteer matches: **65.1%**.
+- Further name-like phrases the gazetteer does not cover (honorific + name, or capitalised runs in mid-sentence): 749. Counting them as missed mentions gives a lower-bound link rate of **59.6%**; many are not entities (titles of acts, sentence fragments), so the true rate is between the two.
 
 ### Most mentioned entities
 
@@ -44,21 +44,21 @@ Document text: 263,225 words.
 | Alexander Hamilton | person | 141 | 44 |
 | Hatsell's Precedents | work | 120 | 33 |
 | Great Britain | place | 112 | 38 |
-| Logan | person | 111 | 4 |
+| Logan (Mingo leader) | person | 107 | 3 |
 | Europe | place | 98 | 31 |
 | Ohio River | place | 86 | 19 |
 | New York (state) | place | 81 | 41 |
 | Michael Cresap | person | 75 | 2 |
+| Pennsylvania | place | 68 | 22 |
 | Paris | place | 67 | 13 |
-| Pennsylvania | place | 67 | 22 |
 | Henry Knox | person | 60 | 25 |
 | Edmond-Charles Genêt | person | 58 | 19 |
 | Mississippi River | place | 57 | 16 |
 | Massachusetts | place | 48 | 16 |
 | Scobell's Memorials | work | 46 | 14 |
-| Delaware (state) | place | 43 | 12 |
 | New Orleans | place | 41 | 18 |
 | Philadelphia | place | 38 | 20 |
+| Delaware (state) | place | 37 | 12 |
 | New Jersey | place | 37 | 13 |
 
 ### Left unlinked: ambiguous names
@@ -126,6 +126,7 @@ Names that refer to more than one entity in this text. They are never guessed.
 | Big Beaver | 3 |
 | Colonel Hitchburn | 3 |
 | Foreign Affairs | 3 |
+| French Revolution | 3 |
 | Habeas Corpus | 3 |
 | Monday of November | 3 |
 | Money Unit | 3 |
@@ -134,7 +135,6 @@ Names that refer to more than one entity in this text. They are never guessed.
 | Agent of Marine | 2 |
 | Almighty God | 2 |
 | Anno Domini | 2 |
-| Appendix No | 2 |
 | Archbishop of Bordeaux | 2 |
 | Baron Glaubec | 2 |
 | Big Knives | 2 |
@@ -164,7 +164,6 @@ Names that refer to more than one entity in this text. They are never guessed.
 | Dr. Small | 2 |
 | East India Company | 2 |
 | Fine Arts | 2 |
-| French Revolution | 2 |
 | General Collot | 2 |
 | General Court | 2 |
 | General Eaton | 2 |
@@ -172,6 +171,7 @@ Names that refer to more than one entity in this text. They are never guessed.
 | General Mercer | 2 |
 | General Nelson | 2 |
 | General Nevill | 2 |
+| General Phillips | 2 |
 
 ## OCR cleanup
 
@@ -179,11 +179,11 @@ Every correction is listed with its raw line in `corrections.tsv`.
 
 | Kind | Count | What it is |
 | --- | ---: | --- |
-| furniture | 914 | running head, folio or signature mark removed |
+| furniture | 967 | running head, folio or signature mark removed |
 | noise | 154 | line of an illustration plate, stamp or other non-text OCR removed |
-| page-join | 743 | paragraph rejoined across a page break |
-| footnote | 28 | page-foot note moved after the paragraph it interrupts |
-| hyphenation | 3379 | line-end word break rejoined (hyphen kept when the book prints the word hyphenated) |
+| page-join | 805 | paragraph rejoined across a page break |
+| footnote | 59 | page-foot note moved after the paragraph it interrupts |
+| hyphenation | 3410 | line-end word break rejoined (hyphen kept when the book prints the word hyphenated) |
 
 ### OCR issues found
 

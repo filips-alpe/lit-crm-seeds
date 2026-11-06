@@ -35,8 +35,8 @@ The wording is never changed. Every word in a record's text is in the raw OCR, i
 
 - **furniture**: running heads, folios and signature marks are removed.
 - **noise**: short blocks that are mostly garbled are removed. These come from the OCR of illustration plates, library stamps and pages printed sideways. A block is removed only if at least 30% of its tokens are garbled and fewer than half of its words occur five or more times in the book. This keeps Latin, plant lists and garbled datelines.
-- **page-join**: a paragraph split by a page break is rejoined. This happens when the page did not end a sentence, or the next page starts in lower case.
-- **footnote**: a note printed at the foot of a page, interrupting a paragraph, is moved to follow that paragraph.
+- **page-join**: a paragraph split by a page break is rejoined. This happens when the page did not end a sentence, or the next page starts in lower case. A word hyphenated at the end of a block is always rejoined with the next block.
+- **footnote**: a note printed at the foot of a page, interrupting a paragraph, is moved to follow that paragraph. A note can span up to four blocks right before a page break, the first of them opening with a note mark (`1`, `*`, `†`, `[`).
 - **hyphenation**: a word broken at a line end ("discon-" / "tinued") is rejoined. The hyphen is kept when the book prints the word hyphenated mid-line more often ("twenty-five").
 
 Line breaks inside a paragraph come from the printer's column width, so they become spaces. Paragraphs are separated by a blank line. Spelling is never corrected: OCR misreads such as "tv" and "Fefferson" stay as printed.
@@ -65,6 +65,7 @@ Records have no creator. The author goes in the `from` text field. This keeps th
 - A variant claimed by one entity links to it. "Colonel Hamilton", "A. Hamilton" and "Hamilton" all link to Alexander Hamilton.
 - A variant claimed by two entities is ambiguous, so it is not linked. The same goes for the names under `unlinked`: bare surnames and titles the text uses for several people or things ("Randolph", "Washington", "the President", "Congress"). Listing them also stops a shorter variant inside them from matching. Nothing is guessed from context.
 - A space in a variant matches one or more spaces but never a paragraph break.
+- A variant can be scoped to records by key prefix (`scopedAliases`). For example, "Logan" is the Mingo leader in Notes on Virginia (`notes-`), but a different man in the Anas, where it stays unlinked.
 
 A mention is stored as a `RecordMention` row (`lit_record_mention`): source record, entity record, and `start`/`end` UTF-16 offsets into the source's `text`. The text itself is not changed.
 

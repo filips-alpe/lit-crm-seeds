@@ -18,6 +18,7 @@ describe('parseAnasDate', () => {
     ['March 1, 1792. ans', { month: 3, day: 1, year: 1792 }],
     ['May the 23d. I had sent', { month: 5, day: 23, year: null }],
     ['Bladensburg, October the 1st, 1792. This morn-', { month: 10, day: 1, year: 1792 }],
+    ['January the 2d, 18oo. Mr. Gallatin', { month: 1, day: 2, year: 1800 }],
   ])('%s', (line, date) => expect(parseAnasDate(line)).toEqual(date));
 
   it('does not read ordinary sentences as dates', () => {

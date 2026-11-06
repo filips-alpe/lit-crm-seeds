@@ -24,8 +24,22 @@ const gazetteer: Gazetteer = {
       aliases: ['Edmond Randolph', 'E. Randolph'],
     },
   ],
-  unlinked: ['Mr. Randolph', 'Randolph'],
+  unlinked: ['Mr. Randolph', 'Randolph', 'Lincoln county'],
 };
+gazetteer.entities.push(
+  {
+    key: 'logan-mingo',
+    type: 'person',
+    name: 'Logan (Mingo leader)',
+    scopedAliases: [{ in: ['notes-'], aliases: ['Logan'] }],
+  },
+  {
+    key: 'abraham-lincoln',
+    type: 'person',
+    name: 'Abraham Lincoln',
+    scopedAliases: [{ in: ['lincoln-tribute'], aliases: ['Lincoln'] }],
+  },
+);
 const index = buildAliasIndex(gazetteer);
 const linked = (text: string) => findMentions(text, index).map((m) => [m.surface, m.entity]);
 
@@ -58,6 +72,19 @@ describe('entity resolution', () => {
   it('matches across a line-wrap space but never across a paragraph break', () => {
     expect(linked('General  Washington')).toEqual([['General  Washington', 'george-washington']]);
     expect(linked('General\n\nWashington')).toEqual([['Washington', null]]);
+  });
+
+  it('links a scoped variant only inside its records', () => {
+    const at = (key: string) =>
+      findMentions('the speech of Logan', index, key).map((m) => m.entity);
+    expect(at('notes-query-06')).toEqual(['logan-mingo']);
+    expect(at('anas-067')).toEqual([null]);
+  });
+
+  it('an unlinked phrase beats a scoped variant inside it', () => {
+    expect(
+      findMentions('in Lincoln county', index, 'lincoln-tribute').map((m) => [m.surface, m.entity]),
+    ).toEqual([['Lincoln county', null]]);
   });
 
   it('offsets slice back to the surface text', () => {

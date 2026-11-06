@@ -12,6 +12,12 @@ describe('classifyFurniture', () => {
     ['VOL. I—12', 'signature', null],
     ['VOL, I.—~9 : 1', 'signature', null],
     ['viii Special Introduction', 'running-head', null],
+    // OCR specks around heads (found in verification)
+    ['The | Anas 407', 'running-head', 407],
+    ['The Anas- | | 389', 'running-head', 389],
+    ['332 Jefferson’s Works bd c', 'running-head', 332],
+    ["334 - Jefferson's Works", 'running-head', 334],
+    ['Jefferson’s Works', 'running-head', null],
   ])('%s → %s', (line, kind, page) => {
     expect(classifyFurniture(line)).toMatchObject({ kind, page });
   });

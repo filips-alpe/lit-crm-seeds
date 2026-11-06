@@ -22,6 +22,12 @@ export type GazetteerEntity = {
   description?: string;
   /** Variant names as printed, including OCR-stable misspellings. The name is always a variant. */
   aliases?: string[];
+  /**
+   * Variants that name this entity only inside some records (by record-key
+   * prefix): "Logan" is the Mingo leader in Notes on Virginia, but another
+   * man in the Anas. Elsewhere such a variant is left unlinked.
+   */
+  scopedAliases?: { in: string[]; aliases: string[] }[];
 };
 
 export type Gazetteer = {
@@ -42,6 +48,8 @@ export type AliasIndex = {
   pattern: RegExp | null;
   /** Variant → entity keys (more than one = ambiguous; empty = listed as unlinked). */
   byAlias: Map<string, string[]>;
+  /** Variant → entities it names only in records whose key starts with a prefix. */
+  scoped: Map<string, { key: string; in: string[] }[]>;
 };
 
 /** Both apostrophe forms occur in the OCR; every variant matches either. */
@@ -68,25 +76,49 @@ export function buildAliasIndex(gazetteer: Gazetteer): AliasIndex {
     seen.add(e.key);
     for (const alias of new Set([e.name, ...(e.aliases ?? [])])) add(alias, e.key);
   }
+  const scoped = new Map<string, { key: string; in: string[] }[]>();
+  for (const e of gazetteer.entities) {
+    for (const group of e.scopedAliases ?? []) {
+      for (const alias of group.aliases) {
+        for (const form of apostropheForms(alias.trim())) {
+          scoped.set(form, [...(scoped.get(form) ?? []), { key: e.key, in: group.in }]);
+          if (!byAlias.has(form)) byAlias.set(form, []);
+        }
+      }
+    }
+  }
   // An explicitly unlinked name stays unlinked even if an entity also claims it.
   for (const name of gazetteer.unlinked ?? []) {
-    for (const form of apostropheForms(name.trim())) byAlias.set(form, []);
+    for (const form of apostropheForms(name.trim())) {
+      byAlias.set(form, []);
+      scoped.delete(form);
+    }
   }
   const aliases = [...byAlias.keys()].sort((a, b) => b.length - a.length || a.localeCompare(b));
   const pattern = aliases.length
     ? new RegExp(`(?<![\\p{L}\\p{N}])(?:${aliases.map(escape).join('|')})(?![\\p{L}\\p{N}])`, 'gu')
     : null;
-  return { pattern, byAlias };
+  return { pattern, byAlias, scoped };
 }
 
 /** Collapses the whitespace in a matched surface so it can be looked up. */
 const lookupForm = (surface: string) => surface.replace(/ +/g, ' ');
 
-export function findMentions(text: string, index: AliasIndex): Mention[] {
+/** Entity keys a matched variant names inside record `recordKey`. */
+function keysFor(index: AliasIndex, form: string, recordKey: string): string[] {
+  const keys = [...(index.byAlias.get(form) ?? [])];
+  for (const s of index.scoped.get(form) ?? []) {
+    if (s.in.some((prefix) => recordKey.startsWith(prefix)) && !keys.includes(s.key))
+      keys.push(s.key);
+  }
+  return keys;
+}
+
+export function findMentions(text: string, index: AliasIndex, recordKey = ''): Mention[] {
   if (!index.pattern) return [];
   const out: Mention[] = [];
   for (const m of text.matchAll(index.pattern)) {
-    const keys = index.byAlias.get(lookupForm(m[0])) ?? [];
+    const keys = keysFor(index, lookupForm(m[0]), recordKey);
     out.push({
       start: m.index,
       end: m.index + m[0].length,

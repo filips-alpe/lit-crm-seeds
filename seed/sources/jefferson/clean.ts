@@ -78,7 +78,7 @@ const LINE_END_HYPHEN = /[A-Za-z]-$/;
 const STARTS_LOWER = /^[a-z]/;
 const ENDS_SENTENCE = /[.!?”"’'):\]]$/;
 /** "1 The opinions…", "* See…", "† …": a footnote at the foot of a page. */
-const FOOTNOTE_START = /^(?:\d{1,2}|[*†‡§¹²³])\s+\S/;
+const FOOTNOTE_START = /^(?:\d{1,2}|[*†‡§¹²³]|\[[!|1I]?)\s*[A-Z“"]/;
 
 type Line = { n: number; text: string };
 
@@ -157,12 +157,19 @@ export function cleanSpan(
     }
   }
 
-  // A short block that starts with a footnote mark and is followed by a page
-  // break is a footnote.
+  // A footnote sits at the foot of a page: the last few blocks before a page
+  // break, the first of them opening with a note mark. It may run over
+  // several blocks (the OCR splits it at blank lines).
   for (let k = 0; k < blocks.length - 1; k++) {
-    const b = blocks[k];
-    if (blocks[k + 1].afterBreak && b.lines.length <= 8 && FOOTNOTE_START.test(b.lines[0].text)) {
-      b.footnote = true;
+    if (!blocks[k + 1].afterBreak) continue;
+    let lines = 0;
+    for (let j = k; j >= Math.max(0, k - 3); j--) {
+      lines += blocks[j].lines.length;
+      if (lines > 12 || (j < k && blocks[j + 1].afterBreak)) break;
+      if (j > 0 && FOOTNOTE_START.test(blocks[j].lines[0].text)) {
+        for (let i = j; i <= k; i++) blocks[i].footnote = true;
+        break;
+      }
     }
   }
 
@@ -178,12 +185,16 @@ export function cleanSpan(
     const prev = paragraphs.at(-1);
     const prevLast = prev?.lines.at(-1)?.text ?? '';
     const breakBefore = b.afterBreak || pendingNotes.length > 0;
+    // A word broken at the end of a block always continues in the next one;
+    // otherwise only a page break can split a paragraph.
+    const brokenWord = LINE_END_HYPHEN.test(prevLast) && STARTS_LOWER.test(b.lines[0].text);
     const continues =
       prev &&
-      breakBefore &&
-      (STARTS_LOWER.test(b.lines[0].text) ||
-        LINE_END_HYPHEN.test(prevLast) ||
-        !ENDS_SENTENCE.test(prevLast));
+      (brokenWord ||
+        (breakBefore &&
+          (STARTS_LOWER.test(b.lines[0].text) ||
+            LINE_END_HYPHEN.test(prevLast) ||
+            !ENDS_SENTENCE.test(prevLast))));
     if (continues) {
       corrections.push({
         line: b.lines[0].n,

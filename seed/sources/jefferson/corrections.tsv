@@ -67,6 +67,7 @@ line	kind	record	raw	result
 1187	hyphenation	autobiography-1	trans-|actions	transactions
 1197	hyphenation	autobiography-1	Bur-|gesses,	Burgesses,
 1204	hyphenation	autobiography-1	mer-|chandise	merchandise
+1218	footnote	autobiography-1	[! The name of a public room in the Raleigh.]	moved after the paragraph it interrupts
 1221	furniture	autobiography-1	Autobiography 7	
 1224	page-join	autobiography-1	by their laws in all cases whatsoever, still suspended	joined to the paragraph before the page break
 1256	furniture	autobiography-1	8 Jefferson’s Works	
@@ -92,7 +93,9 @@ line	kind	record	raw	result
 1373	hyphenation	autobiography-1	univer-|sally,	universally,
 1386	hyphenation	autobiography-1	neces-|sary	necessary
 1396	hyphenation	autobiography-1	Pen-|dleton,	Pendleton,
+1399	footnote	autobiography-1	[ See Appendix, note C.]	moved after the paragraph it interrupts
 1402	furniture	autobiography-1	12 Jefferson’s Works	
+1405	page-join	autobiography-1	Dickinson, who admitted that England had a right	joined to the paragraph before the page break
 1408	hyphenation	autobiography-1	founda-|tion	foundation
 1437	furniture	autobiography-1	Autobiography 13	
 1440	page-join	autobiography-1	I had from Parson Hurt, who happened at the time	joined to the paragraph before the page break
@@ -119,7 +122,11 @@ line	kind	record	raw	result
 1584	page-join	autobiography-1	at its passage was the only circumstance which	joined to the paragraph before the page break
 1606	hyphenation	autobiography-1	inde-|pendent	independent
 1607	hyphenation	autobiography-1	com-|mittee	committee
+1611	hyphenation	autobiography-1	dele-|gates	delegates
+1614	footnote	autobiography-1	[! Here, in the original manuscript, commence the ‘‘two preceding	moved after the paragraph it interrupts
 1622	furniture	autobiography-1	VOL, I—2.	
+1625	furniture	autobiography-1	18 .  Jefferson's Works	
+1628	page-join	autobiography-1	gates from Virginia moved, in obedience to instruc-	joined to the paragraph before the page break
 1628	hyphenation	autobiography-1	instruc-|tions	instructions
 1638	hyphenation	autobiography-1	to-|gether.	together.
 1665	furniture	autobiography-1	Autobiography 19	
@@ -157,6 +164,8 @@ line	kind	record	raw	result
 1988	furniture	autobiography-1	Autobiography 27	
 1991	page-join	autobiography-1	from the question; which was given them. The	joined to the paragraph before the page break
 2013	hyphenation	autobiography-1	re-|ported	reported
+2022	footnote	autobiography-1	1 July 9.	moved after the paragraph it interrupts
+2025	footnote	autobiography-1	———«—mÀ Y 9 mee PR -	moved after the paragraph it interrupts
 2028	furniture	autobiography-1	28 Jefferson's Works	
 2031	page-join	autobiography-1	were struck out, lest they should give them offence.	joined to the paragraph before the page break
 2032	hyphenation	autobiography-1	inhabi-|tants	inhabitants
@@ -167,6 +176,10 @@ line	kind	record	raw	result
 2102	noise	declaration-draft	sa.LvV.Ls (Qa.LIW77 $5) tiep d € Y	
 2105	page-join	declaration-draft	——— aS ne	joined to the paragraph before the page break
 2211	hyphenation	declaration-draft	foh-|ae	fohae
+2234	hyphenation	declaration-draft	U-|ati	Uati
+2237	page-join	declaration-draft	ati BNET RC ort MAO A Lt gurges PR iy	joined to the paragraph before the page break
+2299	furniture	declaration-draft	Autobiography	
+2302	page-join	declaration-draft	them with another, and to assume among	joined to the paragraph before the page break
 2314	hyphenation	declaration-draft	happi-|ness;	happiness;
 2315	hyphenation	declaration-draft	govern-|ments	governments
 2318	hyphenation	declaration-draft	gov-|ernment	government
@@ -175,6 +188,8 @@ line	kind	record	raw	result
 2325	hyphenation	declaration-draft	Pru-|dence,	Prudence,
 2328	hyphenation	declaration-draft	accord-|ingly	accordingly
 2329	hyphenation	declaration-draft	man-|kind	mankind
+2353	furniture	declaration-draft	Jefferson's Works	
+2356	page-join	declaration-draft	accustomed. But when a long train of	joined to the paragraph before the page break
 2357	hyphenation	declaration-draft	dis-|tinguished	distinguished
 2365	hyphenation	declaration-draft	con-|strains	constrains
 2366	hyphenation	declaration-draft	sys-|tems	systems
@@ -184,7 +199,11 @@ line	kind	record	raw	result
 2417	hyphenation	declaration-draft	con-|vulsions	convulsions
 2420	hyphenation	declaration-draft	popu-|lation	population
 2423	hyphenation	declaration-draft	en-|courage	encourage
+2441	furniture	declaration-draft	Jefferson’s Works	
+2444	page-join	declaration-draft	He has [suffered] the administration of	joined to the paragraph before the page break
 2468	hyphenation	declaration-draft	consti-|tutions	constitutions
+2477	hyphenation	declaration-draft	con-|in	conin
+2480	page-join	declaration-draft	in many cases Sent; for depriving us [ ] of the benefits	joined to the paragraph before the page break
 2483	furniture	declaration-draft	Autobiography 33	
 2486	page-join	declaration-draft	of trial by jury; for transporting us beyond	joined to the paragraph before the page break
 2492	hyphenation	declaration-draft	en-|larging	enlarging
@@ -194,10 +213,16 @@ line	kind	record	raw	result
 2533	page-join	declaration-draft	executioners of their friends and brethren,	joined to the paragraph before the page break
 2537	hyphenation	declaration-draft	war-|fare	warfare
 2556	hyphenation	declaration-draft	as-|semblage	assemblage
+2565	furniture	declaration-draft	Autobiography	
+2568	page-join	declaration-draft	off former crimes committed against the	joined to the paragraph before the page break
 2582	hyphenation	declaration-draft	adven-|tured,	adventured,
+2599	hyphenation	declaration-draft	unwerrant-|over	unwerrantover
+2602	page-join	declaration-draft	over [these our states]. We have reminded	joined to the paragraph before the page break
 2603	hyphenation	declaration-draft	emigra-|tion	emigration
 2609	hyphenation	declaration-draft	gov-|ernment,	government,
 2627	hyphenation	declaration-draft	inevit-|ably	inevitably
+2631	furniture	declaration-draft	Jefferson’s Works	
+2634	page-join	declaration-draft	thereby laying a foundation for perpetual	joined to the paragraph before the page break
 2635	hyphenation	declaration-draft	sub-|mission	submission
 2642	hyphenation	declaration-draft	cor-|respondence.	correspondence.
 2647	hyphenation	declaration-draft	har-|mony,	harmony,
@@ -226,6 +251,7 @@ line	kind	record	raw	result
 2829	page-join	autobiography-2	the two following are of the earlier debates on the	joined to the paragraph before the page break
 2837	hyphenation	autobiography-2	deter-|mined	determined
 2850	hyphenation	autobiography-2	inhabi-|tants,	inhabitants,
+2858	footnote	autobiography-2	[! The above note of the author is on a slip of paper, pasted in at the	moved after the paragraph it interrupts
 2859	hyphenation	autobiography-2	news-|paper	newspaper
 2866	furniture	autobiography-2	40 Jefferson’s Works	
 2869	page-join	autobiography-2	but by that of the “white inhabitants." He ad-	joined to the paragraph before the page break
@@ -290,6 +316,8 @@ line	kind	record	raw	result
 3282	hyphenation	autobiography-2	his-|tory	history
 3292	hyphenation	autobiography-2	govern-|ment	government
 3297	hyphenation	autobiography-2	indi-|viduals.	individuals.
+3302	furniture	autobiography-2	B2 7. Jefferson's Works	
+3305	page-join	autobiography-2	annexing the name of “State” to ten thousand men,	joined to the paragraph before the page break
 3311	hyphenation	autobiography-2	govern-|ment;	government;
 3312	hyphenation	autobiography-2	suffi-|cient	sufficient
 3323	hyphenation	autobiography-2	col-|onies	colonies
@@ -351,6 +379,8 @@ line	kind	record	raw	result
 3705	page-join	autobiography-2	favor of ancient things, was for the former proposi-	joined to the paragraph before the page break
 3705	hyphenation	autobiography-2	proposi-|tion,	proposition,
 3720	hyphenation	autobiography-2	imperfec-|tion	imperfection
+3737	furniture	autobiography-2	64 | Jefferson's Works	
+3740	page-join	autobiography-2	the work, and he resigned soon after. Mr. Lee	joined to the paragraph before the page break
 3752	hyphenation	autobiography-2	pro-|posed	proposed
 3773	furniture	autobiography-2	Autobiography 65	
 3776	page-join	autobiography-2	felonies, should be substituted hard labor in the	joined to the paragraph before the page break
@@ -387,6 +417,7 @@ line	kind	record	raw	result
 3973	hyphenation	autobiography-2	Pendle-|ton’s	Pendleton’s
 3981	hyphenation	autobiography-2	Ele-|mentary	Elementary
 3983	hyphenation	autobiography-2	instruc-|tion,	instruction,
+3987	footnote	autobiography-2	[ See Appendix, note E.]	moved after the paragraph it interrupts
 3990	furniture	autobiography-2	Autobiography 71	
 3993	page-join	autobiography-2	easy circumstances. And, 3d, an ultimate grade	joined to the paragraph before the page break
 4008	hyphenation	autobiography-2	ele-|mentary	elementary
@@ -441,6 +472,7 @@ line	kind	record	raw	result
 4283	page-join	autobiography-2	price of a loaf of bread, 1-20 of a dollar, would be	joined to the paragraph before the page break
 4295	hyphenation	autobiography-2	pay-|ment,	payment,
 4311	hyphenation	autobiography-2	under-|stood,	understood,
+4315	footnote	autobiography-2	[! See Appendix, note F.]	moved after the paragraph it interrupts
 4318	furniture	autobiography-2	80 Jefferson’s Works	
 4321	page-join	autobiography-2	when I travel, an Odometer of Clarke’s invention,	joined to the paragraph before the page break
 4332	hyphenation	autobiography-2	Con-|gress,	Congress,
@@ -568,7 +600,9 @@ line	kind	record	raw	result
 5104	hyphenation	autobiography-3	Peters-|burg	Petersburg
 5110	hyphenation	autobiography-3	Sémou-|lin,	Sémoulin,
 5112	hyphenation	autobiography-3	Em-|press,	Empress,
+5115	footnote	autobiography-3	[! In the original MS., the paragraph ending ‘‘fell through," termi-	moved after the paragraph it interrupts
 5115	hyphenation	autobiography-3	termi-|nates	terminates
+5119	footnote	autobiography-3	leaf of old writing, constituting a memorandum, whereof note G. in the	moved after the paragraph it interrupts
 5123	furniture	autobiography-3	102 Jefferson’s Works	
 5126	page-join	autobiography-3	her dominions, to the Western coast of America.	joined to the paragraph before the page break
 5131	hyphenation	autobiography-3	permis-|sion	permission
@@ -886,6 +920,8 @@ line	kind	record	raw	result
 7017	hyphenation	autobiography-4	constitu-|tion,	constitution,
 7027	hyphenation	autobiography-4	char-|acter	character
 7028	hyphenation	autobiography-4	dis-|cussed	discussed
+7041	furniture	autobiography-4	Autobiography ` 155	
+7044	page-join	autobiography-4	be a King? met with no open opposition; and it was	joined to the paragraph before the page break
 7047	hyphenation	autobiography-4	abso-|lute,	absolute,
 7048	hyphenation	autobiography-4	Cham-|bers	Chambers
 7060	hyphenation	autobiography-4	constitu-|tion	constitution
@@ -902,6 +938,8 @@ line	kind	record	raw	result
 7122	hyphenation	autobiography-4	incum-|bent	incumbent
 7130	hyphenation	autobiography-4	confer-|ences,	conferences,
 7142	hyphenation	autobiography-4	Min-|ister,	Minister,
+7150	furniture	autobiography-4	158 . Jefferson's Works	
+7153	page-join	autobiography-4	Revolution. The minuteness with which I have so	joined to the paragraph before the page break
 7155	hyphenation	autobiography-4	justi-|fied	justified
 7163	hyphenation	autobiography-4	oppo-|sition	opposition
 7167	hyphenation	autobiography-4	won-|derful	wonderful
@@ -916,6 +954,7 @@ line	kind	record	raw	result
 7242	hyphenation	autobiography-4	resi-|dence	residence
 7248	hyphenation	autobiography-4	estab-|lishment,	establishment,
 7252	hyphenation	autobiography-4	with-|draw	withdraw
+7255	footnote	autobiography-4	[! See Appendix, note H.]	moved after the paragraph it interrupts
 7258	furniture	autobiography-4	Autobiography 161	
 7261	page-join	autobiography-4	impressed by the circumstances of the times, to	joined to the paragraph before the page break
 7264	hyphenation	autobiography-4	ex-|pressed	expressed
@@ -1157,6 +1196,8 @@ line	kind	record	raw	result
 8755	hyphenation	note-c-instructions	exist-|ence	existence
 8763	hyphenation	note-c-instructions	legis-|lative	legislative
 8775	hyphenation	note-c-instructions	coun-|ties,	counties,
+8788	furniture	note-c-instructions	Appendix i 203	
+8791	page-join	note-c-instructions	that his subjects should give up the glorious right of	joined to the paragraph before the page break
 8799	hyphenation	note-c-instructions	Tres-|ilian,	Tresilian,
 8803	hyphenation	note-c-instructions	dis-|solve	dissolve
 8821	hyphenation	note-c-instructions	De-|cember	December
@@ -1272,9 +1313,10 @@ line	kind	record	raw	result
 9509	hyphenation	crimes-bill	pre-|sumptive	presumptive
 9516	furniture	crimes-bill	222 Jefferson’s Works	
 9519	page-join	crimes-bill	parent, he shall suffer death by hanging, and his body	joined to the paragraph before the page break
+9538	hyphenation	crimes-bill	representa-|jury,	representajury,
+9541	page-join	crimes-bill	jury, who are, in a regular course, to hear presumptive, as well as posi-	joined to the paragraph before the page break
 9541	hyphenation	crimes-bill	posi-|tive	positive
 9542	hyphenation	crimes-bill	conceal-|ment,	concealment,
-9561	footnote	crimes-bill	1 28./G. 210.37:	moved after the paragraph it interrupts
 9564	furniture	crimes-bill	Appendix 223	
 9567	page-join	crimes-bill	tives. Save only, where one shall slay the chal-	joined to the paragraph before the page break
 9567	hyphenation	crimes-bill	chal-|lenger	challenger
@@ -1287,6 +1329,8 @@ line	kind	record	raw	result
 9633	hyphenation	crimes-bill	man-|slaughter,	manslaughter,
 9640	hyphenation	crimes-bill	touch-|ing	touching
 9645	hyphenation	crimes-bill	mis-|adventure.	misadventure.
+9652	hyphenation	crimes-bill	Excusa-|ble.	Excusable.
+9655	page-join	crimes-bill	ble. 3. Felonious. For the last, punishments have been already pro-	joined to the paragraph before the page break
 9655	hyphenation	crimes-bill	pro-|vided.	provided.
 9659	furniture	crimes-bill	Appendix 225	
 9662	page-join	crimes-bill	Whenever sentence of death shall have been pro-	joined to the paragraph before the page break
@@ -1300,6 +1344,8 @@ line	kind	record	raw	result
 9703	hyphenation	crimes-bill	ex-|empts	exempts
 9709	furniture	crimes-bill	226 Jefferson’s Works	
 9712	page-join	crimes-bill	after such sentence, unless it be Sunday, and then	joined to the paragraph before the page break
+9714	hyphenation	crimes-bill	Polyg-|who	Polygwho
+9717	page-join	crimes-bill	who leaves it with his effects. If the latter then be not punished, the	joined to the paragraph before the page break
 9725	hyphenation	crimes-bill	dis-|approve	disapprove
 9740	hyphenation	crimes-bill	Brac-|ton,	Bracton,
 9741	hyphenation	crimes-bill	mem-|brorum,	membrorum,
@@ -1313,6 +1359,8 @@ line	kind	record	raw	result
 9799	hyphenation	crimes-bill	pun-|ished,	punished,
 9807	furniture	crimes-bill	228 Jefferson’s Works	
 9832	hyphenation	crimes-bill	mem-|bre	membre
+9839	hyphenation	crimes-bill	fore-|thought."	forethought."
+9842	page-join	crimes-bill	thought." Nor does the Common law prescribe the same punishment	joined to the paragraph before the page break
 9855	furniture	crimes-bill	Appendix 229	
 9858	page-join	crimes-bill	be, for want of the same part, then as nearly as	joined to the paragraph before the page break
 9860	hyphenation	crimes-bill	more-|over,	moreover,
@@ -1330,6 +1378,8 @@ line	kind	record	raw	result
 9946	furniture	crimes-bill	Appendix 231	
 9949	page-join	crimes-bill	If any person shall, within this Commonwealth, or	joined to the paragraph before the page break
 9957	hyphenation	crimes-bill	con-|demned	condemned
+9963	hyphenation	crimes-bill	Bur-|house,	Burhouse,
+9966	page-join	crimes-bill	house, but the outset also, as barn, stable, cowhouse, sheep house,	joined to the paragraph before the page break
 9973	noise	crimes-bill	ihren $t2..659. (r2; Anns CrS: 4. Gave. 2.4 26:6 25€ H9:	
 9975	noise	crimes-bill	axrg1 mor. W o3. 6L 67. I	
 9978	hyphenation	crimes-bill	pun-|ished	punished
@@ -1342,6 +1392,7 @@ line	kind	record	raw	result
 10013	hyphenation	crimes-bill	Bur-|glaria	Burglaria
 10015	hyphenation	crimes-bill	perpe-|trandam.	perpetrandam.
 10022	hyphenation	crimes-bill	dis-|tinguished	distinguished
+10030	footnote	crimes-bill	1 At the Common law, the offence of Housebreaking was not distin-	moved after the paragraph it interrupts
 10030	hyphenation	crimes-bill	distin-|guished	distinguished
 10033	hyphenation	crimes-bill	how-|ever,	however,
 10037	hyphenation	crimes-bill	circum-|stances	circumstances
@@ -1349,6 +1400,9 @@ line	kind	record	raw	result
 10044	page-join	crimes-bill	whosoever is guilty thereof, shall be condemned to	joined to the paragraph before the page break
 10063	hyphenation	crimes-bill	pun-|ishment.	punishment.
 10072	hyphenation	crimes-bill	Aeth-|elst.	Aethelst.
+10083	footnote	crimes-bill	* Ll. Inae. c. 7. “Si quis furetur ita ut uxor ejus et infans ipsius	moved after the paragraph it interrupts
+10089	furniture	crimes-bill	2 E Jefferson's Works	
+10092	page-join	crimes-bill	two years in the public works, and shall make repara-	joined to the paragraph before the page break
 10092	hyphenation	crimes-bill	repara-|tion	reparation
 10103	hyphenation	crimes-bill	pay-|the	paythe
 10104	hyphenation	crimes-bill	pun-|ishable	punishable
@@ -1459,6 +1513,7 @@ line	kind	record	raw	result
 11163	page-join	note-g-summary	Carolina; but it has spread in the upper parts of	joined to the paragraph before the page break
 11165	hyphenation	note-g-summary	Ten-|nessee	Tennessee
 11190	hyphenation	note-h-washington-1	dis-|positions	dispositions
+11195	footnote	note-h-washington-1	[! It appears, from a blank space at the bottom of this paper, that a	moved after the paragraph it interrupts
 11198	hyphenation	note-h-washington-1	per-|manent	permanent
 11202	furniture	note-h-washington-1	260 Jefferson’s Works	
 11205	page-join	note-h-washington-1	able to consult your inclination, or to derive any	joined to the paragraph before the page break
@@ -1821,13 +1876,19 @@ line	kind	record	raw	result
 13796	hyphenation	anas-018	discon-|tent	discontent
 13799	hyphenation	anas-018	pro-|ceeded	proceeded
 13801	hyphenation	anas-018	govern-|ment,	government,
+13805	furniture	anas-018	332 Jefferson’s Works bd c	
+13808	page-join	anas-018	which he had done to me in two former conversa-	joined to the paragraph before the page break
 13808	hyphenation	anas-018	conversa-|tions.	conversations.
 13814	hyphenation	anas-018	impor-|tance	importance
 13830	hyphenation	anas-018	hon-|estly	honestly
 13833	hyphenation	anas-018	judg-|ments	judgments
+13841	furniture	anas-018	The Anas | 333	
+13844	page-join	anas-018	had any interest distinct from, and contrary to the	joined to the paragraph before the page break
 13848	hyphenation	anas-018	in-|stanced	instanced
 13856	hyphenation	anas-018	Depart-|ments	Departments
 13870	hyphenation	anas-019	intro-|duce	introduce
+13878	furniture	anas-019	334 - Jefferson's Works	
+13881	page-join	anas-019	preceded by Humphreys. After passing through	joined to the paragraph before the page break
 13910	hyphenation	anas-019	coun-|tries,	countries,
 13915	furniture	anas-019	The Anas 335	
 13918	page-join	anas-019	that they propose to emancipate South America,	joined to the paragraph before the page break
@@ -1863,6 +1924,8 @@ line	kind	record	raw	result
 14120	hyphenation	anas-021	some-|thing	something
 14131	hyphenation	anas-021	pre-|emption	preemption
 14137	hyphenation	anas-021	defeat-|ing	defeating
+14141	furniture	anas-021	The Anas H BAT	
+14144	page-join	anas-021	undivided and independent sovereignty as long as	joined to the paragraph before the page break
 14158	hyphenation	anas-021	delega-|tions	delegations
 14177	furniture	anas-021	342 Jefferson’s Works	
 14180	page-join	anas-021	founded on the universality of settlement there;	joined to the paragraph before the page break
@@ -1917,6 +1980,7 @@ line	kind	record	raw	result
 14608	furniture	anas-030	VOL. I—23 —-	
 14611	furniture	anas-030	354 Jefferson’s Works	
 14614	hyphenation	anas-031	re-|turned	returned
+14644	footnote	anas-031	[!In the margin is written, by Mr. Jefferson, "Impossible as to	moved after the paragraph it interrupts
 14648	furniture	anas-031	The Anas 355	
 14651	page-join	anas-031	he did not put into Beckley’s hand, as he did the	joined to the paragraph before the page break
 14662	hyphenation	anas-031	depart-|ment,	department,
@@ -1942,6 +2006,8 @@ line	kind	record	raw	result
 14882	hyphenation	anas-034	there-|fore	therefore
 14889	hyphenation	anas-034	pesti-|lential	pestilential
 14896	hyphenation	anas-034	inhabi-|tants	inhabitants
+14904	furniture	anas-034	362 ^ Jefferson’s Works	
+14907	page-join	anas-034	to go and take New Orleans, if he will furnish the	joined to the paragraph before the page break
 14908	hyphenation	anas-034	ad-|vancing	advancing
 14910	hyphenation	anas-034	com-|missioned	commissioned
 14918	hyphenation	anas-034	con-|nected	connected
@@ -2059,6 +2125,8 @@ line	kind	record	raw	result
 15895	hyphenation	anas-044	in-|stance.	instance.
 15898	hyphenation	anas-044	Ran-|dolph.	Randolph.
 15905	hyphenation	anas-044	inde-|pendence;	independence;
+15918	furniture	anas-044	The Anas- | | 389	
+15921	page-join	anas-044	private affairs in motion in a line which had power-	joined to the paragraph before the page break
 15921	hyphenation	anas-044	power-|fully	powerfully
 15934	hyphenation	anas-044	busi-|ness	business
 15956	furniture	anas-045	390 Jefferson's Works	
@@ -2143,6 +2211,9 @@ line	kind	record	raw	result
 16530	hyphenation	anas-050	pro-|duced	produced
 16545	furniture	anas-050	406 Jefferson’s Works	
 16548	page-join	anas-050	many over to Genet’s side. Genet will not obey	joined to the paragraph before the page break
+16579	hyphenation	anas-051	inten-|tions	intentions
+16582	furniture	anas-051	The | Anas 407	
+16585	page-join	anas-051	tions of the proclamation, was the matter of debate.	joined to the paragraph before the page break
 16611	hyphenation	anas-051	Con-|gress	Congress
 16617	furniture	anas-051	408 Jefferson’s Works	
 16620	page-join	anas-051	given by the constitution to the House of Repre-	joined to the paragraph before the page break
@@ -2176,6 +2247,8 @@ line	kind	record	raw	result
 16801	page-join	anas-053	inexecution of the treaty should go in as public, (in	joined to the paragraph before the page break
 16819	hyphenation	anas-054	men-|tioned	mentioned
 16832	hyphenation	anas-055	Madi-|son’s,	Madison’s,
+16836	furniture	anas-055	414 - Jefferson's Works	
+16839	page-join	anas-055	room, and shutting the door himself, he said he was	joined to the paragraph before the page break
 16840	hyphenation	anas-055	con-|versation	conversation
 16845	hyphenation	anas-055	neces-|sity	necessity
 16860	hyphenation	anas-055	impro-|priety	impropriety
@@ -2198,6 +2271,7 @@ line	kind	record	raw	result
 16962	hyphenation	anas-057	establish-|ment	establishment
 16973	hyphenation	anas-058	conversa-|tion,	conversation,
 16980	furniture	anas-058	VOL. 1—27	
+16983	furniture	anas-058	418 Jefferson’s Works ,	
 16986	hyphenation	anas-059	remark-|able	remarkable
 16994	hyphenation	anas-059	con-|sultations	consultations
 16998	hyphenation	anas-059	co-|operation.	cooperation.
@@ -2302,6 +2376,8 @@ line	kind	record	raw	result
 17752	hyphenation	anas-074	Eng-|land	England
 17766	hyphenation	anas-075	unde-|ceive	undeceive
 17768	hyphenation	anas-075	Hig-|ginson	Higginson
+17778	furniture	anas-076	440 ^ Jefferson's Works	
+17781	page-join	anas-076	General Samuel Smith, and represented to him the	joined to the paragraph before the page break
 17804	hyphenation	anas-077	him-|self	himself
 17815	furniture	anas-077	The Anas 441	
 17819	hyphenation	anas-078	argu-|ment	argument
@@ -2375,6 +2451,7 @@ line	kind	record	raw	result
 18256	page-join	anas-083	however, as the general subject and all its parts	joined to the paragraph before the page break
 18260	hyphenation	anas-083	submit-|ting	submitting
 18286	hyphenation	anas-084	accord-|ing	according
+18293	footnote	anas-084	1G, W. Erving was secretary of Legation to Spain at that time.	moved after the paragraph it interrupts
 18296	furniture	anas-084	454 Jefferson’s Works	
 18299	page-join	anas-084	troops—certainly none to spare, at Pensacola and	joined to the paragraph before the page break
 18311	hyphenation	anas-084	pro-|ceed	proceed
@@ -2404,6 +2481,9 @@ line	kind	record	raw	result
 18424	hyphenation	anas-086	Mediter-|ranean,	Mediterranean,
 18430	hyphenation	anas-086	there-|fore	therefore
 18432	hyphenation	anas-086	Or-|leans	Orleans
+18441	hyphenation	anas-086	how-|ever	however
+18444	furniture	anas-086	458 — Jefferson’s Works	
+18447	page-join	anas-086	ever is to be kept manned at each place, the rest	joined to the paragraph before the page break
 18456	hyphenation	anas-086	pri-|vateer	privateer
 18463	hyphenation	anas-086	instruc-|tions,	instructions,
 18484	footnote	anas-087	1 Merry was the name of the British Minister.	moved after the paragraph it interrupts
@@ -2432,6 +2512,8 @@ line	kind	record	raw	result
 18598	hyphenation	anas-088	infor-|mation.	information.
 18615	hyphenation	anas-088	Gover-|nors,	Governors,
 18624	hyphenation	anas-089	Wil-|kinson,	Wilkinson,
+18630	hyphenation	anas-089	Gen-|ef	Genef
+18633	page-join	anas-089	ef	joined to the paragraph before the page break
 18636	furniture	anas-089	The Anas 463	
 18639	page-join	anas-089	eral Wilkinson to myself of October 21st by a con-	joined to the paragraph before the page break
 18639	hyphenation	anas-089	con-|ndential	conndential
@@ -2488,10 +2570,15 @@ line	kind	record	raw	result
 18914	hyphenation	anas-096	Depart-|ment	Department
 18927	hyphenation	anas-096	search-|ing	searching
 18929	hyphenation	anas-096	Com-|municate	Communicate
+18941	hyphenation	anas-097	Octo-|ber	October
+18943	footnote	anas-097	1 Which was to the effect that all armed English ships leave the	moved after the paragraph it interrupts
+18946	footnote	anas-097	United States’ ports. This proclamation was provoked by the	moved after the paragraph it interrupts
 18950	furniture	anas-097	The Anas 471	
 18953	page-join	anas-097	ber (26th)'unless new occurrences should render an	joined to the paragraph before the page break
 18975	hyphenation	anas-099	com-|pany	company
 18978	hyphenation	anas-099	squad-|ron,	squadron,
+18989	furniture	anas-099	472 - Jefferson's Works	
+18992	page-join	anas-099	Canada and the upper part of Lower Canada, as far	joined to the paragraph before the page break
 19082	furniture	anas-099	The Anas 473	
 19106	hyphenation	anas-099	com-|mission	commission
 19112	hyphenation	anas-099	Gover-|nors	Governors
@@ -2507,6 +2594,8 @@ line	kind	record	raw	result
 19258	hyphenation	anas-101	situa-|tion	situation
 19265	furniture	anas-101	The Anas 477	
 19307	hyphenation	anas-101	infor-|mation	information
+19313	hyphenation	anas-101	depend-|ing.	depending.
+19316	page-join	anas-101	ing.	joined to the paragraph before the page break
 19319	furniture	anas-101	478 Jefferson’s Works	
 19322	hyphenation	anas-102	Constitu-|tion	Constitution
 19323	hyphenation	anas-102	dis-|charged:	discharged:
@@ -2574,6 +2663,8 @@ line	kind	record	raw	result
 19849	furniture	anas-110	492 Jefferson’s Works	
 19861	hyphenation	anas-110	Chicka-|saws,	Chickasaws,
 20023	hyphenation	carter-university	distin-|guished	distinguished
+20036	hyphenation	carter-university	occa-|sion	occasion
+20039	page-join	carter-university	sion of the Dedication of the new Buildings of the University,	joined to the paragraph before the page break
 20057	hyphenation	carter-university	warm-|hearted	warmhearted
 20058	hyphenation	carter-university	dis-|tant	distant
 20068	hyphenation	carter-university	evi-|dence	evidence
@@ -2861,6 +2952,8 @@ line	kind	record	raw	result
 22721	hyphenation	notes-query-05	Nia-|gara	Niagara
 22725	hyphenation	notes-query-05	fifty-|six	fifty-six
 22727	hyphenation	notes-query-05	hun-|dred	hundred
+22735	furniture	notes-query-05	. 28 Jefferson's Works	
+22738	page-join	notes-query-05	the Blue Ridge, near the intersection of the Rock-	joined to the paragraph before the page break
 22738	hyphenation	notes-query-05	Rock-|ingham	Rockingham
 22765	hyphenation	notes-query-05	cav-|erns,	caverns,
 22773	furniture	notes-query-05	Notes on Virginia 29	
@@ -2878,6 +2971,8 @@ line	kind	record	raw	result
 22828	hyphenation	notes-query-05	Regu-|lar	Regular
 22860	hyphenation	notes-query-05	con-|stituted	constituted
 22874	hyphenation	notes-query-05	delight-|ful	delightful
+22881	furniture	notes-query-05	32 Jefferson’s Works —	
+22884	page-join	notes-query-05	rapture of the spectator is really indescribable! The	joined to the paragraph before the page break
 22917	hyphenation	notes-query-05	promi-|nences	prominences
 22920	hyphenation	notes-query-05	corre-|sponding	corresponding
 22924	furniture	notes-query-05	Notes on Virginia 33	
@@ -2885,6 +2980,8 @@ line	kind	record	raw	result
 22949	hyphenation	notes-query-06	Montgom-|ery,	Montgomery,
 22950	hyphenation	notes-query-06	some-|times	sometimes
 22954	hyphenation	notes-query-06	at-|tempted	attempted
+22956	hyphenation	notes-query-06	hun-|fectly,	hunfectly,
+22959	page-join	notes-query-06	fectly, that, were the two sides to come together they would fit in all	joined to the paragraph before the page break
 22966	hyphenation	notes-query-06	cir-|cumstance;	circumstance;
 22974	furniture	notes-query-06	34 Jefferson’s Works	
 22977	page-join	notes-query-06	dred pounds of washed ore. The most common is	joined to the paragraph before the page break
@@ -2978,7 +3075,14 @@ line	kind	record	raw	result
 23559	furniture	notes-query-06	5o Jefferson's Works	
 23606	furniture	notes-query-06	Notes on Virginia 51	
 23609	page-join	notes-query-06	Scaly bark hiccory. Juglans alba corticesquamoso. Clayton.	joined to the paragraph before the page break
+23610	hyphenation	notes-query-06	Clay-|ton.	Clayton.
+23613	page-join	notes-query-06	ton.	joined to the paragraph before the page break
 23622	hyphenation	notes-query-06	com-|presso,	compresso,
+23691	furniture	notes-query-06	Jefferson’s Works	
+23694	page-join	notes-query-06	Laurel of the western country. Qu. species?	joined to the paragraph before the page break
+23781	furniture	notes-query-06	Notes on Virginia | 53	
+23784	page-join	notes-query-06	Red oak. Quercus rubra.	joined to the paragraph before the page break
+23829	furniture	notes-query-06	Jefferson’s Works	
 23860	hyphenation	notes-query-06	mam-|moth,	mammoth,
 23863	hyphenation	notes-query-06	north-|ern	northern
 23866	hyphenation	notes-query-06	busi-|ness,	business,
@@ -2994,6 +3098,8 @@ line	kind	record	raw	result
 23910	hyphenation	notes-query-06	west-|wardly;	westwardly;
 23925	hyphenation	notes-query-06	author-|ize	authorize
 23934	hyphenation	notes-query-06	hippopota-|mus,	hippopotamus,
+23942	furniture	notes-query-06	Notes on Virginia . 57	
+23945	page-join	notes-query-06	found, there also we find the tusks and skeleton; but	joined to the paragraph before the page break
 23953	hyphenation	notes-query-06	hippo-|potamus,	hippopotamus,
 23959	hyphenation	notes-query-06	anat-|omist,	anatomist,
 23961	hyphenation	notes-query-06	essen-|tially	essentially
@@ -3063,6 +3169,9 @@ line	kind	record	raw	result
 24431	hyphenation	notes-query-06	coun-|tries,	countries,
 24438	hyphenation	notes-query-06	hun-|dred	hundred
 24448	hyphenation	notes-query-06	Mis-|cellanies.]	Miscellanies.]
+24451	hyphenation	notes-query-06	middle-|sized	middle-sized
+24453	footnote	notes-query-06	1T. 233, Lon. 1772.	moved after the paragraph it interrupts
+24456	footnote	notes-query-06	Mids 233;	moved after the paragraph it interrupts
 24460	furniture	notes-query-06	70 Jefferson’s Works	
 24463	page-join	notes-query-06	sized ox. The same account of their size has been	joined to the paragraph before the page break
 24464	hyphenation	notes-query-06	Mon-|sieur	Monsieur
@@ -3104,6 +3213,7 @@ line	kind	record	raw	result
 24704	page-join	notes-query-06	best informed of any naturalist who has ever written.	joined to the paragraph before the page break
 24720	hyphenation	notes-query-06	be-|come	become
 24724	hyphenation	notes-query-06	indiffer-|ently	indifferently
+24728	footnote	notes-query-06	1The Tapir is the largest of the animals peculiar to America. I	moved after the paragraph it interrupts
 24735	hyphenation	notes-query-06	hun-|dred	hundred
 24736	hyphenation	notes-query-06	pecu-|liars	peculiars
 24741	furniture	notes-query-06	Notes on Virginia 77	
@@ -3147,6 +3257,7 @@ line	kind	record	raw	result
 25008	hyphenation	notes-query-06	Amer-|ica,	America,
 25014	hyphenation	notes-query-06	provoca-|tion.	provocation.
 25019	hyphenation	notes-query-06	ani-|quillan	aniquillan
+25022	footnote	notes-query-06	1A remarkable instance of this appeared in the case of the late	moved after the paragraph it interrupts
 25026	furniture	notes-query-06	84 Jefferson's Works	
 25029	page-join	notes-query-06	that his sensibility is keen, even the warriors weep-	joined to the paragraph before the page break
 25029	hyphenation	notes-query-06	weep-|ing	weeping
@@ -3233,6 +3344,8 @@ line	kind	record	raw	result
 25575	hyphenation	notes-query-06	prob-|ably	probably
 25576	hyphenation	notes-query-06	suffi-|cient	sufficient
 25584	hyphenation	notes-query-06	discov-|ered	discovered
+25601	furniture	notes-query-06	Jefferson’s Works	
+25604	page-join	notes-query-06	*xn'eosto	joined to the paragraph before the page break
 25620	noise	notes-query-06	fttt p993 Sura 9n pq	
 25621	noise	notes-query-06	ODE * [993999] 931UM.	
 25622	noise	notes-query-06	+++ yonp uAOIq 9[arr	
@@ -3262,7 +3375,7 @@ line	kind	record	raw	result
 25752	noise	notes-query-06	£6z'S	
 25755	page-join	notes-query-06	6$:9	joined to the paragraph before the page break
 25808	noise	notes-query-06	"Prrgp*[q usrepp / ^3umnreig	
-25811	page-join	notes-query-06	*BUIM pes	joined to the paragraph before the page break
+25811	footnote	notes-query-06	*BUIM pes	moved after the paragraph it interrupts
 25814	noise	notes-query-06	À Sep ATS) sey	
 25815	noise	notes-query-06	AOp AYN ANNL	
 25816	noise	notes-query-06	ER pM ‘as8essed jo uoadiq	
@@ -3306,6 +3419,8 @@ line	kind	record	raw	result
 25970	noise	notes-query-06	'** Jeq[e snyequey	
 25971	noise	notes-query-06	tt*t*** JOye[mnoo[ SN ELUENT,	
 25974	page-join	notes-query-06	sienooumbe vopry	joined to the paragraph before the page break
+25989	furniture	notes-query-06	Jefferson’s Works	
+25992	page-join	notes-query-06	"Xn'e3sIo	joined to the paragraph before the page break
 25996	noise	notes-query-06	enne nnn qmma-a00d-diqM | 9r£	
 25997	noise	notes-query-06	yog * qeq 3€21c) -"1oxons3*0r) | g "I	
 25998	noise	notes-query-06	e Fansen omor urjavus adang | 18x	
@@ -3313,7 +3428,6 @@ line	kind	record	raw	result
 26000	noise	notes-query-06	‘trees esnou3m MOA | £9 1	
 26002	noise	notes-query-06	*+* 1odoo19 poyeoryy ^O][9A | £9'I	
 26004	page-join	notes-query-06	IUE esnounn pepooH | og’!	joined to the paragraph before the page break
-26030	footnote	notes-query-06	* puq Somgorpe "uougp[o3 ueonowy | Etr	moved after the paragraph it interrupts
 26032	noise	notes-query-06	o9 * 9 * o9 à o9 9 o9] o9 m o9 t n o9 o! t m8 0 9 n8 paq 9uA^o] PEI	
 26034	page-join	notes-query-06	eee s... mie e E E L OTT "pu uodaoj veo: f	joined to the paragraph before the page break
 26077	noise	notes-query-06	‘voryeusiseg S, Áqs93€))	
@@ -3353,6 +3467,8 @@ line	kind	record	raw	result
 26232	hyphenation	notes-query-06	com-|edunt	comedunt
 26267	furniture	notes-query-07	Notes on Virginia 105	
 26270	page-join	notes-query-07	an analytical view of the winds during the same	joined to the paragraph before the page break
+26278	hyphenation	notes-query-07	Fah-|etc.,in	Fahetc.,in
+26281	page-join	notes-query-07	etc.,in vo	joined to the paragraph before the page break
 26308	hyphenation	notes-query-07	in-|stance,)	instance,)
 26317	hyphenation	notes-query-07	observa-|tions,	observations,
 26321	hyphenation	notes-query-07	north-|east,	north-east,
@@ -3426,6 +3542,8 @@ line	kind	record	raw	result
 26706	hyphenation	notes-query-07	neces-|sary	necessary
 26707	hyphenation	notes-query-07	circum-|stances	circumstances
 26727	hyphenation	notes-query-08	differ-|ent	different
+26732	furniture	notes-query-08	Notes on Virginia	
+26735	page-join	notes-query-08	117	joined to the paragraph before the page break
 26777	hyphenation	notes-query-08	some-|times	sometimes
 26787	furniture	notes-query-08	118 Jefferson’s Works	
 26790	page-join	notes-query-08	which are here stated will enable us to calculate, with	joined to the paragraph before the page break
@@ -3606,6 +3724,7 @@ line	kind	record	raw	result
 27837	page-join	notes-query-11	COO nro A Irc ro Aone el tun bo se[euo	joined to the paragraph before the page break
 27849	noise	notes-query-11	iste |n ent rit *sorpoesoasQO	
 27852	page-join	notes-query-11	ee | ——— —— ————	joined to the paragraph before the page break
+27870	furniture	notes-query-11	Jefferson's Works	
 27873	noise	notes-query-11	‘uoue mo	
 27874	noise	notes-query-11	'useqeAM 3y} jo squeq əy} UO	
 27875	noise	notes-query-11	'uouogemo  )	
@@ -3721,6 +3840,8 @@ line	kind	record	raw	result
 28591	furniture	notes-query-13	Notes on Virginia 157	
 28594	page-join	notes-query-13	Then follow the articles stipulated by the governor	joined to the paragraph before the page break
 28595	hyphenation	notes-query-13	per-|sons	persons
+28600	hyphenation	notes-query-13	commis-|sioners	commissioners
+28602	page-join	notes-query-13	sioners appointed by the councill of state authorized thereto, having	joined to the paragraph before the page break
 28607	hyphenation	notes-query-13	bur-|gesses	burgesses
 28610	hyphenation	notes-query-13	hov-|ering	hovering
 28615	hyphenation	notes-query-13	com-|missioners,	commissioners,
@@ -3808,6 +3929,9 @@ line	kind	record	raw	result
 29158	page-join	notes-query-13	to decline a little more trouble for placing them	joined to the paragraph before the page break
 29164	hyphenation	notes-query-13	deter-|mining	determining
 29176	hyphenation	notes-query-13	there-|fore,	therefore,
+29185	hyphenation	notes-query-13	inva-|sion,	invasion,
+29187	footnote	notes-query-13	1 Bro. abr. Corporations, 31, 34.  Hakewell, 93.	moved after the paragraph it interrupts
+29190	footnote	notes-query-13	? Puff. Off. hom. 1. 2, c. 6, $ xa.	moved after the paragraph it interrupts
 29194	furniture	notes-query-13	Notes on Virginia 173	
 29197	page-join	notes-query-13	sion, it is probable the former rule will be permitted	joined to the paragraph before the page break
 29202	hyphenation	notes-query-13	chair-|man	chairman
@@ -3949,6 +4073,8 @@ line	kind	record	raw	result
 30005	hyphenation	notes-query-14	conver-|sation	conversation
 30007	hyphenation	notes-query-14	circum-|stance	circumstance
 30014	hyphenation	notes-query-14	desti-|tute	destitute
+30029	footnote	notes-query-14	1 The instrument proper to them is the Banjar, which they brought	moved after the paragraph it interrupts
+30032	footnote	notes-query-14	hither from Africa, and which is the original of the guitar, its chords	moved after the paragraph it interrupts
 30036	furniture	notes-query-14	196 Jefferson's Works	
 30039	page-join	notes-query-14	equal to the composition of a more extensive run of	joined to the paragraph before the page break
 30045	hyphenation	notes-query-14	imagi-|nation.	imagination.
@@ -3986,6 +4112,10 @@ line	kind	record	raw	result
 30236	hyphenation	notes-query-14	anx-|ious	anxious
 30238	hyphenation	notes-query-14	fur-|ther	further
 30244	hyphenation	notes-query-14	un-|known	unknown
+30256	furniture	notes-query-14	Jefferson’s Works	
+30259	page-join	notes-query-14	I. Crimes whose punishment extends to LIFE.	joined to the paragraph before the page break
+30340	hyphenation	notes-query-14	witch-|worn	witchworn
+30343	page-join	notes-query-14	worn dm } Ducking. Stripes,	joined to the paragraph before the page break
 30352	hyphenation	notes-query-14	defend-|ant,	defendant,
 30375	furniture	notes-query-14	Notes on Virginia 203	
 30378	hyphenation	notes-query-14	knowl-|edge	knowledge
@@ -4148,6 +4278,8 @@ line	kind	record	raw	result
 31331	hyphenation	notes-query-19	sup-|port	support
 31349	hyphenation	notes-query-19	Depend-|ence	Dependence
 31355	hyphenation	notes-query-19	aggre-|gate	aggregate
+31362	furniture	notes-query-19	230 Jefferson's Works Á	
+31365	page-join	notes-query-19	corruption. While we have land to labor then, let	joined to the paragraph before the page break
 31366	hyphenation	notes-query-19	work-|bench,	workbench,
 31369	hyphenation	notes-query-19	work-|shops	work-shops
 31370	hyphenation	notes-query-19	pro-|visions	provisions
@@ -4155,6 +4287,7 @@ line	kind	record	raw	result
 31399	furniture	notes-query-20	Notes on Virginia 231	
 31402	page-join	notes-query-20	erences: Bv. Price in Amount in	joined to the paragraph before the page break
 31439	hyphenation	notes-query-20	quan-|tity	quantity
+31453	footnote	notes-query-20	1This sum is equal to £850,000; Virginia money, 607,142 guineas,	moved after the paragraph it interrupts
 31456	furniture	notes-query-20	232 Jefferson’s Works	
 31459	page-join	notes-query-20	depend on Virginia and Maryland alone as its culture	joined to the paragraph before the page break
 31462	hyphenation	notes-query-20	Mis-|sissippi,	Mississippi,
@@ -4236,25 +4369,38 @@ line	kind	record	raw	result
 32023	hyphenation	notes-query-23	mean-|time	meantime
 32025	hyphenation	notes-query-23	unde-|signedly	undesignedly
 32032	furniture	notes-query-23	Notes on Virginia 247	
+32200	furniture	notes-query-23	Jefferson's Works	
 32203	hyphenation	notes-query-23	Noco-|tiane.	Nocotiane.
 32212	hyphenation	notes-query-23	gen-|eral	general
 32268	hyphenation	notes-query-23	Vir-|ginia.	Virginia.
+32275	furniture	notes-query-23	Notes on Virginia	
+32278	page-join	notes-query-23	De proclamatione de signatione de tobacco. 18. Rym. 886	joined to the paragraph before the page break
 32300	hyphenation	notes-query-23	Amer-|ica	America
+32315	furniture	notes-query-23	Appendix No. r.	
+32317	page-join	notes-query-23	A special commission-to Edward, Earle of Dorsett, and	joined to the paragraph before the page break
 32318	hyphenation	notes-query-23	Vir-|ginia.	Virginia.
 32321	hyphenation	notes-query-23	cas-|trum	castrum
 32332	hyphenation	notes-query-23	Balti-|more	Baltimore
+32507	furniture	notes-query-23	Jefferson’s Works	
 32514	hyphenation	notes-query-23	Penn-|sylvania.	Pennsylvania.
+32518	hyphenation	notes-query-23	unor-|dered	unordered
+32521	page-join	notes-query-23	dered retailing of tobacco. Mentioned 3. Rushw. 191.	joined to the paragraph before the page break
 32522	hyphenation	notes-query-23	dis-|cover	discover
+32524	hyphenation	notes-query-23	adjoin-|ing.	adjoining.
+32527	page-join	notes-query-23	ing. 19. Ry. 472.	joined to the paragraph before the page break
 32542	hyphenation	notes-query-23	do-|minions.	dominions.
 32573	hyphenation	notes-query-23	Majes-|ty's	Majesty's
 32574	hyphenation	notes-query-23	Amer-|ica.	America.
+32588	furniture	notes-query-23	Notes on Virginia	
 32616	hyphenation	notes-query-23	Massa-|chusetts,	Massachusetts,
 32620	hyphenation	notes-query-23	juris-|diction.	jurisdiction.
 32623	hyphenation	notes-query-23	par-|liament,	parliament,
 32632	hyphenation	notes-query-23	Eng-|land	England
 32641	hyphenation	notes-query-23	Cul-|pepper.	Culpepper.
+32739	furniture	notes-query-23	Jefferson's Works	
 32751	hyphenation	notes-query-23	Clai-|bourn,	Claibourn,
 32753	hyphenation	notes-query-23	obe-|dience	obedience
+32803	furniture	notes-query-23	Notes on Virginia	
 32809	hyphenation	notes-query-23	rea-|sons	reasons
 32816	hyphenation	notes-query-23	author-|ity	authority
 32826	hyphenation	notes-query-23	Connecti-|cut	Connecticut
@@ -4265,14 +4411,19 @@ line	kind	record	raw	result
 32924	furniture	notes-query-23	254 Jefferson’s Works	
 32927	page-join	notes-query-23	Treaty between the English and Dutch for the surrender	joined to the paragraph before the page break
 32978	hyphenation	notes-query-23	Vir-|ginia	Virginia
+33052	furniture	notes-query-23	Notes on Virginia	
 33063	hyphenation	notes-query-23	com-|modities	commodities
 33069	hyphenation	notes-query-23	free-|holders	freeholders
 33093	hyphenation	notes-query-23	Assun-|pink	Assunpink
 33099	hyphenation	notes-query-23	encourage-|ment	encouragement
+33264	furniture	notes-query-23	Jefferson's Works	
 33267	hyphenation	notes-query-23	Rep-|resen.	Represen.
 33281	hyphenation	notes-query-23	regu-|lation	regulation
 33285	hyphenation	notes-query-23	convey-|ing	conveying
+33295	hyphenation	notes-query-23	Pennsyl-|vania,	Pennsylvania,
+33298	page-join	notes-query-23	vania, in America, Votes of Repr. Penn. xxvii.	joined to the paragraph before the page break
 33324	hyphenation	notes-query-23	Penn-|sylvania	Pennsylvania
+33341	furniture	notes-query-23	Notes on Virginia	
 33350	hyphenation	notes-query-23	pros-|ecution	prosecution
 33357	hyphenation	notes-query-23	lieu-|tenant	lieutenant
 33371	hyphenation	notes-query-23	reduc-|ing	reducing
@@ -4283,11 +4434,14 @@ line	kind	record	raw	result
 33505	hyphenation	notes-query-23	terri-|tories,	territories,
 33526	hyphenation	notes-query-23	memo-|rial	memorial
 33549	hyphenation	notes-query-23	Jer-|sey.	Jersey.
+33562	furniture	notes-query-23	Notes on Virginia	
 33579	hyphenation	notes-query-23	ascer-|taining	ascertaining
 33618	hyphenation	notes-query-23	sus-|pension	suspension
 33684	furniture	notes-query-23	260 Jefferson’s Works	
 33687	page-join	notes-query-23	1712, Aug. 19. Traité pour une suspension d'armes entre Louis XIV. roi	joined to the paragraph before the page break
 33725	hyphenation	notes-query-23	dis-|trict	district
+33754	furniture	notes-query-23	Notes on Virginia	
+33757	page-join	notes-query-23	Report of the council for plantation affairs, fixing the	joined to the paragraph before the page break
 33758	hyphenation	notes-query-23	com-|mission	commission
 33764	hyphenation	notes-query-23	Aix-|la-Chapelle	Aixla-Chapelle
 33769	hyphenation	notes-query-23	Grande-Bre-|tagne,	Grande-Bretagne,
@@ -4303,6 +4457,8 @@ line	kind	record	raw	result
 33900	page-join	notes-appendix-1-thomson	some centuries ago; that the broken and ragged	joined to the paragraph before the page break
 33907	hyphenation	notes-appendix-1-thomson	evi-|dently	evidently
 33910	hyphenation	notes-appendix-1-thomson	col-|lection	collection
+33932	furniture	notes-appendix-1-thomson	Appendix | 265	
+33935	page-join	notes-appendix-1-thomson	must have opened its way through a different part	joined to the paragraph before the page break
 33936	hyphenation	notes-appendix-1-thomson	ob-|struction,	obstruction,
 33939	hyphenation	notes-appendix-1-thomson	pas-|sage	passage
 33943	hyphenation	notes-appendix-1-thomson	Cham-|paign.	Champaign.
@@ -4365,6 +4521,9 @@ line	kind	record	raw	result
 34259	page-join	notes-appendix-1-thomson	Powhatan (who was the chief of the nation, and	joined to the paragraph before the page break
 34260	hyphenation	notes-appendix-1-thomson	Wahun-|sonacock)	Wahunsonacock)
 34274	hyphenation	notes-appendix-1-thomson	in-|stance	instance
+34280	hyphenation	notes-appendix-1-thomson	Opicha-|pan,	Opichapan,
+34283	footnote	notes-appendix-1-thomson	1 This is one generation more than the poet ascribes to the life of	moved after the paragraph it interrupts
+34287	footnote	notes-appendix-1-thomson	Tö d’ ede duo men geneai meropó anthrópón	moved after the paragraph it interrupts
 34297	furniture	notes-appendix-1-thomson	Appendix 275	
 34300	page-join	notes-appendix-1-thomson	pan, and who was a bitter but secret enemy to the	joined to the paragraph before the page break
 34308	hyphenation	notes-appendix-1-thomson	con-|ferences	conferences
@@ -4396,6 +4555,8 @@ line	kind	record	raw	result
 34405	hyphenation	notes-appendix-1-thomson	con-|sisted	consisted
 34406	hyphenation	notes-appendix-1-thomson	Massa-|womacs.	Massawomacs.
 34419	hyphenation	notes-appendix-1-thomson	High-|lands	Highlands
+34437	furniture	notes-appendix-1-thomson	Appendix | 279	
+34440	page-join	notes-appendix-1-thomson	arms, engaged a nation, now known by the name of	joined to the paragraph before the page break
 34442	hyphenation	notes-appendix-1-thomson	border-|ing	bordering
 34443	hyphenation	notes-appendix-1-thomson	alli-|ance	alliance
 34447	hyphenation	notes-appendix-1-thomson	Hud-|son	Hudson
@@ -4460,6 +4621,9 @@ line	kind	record	raw	result
 34783	hyphenation	notes-appendix-2-constitution	con-|tinuance	continuance
 34790	hyphenation	notes-appendix-2-constitution	west-|ward	westward
 34807	hyphenation	notes-appendix-2-constitution	Gov-|ernor,	Governor,
+34811	hyphenation	notes-appendix-2-constitution	emol-|ument	emolument
+34814	furniture	notes-appendix-2-constitution	Appendix ` 289	
+34817	page-join	notes-appendix-2-constitution	ument under this State, or any other State or power	joined to the paragraph before the page break
 34818	hyphenation	notes-appendix-2-constitution	refer-|ence	reference
 34828	hyphenation	notes-appendix-2-constitution	bor-|oughs,	boroughs,
 34835	hyphenation	notes-appendix-2-constitution	con-|cluding	concluding
@@ -4612,6 +4776,8 @@ line	kind	record	raw	result
 35930	furniture	notes-appendix-4-logan	316 Jefferson's Works	
 35933	page-join	notes-appendix-4-logan	cause which gave rise to the murder was a general idea that the Indians	joined to the paragraph before the page break
 35939	hyphenation	notes-appendix-4-logan	Ken-|tucky,	Kentucky,
+35966	hyphenation	notes-appendix-4-logan	approba-|tion;	approbation;
+35968	page-join	notes-appendix-4-logan	tion; he being the leader of the party, and that he had this information	joined to the paragraph before the page break
 35984	hyphenation	notes-appendix-4-logan	mani-|fested	manifested
 35992	furniture	notes-appendix-4-logan	Appendix 317	
 35995	page-join	notes-appendix-4-logan	town, where he would probably be adopted in some of their families;	joined to the paragraph before the page break
@@ -4627,7 +4793,10 @@ line	kind	record	raw	result
 36094	hyphenation	notes-appendix-4-logan	afore-|said.	aforesaid.
 36117	hyphenation	notes-appendix-4-logan	pocket-|book,	pocket-book,
 36124	hyphenation	notes-appendix-4-logan	Freder-|icksburg,	Fredericksburg,
+36131	footnote	notes-appendix-4-logan	[Here follows a copy of the speech, agreeing verbatim with that in	moved after the paragraph it interrupts
+36134	footnote	notes-appendix-4-logan	A copy of Logan's speech from the Notes on Virginia having been	moved after the paragraph it interrupts
 36135	hyphenation	notes-appendix-4-logan	follow-|ing	following
+36138	footnote	notes-appendix-4-logan	In the year 1774 I was out with the Virginia Volunteers, and was in	moved after the paragraph it interrupts
 36142	furniture	notes-appendix-4-logan	320 Jefferson’s Works	
 36145	page-join	notes-appendix-4-logan	the Ohio to the Indian towns. I did not hear Logan make the above	joined to the paragraph before the page break
 36147	hyphenation	notes-appendix-4-logan	remem-|ber	remember
@@ -4788,8 +4957,11 @@ line	kind	record	raw	result
 37861	hyphenation	manual-section-15	two-|thirds,	two-thirds,
 37882	furniture	manual-section-16	Parliamentary Manual 361	
 37885	page-join	manual-section-16	amended a mistake in a bill, without order or	joined to the paragraph before the page break
+37923	furniture	manual-section-17	362 - Jefferson’s Works	
 37932	hyphenation	manual-section-17	volun-|tarily	voluntarily
 37940	hyphenation	manual-section-17	with-|out	without
+37956	hyphenation	manual-section-17	mem-|ber	member
+37959	page-join	manual-section-17	ber shall speak more than twice in any one debate on the same day,	joined to the paragraph before the page break
 37968	furniture	manual-section-17	Parliamentary Manual 363	
 37971	page-join	manual-section-17	his speech, 7b. 75; or to the manner or words of the	joined to the paragraph before the page break
 37972	hyphenation	manual-section-17	trav-|elling	travelling
@@ -4857,6 +5029,8 @@ line	kind	record	raw	result
 38524	page-join	manual-section-26	have a controlling power over the names and num-	joined to the paragraph before the page break
 38524	hyphenation	manual-section-26	num-|ber,	number,
 38557	hyphenation	manual-section-26	com-|mittee	committee
+38558	hyphenation	manual-section-26	committee-|chamber,	committeechamber,
+38561	page-join	manual-section-26	chamber, and act on and bring back the bill, sitting	joined to the paragraph before the page break
 38565	furniture	manual-section-26	Parliamentary Manual 377	
 38571	hyphenation	manual-section-26	con-|sent;	consent;
 38605	furniture	manual-section-26	378 Jefferson’s Works	
@@ -5043,6 +5217,7 @@ line	kind	record	raw	result
 40102	hyphenation	manual-section-41	indo-|lent,	indolent,
 40106	hyphenation	manual-section-41	mat-|ter,	matter,
 40107	hyphenation	manual-section-41	estab-|lished	established
+40150	furniture	manual-section-41	Parliamentary Manual	
 40183	hyphenation	manual-section-41	re-|solve	resolve
 40194	hyphenation	manual-section-41	ab-|sent	absent
 40225	furniture	manual-section-41	418 Jefferson's Works	
@@ -5201,6 +5376,8 @@ line	kind	record	raw	result
 41439	furniture	manual-section-53	Parliamentary Manual 447	
 41442	page-join	manual-section-53	some sort, judicium parium suorum.—Seld. Fud.	joined to the paragraph before the page break
 41449	hyphenation	manual-section-53	excep-|tions,	exceptions,
+41455	hyphenation	manual-section-53	repli-|cation,	replication,
+41457	page-join	manual-section-53	cation, rejoinder, &c.—Seld. Fud. 114; 8 Grey’s Deb.	joined to the paragraph before the page break
 41477	furniture	manual-section-53	448 Jefferson’s Works	
 41480	page-join	manual-section-53	and goods.—Seld. Fud. 188. This, Selden says, is	joined to the paragraph before the page break
 41482	hyphenation	manual-section-53	delin-|quent	delinquent

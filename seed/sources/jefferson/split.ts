@@ -72,7 +72,7 @@ const MONTHS: Record<string, number> = {
 // "February the 28th, 1792.", "March 1, 1792.", "May the 23d.", "Feb. 7.",
 // "Bladensburg, October the 1st, 1792." (a place may precede the date)
 const DATE_START =
-  /^(?:[A-Z][a-z]+(?: [A-Z][a-z]+)?, )?(Jan(?:uary|\.)|Feb(?:ruary|\.)|Mar(?:ch|\.)|Apr(?:il|\.)|May|June?|July?|Aug(?:ust|\.)|Sept?(?:ember|\.)|Oct(?:ober|\.)|Nov(?:ember|\.)|Dec(?:ember|\.))\s+(?:the\s+)?([0-9][0-9IlO]?|[IlO][0-9])(?:st|th|d|nd|rd)?(?=[\s.,])[.,]?(?:\s*(1[78]\d\d)\b)?/;
+  /^(?:[A-Z][a-z]+(?: [A-Z][a-z]+)?, )?(Jan(?:uary|\.)|Feb(?:ruary|\.)|Mar(?:ch|\.)|Apr(?:il|\.)|May|June?|July?|Aug(?:ust|\.)|Sept?(?:ember|\.)|Oct(?:ober|\.)|Nov(?:ember|\.)|Dec(?:ember|\.))\s+(?:the\s+)?([0-9][0-9IlO]?|[IlO][0-9])(?:st|th|d|nd|rd)?(?=[\s.,])[.,]?(?:\s*(1[78][\doOlI]{2})\b)?/;
 
 export type AnasDate = { month: number; day: number; year: number | null };
 
@@ -82,7 +82,8 @@ export function parseAnasDate(line: string): AnasDate | null {
   const month = MONTHS[m[1].slice(0, 3).toLowerCase()];
   const day = Number(m[2].replace(/[Il]/g, '1').replace(/O/g, '0'));
   if (!month || !(day >= 1 && day <= 31)) return null;
-  return { month, day, year: m[3] ? Number(m[3]) : null };
+  const year = m[3] ? Number(m[3].replace(/[oO]/g, '0').replace(/[lI]/g, '1')) : null;
+  return { month, day, year };
 }
 
 const ANAS_HEADING =

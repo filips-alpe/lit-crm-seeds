@@ -34,10 +34,15 @@ export function parsePageNumber(token: string): number | null {
   return n > 0 ? n : null;
 }
 
-const EVEN_HEAD = /^\s*(\S{1,4})\s+Jefferson['’]s\s+Works\.?\s*$/;
-const ODD_HEAD = new RegExp(
-  `^\\s*(?:${ODD_HEADS.map((h) => h.replace(/ /g, '\\s+')).join('|')})\\.?\\s+(\\S{1,4})\\s*$`,
-);
+// Heads are matched after `normalizeHead`: OCR specks ("|", trailing "bd c")
+// are tolerated as long as nothing word-like follows the head.
+const EVEN_HEAD = /^(?:(\S{1,4}) )?(?:\S{1,2} )?Jefferson['’]s Works\b[.,]?(?: \S{1,3}){0,3}$/;
+const ODD_HEAD = new RegExp(`^(?:${ODD_HEADS.join('|')})[-.,]?(?: (\\S{1,4}))?(?: \\S{1,3}){0,2}$`);
+
+/** "The | Anas 407" → "The Anas 407": pipes and runs of spaces are OCR specks. */
+export function normalizeHead(line: string): string {
+  return line.replace(/[|]/g, ' ').replace(/\s+/g, ' ').trim();
+}
 /** Front-matter heads carry roman page numbers: "viii Special Introduction", "Contents xlii". */
 const ROMAN_HEAD = new RegExp(
   `^\\s*(?:[xvil]{1,6}\\.?\\s+(?:${[...ODD_HEADS, 'Contents'].join('|')})|(?:${[...ODD_HEADS, 'Contents'].join('|')})\\s+[xvil]{1,6})\\.?\\s*$`,
@@ -50,8 +55,9 @@ const SIGNATURE = /^\s*[VM]OL[.,]?\s*[IL1]{1,3}[.,]?\s*[—–-]+.{0,12}$/;
 export type FurnitureMatch = { kind: Furniture; page: number | null; at: 'top' | 'bottom' };
 
 export function classifyFurniture(line: string): FurnitureMatch | null {
-  let m = EVEN_HEAD.exec(line) ?? ODD_HEAD.exec(line);
-  if (m) return { kind: 'running-head', page: parsePageNumber(m[1]), at: 'top' };
+  const head = normalizeHead(line);
+  let m = EVEN_HEAD.exec(head) ?? ODD_HEAD.exec(head);
+  if (m) return { kind: 'running-head', page: m[1] ? parsePageNumber(m[1]) : null, at: 'top' };
   if (ROMAN_HEAD.test(line)) return { kind: 'running-head', page: null, at: 'top' };
   m = FOLIO.exec(line);
   if (m) return { kind: 'folio', page: Number(m[1]), at: 'bottom' };

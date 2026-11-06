@@ -8,7 +8,9 @@ entities:
     type: person
     name: 'Abraham Lincoln'
     description: 'Sixteenth President of the United States.'
-    aliases: ['Lincoln']
+    aliases: ['A. LINCOLN']
+    scopedAliases:
+      - { in: [lincoln-tribute, special-introduction], aliases: ['Lincoln', 'LINCOLN'] }
   - key: albert-gallatin
     type: person
     name: 'Albert Gallatin'
@@ -395,8 +397,10 @@ entities:
     aliases: ['George the Third', 'King George']
   - key: logan
     type: person
-    name: 'Logan'
+    name: 'Logan (Mingo leader)'
     description: 'Mingo leader whose speech following the 1774 killing of his family Jefferson quoted in the Notes.'
+    scopedAliases:
+      - { in: ['notes-'], aliases: ['Logan'] }
   - key: lord-baltimore
     type: person
     name: 'Lord Baltimore'
@@ -1952,6 +1956,9 @@ entities:
     description: "Emer de Vattel's treatise on the law of nations."
     aliases: ['Vattel']
 unlinked:
+  - 'Greene county'
+  - 'Lincoln county'
+  - 'Delaware counties'
   - 'Washington'
   - 'Adams'
   - 'Mr. Adams'

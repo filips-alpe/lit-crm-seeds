@@ -145,7 +145,7 @@ export function buildDataset(
     };
     documents.push({ span, record, corrections: cleaned.corrections });
 
-    const found = findMentions(cleaned.text, index);
+    const found = findMentions(cleaned.text, index, span.key);
     for (const m of found) {
       if (!m.entity) {
         ambiguous.set(

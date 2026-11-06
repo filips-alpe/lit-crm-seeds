@@ -56,6 +56,29 @@ describe('cleanSpan', () => {
     expect(r.corrections.some((c) => c.kind === 'footnote' && c.line === 3)).toBe(true);
   });
 
+  it('moves a footnote the OCR split into several blocks, and rejoins the word it broke', () => {
+    const r = clean([
+      'to meet the fourth Monday in Octo-',
+      '',
+      '1 Which was to the effect that all armed ships leave the',
+      '',
+      'United States’ ports.',
+      '',
+      'The Anas 471',
+      'ber (26th) unless new occurrences.',
+    ]);
+    expect(r.text).toBe(
+      'to meet the fourth Monday in October (26th) unless new occurrences.\n\n' +
+        '1 Which was to the effect that all armed ships leave the\n\nUnited States’ ports.',
+    );
+  });
+
+  it('rejoins a word broken across a blank line', () => {
+    expect(clean(['the Treasury depart-', '', 'ment was', 'his']).text).toBe(
+      'the Treasury department was his',
+    );
+  });
+
   it('rejoins line-end hyphenation and logs it against the raw line', () => {
     const r = clean(['An impeachment is not discon-', 'tinued by the dissolution.']);
     expect(r.text).toBe('An impeachment is not discontinued by the dissolution.');
