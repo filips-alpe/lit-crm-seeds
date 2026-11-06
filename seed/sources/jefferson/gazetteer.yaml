@@ -1230,7 +1230,6 @@ entities:
     type: place
     name: 'New York (state)'
     description: 'State of the United States, formerly a British colony.'
-    aliases: ['New York', 'New-York']
   - key: newfoundland
     type: place
     name: 'Newfoundland'
@@ -1956,6 +1955,9 @@ entities:
     description: "Emer de Vattel's treatise on the law of nations."
     aliases: ['Vattel']
 unlinked:
+  # The city (the capital in 1789–90) and the state are both printed 'New York'.
+  - 'New York'
+  - 'New-York'
   - 'Greene county'
   - 'Lincoln county'
   - 'Delaware counties'

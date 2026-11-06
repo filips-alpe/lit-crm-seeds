@@ -1,3 +1,7 @@
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import * as YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
 import { buildAliasIndex, findMentions, unlinkedCandidates, type Gazetteer } from './entities';
 
@@ -85,6 +89,22 @@ describe('entity resolution', () => {
     expect(
       findMentions('in Lincoln county', index, 'lincoln-tribute').map((m) => [m.surface, m.entity]),
     ).toEqual([['Lincoln county', null]]);
+  });
+
+  it('leaves New York unlinked: the city and the state print the same (real gazetteer)', () => {
+    const real = buildAliasIndex(
+      YAML.parse(
+        readFileSync(resolve(dirname(fileURLToPath(import.meta.url)), 'gazetteer.yaml'), 'utf8'),
+      ) as Gazetteer,
+    );
+    for (const text of [
+      'I arrived at New York on the 21st of March',
+      'the convention of New-York approved',
+    ]) {
+      expect(
+        findMentions(text, real, 'autobiography-4').filter((m) => /New.York/.test(m.surface)),
+      ).toMatchObject([{ entity: null }]);
+    }
   });
 
   it('offsets slice back to the surface text', () => {

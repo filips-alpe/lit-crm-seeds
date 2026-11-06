@@ -16,20 +16,20 @@ Source: Internet Archive `writingsofthomas0000vari_v5r4` (Lipscomb & Bergh, vols
 | `editorial` | 5 |
 | `memoir` | 4 |
 | **documents** | **217** |
-| `place` | 191 |
+| `place` | 190 |
 | `person` | 143 |
 | `organization` | 49 |
 | `work` | 31 |
-| **entities** | **414** |
+| **entities** | **413** |
 
 Document text: 263,026 words.
 
 ## Linking
 
-- Linked mentions: **5,210** across 207 of 217 documents.
-- Gazetteer matches left unlinked as ambiguous: 2,789.
-- Link rate over gazetteer matches: **65.1%**.
-- Further name-like phrases the gazetteer does not cover (honorific + name, or capitalised runs in mid-sentence): 749. Counting them as missed mentions gives a lower-bound link rate of **59.6%**; many are not entities (titles of acts, sentence fragments), so the true rate is between the two.
+- Linked mentions: **5,129** across 207 of 217 documents.
+- Gazetteer matches left unlinked as ambiguous: 2,870.
+- Link rate over gazetteer matches: **64.1%**.
+- Further name-like phrases the gazetteer does not cover (honorific + name, or capitalised runs in mid-sentence): 749. Counting them as missed mentions gives a lower-bound link rate of **58.6%**; many are not entities (titles of acts, sentence fragments), so the true rate is between the two.
 
 ### Most mentioned entities
 
@@ -47,7 +47,6 @@ Document text: 263,026 words.
 | Logan (Mingo leader) | person | 107 | 3 |
 | Europe | place | 98 | 31 |
 | Ohio River | place | 86 | 19 |
-| New York (state) | place | 81 | 41 |
 | Michael Cresap | person | 75 | 2 |
 | Pennsylvania | place | 68 | 22 |
 | Paris | place | 67 | 13 |
@@ -60,6 +59,7 @@ Document text: 263,026 words.
 | Philadelphia | place | 38 | 20 |
 | Delaware (state) | place | 37 | 12 |
 | New Jersey | place | 37 | 13 |
+| Kentucky | place | 36 | 12 |
 
 ### Left unlinked: ambiguous names
 
@@ -76,6 +76,7 @@ Names that refer to more than one entity in this text. They are never guessed.
 | King | 120 |
 | Indian | 83 |
 | Speaker | 81 |
+| New York | 80 |
 | Parliament | 77 |
 | Governor | 70 |
 | Government | 68 |
@@ -106,7 +107,6 @@ Names that refer to more than one entity in this text. They are never guessed.
 | Secretary | 14 |
 | Americans | 11 |
 | Pickering | 11 |
-| Carolina | 10 |
 
 ### Left unlinked: names not in the gazetteer (top 60)
 
