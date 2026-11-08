@@ -1,0 +1,5 @@
+# Records set `hidden`: visible to admins only, whatever the grants. Each entry matches
+# records of one type whose title matches the regular expression. Private family
+# matters: the letters between Franklin and his loyalist son during the war and after.
+- type: letter
+  title: "^(William Franklin to Benjamin Franklin|Benjamin Franklin to William Franklin), .*(177[5-9]|178\\d)"

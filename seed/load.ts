@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import * as YAML from 'yaml';
 import type { SeedProjectMeta, SeedRecordFlat, SeedType } from './types-defs';
 import type { GeneratedRecord } from './pipeline/record-mapper';
+import type { SeedAmounts, SeedGrant, SeedGroup, SeedHidden } from './grants';
 
 const dataDir = resolve(dirname(fileURLToPath(import.meta.url)), 'data');
 const generatedDir = resolve(dirname(fileURLToPath(import.meta.url)), 'generated');
@@ -18,7 +19,7 @@ export type SeedUser = {
   bio?: string;
   color: string;
   avatarSeed?: string;
-  /** Sees every record through lit-crm's read-only RLS gateway role. */
+  /** Sees every record, hidden ones included, under lit-crm's row-level security. */
   isAdmin?: boolean;
 };
 
@@ -26,6 +27,10 @@ export const users = load<SeedUser[]>('user.yaml');
 
 export const types = load<SeedType[]>('types.yaml');
 export const projects = load<SeedProjectMeta[]>('projects.yaml');
+export const groups = load<SeedGroup[]>('groups.yaml');
+export const grants = load<SeedGrant[]>('grants.yaml');
+export const hidden = load<SeedHidden[]>('hidden.yaml');
+export const amounts = load<SeedAmounts[]>('amounts.yaml');
 
 /**
  * Records come entirely from the generated import (seed/generate.ts):

@@ -2,6 +2,16 @@ import { randomUUID } from 'node:crypto';
 import { createId } from '@paralleldrive/cuid2';
 import type { ClientBase } from 'pg';
 import type { SeedUser } from './load';
+import {
+  amountsByIndex,
+  hiddenIndexes,
+  recordIndex,
+  validateGrants,
+  type SeedAmounts,
+  type SeedGrant,
+  type SeedGroup,
+  type SeedHidden,
+} from './grants';
 import type { SeedProjectMeta, SeedRecordFlat, SeedType } from './types-defs';
 
 export type SeedData = {
@@ -9,6 +19,12 @@ export type SeedData = {
   types: SeedType[];
   projects: SeedProjectMeta[];
   records: SeedRecordFlat[];
+  /** Written only when lit-crm has the grant tables (see `seed`). */
+  groups?: SeedGroup[];
+  grants?: SeedGrant[];
+  /** Written only when lit_record has the `hidden` column. */
+  hidden?: SeedHidden[];
+  amounts?: SeedAmounts[];
 };
 
 export type SeedCounts = {
@@ -17,6 +33,12 @@ export type SeedCounts = {
   projects: number;
   records: number;
   links: number;
+  /** 0 when lit-crm has no grant tables / hidden column. */
+  groups: number;
+  memberships: number;
+  grants: number;
+  hidden: number;
+  amounts: number;
 };
 
 // Postgres allows 65535 bind parameters per statement; each batch stays under it.
@@ -26,6 +48,8 @@ const DEFAULT_COLOR = '#000000';
 
 // Children before parents, so foreign keys never block the wipe.
 const WIPE_ORDER = ['lit_project_record', 'lit_record', 'lit_project', 'lit_type', 'lit_user'];
+// Present only in lit-crm versions with grants; grants, then members, then groups.
+const GRANT_WIPE_ORDER = ['lit_grant', 'lit_group_member', 'lit_group'];
 
 /** Multi-row parameterised INSERT, split into batches under the parameter limit. */
 async function insertRows(
@@ -49,7 +73,8 @@ const iso = (s: string | undefined) => (s ? new Date(s).toISOString() : null);
 
 /**
  * Replace the contents of lit-crm's user, type, project, record and
- * project-link tables with `data`, in one transaction. DESTRUCTIVE: every
+ * project-link tables (and group, membership and grant tables, when they exist)
+ * with `data`, in one transaction. DESTRUCTIVE: every
  * existing row in those tables is deleted first.
  *
  * Ids are generated here because lit-crm's Prisma schema generates them in the
@@ -62,7 +87,24 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
 
   await client.query('BEGIN');
   try {
-    for (const table of WIPE_ORDER) await client.query(`DELETE FROM "${table}"`);
+    const rowCount = (r: { rowCount?: number | null; rows?: unknown[] }) =>
+      r.rowCount ?? r.rows?.length ?? 0;
+
+    // Older lit-crm versions lack the grant tables and lit_record.hidden. Look them up
+    // in information_schema and skip what is absent, so the seeds load into both.
+    const tables = await client.query(
+      `SELECT table_name FROM information_schema.tables
+       WHERE table_schema = current_schema() AND table_name IN ('lit_group', 'lit_group_member', 'lit_grant')`,
+    );
+    const hasGrants = rowCount(tables) === 3;
+    const hiddenCol = await client.query(
+      `SELECT 1 FROM information_schema.columns
+       WHERE table_schema = current_schema() AND table_name = 'lit_record' AND column_name = 'hidden'`,
+    );
+    const hasHidden = rowCount(hiddenCol) > 0;
+
+    for (const table of hasGrants ? [...GRANT_WIPE_ORDER, ...WIPE_ORDER] : WIPE_ORDER)
+      await client.query(`DELETE FROM "${table}"`);
 
     // lit_user.isAdmin exists only in lit-crm versions that carry the RLS gateway
     // migration. Write it when the column is there, so the seeds work against both.
@@ -70,7 +112,7 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       `SELECT 1 FROM information_schema.columns
        WHERE table_schema = current_schema() AND table_name = 'lit_user' AND column_name = 'isAdmin'`,
     );
-    const hasAdmin = (adminCol.rowCount ?? adminCol.rows?.length ?? 0) > 0;
+    const hasAdmin = rowCount(adminCol) > 0;
 
     const userId = new Map(users.map((u) => [u.username, createId()]));
     await insertRows(
@@ -158,6 +200,10 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       }),
     );
 
+    const hiddenIdx = hasHidden ? hiddenIndexes(records, data.hidden ?? []) : new Set<number>();
+    const sumByIdx = amountsByIndex(records, data.amounts ?? []);
+    const recordIds: string[] = [];
+
     const links: unknown[][] = [];
     const recordRows = records.map((r, i) => {
       const tid = typeId.get(r.type);
@@ -172,6 +218,7 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       // to keep a strict order even when entries share a day.
       const createdAt = new Date(new Date(r.entered).getTime() + i).toISOString();
       const id = randomUUID();
+      recordIds.push(id);
       for (const code of r.projects) {
         const pid = projectId.get(code);
         if (!pid) throw new Error(`Unknown project: ${code}`);
@@ -199,6 +246,8 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
         tid,
         creator,
         assignee,
+        ...(hasHidden ? [hiddenIdx.has(i)] : []),
+        ...(sumByIdx.size ? [sumByIdx.get(i) ?? null, sumByIdx.get(i) ?? null] : []),
       ];
     });
 
@@ -225,10 +274,73 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
         'typeId',
         'creatorId',
         'assigneeId',
+        ...(hasHidden ? ['hidden'] : []),
+        ...(sumByIdx.size ? ['sum', 'total'] : []),
       ],
       recordRows,
     );
     await insertRows(client, 'lit_project_record', ['projectId', 'recordId'], links);
+
+    let groupCount = 0;
+    let memberCount = 0;
+    let grantCount = 0;
+    const groups = data.groups ?? [];
+    const grants = data.grants ?? [];
+    if (hasGrants && (groups.length || grants.length)) {
+      validateGrants(
+        groups,
+        grants,
+        {
+          users: new Set(userId.keys()),
+          groups: new Set(groups.map((g) => g.name)),
+          projects: new Set(projectId.keys()),
+          types: new Set(typeId.keys()),
+        },
+        records,
+      );
+      const groupId = new Map(groups.map((g) => [g.name, createId()]));
+      await insertRows(
+        client,
+        'lit_group',
+        ['id', 'updatedAt', 'name', 'description'],
+        groups.map((g) => [groupId.get(g.name), now, g.name, g.description ?? null]),
+      );
+      const members = groups.flatMap((g) =>
+        g.members.map((u) => [groupId.get(g.name), userId.get(u)]),
+      );
+      await insertRows(client, 'lit_group_member', ['groupId', 'userId'], members);
+      await insertRows(
+        client,
+        'lit_grant',
+        [
+          'id',
+          'updatedAt',
+          'userId',
+          'groupId',
+          'personId',
+          'projectId',
+          'typeId',
+          'recordId',
+          'level',
+          'hideAmounts',
+        ],
+        grants.map((g) => [
+          createId(),
+          now,
+          g.user ? userId.get(g.user) : null,
+          g.group ? groupId.get(g.group) : null,
+          g.person ? userId.get(g.person) : null,
+          g.project ? projectId.get(g.project) : null,
+          g.type ? typeId.get(g.type) : null,
+          g.record ? recordIds[recordIndex(records, g.record)] : null,
+          g.level ?? 'READ',
+          g.hideAmounts ?? false,
+        ]),
+      );
+      groupCount = groups.length;
+      memberCount = members.length;
+      grantCount = grants.length;
+    }
 
     await client.query('COMMIT');
     return {
@@ -237,6 +349,11 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       projects: projects.length,
       records: records.length,
       links: links.length,
+      groups: groupCount,
+      memberships: memberCount,
+      grants: grantCount,
+      hidden: hiddenIdx.size,
+      amounts: sumByIdx.size,
     };
   } catch (e) {
     await client.query('ROLLBACK');

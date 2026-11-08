@@ -1,0 +1,15 @@
+# Demo groups. Members are usernames from user.yaml. Groups are what grants.yaml
+# targets when a circle, not a single person, is meant. Loaded only into lit-crm
+# versions that have the group tables.
+- name: family
+  description: The Franklin household and its kin.
+  members: [dfranklin, wfranklin, sbache, wtfranklin]
+- name: craven-street
+  description: The Craven Street household in the Strand, London, 1757-1775.
+  members: [mstevenson, phewson]
+- name: natural-philosophy
+  description: Correspondents of the natural-philosophy letters and essays.
+  members: [pcollinson, estiles, phewson]
+- name: passy-circle
+  description: The Auteuil and Passy circle, France, 1777-1785.
+  members: [ahelvetius, jcaillot, montgolfier, lafayette]

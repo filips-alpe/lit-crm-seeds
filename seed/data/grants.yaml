@@ -1,0 +1,49 @@
+# Demo grants. Target: `user: <username>` or `group: <name>`. Scope, exactly one of
+# `person: <username>` (records that person created or is assigned to),
+# `project: <code>`, `type: <code>` or `record: {type, title}` (the title must match
+# exactly one record of that type). `level` is READ or WRITE (default READ);
+# `hideAmounts: true` masks sum, hours and total on records reached only through hiding
+# grants. Without any grant, the creator and assignee of a record, and of a project (for
+# every record in it), already have WRITE. Loaded only into lit-crm versions with the
+# grant tables.
+
+# Group, project scope, READ: the household follows the Philadelphia years.
+- group: family
+  project: periode-philadelphie-1723-1757
+  level: READ
+
+# Person scope, WRITE, amounts hidden: the grandson and secretary works on Franklin's own
+# papers, but not on what the accounts show.
+- user: wtfranklin
+  person: bfranklin
+  level: WRITE
+  hideAmounts: true
+
+# Group, type scope, READ, amounts hidden: the landlady's circle reads the accounts.
+- group: craven-street
+  type: account
+  level: READ
+  hideAmounts: true
+
+# Record scope, WRITE. Together with the grant above this is the READ vs WRITE contrast:
+# Polly may read every account (amounts hidden) but may correct only her mother's bill.
+- user: phewson
+  record:
+    type: account
+    title: 'Margaret Stevenson to Benjamin Franklin: Bill, 18 October 1765'
+  level: WRITE
+
+# Group, type scope, READ, amounts visible: the natural-philosophy circle reads the essays.
+- group: natural-philosophy
+  type: essay
+  level: READ
+
+# Project scope, WRITE: a French friend keeps the notes of the alliance negotiations.
+- user: lafayette
+  project: theme-alliance-france
+  level: WRITE
+
+# User, type scope, READ: the abolitionist reads the petitions.
+- user: gsharp
+  type: petition
+  level: READ

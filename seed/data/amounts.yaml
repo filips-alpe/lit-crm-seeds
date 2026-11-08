@@ -1,0 +1,6 @@
+# The generated import carries no amounts. So that amount masking shows in real data,
+# every `every`-th record of the type (counting from the first) gets `sum` (and the same
+# `total`), cycling through `sums`. Deterministic. Loaded as is; no column check needed.
+- type: account
+  every: 3
+  sums: [4.5, 12, 30.25, 88, 156.75]
