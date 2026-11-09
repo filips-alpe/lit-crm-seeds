@@ -1,6 +1,6 @@
 # lit-crm-seeds
 
-The Benjamin Franklin demo dataset for [lit-crm](https://github.com/filips-alpe/lit-crm): 25,827 records from Founders Online and Wikidata, 17 of the people around him as users, 12 types, 23 projects, plus demo groups, grants, hidden records and amounts for lit-crm's permission model. It has three parts:
+The demo datasets for [lit-crm](https://github.com/filips-alpe/lit-crm): Benjamin Franklin's world (25,827 records from Founders Online and Wikidata, 17 of the people around him as users, 12 types, 23 projects) and 630 records from volumes I–II of Lipscomb & Bergh's _Writings of Thomas Jefferson_ (documents and linked entities, 11 types, 5,129 mentions of entities in document text), plus plus demo groups, grants, hidden records and amounts for lit-crm's permission model. It has three parts:
 
 - `seed/`: the data pipeline (committed source snapshots, generator, generated records) and the loader.
 - `extension/`: the `franklin` lit-crm extension, with a renderer for each type and a dashboard for each user.
@@ -19,7 +19,7 @@ bun install
 bun run seed --db "postgresql://postgres:postgres@localhost:5433/lit_crm?schema=public"
 ```
 
-> **This deletes every user, type, project and record** in the database it is pointed at (and every group, membership and grant, when the database has those tables), then loads 17 users, 12 types, 23 projects, 25,827 records and 26,118 project links, plus the permission demo below, in one transaction. `--db` is required: there is no default and no environment fallback, so it cannot hit a database by accident. Do not point it at a database that holds data you want to keep.
+> **This deletes every user, type, project and record** in the database it is pointed at (and every group, membership and grant, when the database has those tables), then loads 17 users, 23 types, 23 projects, 26,457 records (25,827 Franklin, 630 Jefferson), 26,118 project links and 5,129 record mentions, plus the permission demo below, in one transaction. `--db` is required: there is no default and no environment fallback, so it cannot hit a database by accident. Do not point it at a database that holds data you want to keep.
 
 ### The permission demo
 
@@ -38,6 +38,8 @@ Targets and scopes are natural keys (usernames, group names, project and type co
 
 Compatibility: the loader looks up the grant tables (`lit_group`, `lit_group_member`, `lit_grant`), `lit_record.hidden` and `lit_user.isAdmin` in `information_schema` and writes only what exists. Against a database migrated with an older lit-crm (before the grants or even the RLS migrations), it loads exactly the users, types, projects, records and links as before and prints that groups and grants were skipped (the amounts are still stored, they are an ordinary `lit_record` column). The loader connects as the table owner, so row-level security and lit-crm's guard triggers do not apply to it. Ids and `updatedAt` are set by the loader itself (lit-crm's Prisma schema generates them client-side).
 
+The Jefferson records are documents and entities (people, places, organisations, works) with no creator and no project; a mention is a span of a document's `text` that names an entity, stored in `lit_record_mention`. They are built by `seed/sources/jefferson/` (see its README) and load after the Franklin records. Compatibility: when the database has no `lit_record_mention` table (a lit-crm from before record mentions), the Jefferson records still load and the mentions are skipped with a note; the loader writes mentions exactly when the table exists. Against a database with the grant tables and the mentions table it writes both.
+
 Edit the YAML files to change the demo; `bun run test` checks the loader against both schema shapes.
 
 ## Install the extension
@@ -55,7 +57,7 @@ bun run ext install ../lit-crm-seeds --path extension
 
 ```sh
 bun install
-bun run test    # pipeline, classifier, types and loader tests (loader: with and without the grant tables)
+bun run test    # pipeline, classifier, types, Jefferson and loader tests (loader: with and without the grant and mentions tables)
 bun run check   # tsc
 bun run lint    # prettier
 ```
@@ -70,6 +72,9 @@ The records are generated from snapshots committed in `seed/sources/`. Generatio
 bun run generate                                  # snapshots -> seed/generated/ and seed/data/projects.yaml
 bun seed/sources/extract-fo.ts <path>             # rebuild the Founders Online snapshot from the raw metadata dump
 bun seed/sources/wikidata/fetch.ts                # refetch the Wikidata snapshot (network)
+bun seed/sources/smyth/fetch.ts                   # cache the Smyth OCR once (network); then smyth/build.ts, then generate
+bun seed/sources/jefferson/fetch.ts               # cache the Jefferson OCR once (network)
+bun seed/sources/jefferson/build.ts               # rebuild the Jefferson dataset from that cache
 ```
 
 Types are defined in `seed/data/types.yaml`, users in `seed/data/user.yaml`. The generator assigns each record a type from its source data:
@@ -89,7 +94,7 @@ Types are defined in `seed/data/types.yaml`, users in `seed/data/user.yaml`. The
 | `petition`    | 71      | Founders Online | Petitions, memorials, proposals          |
 | `document`    | 47      | Founders Online | Other documents                          |
 
-Founders Online types are assigned from document titles, so some documents outside `letter` land in a neighbouring type. Wikidata people are matched by name, so a few obscure names may be the wrong person. Only 17 records have full text.
+Founders Online types are assigned from document titles, so some documents outside `letter` land in a neighbouring type. Wikidata people are matched by name, so a few obscure names may be the wrong person. Only a small share of records have full text (1,022 of 25,827), and most of it is uncorrected OCR from Smyth's 1905-07 edition (see `seed/sources/smyth/REPORT.md`).
 
 ## Data sources and licensing
 
@@ -100,4 +105,4 @@ The data is not ours and is not covered by the MIT license. It comes from:
 - [Founders Online](https://founders.archives.gov/) (National Archives and the University of Virginia Press). Its own terms of use apply to the metadata and text taken from it; check them before reusing the data.
 - [Wikidata](https://www.wikidata.org/), released under CC0.
 
-Full text where present comes from public-domain sources (Wikisource, Gutenberg).
+Full text where present comes from public-domain sources (Wikisource, Gutenberg, and Internet Archive OCR of Smyth's _Writings of Benjamin Franklin_ and Lipscomb & Bergh's _Writings of Thomas Jefferson_).

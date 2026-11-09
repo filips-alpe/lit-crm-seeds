@@ -1,4 +1,4 @@
-/** Shape of prisma/seed/generated/jefferson.generated.json (written by build.ts, read by the seeder). */
+/** Shape of seed/generated/jefferson.generated.json (written by build.ts, read by the seeder). */
 
 /** A record in the generated dataset; `key` is stable across rebuilds. */
 export type JeffersonRecord = {

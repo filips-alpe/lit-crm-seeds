@@ -1,4 +1,4 @@
-/** Checks the committed generated dataset (prisma/seed/generated/jefferson.generated.json). */
+/** Checks the committed generated dataset (seed/generated/jefferson.generated.json). */
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';

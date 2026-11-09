@@ -1,12 +1,12 @@
 /**
  * Builds the Jefferson dataset from the cached Internet Archive OCR.
  *
- * Run with: `bunx tsx prisma/seed/sources/jefferson/build.ts [cacheDir]`
+ * Run with: `bun seed/sources/jefferson/build.ts [cacheDir]`
  * Reads:    .workflow/scratch/jefferson/{raw.txt,page_numbers.json}  (see fetch.ts)
- *           prisma/seed/sources/jefferson/gazetteer.yaml             (curated entities)
- * Writes:   prisma/seed/generated/jefferson.generated.json            (records, entities, mentions)
- *           prisma/seed/sources/jefferson/corrections.tsv             (every OCR correction)
- *           prisma/seed/sources/jefferson/REPORT.md                   (counts, link rate, issues)
+ *           seed/sources/jefferson/gazetteer.yaml             (curated entities)
+ * Writes:   seed/generated/jefferson.generated.json            (records, entities, mentions)
+ *           seed/sources/jefferson/corrections.tsv             (every OCR correction)
+ *           seed/sources/jefferson/REPORT.md                   (counts, link rate, issues)
  *
  * Deterministic: no network, no randomness, stable ordering.
  */

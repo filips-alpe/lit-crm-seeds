@@ -17,13 +17,7 @@
  */
 
 export type DocumentTypeCode =
-  | 'memoir'
-  | 'memorandum'
-  | 'epistle'
-  | 'paper'
-  | 'query'
-  | 'rule'
-  | 'editorial';
+  'memoir' | 'memorandum' | 'epistle' | 'paper' | 'query' | 'rule' | 'editorial';
 
 export type ContentsEntry = {
   key: string;

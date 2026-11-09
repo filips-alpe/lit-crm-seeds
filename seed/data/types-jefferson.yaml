@@ -1,4 +1,4 @@
-# Types for the Jefferson dataset (prisma/seed/sources/jefferson). Kept apart
+# Types for the Jefferson dataset (seed/sources/jefferson). Kept apart
 # from types.yaml so the Franklin types, and their renderers and counts, are
 # unchanged. The rationale for each type is in sources/jefferson/README.md.
 # None selects a renderer: records use the generic view, and the best page

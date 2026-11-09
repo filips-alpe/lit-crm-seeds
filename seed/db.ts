@@ -13,6 +13,8 @@ import {
   type SeedHidden,
 } from './grants';
 import type { SeedProjectMeta, SeedRecordFlat, SeedType } from './types-defs';
+import { jeffersonRows, firstEnteredByType as jeffersonFirstEntered } from './jefferson';
+import type { JeffersonDataset } from './sources/jefferson/dataset';
 
 export type SeedData = {
   users: SeedUser[];
@@ -25,6 +27,12 @@ export type SeedData = {
   /** Written only when lit_record has the `hidden` column. */
   hidden?: SeedHidden[];
   amounts?: SeedAmounts[];
+  /**
+   * Jefferson documents and entities, loaded after the Franklin records, and the
+   * mentions linking them. Mentions are written only when lit-crm has
+   * lit_record_mention; the Jefferson records are loaded either way.
+   */
+  jefferson?: JeffersonDataset;
 };
 
 export type SeedCounts = {
@@ -39,6 +47,10 @@ export type SeedCounts = {
   grants: number;
   hidden: number;
   amounts: number;
+  /** Jefferson records (documents and entities), included in `records`. */
+  jeffersonRecords: number;
+  /** 0 when lit-crm has no lit_record_mention table. */
+  mentions: number;
 };
 
 // Postgres allows 65535 bind parameters per statement; each batch stays under it.
@@ -49,6 +61,8 @@ const DEFAULT_COLOR = '#000000';
 // Children before parents, so foreign keys never block the wipe.
 const WIPE_ORDER = ['lit_project_record', 'lit_record', 'lit_project', 'lit_type', 'lit_user'];
 // Present only in lit-crm versions with grants; grants, then members, then groups.
+// Present only in lit-crm versions with record mentions; before the records they point at.
+const MENTION_TABLE = 'lit_record_mention';
 const GRANT_WIPE_ORDER = ['lit_grant', 'lit_group_member', 'lit_group'];
 
 /** Multi-row parameterised INSERT, split into batches under the parameter limit. */
@@ -82,7 +96,7 @@ const iso = (s: string | undefined) => (s ? new Date(s).toISOString() : null);
  * database. `updatedAt` is likewise set explicitly.
  */
 export async function seed(client: ClientBase, data: SeedData): Promise<SeedCounts> {
-  const { users, types, projects, records } = data;
+  const { users, types, projects, records, jefferson } = data;
   const now = new Date().toISOString();
 
   await client.query('BEGIN');
@@ -103,8 +117,18 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
     );
     const hasHidden = rowCount(hiddenCol) > 0;
 
-    for (const table of hasGrants ? [...GRANT_WIPE_ORDER, ...WIPE_ORDER] : WIPE_ORDER)
-      await client.query(`DELETE FROM "${table}"`);
+    const mentionTable = await client.query(
+      `SELECT table_name FROM information_schema.tables
+       WHERE table_schema = current_schema() AND table_name = '${MENTION_TABLE}'`,
+    );
+    const hasMentions = rowCount(mentionTable) > 0;
+
+    const wipe = [
+      ...(hasGrants ? GRANT_WIPE_ORDER : []),
+      ...(hasMentions ? [MENTION_TABLE] : []),
+      ...WIPE_ORDER,
+    ];
+    for (const table of wipe) await client.query(`DELETE FROM "${table}"`);
 
     // lit_user.isAdmin exists only in lit-crm versions that carry the RLS gateway
     // migration. Write it when the column is there, so the seeds work against both.
@@ -149,6 +173,10 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       const d = new Date(r.entered);
       const cur = firstEntered.get(r.type);
       if (!cur || d < cur) firstEntered.set(r.type, d);
+    }
+    for (const [code, d] of jefferson ? jeffersonFirstEntered(jefferson) : []) {
+      const cur = firstEntered.get(code);
+      if (!cur || d < cur) firstEntered.set(code, d);
     }
 
     const typeId = new Map(types.map((t) => [t.code, createId()]));
@@ -251,6 +279,35 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       ];
     });
 
+    // The Jefferson dataset: documents and entities are ordinary records with no
+    // creator, assignee or project, loaded after the Franklin ones.
+    const j = jefferson
+      ? jeffersonRows(jefferson, typeId, randomUUID)
+      : { records: [], mentions: [] };
+    const jRows = j.records.map((r) => [
+      r.id,
+      r.createdAt.toISOString(),
+      now,
+      r.title,
+      r.description ?? null,
+      r.text ?? null,
+      r.note ?? null,
+      r.references,
+      r.date ? r.date.toISOString() : null,
+      null,
+      null,
+      null,
+      r.from ?? null,
+      r.to ?? null,
+      null,
+      null,
+      r.typeId,
+      null,
+      null,
+      ...(hasHidden ? [false] : []),
+      ...(sumByIdx.size ? [null, null] : []),
+    ]);
+
     await insertRows(
       client,
       'lit_record',
@@ -277,9 +334,20 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
         ...(hasHidden ? ['hidden'] : []),
         ...(sumByIdx.size ? ['sum', 'total'] : []),
       ],
-      recordRows,
+      [...recordRows, ...jRows],
     );
     await insertRows(client, 'lit_project_record', ['projectId', 'recordId'], links);
+
+    let mentionCount = 0;
+    if (hasMentions && j.mentions.length) {
+      await insertRows(
+        client,
+        MENTION_TABLE,
+        ['id', 'sourceId', 'entityId', 'start', 'end'],
+        j.mentions.map((m) => [createId(), m.sourceId, m.entityId, m.start, m.end]),
+      );
+      mentionCount = j.mentions.length;
+    }
 
     let groupCount = 0;
     let memberCount = 0;
@@ -347,13 +415,15 @@ export async function seed(client: ClientBase, data: SeedData): Promise<SeedCoun
       users: users.length,
       types: types.length,
       projects: projects.length,
-      records: records.length,
+      records: records.length + j.records.length,
       links: links.length,
       groups: groupCount,
       memberships: memberCount,
       grants: grantCount,
       hidden: hiddenIdx.size,
       amounts: sumByIdx.size,
+      jeffersonRecords: j.records.length,
+      mentions: mentionCount,
     };
   } catch (e) {
     await client.query('ROLLBACK');

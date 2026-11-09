@@ -1,14 +1,25 @@
 import type { ClientBase } from 'pg';
 import { describe, expect, it } from 'vitest';
 import { seed, type SeedData } from './db';
+import type { JeffersonDataset } from './sources/jefferson/dataset';
 
 type Call = { sql: string; params: unknown[] };
 
 function fakeClient(
   failOn?: RegExp,
-  opts: { isAdminColumn?: boolean; grantTables?: boolean; hiddenColumn?: boolean } = {},
+  opts: {
+    isAdminColumn?: boolean;
+    grantTables?: boolean;
+    hiddenColumn?: boolean;
+    mentionTable?: boolean;
+  } = {},
 ) {
-  const { isAdminColumn = true, grantTables = false, hiddenColumn = false } = opts;
+  const {
+    isAdminColumn = true,
+    grantTables = false,
+    hiddenColumn = false,
+    mentionTable = false,
+  } = opts;
   const one = { rows: [{ '?column?': 1 }], rowCount: 1 };
   const none = { rows: [], rowCount: 0 };
   const calls: Call[] = [];
@@ -16,6 +27,7 @@ function fakeClient(
     query: async (sql: string, params: unknown[] = []) => {
       calls.push({ sql, params });
       if (failOn?.test(sql)) throw new Error('boom');
+      if (sql.includes("'lit_record_mention'")) return mentionTable ? one : none;
       if (sql.includes('information_schema.tables'))
         return grantTables ? { rows: [{}, {}, {}], rowCount: 3 } : none;
       if (sql.includes("'hidden'")) return hiddenColumn ? one : none;
@@ -71,7 +83,7 @@ describe('seed', () => {
     const counts = await seed(client, data(5));
     const sqls = calls.map((c) => c.sql);
     expect(sqls[0]).toBe('BEGIN');
-    expect(sqls.slice(1, 8).filter((s) => s.startsWith('DELETE'))).toEqual([
+    expect(sqls.slice(1, 10).filter((s) => s.startsWith('DELETE'))).toEqual([
       'DELETE FROM "lit_project_record"',
       'DELETE FROM "lit_record"',
       'DELETE FROM "lit_project"',
@@ -90,6 +102,8 @@ describe('seed', () => {
       grants: 0,
       hidden: 0,
       amounts: 0,
+      jeffersonRecords: 0,
+      mentions: 0,
     });
   });
 
@@ -206,5 +220,85 @@ describe('seed with grants', () => {
       expect(calls.some((c) => c.sql.startsWith('INSERT INTO "lit_grant"'))).toBe(false);
       expect(calls.at(-1)?.sql).toBe('ROLLBACK');
     }
+  });
+});
+
+describe('seed with the Jefferson dataset', () => {
+  const jefferson: JeffersonDataset = {
+    source: { item: 'x', url: 'u', edition: 'e' },
+    records: [
+      {
+        key: 'doc',
+        type: 'memoir',
+        title: 'Autobiography',
+        text: 'I met Hamilton.',
+        references: ['r'],
+        entered: '1821-01-06',
+        date: '1821-01-06',
+        from: 'Thomas Jefferson',
+      },
+      {
+        key: 'ham',
+        type: 'person',
+        title: 'Alexander Hamilton',
+        references: [],
+        entered: '1791-08-13',
+      },
+    ],
+    mentions: [{ record: 'doc', entity: 'ham', start: 6, end: 14 }],
+  };
+  const withJ = (): SeedData => {
+    const d = data(2);
+    d.types.push(
+      { code: 'memoir', description: 'M', color: '#666', layout: { fields: [] } },
+      { code: 'person', description: 'P', color: '#777', layout: { fields: [] } },
+    );
+    return { ...d, jefferson };
+  };
+
+  it('writes the records and the mentions when lit_record_mention exists, wiping mentions first', async () => {
+    const { client, calls } = fakeClient(undefined, { mentionTable: true });
+    const counts = await seed(client, withJ());
+    const sqls = calls.map((c) => c.sql);
+    const dels = sqls.filter((s) => s.startsWith('DELETE'));
+    expect(dels.slice(0, 2)).toEqual([
+      'DELETE FROM "lit_record_mention"',
+      'DELETE FROM "lit_project_record"',
+    ]);
+    const rec = calls.find((c) => c.sql.startsWith('INSERT INTO "lit_record"'))!;
+    const width = rec.params.length / 4; // 2 Franklin + 2 Jefferson
+    const ids = [0, 1, 2, 3].map((i) => rec.params[i * width]);
+    expect(rec.params[2 * width + 3]).toBe('Autobiography');
+    expect(rec.params[2 * width + 17]).toBeNull(); // no creator
+    const men = calls.find((c) => c.sql.startsWith('INSERT INTO "lit_record_mention"'))!;
+    expect(men.params.slice(1)).toEqual([ids[2], ids[3], 6, 14]);
+    expect(sqls.indexOf(men.sql)).toBeGreaterThan(sqls.indexOf(rec.sql));
+    expect(counts).toMatchObject({ records: 4, jeffersonRecords: 2, mentions: 1, links: 3 });
+  });
+
+  it('loads the records but skips mentions against a schema without lit_record_mention', async () => {
+    const { client, calls } = fakeClient();
+    const counts = await seed(client, withJ());
+    expect(
+      calls.some((c) => c.sql.includes('lit_record_mention') && c.sql.startsWith('DELETE')),
+    ).toBe(false);
+    expect(calls.some((c) => c.sql.startsWith('INSERT INTO "lit_record_mention"'))).toBe(false);
+    expect(counts).toMatchObject({ records: 4, jeffersonRecords: 2, mentions: 0 });
+  });
+
+  it('keeps every record column the same width with hidden and amounts columns present', async () => {
+    const { client, calls } = fakeClient(undefined, { hiddenColumn: true, mentionTable: true });
+    const d = { ...withJ(), amounts: [{ type: 'letter', every: 1, sums: [5] }] };
+    await seed(client, d);
+    const rec = calls.find((c) => c.sql.startsWith('INSERT INTO "lit_record"'))!;
+    expect(rec.params.length % 4).toBe(0);
+  });
+
+  it('rejects a mention of an unknown record', async () => {
+    const { client, calls } = fakeClient(undefined, { mentionTable: true });
+    const d = withJ();
+    d.jefferson!.mentions = [{ record: 'doc', entity: 'nope', start: 0, end: 1 }];
+    await expect(seed(client, d)).rejects.toThrow(/unknown record/);
+    expect(calls.at(-1)?.sql).toBe('ROLLBACK');
   });
 });

@@ -7,17 +7,17 @@ Counts, link rate, OCR issues and unlinked names are in [`REPORT.md`](REPORT.md)
 ## Running it
 
 ```sh
-bunx tsx prisma/seed/sources/jefferson/fetch.ts   # network, once: caches raw.txt + page_numbers.json
-bunx tsx prisma/seed/sources/jefferson/build.ts   # no network: writes the files below
-bunx prisma db seed                                # loads them with the Franklin data
+bun seed/sources/jefferson/fetch.ts   # network, once: caches raw.txt + page_numbers.json
+bun seed/sources/jefferson/build.ts   # no network: writes the files below
+bun run seed --db <postgres-url>               # in lit-crm-seeds: loads them with the Franklin data
 ```
 
 `fetch.ts` downloads two files into `.workflow/scratch/jefferson/`, which is gitignored like the Smyth cache, and skips any file that is already there. It sends the User-Agent `lit-crm-seed/1.0 (one-off download of public-domain text for a research seed dataset)`. `build.ts` reads only that cache and `gazetteer.yaml`. Its output is deterministic: two runs give byte-identical files. It writes:
 
-- `prisma/seed/generated/jefferson.generated.json`: documents, entities and mentions. This file is committed, and it is what the seed reads.
+- `seed/generated/jefferson.generated.json`: documents, entities and mentions. This file is committed, and it is what the seed reads.
 - `REPORT.md` and `corrections.tsv` in this folder.
 
-The seed adds the Jefferson records after the Franklin ones and leaves the Franklin records and types unchanged. The Jefferson types live in `prisma/seed/data/types-jefferson.yaml`.
+The seed adds the Jefferson records after the Franklin ones and leaves the Franklin records and types unchanged. The Jefferson types live in `seed/data/types-jefferson.yaml`.
 
 ## Pipeline
 

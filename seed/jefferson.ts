@@ -1,6 +1,6 @@
 /**
  * Maps the Jefferson dataset to database rows. Pure (ids come from `newId`),
- * so it is unit-tested without a database; index.ts inserts the rows.
+ * so it is unit-tested without a database; db.ts inserts the rows.
  *
  * Documents and entities are ordinary records. Records carry no creator: the
  * author is the `from` text field, so the Franklin-world users' dashboards

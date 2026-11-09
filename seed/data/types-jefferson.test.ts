@@ -3,7 +3,6 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
-import { typeSchema } from '../../../src/lib/schemas/types';
 import type { SeedType } from '../types-defs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -11,9 +10,10 @@ const read = (f: string) => YAML.parse(readFileSync(resolve(here, f), 'utf8')) a
 const jefferson = read('types-jefferson.yaml');
 
 describe('seed types-jefferson.yaml', () => {
-  it.each(jefferson.map((t) => t.code))('%s parses with typeSchema', (code) => {
-    const parsed = typeSchema.safeParse(jefferson.find((t) => t.code === code));
-    expect(parsed.error?.issues ?? []).toEqual([]);
+  // That these parse with lit-crm's own typeSchema is checked in
+  // extension/seed-types.test.ts, which runs inside lit-crm.
+  it('defines types', () => {
+    expect(jefferson.length).toBeGreaterThan(0);
   });
 
   it('shares no code with the Franklin types', () => {

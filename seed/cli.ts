@@ -1,13 +1,23 @@
 import pg from 'pg';
 import { seed } from './db';
 import { parseDbUrl } from './db-url';
-import { users, types, projects, records, groups, grants, hidden, amounts } from './load';
+import {
+  users,
+  types,
+  projects,
+  records,
+  groups,
+  grants,
+  hidden,
+  amounts,
+  jefferson,
+} from './load';
 
 const USAGE = `Usage: bun run seed --db <postgres-url>
 
-Loads the Franklin demo data into a lit-crm database (lit_user, lit_type,
-lit_project, lit_record, lit_project_record, and lit_group, lit_group_member,
-lit_grant when the database has them). The schema must already be
+Loads the Franklin and Jefferson demo data into a lit-crm database (lit_user, lit_type,
+lit_project, lit_record, lit_project_record, and lit_record_mention, lit_group,
+lit_group_member, lit_grant when the database has them). The schema must already be
 migrated (bunx prisma migrate deploy, in lit-crm).
 
 WARNING: this DELETES every user, type, project and record in the target
@@ -55,10 +65,17 @@ async function main() {
       grants,
       hidden,
       amounts,
+      jefferson,
     });
     console.log(
       `Seeded ${counts.users} users, ${counts.types} types, ${counts.projects} projects, ` +
-        `${counts.records} records, ${counts.links} project links.`,
+        `${counts.records} records (${counts.jeffersonRecords} Jefferson), ${counts.links} project links.`,
+    );
+    console.log(
+      `${counts.mentions} record mentions.` +
+        (counts.mentions === 0 && jefferson.mentions.length > 0
+          ? ' (This lit-crm has no lit_record_mention table: mentions skipped.)'
+          : ''),
     );
     console.log(
       `${counts.groups} groups, ${counts.memberships} memberships, ${counts.grants} grants, ` +

@@ -4,7 +4,7 @@
  * public domain) into a local, uncommitted cache. Only this step touches the
  * network; build.ts reads the cache.
  *
- * Run with: `bunx tsx prisma/seed/sources/jefferson/fetch.ts [cacheDir]`
+ * Run with: `bun seed/sources/jefferson/fetch.ts [cacheDir]`
  * Writes:   .workflow/scratch/jefferson/{raw.txt,page_numbers.json} (skipped if present)
  */
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';

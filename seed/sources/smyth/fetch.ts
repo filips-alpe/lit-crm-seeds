@@ -3,7 +3,7 @@
  * Franklin" (10 vols, 1905-07, public domain) into a local, uncommitted cache.
  * Only this step touches the network; matching reads the cache.
  *
- * Run with: `tsx prisma/seed/sources/smyth/fetch.ts [cacheDir]`
+ * Run with: `tsx seed/sources/smyth/fetch.ts [cacheDir]`
  * Writes:   .workflow/scratch/smyth/vol-NN.txt (one per volume, skipped if present)
  */
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
