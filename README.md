@@ -1,6 +1,6 @@
 # lit-crm-seeds
 
-The demo datasets for [lit-crm](https://github.com/filips-alpe/lit-crm): Benjamin Franklin's world (25,827 records from Founders Online and Wikidata, 17 of the people around him as users, 12 types, 23 projects) and 630 records from volumes I–II of Lipscomb & Bergh's _Writings of Thomas Jefferson_ (documents and linked entities, 11 types, 5,129 mentions of entities in document text), plus plus demo groups, grants, hidden records and amounts for lit-crm's permission model. It has three parts:
+The demo datasets for [lit-crm](https://github.com/filips-alpe/lit-crm): Benjamin Franklin's world (25,827 records from Founders Online and Wikidata, 17 of the people around him as users, 12 types, 23 projects) and 630 records from volumes I–II of Lipscomb & Bergh's _Writings of Thomas Jefferson_ (documents and linked entities, 11 types, 5,129 mentions of entities in document text), plus demo groups, grants, hidden records and amounts for lit-crm's permission model. It has three parts:
 
 - `seed/`: the data pipeline (committed source snapshots, generator, generated records) and the loader.
 - `extension/`: the `franklin` lit-crm extension, with a renderer for each type and a dashboard for each user.
