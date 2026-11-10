@@ -90,17 +90,17 @@ describe('project assignees (so the gateway project rule shows in the data)', ()
     expect(Object.keys(ASSIGNEES).sort()).toEqual(Object.keys(expected()).sort());
   });
 
-  it('every assignee is a seeded non-admin user', () => {
+  it('every assignee is a seeded user', () => {
     const byName = new Map(users.map((u) => [u.username, u]));
     for (const p of projects.filter((p) => p.assignee)) {
-      const u = byName.get(p.assignee!);
-      expect(u, `${p.code} -> ${p.assignee}`).toBeDefined();
-      expect(u!.isAdmin ?? false).toBe(false);
+      expect(byName.get(p.assignee!), `${p.code} -> ${p.assignee}`).toBeDefined();
     }
   });
 
+  // Core users are admins (they see everything anyway); the project rule needs non-admins.
   it('at least four projects, held by at least four different non-admin users', () => {
-    const assigned = projects.filter((p) => p.assignee);
+    const byName = new Map(users.map((u) => [u.username, u]));
+    const assigned = projects.filter((p) => p.assignee && !byName.get(p.assignee)?.isAdmin);
     expect(assigned.length).toBeGreaterThanOrEqual(4);
     expect(new Set(assigned.map((p) => p.assignee)).size).toBeGreaterThanOrEqual(4);
   });
