@@ -6,10 +6,12 @@ export interface ExchangeRow {
   received: number;
 }
 
-/** Correspondents with at least one letter, ordered by volume. */
+/** Correspondents she wrote to or heard from, ordered by volume. Names that only appear on
+ *  records she is not a party to (a place in a life event, a co-recipient) have no
+ *  direction, so they are left out. */
 export function exchangeRows(people: Correspondent[], limit = 8): ExchangeRow[] {
   return people
-    .filter((p) => p.total > 0)
+    .filter((p) => p.sent + p.received > 0)
     .slice(0, limit)
     .map((p) => ({ name: p.name, sent: p.sent, received: p.received }));
 }

@@ -13,8 +13,9 @@ const person = (name: string, sent: number, received: number) => ({
 });
 
 describe('phewson exchange', () => {
-  it('drops silent correspondents and scales to the largest side', () => {
-    const rows = exchangeRows([person('A', 5, 2), person('B', 0, 0)]);
+  it('drops correspondents with no letters either way and scales to the largest side', () => {
+    const london = { ...person('London', 0, 0), total: 1 };
+    const rows = exchangeRows([person('A', 5, 2), person('B', 0, 0), london]);
     expect(rows).toHaveLength(1);
     expect(exchangeMax(rows)).toBe(5);
     expect(exchangeMax([])).toBe(1);
